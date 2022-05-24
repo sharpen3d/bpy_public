@@ -1,1 +1,133 @@
+﻿body
+{
+	font-family: 'Open Sans', sans-serif;
+}
 
+h1
+{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #777;
+}
+
+h2
+{
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: .25em;
+	font-size: 18px;
+	color: #333;
+}
+
+h3
+{
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 16px;
+	color: #3c78d8;
+}
+
+a{
+	color: #1155cc;
+}
+
+p
+{
+	font-weight: thin;
+	font-size: 14px;
+	padding-top: 0;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+ul.access
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: .25em;
+}
+
+ul.access li a
+{
+	text-decoration: none;
+}
+
+.main
+{
+	margin: auto;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	max-width: 800px;
+	display: block;
+}
+
+.wrapper
+{
+	margin: auto;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	width: 800px;
+	display: block;
+}
+
+
+.navmenu
+{
+	padding: 0;
+	margin:0;
+	min-width: 190px;
+}
+
+.nav
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+.nav li
+{
+	padding:0;
+	background-color: #ddd;
+	transition: background-color .18s ease-out 100ms;
+	transition: transform .18s ease 10ms;
+}
+
+.nav li:hover
+{
+	background-color: #3c78d8;
+	transform: translate(20px, 0);
+}
+
+.nav li a
+{
+	padding: 12px;
+	text-decoration: none;
+	color: #333;
+	display:block
+}
+
+.nav li.current
+{
+	background-color: #3c78d8;
+}
+
+.nav li.current a
+{
+	color: #FFF;
+}
+
+.nav li a:hover
+{
+	color: #FFF;
+}
+
+.content
+{
+	display: flex;
+	flex-direction: row;
+	padding-top: 40px;
+	justify-content: stretch;
+}
