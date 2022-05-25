@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                Tools
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Overview</a></li>
+			<li class="current"><a href="setup.html">Setup</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+            </div>
+
+            <div class="main">
+                <h1>
+                    BPX_EXTENSIONS (v1.3)
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Pixel Perfect Python Extensions and Asset Library
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    GETTING STARTED
+                </h2>
+
+                <p>
+		    <h3>Prerequisites</h3>
+		    This repo holds primarily addons, plugins, scripts, and assets for use in Blender. 
+It is recommended to use this file suite with the most recent stable version of Blender. 
+Latest stable version Blender 3.1.2. Download Blender <a href="https://www.blender.org/download/" target="blank">here</a>
+		    <br><br>
+		    <h3>Access and Source Control</h3>
+		    To download bpx files, please visit <a href="downloads.html">downloads</a>. Milestone updates will be published to all accessible locations–Google Drive, Microsoft OneDrive, NCFS1 (NC Studio). Be sure to occasionally check for updates if using these access points.
+Continuous updates of this file suite are available as a GitHub repository.
+		    <br><br>
+		    <h3>Directory Setup</h3>
+		    Before proceeding, make sure files are located in a secure, isolated location (not a Desktop or Downloads folder)
+		    <em>Altering, renaming or adding to the contents of anything within the folder structure under the master folder may cause unexpected errors within some tools</em>
+                    <br><br>
+		    <h3>Blender Setup</h3>
+			<ol>
+			    <li>Open Blender and verify the version number currently being used via the splash screen.</li>
+			    <li>Click Edit > Preferences from the upper toolbar</li>
+			    <li>Navigate to File Paths in the preferences window</li>
+			    <li>Under Asset Libraries click the + (add asset library)</li>
+			    <li>Name this library whatever you’d like and click the folder icon to choose a directory</li>
+				<ul>
+				    <li>This directory must be set to your install location of the Library folder within the bpy folder, this will always end in ‘\Library\’</li>
+				    <li>If you are using other personal asset libraries, this is fine and should not cause conflicts when adding this library</li>
+				</ul>
+			</ol>
+		    <em>Now when an asset library window is open, you can use the Library dropdown (by default set to ‘Current File’), and set this to the name of the new library to access included assets.</em>
+		    <br><br><br>
+		    <h2>PYTHON ADDON QUICKSTART</h2>
+		    Python files in this file collection are placed in bpy > Library > Resources. Do not move, rename, alter or delete these files or any files in the bpy > Library > Resources > Extensions folder.
+		    <br><br>
+		    <h3>Make Modules Accessible By Default</h3>
+		    <em>Note: If you currently have a custom startup file, follow instructions below for adding ToolManager to an existing project, then execute step 4 from this list.</em>
+			<ol>
+			    <li>Find and open startup.blend in the Templates folder</li>
+			    <li>Check the checkbox and click Always Allow when prompted upon opening the file</li>
+			    <li>In the 3D View Properties Panel UI (keyboard shortcut ‘n’ with mouse in 3D view window), there will be a new tab called ‘tools manager’ - do not make any changes inside the tools manager at this time</li>
+			    <li>Select File > Defaults > Save Startup File</li>
+			    <li>Close Blender, then reopen and check that the Tools Manager panel is available on a default startup</li>
+			</ol>
+		    <h3>Add Modules To Existing Projects</h3>
+		    If you would like to make scripts accessible to a project you created previously, follow these instructions:
+			<ol>
+			    <li>In the .blend file you would like to add tools to, set your workspace to ‘Scripting’ via the workspace tabs at the top of the screen</li>
+			    <li>Click Text > Open (Alt+O) and navigate in your files to bpy/Library/Resources</li>
+			    <li>Select ‘ToolManager’ and click ‘Open’</li>
+			    <li>Run the script by pressing Alt+P or clicking the play button next to the name of the script</li>
+			    <li>Select Text > Register</li>
+			    <li>Change the workspace back to whatever you like</li>
+			    <li>Save the file (Ctrl+S)</li>
+			</ol>
+		    Note: Registering the text will make this script accessible every time the file is opened.
+		</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
