@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                Tools
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Overview</a></li>
+			<li><a href="setup.html">Setup</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li class="current" ><a href="documentation.html">Documentation</a></li>
+                        <li class="t"><a href="documentation.html">Tool Manager</a></li>
+                        <li class="ct"><a href="filemanager.html">File Manager</a></li>
+                        <li class="t"><a href="2Dtools.html">2D Tools</a></li>
+                        <li class="t"><a href="quickactions.html">Quick Actions</a></li>
+                        <li class="t"><a href="wordartist.html">Word Artist</a></li>
+                        <li class="t"><a href="gridpacker.html">Grid Packer</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+            </div>
+
+            <div class="main">
+                <h1>
+                    BPX_EXTENSIONS (v1.3)
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Pixel Perfect Python Extensions and Asset Library
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    TOOLS DOCUMENTATION
+                </h2>
+
+                <p>
+                    <h3>
+                    File Manager
+                    </h3>
+		        <br>
+		        <img src="images/fm.png" alt="file manager window">
+                <br>
+                The File Manager panel collects all associated files used in the currently open project, 
+                copies these files, and places them in a directory relative to the project.
+                <br><br>
+                For instance if the .blend is saved on the desktop, the "Collect Files" button will create a 
+                new folder on the desktop named "Project Files", then creates a folder for any images "Images" 
+                and a folder for any fonts "Fonts" inside the desktop\Project Files\ folder.
+                <br><br>
+                <em>For best results, save each project in it's own unique folder</em>
+                <br><br>
+                This function results in paths of the .blend to be relative, meaning if the .blend and 
+                Project Files folder are transferred to another device, everything in the .blend will clearly 
+                transfer without any linking issues.
+                <br><br>
+                <em>Note that this does not clear out unused images if an image is removed from the project after the Collect Files function is ran 
+                , and Collect files never runs automatically (if files are added, you must Collect Files again)</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

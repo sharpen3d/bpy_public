@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                Tools
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Overview</a></li>
+			<li><a href="setup.html">Setup</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li class="current" ><a href="documentation.html">Documentation</a></li>
+                        <li class="t"><a href="documentation.html">Tool Manager</a></li>
+                        <li class="t"><a href="filemanager.html">File Manager</a></li>
+                        <li class="t"><a href="2Dtools.html">2D Tools</a></li>
+                        <li class="ct"><a href="quickactions.html">Quick Actions</a></li>
+                        <li class="t"><a href="wordartist.html">Word Artist</a></li>
+                        <li class="t"><a href="gridpacker.html">Grid Packer</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+            </div>
+
+            <div class="main">
+                <h1>
+                    BPX_EXTENSIONS (v1.3)
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Pixel Perfect Python Extensions and Asset Library
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    TOOLS DOCUMENTATION
+                </h2>
+
+                <p>
+                    <h3>
+                    Quick Actions
+                    </h3>
+		        <br>
+		        <img src="images/quick.png" alt="quick actions panel">
+                <br>
+                The Quick Actions panel is a catch-all for useful tools to reduce clicks for repetitive tasks.
+                <br><br>
+                HDRI world setup creates world nodes using the 
+                default .exr "courtyard".
+                <br><br>
+                Disable Color Management sets the Display Device>Look in Output Properties to 'NONE', rendering in true color
+                <br><br>
+                Reset Color Management sets the Display Device>Look in Output Properties to 'Filmic', Blender's default, for photorealistic rendering puropses.
+                <br><br>
+                Boost Contrast cycles through Display Contrast settings to globally increase contrast in the project.
+                <br><br>
+                Center Location buttons essentially perform "Selection to Cursor (Keep Offset)" if 2 objects are selected.
+                <br><br>
+		        <img src="images/quickrender.png" alt="quick actions panel">
+                <br>
+                Quick Renders and Quick animations are a one-click solution to render and save images. Images are saved in an Images folder at the location of the 
+                .blend file.  The percentages listed act as the scale of the render (i.e. a 50% render of a scene with render resolution 1024x1024 will render at 512x512)
+                <br><br>
+                <em>Note the image may not display while rendering (Blender may appear frozen for large renders), or display incorrectly in Blender when finished rendering, view the saved file (Open Directory in Folder) 
+                to check the actual result when finished.</em>
+		        <img src="images/alignmenu.png" alt="quick actions panel">
+                <br>
+                When Quick Actions is added from the Tool Manager, the Align Menu will be automatically added.
+                <br>
+                The Align Menu can be accessed in the 3D Viewport with the hotkey "E".
+                Align all selected objects to either the Active Object or 3D cursor location by axis.
+                <br><br>
+                <em>This is essentially (Shift+S), but per axis rather than absolute</em>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

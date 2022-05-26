@@ -124,6 +124,41 @@ ul.access li a
 	color: #FFF;
 }
 
+.nav li.ct
+{
+	background-color: #3c78d8;
+	transform: translate(20px, 0);
+}
+
+.nav li.ct a
+{
+	color: #FFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.nav li.t
+{
+	transform: translate(20px, 0);
+}
+
+.nav li.t a
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.nav li.ct:hover
+{
+	transform: translate(30px, 0);
+}
+
+.nav li.t:hover
+{
+	transform: translate(30px, 0);
+}
+
+
 .content
 {
 	display: flex;

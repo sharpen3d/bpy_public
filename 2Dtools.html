@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                Tools
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Overview</a></li>
+			<li><a href="setup.html">Setup</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li class="current" ><a href="documentation.html">Documentation</a></li>
+                        <li class="t"><a href="documentation.html">Tool Manager</a></li>
+                        <li class="t"><a href="filemanager.html">File Manager</a></li>
+                        <li class="ct"><a href="2Dtools.html">2D Tools</a></li>
+                        <li class="t"><a href="quickactions.html">Quick Actions</a></li>
+                        <li class="t"><a href="wordartist.html">Word Artist</a></li>
+                        <li class="t"><a href="gridpacker.html">Grid Packer</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+            </div>
+
+            <div class="main">
+                <h1>
+                    BPX_EXTENSIONS (v1.3)
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Pixel Perfect Python Extensions and Asset Library
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    TOOLS DOCUMENTATION
+                </h2>
+
+                <p>
+                    <h3>
+                    2D Tools
+                    </h3>
+		        <br>
+                <img src="images/2Dcomp.png" alt="2D tools panel expanded">
+                <br>
+                The Composition Panel within 2D Tools simply controls the 
+                current scene render resolution. The Select Camera button 
+                selects the camera associated with the current Scene (if one exists)
+                <br><br>
+                <em>For best results, set the composition size (or scene render resolution) before adding 2D layers 
+                in the panel below. If this is changed after adding 2D layers, they will not be an accurate pixel 
+                size (the panel will prompt you if this occurs and provide a method to fix)</em>
+
+                <br>
+		        <img src="images/2D.png" alt="2D tools panel">
+                <br>
+                The Solids panel is contextual based on selected objects (see below), and 
+                contains functionality for creating planes as pixel-based 2D shapes relative to the Composition size.
+                <br>
+                The Make Camera 2D button sets the camera's transform to (0,0,10), faces the camera in the -Z direction, 
+                sets the camera to Orthographic, and sets the camera's Orthographic size to 10. If no camera exists in Scene, 
+                this button creates a new camera with the settings mentioned.
+                <br><br>
+                <em>For 2D layer size to be pixel-accurate, the camera must be orthographic, but can be any scale.
+                <br>The camera faces -Z as to make the X axis left to right, the Y axis up and down, and the Z axis as depth</em>
+                <br><br>
+                The Add Layer button creates a new plane and applies a geometry node modifier "bpx_geo" to control the size of the plane 
+                in pixes relative to the canvas size. By default, this plane is added at the size of 1024x1024 pixels. When Selected, 
+                the user can manipulate the pixel size via the expanded panel shown below.
+                <br><br>
+                <em>There is no need to alter the values of the geometry node inputs outside of the 2D Tools panel</em>
+
+                <br>
+                <img src="images/2D_expanded.png" alt="2D tools panel expanded">
+                <br>
+                When a 2D layer is selected, additional options populate the panel. Set the pixel-size width and height of the 
+                layer here.
+                <br><br>
+                The Match Cam Size button sets the 2D Layer's size to match the Canvas Size (render resolution).
+                <br><br>
+                Each 2D Layer, when added via the New Layer button, will appear with a unique material, allowing for an 
+                image texture to be added. This texture is visible in this panel, and able to be changed.
+                <br><br>
+                The Match Texture Size button applies the image's resolution to the selected 2D layer (allowing for 
+                quick reference images as planes)
+                <br><br>
+                <em>Any material can be applied to the 2D Layer, but functionality to add a texture will only be visible 
+                when the default material (bpx_defaultMat) is active on the selected 2D Layer</em>
+                <br><br>
+                If canvas size (render resolution) or camera size (orthographic camera scale) is changed after adding 2D Layers, 
+                an error message will appear in the panel, with a button "Fix Pixel Size". Select each 2D layer individually, 
+                and click this button for each to make the pixel dimensions of the layer accurate to the render size.
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
