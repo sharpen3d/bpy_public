@@ -64,6 +64,16 @@ ul.access li a
 	display: block;
 }
 
+.main_2
+{
+	margin: auto;
+	padding-bottom: 40px;
+	padding-left: 40px;
+	max-width: 100px;
+	display: block;
+	background-color: #000;
+}
+
 .wrapper
 {
 	margin: auto;
@@ -165,4 +175,9 @@ ul.access li a
 	flex-direction: row;
 	padding-top: 40px;
 	justify-content: stretch;
+}
+
+.black
+{
+	background-color: #000;
 }
