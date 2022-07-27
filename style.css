@@ -3,6 +3,23 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+.gifhover{
+	position: absolute;
+}
+
+.gifhide{
+	position: absolute;
+	transition: opacity 2s ease-out 100ms;
+	opacity:1;
+}
+
+.gifhide:hover{
+	transition: opacity .12s ease-out 100ms;
+	opacity:0;
+}
+
+
+
 h1
 {
 	margin: 0;
@@ -175,6 +192,17 @@ ul.access li a
 	flex-direction: row;
 	padding-top: 40px;
 	justify-content: stretch;
+}
+
+.main_2
+{
+	max-width: 100%;
+	display: flex;
+	flex-direction: flex-row;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	justify-content: stretch;
+	align-items: center;
 }
 
 .black
