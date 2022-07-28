@@ -201,11 +201,16 @@ ul.access li a
 	flex-direction: flex-row;
 	flex-wrap: wrap;
 	padding-top: 40px;
-	justify-content: stretch;
+	justify-content: center;
 	align-items: center;
 }
 
 .black
 {
+margin: auto;
 	background-color: #000;
+	align-items: center;
+	justify-content: center;
+	max-width: 1200px;
+
 }
