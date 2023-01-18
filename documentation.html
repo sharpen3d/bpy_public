@@ -16,82 +16,229 @@
 
             <div class="navmenu">
                 <h3>
-                Tools
+                LUKE STILSON
                 </h3>
                     <ul class="nav">
                         <li><a href="index.html">Overview</a></li>
-			<li><a href="setup.html">Setup</a></li>
                         <li><a href="downloads.html">Downloads</a></li>
-                        <li class="current" ><a href="documentation.html">Documentation</a></li>
-                        <li class="ct"><a href="documentation.html">Tool Manager</a></li>
-                        <li class="t"><a href="filemanager.html">File Manager</a></li>
-                        <li class="t"><a href="2Dtools.html">2D Tools</a></li>
-                        <li class="t"><a href="quickactions.html">Quick Actions</a></li>
-                        <li class="t"><a href="wordartist.html">Word Artist</a></li>
-                        <li class="t"><a href="gridpacker.html">Grid Packer</a></li>
-                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li class="current" ><a href="documentation.html">Tools</a></li>
                     </ul>
+
+                    <p>
+                    [BPX] Blender Pixels <br>Extension Library
+                    <br>
+                    <br>
+                    &copy;2023 Luke Stilson<br>All Rights Reserved
+                </p>
             </div>
 
+
             <div class="main">
-                <h1>
-                    BPX_EXTENSIONS (v1.3)
-                </h1>
 
-                <h2>
-                    2022 LUKE STILSON
-                </h2>
 
-                <p>
-                    Blender Pixel Perfect Python Extensions and Asset Library
-                    <br>
-                    Created by Luke Stilson 2022
-                </p>
 
-                <h2>
-                    TOOLS DOCUMENTATION
-                </h2>
 
-                <p>
-                    <h3>
-                    Tool Manager
-                    </h3>
-		        <br>
-		        <img src="images/toolmanager.png" alt="tool manager window">
-                <br>
-                After following setup instructions, the tool manager window will be available to you in the Properties UI window of the 3D Viewport ("n" to show/hide).
-                <br>
-                The Tool Manager window manages instillation of scripts and appending of resource data in the currently open project. Tools remain active automatically each time
-                the project file is opened. This allows for specific tools to be added in specific projects, while not appending unnecessicary resources
-                or scripts in every project. 
-                <br><br>
-                <em>For tools to function accurately, be sure to close and reopen Blender before starting a new file, or opening an existing file</em>
-                <em>If the File>Open functionality within blender is used after tools are appended, Blender will not clear tools panels that have been
-                appended in the current project, and may cause errors</em>
-                <br><br>
-                    <h3>
-                    Append Tools
-                    </h3>
-                Click the checkbox for any/all of the tools you would like to add to the current file. Then click the Append Tools button.
-                <br><br>
-                The selected associated script(s) will automatically be added, ran, and registered as modules (made to be available each time the file is opened).
-                <br><br>
-                Some tools, when added, will also automatically append necessicary data from Library\Resources\Extensions\Resources.blend. For example, adding 2D Tools will append a
-                geometry node_group named "bpx_geo". See indivual documentation for each tool to see what (if any) resources are automatically appended.
-                <br><br>
-                <em>Everything added through the tool manager panel derives from a specific file locations, based off the path you provide in setup to the \Library folder if there are
-                issues when using the Append Tools button, it is likely your resource path to \Library is incorrect or missing. Do not make file structure or file changes to anything inside 
-                the \Library folder</em>
-                <br><br>
-                    <h3>
-                    Release Tools
-                    </h3>
-                The release tools button cleans out any script previously added, but <em>does not</em> clean out additional appended data, such as node_groups. This means anything created
-                with any of the tools should not be affected, but the functionality of the panel will be disabled the next time the file is opened.
-                <br><br>
-                This button is useful for applying updates to tools. If you update your resources (through a git pull, or a download of a newer version of these tools), you can "Release Tools"
-                 followed by "Append Tools" to update tools in an existing project. Otherwise tools will always remain the same as they were when first added to the project.
-                </p>
+                <div class="container">
+                    <div class="grid">
+
+
+                    <h2>
+             
+                        PLUGINS - BLENDER
+                    </h2>
+
+
+                    <div class = "grid-description">
+                                <h3>
+                                    BPx Tool Manager
+                                </h3>
+                                <p >
+                                    The tool manager is the easiest way for me to keep [BPx] plugins up-to-date with the latest releases of Blender. Currently for best results, all [BPx] plugins should be accessed
+                                    via install of the tool manager and accessed via GitHub clone.
+                                    If you would like to simply try out a specific tool, you can download template files for any of the plugins, with most functionality available to you.
+                                </p>
+
+                                <br>
+
+                                <div class="">
+                                    <a href="" class= grid-button>
+                                    Download From GitHub
+                                    </a>
+
+                                    <a href="setup.html" class= grid-button2>
+                                    Setup Instructions
+                                    </a>
+                                 </div>
+                    </div>
+
+                        <h1>
+                            BPx PLUGINS
+                        </h1>
+
+                        <div  class="grid-item-featured">
+                            <img class="icon" src="images/particle.png">
+
+                            <img class="grid-image" src="images/emitterLarge.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    Emitters
+                                </h3>
+                                <p class="grid-description">
+                                    This add-on utilizes a set of geometry node-groups to create animated particles, allowing for customization through a panel in the 3D Viewport. 
+                                    This tool makes it easy to create complex particle systems within Blender and allows for a high degree of control and no simulation baking.
+                                    More advanced control through the geometry graph allows for endless flexibility.
+                                </p>
+
+                                <div class="grid-buttons">
+
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="emitters" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+
+
+                        <div class="grid-item">
+                            <img class="icon" src="images/wand.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    Quick Actions
+                                </h3>
+                                <p class="grid-description">
+                                    Unity FBX Export, 
+                                    Render to file in background, 
+                                    Automatic HDRI setup, 
+                                    Alignment tools pie menu,
+                                    Easy Color Managment panel, and more!
+                                    Reduce repetitive mouse clicks and menu navigation, 
+                                    save time with Quick Actions
+                                </p>
+
+                                <div class="grid-buttons">
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="quickactions.html" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <img class="icon" src="images/imageicon.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    2D Tools
+                                </h3>
+                                <p class="grid-description">
+                                    2D image planes, better than ever. Load images and scale planes at exact correct pixel-scaling based on your render and camera settings.
+                                    Great for logo animation, VFX, 
+                                    storyboarding, or bringing 2D illustrations
+                                    to life.
+                                </p>
+
+                                <div class="grid-buttons">
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="2Dtools.html" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-item">
+                            <img class="icon" src="images/filesicon.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    File Manager
+                                </h3>
+                                <p class="grid-description">
+                                    Consolidate images, fonts and sounds used in the project to a single folder. 
+                                    This custom panel locates, copies, and places source files into a new folder organized by data type. Great for sharing files 
+                                    and avoiding the inevidable dreaded pink scene.
+                                </p>
+
+                                <div class="grid-buttons">
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="filemanager.html" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <img class="icon" src="images/wordarticon.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    Word Artist
+                                </h3>
+                                <p class="grid-description">
+                                    Additional text tools and shortcuts panel, generate text with geometry node-groups 
+                                    allowing for shader information based on extrude depth and positioning of text, 
+                                    isolates front, bevel, and extrusion for seperate material settnigs. Add 'stroke' to 
+                                    text in a orthographic view, and more!
+                                </p>
+
+                                <div class="grid-buttons">
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="wordartist.html" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <img class="icon" src="images/gridicon.png">
+
+                            <div class="grid-text">
+                                <h3>
+                                    Grid Packer
+                                </h3>
+                                <p class="grid-description">
+                                    Automatically render the current .blend or any image sequence to a sprite sheet. Render directly to the sprite sheet from your 
+                                    scene, or select a pre-rendered PNG sequence to pack into a uniform grid.
+                                    Applicable as an alternative to Tsoftware like TexturePacker for simple uniform grid spacing of frames.
+                                </p>
+
+                                <div class="grid-buttons">
+                                    <a href="" class= grid-button2>
+                                    Download Template
+                                    </a>
+
+                                    <a href="gridpacker.html" class= grid-button2>
+                                    Documentation
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>   
             </div>
         </div>
     </div>

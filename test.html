@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                Tools
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Overview</a></li>
+			<li><a href="setup.html">Setup</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li ><a href="tutorials.html">Tutorials</a></li>
+                        <li class="current"><a href="extras.html">Extras</a></li>
+                    </ul>
+            </div>
+
+            <div class="main">
+                <h1>
+                    BPX_EXTENSIONS (v1.3)
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Experiments & Extras
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    Extras
+                </h2>
+
+            <div id="progress-bar"></div>
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+
+                <div id="lesson-container">
+                    <div id="lesson-1" class="lesson" style="display: none;">Lesson 1
+                    <h1>Lesson 1: Introduction to Blender's Data Structure</h1>
+                    <p>Welcome to this tutorial on understanding Blender's data structure. In this lesson, we will cover the basics of the Blender interface and key concepts that will help you navigate and manipulate data in Blender.</p>
+                    </div>    
+
+                     <div id="lesson-2" class="lesson" style="display: none;">Lesson 2
+                    <h2>Step 1: Understanding the Blender Interface</h2>
+                    <p>When you first open Blender, you will be presented with a number of windows and panels. These include the 3D View, Properties window, Outliner, and Tool Shelf. Each of these windows serves a specific purpose and will be used to access and manipulate different types of data.</p>
+                    <img src="blender-interface.png" alt="Blender interface">
+                    <p>The 3D View is where you will do most of your work in Blender. This is where you will create and edit your 3D models and scenes. The Properties window is where you can access and change the properties of the currently selected object or element in the 3D View.</p>
+                    </div>
+                
+                    <div id="lesson-4" class="lesson" style="display: none;">Lesson 4
+                    <h2>Step 2: The Outliner</h2>
+                    <p>The Outliner is one of the most important windows in Blender as it allows you to see and navigate the entire structure of your scene. The Outliner displays all of the objects, cameras, lights, and other elements in your scene in a hierarchical tree structure. This makes it easy to find and select specific elements, as well as organize and group them.</p>
+                    <img src="outliner.png" alt="Outliner window">
+                    <p>In the Outliner, you can also access the properties of each element, as well as perform actions such as hiding, locking, or deleting elements. The Outliner also allows you to create groups, which can be useful for organizing large and complex scenes.</p>
+                    </div>
+
+                    <div id="lesson-5" class="lesson" style="display: none;">Lesson 5
+                    <h2>Step 3: Key Concepts</h2>
+                    <p>To effectively work with Blender's data structure, there are a few key concepts that you should understand:</p>
+                    <ul>
+                      <li>Objects: Objects are the basic building blocks of a scene in Blender. Objects can be anything from a simple cube to a complex model.</li>
+                      <li>Hierarchy: The hierarchy of a scene refers to the way objects are organized in relation to each other. In the Outliner, you can see the hierarchy of a scene represented as a tree structure.</li>
+                      <li>Properties: Each object and element in a scene has a set of properties that can be accessed and modified. These properties include things like position, rotation, scale, and material.</li>
+                    </ul>
+                    </div>
+
+                <!-- Add more lesson divs as needed -->
+                 </div>
+
+                <div class="container">
+                    <div class="grid">
+                    <a href="tutorial1.html" class="grid-item">
+                        <img src="tutorial1-image.jpg" class="grid-image">
+                        <div class="grid-text">
+                        <h3 class="grid-title">Tutorial 1</h3>
+                        <p class="grid-description">Learn how to create a realistic 3D character in Blender</p>
+                        </div>
+                    </a>
+                    <a href="tutorial2.html" class="grid-item">
+                        <img src="tutorial2-image.jpg" class="grid-image">
+                        <div class="grid-text">
+                        <h3 class="grid-title">Tutorial 2</h3>
+                        <p class="grid-description">Discover advanced lighting techniques in Blender</p>
+                        </div>
+                    </a>
+                    <!-- Add more grid items as needed -->
+                    </div>
+                </div>
+
+        <script>
+        var currentLesson = 0;
+        var numLessons = document.getElementsByClassName("lesson").length;
+        document.getElementById("lesson-container").children[currentLesson].style.display = "block";
+
+        document.getElementById("prev-button").onclick = function() {
+        if (currentLesson > 0) {
+            document.getElementById("lesson-container").children[currentLesson].style.display = "none";
+            currentLesson--;
+            document.getElementById("lesson-container").children[currentLesson].style.display = "block";
+            updateProgress();
+        }
+        }
+
+        document.getElementById("next-button").onclick = function() {
+        if (currentLesson < numLessons - 1) {
+            document.getElementById("lesson-container").children[currentLesson].style.display = "none";
+            currentLesson++;
+            document.getElementById("lesson-container").children[currentLesson].style.display = "block";
+            updateProgress();
+        }
+        }
+
+        function updateProgress() {
+        var progress = (currentLesson + 1) / numLessons;
+        document.getElementById("progress-bar").style.width = (progress * 100) + "%";
+        }
+        </script>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
