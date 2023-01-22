@@ -412,3 +412,7 @@ footer{
 	height:20px;
 	transform: translate(0, 2px);
 }
+
+.profileimg{
+	border-radius: 50%;
+}
