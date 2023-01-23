@@ -262,7 +262,6 @@ margin: auto;
 }
 .grid-item-featured {
   width: 650px;
-  height: 325px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -315,21 +314,10 @@ margin: auto;
 	  cursor: pointer;
 }
 
-.grid-item:hover {
-  transform: scale(1.05);
-}
-
-.grid-item:hover {
-  transform: scale(1.05);
-}
-
-.grid-item-featured:hover {
-  transform: scale(1.02);
-}
 
 .grid-image {
   width: 100%;
-  height: 50%;
+  height: 150px;;
   object-fit: cover;
   opacity: 1;
   top: 0;
