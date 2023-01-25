@@ -8,210 +8,232 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
-    <div class= "wrapper">
-        <div class="content">
+            <div id="downloaddonate" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h1>
+                         Support Future Development
+                        </h1>
+                        <br>
+                        <p>
+                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
+                        </p>
+                        <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'Y352QSKHP2W96',
+                        image: {
+                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        </div>
+
+
+
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp()"   class= "grid-button2">
+                        No, Thanks
+                        </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
+				<script>
+                function openPopUp() {
+					document.getElementById("downloaddonate").style.display = "flex"
+					};
+                function closePopUp() {
+					document.getElementById("downloaddonate").style.display = "none"
+					};
+				</script>
 
             <div class="navmenu">
-                <h3>
-                LUKE STILSON
-                </h3>
+                <div class="banner">
+                    <h3>             
+                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
+                    </h3>
+                </div>
                     <ul class="nav">
-                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="index.html">About Me</a></li>
                         <li class="current"><a href="tools.html">Tools</a></li>
                         <li ><a href="templates.html">Templates</a></li>
                         <li ><a href="projects.html">Projects</a></li>
                     </ul>
+                </div>
+            </div>
+                <div class="navmenu1">
 
-                    <p>
-                    [BPX] Blender Pixels <br>Extension Library
-                    <br>
-                    <br>
-                    &copy;2023 Luke Stilson<br>All Rights Reserved
-                </p>
+                    <ul class="nav">
+                        <li class="current"><a href="tools.html">Overview</a></li>
+                        <li ><a href="">Emitters</a></li>
+                        <li ><a href="">2D Tools</a></li>
+                        <li ><a href="">Word Artist</a></li>
+                        <li ><a href="">Quick Actions</a></li>
+                        <li ><a href="">File Manager</a></li>
+                    </ul>
             </div>
 
             <div class="main">
 
 
-                <div class="container">
+
                     <div class="grid">
+                        <div class= "center">
 
-                    <h2>             
-                        Addons - Blender
-                    </h2>
+                            <h2>             
+                                Blender Pixels
+                            </h2>
+
+                            <h3>
+                                Add-on Suite
+                             </h3>
+
+                            <div class = "grid-buttons">
+                            
+                                    <a href="#" onclick='window.open("https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/sharpen3d/bpx/tree/main/BPxSuite");return false;'  class= "grid-button">
+                                    Download BPx Suite
+                                    </a>
+                                    <p>
+                                    <em> Windows &#x2022 zip  &#x2022  828KB </em>
+                                    </p>
+                              
+
+                            </div>
+                            <br><br>
+
+                        </div>
+
+                        <div class= "center">
 
 
-                    <div class = "">
-                        <h3>
-                            About Addons
-                        </h3>
-                        <br>
-                        <p >
-                            Download addons below and install via prefrences. Check the documentation for
-                            full setup instructions and learn the functionality of each addon.
-                        </p>
+                            <div class = "grid-buttons">
+                            <h1>
+                            System Requirements
+                            </h1>
+                            <p>
+                               Windows 11, 10, 8.1 <br> Blender 3.1.0 - 3.4.1
+                               </p>
+                              <div onclick="openPopUp()"  id="donatepopup" class= "grid-button3">
+                              Support Future Development &#8201
+                              <img class="downloadicon" src="images/donate.png">
+                              </div>
 
-                        <br>
+                            </div>
+                            <br><br>
 
-                        <div class="">
-                            <a href="https://github.com/sharpen3d/bpx/tree/main/Addons" id="bpxexpand"   class= "grid-button2">
-                            GitHub Access
-                            </a>
-                            <a href="setup.html" class= "grid-button2">
-                            Documentation
-                            </a>
+                        </div>
+
+
+
                     </div>
-                    <br>
-                    <br>
 
+
+                    
+
+                <div class="container">
 
                     <div id="bpx" class="grid">
 
-                        <div  class="grid-item-featured">
-                            <img class="icon" src="images/particle.png">
-                            <img class="grid-image" src="images/cover.png">
+                        <a href="emitters.html"  class="grid-item-featured">
+                        <img class="icon" src="images/particle.png">
+                        
+                            <img id="background" class="grid-image" src="images/cover.png">
 
                             <div class="grid-text">
-                                
+                            
                                 <h3>
                                     BPx Emitters
                                 </h3>
                                 <p class="grid-description">
-                                    This add-on utilizes a set of geometry node-groups to create animated particles, allowing for customization through a panel in the 3D Viewport. 
-                                    This tool makes it easy to create complex particle systems within Blender and allows for a high degree of control and no simulation baking.
+                                    This add-on utilizes a set of geometry node-groups to create animated particles, allowing for customization through a panel in the 3D Viewport
                                 </p>
-
-                                <div class="grid-buttons">
-
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Addons/BPx%20Emitters.zip" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="emitters" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
                             </div>
-                        </div>
+                        </a>
 
 
-                        <div class="grid-item-featured">
-                            <img class="icon" src="images/imageicon.png">
-                            <img class="grid-image" src="images/2DLarge.png">
+                        <a class="grid-item-featured">
+                            <img class="icon" src="images/imageicon.png">
+
+                            <img id="background" class="grid-image" src="images/2DLarge.png">
 
                             <div class="grid-text">
                                 <h3>
-                                    2D Tools
+                                    BPx 2D Tools
                                 </h3>
                                 <p class="grid-description">
-                                    2D image planes, better than ever. Load images and scale planes at exact correct pixel-scaling based on your render and camera settings.
-                                    Great for logo animation, VFX, 
-                                    storyboarding, or bringing 2D illustrations
-                                    to life.
+                                    Load images and scale planes at exact correct pixel-scaling based on your render and camera settings
                                 </p>
-
-                                <div class="grid-buttons">
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Addons/2DTools.zip" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="2Dtools.html" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
                             </div>
 
-                        </div>
+                        </a>
 
-                        <div class="grid-item-featured">
+                        <a class="grid-item-featured">
                             <img class="icon" src="images/wordarticon.png">
-                            <img class="grid-image" src="images/wordart-large.png">
+                            <img id="background" class="grid-image" src="images/wordart-large.png">
                             <div class="grid-text">
                                 <h3>
-                                    Word Artist
+                                    BPx Word Artist
                                 </h3>
                                 <p class="grid-description">
-                                    Additional text tools and shortcuts panel, generate text with geometry node-groups 
-                                    allowing for shader information based on extrude depth and positioning of text, 
-                                    isolates front, bevel, and extrusion for seperate material settnigs. Add 'stroke' to 
-                                    text in a orthographic view, and more!
+                                    Additional text tools and shortcuts panel,
+                                    allows for live shader isolation front, bevel, depth, and stroke 
+                                    
                                 </p>
-
-                                <div class="grid-buttons">
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Addons/WordArtist.zip" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="wordartist.html" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="grid-item">
+                        <a class="grid-item-featured">
                             <img class="icon" src="images/filesicon.png">
-
+                            <img id="background" class="grid-image" src="images/filemanager.png">
                             <div class="grid-text">
                                 <h3>
-                                    File Manager
+                                    BPx File Manager
                                 </h3>
                                 <p class="grid-description">
-                                    Consolidate images, fonts and sounds used in the project to a single folder. 
-                                    This custom panel locates, copies, and places source files into a new folder organized by data type. Great for sharing files 
-                                    and avoiding the inevidable dreaded pink scene.
+                                    Collect referenced Images, Fonts, and Sounds into a single folder. Designed for file sharing and backup management.
                                 </p>
-
-                                <div class="grid-buttons">
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Addons/FileManager.zip" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="filemanager.html" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
                             </div>
-                        </div>
+                        </a>
 
 
-                        <div class="grid-item">
+                        <a class="grid-item-featured">
                             <img class="icon" src="images/wand.png">
-
+                            <img id="background" class="grid-image" src="images/quickactions.png">
                             <div class="grid-text">
                                 <h3>
-                                    Quick Actions
+                                    BPx Quick Actions
                                 </h3>
                                 <p class="grid-description">
-                                    Unity FBX Export, 
-                                    Render to file in background, 
-                                    Automatic HDRI setup, 
-                                    Alignment tools pie menu,
-                                    Easy Color Managment panel, and more!
-                                    Reduce repetitive mouse clicks and menu navigation, 
-                                    save time with Quick Actions
+                                    Simple Actions, Tools, and Panels to reduce clicks on repetitive processes and automate redudant tasks
                                 </p>
-
-                                <div class="grid-buttons">
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Addons/QuickActions.zip" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="quickactions.html" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
                             </div>
-                        </div>
+                        </a>
+
+
 
                     </div>                 
                 </div>   
-            </div>
-        </div>
-    </div>
+                <div class="footer">
+                 &copy;2023 Luke Stilson | Blender Pixels <br>
+                 GNU General Public License v3.0 
+                </div>
 
 </body>
+
+
 </html>
