@@ -8,95 +8,165 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+<div class="bgloop">
+</div>
 
-    <div class= "wrapper">
-        <div class="content">
+            <div id="downloaddonate" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h1>
+                         Support Future Development
+                        </h1>
+                        <br>
+                        <p>
+                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
+                        </p>
+                        <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'Y352QSKHP2W96',
+                        image: {
+                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        </div>
+
+
+
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp()"   class= "grid-button2">
+                        No, Thanks
+                        </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
+				<script>
+                function openPopUp() {
+					document.getElementById("downloaddonate").style.display = "flex"
+					};
+                function closePopUp() {
+					document.getElementById("downloaddonate").style.display = "none"
+					};
+				</script>
 
             <div class="navmenu">
-                <h3>
-                BPx Extensions
-                </h3>
+                <div class="banner">
+                    <h3>             
+                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
+                    </h3>
+                </div>
                     <ul class="nav">
-                        <li><a href="index.html">Back</a></li>
-						<li><a href="setup.html">Setup</a></li>
-                        <li><a href="toolmanager.html">Tool Manager</a></li>
-                        <li><a href="emitters.html">Emitters</a></li>
-                        <li class="current"><a href="quickactions.html">Quick Actions</a></li>
-                        <li><a href="2Dtools.html">2D Tools</a></li>
-                        <li><a href="filemanager.html">File Manager</a></li>
-                        <li><a href="wordartist.html">Word Artist</a></li>
-                        <li><a href="gridpacker.html">Grid Packer</a></li>
+                        <li><a href="index.html">About Me</a></li>
+                        <li class="current"><a href="tools.html">Tools</a></li>
+                        <li ><a href="templates.html">Templates</a></li>
+                        <li ><a href="projects.html">Projects</a></li>
+                    </ul>
+                                                  <div onclick="openPopUp()"  id="donatepopup" class= "grid-button3">
+                              Donate &#8201
+                              <img class="downloadicon" src="images/donate.png">
+                              </div>
+                </div>
+
+            </div>
+                <div class="navmenu1">
+
+                    <ul class="nav">
+                        <li ><a href="tools.html">Overview</a></li>
+                        <li ><a href="emitters.html">Emitters</a></li>
+                        <li ><a href="2dtools.html">2D Tools</a></li>
+                        <li ><a href="wordartist.html">Word Artist</a></li>
+                        <li class="current" ><a href="quickactions.html">Quick Actions</a></li>
+                        <li ><a href="filemanager.html">File Manager</a></li>
                     </ul>
 
-                    <p>
-                    [BPX] Blender Pixels <br>Extension Library
-                    <br>
-                    <br>
-                    &copy;2023 Luke Stilson<br>All Rights Reserved
-                </p>
             </div>
-
             <div class="main">
-                <h1>
-                    DOCUMENTATION
-                </h1>
 
-                <h2>
-                    2022 LUKE STILSON
-                </h2>
 
-                <p>
-                    Blender Pixel Perfect Python Extensions and Asset Library
-                    <br>
-                    Created by Luke Stilson 2022
-                </p>
 
-                <h2>
-                    TOOLS DOCUMENTATION
-                </h2>
+                    <div class="grid">
+                        <div class= "center">
 
-                <p>
-                    <h3>
-                    Quick Actions
-                    </h3>
-		        <br>
+                            <h2>             
+                                Quick Actions
+                            </h2>
+
+                            <h3>
+                                Blender Add-on
+                             </h3>
+
+                            <div class = "grid-buttons">
+                            
+                                    <a href="downloads/QuickActions.zip"  class= "grid-button">
+                                    Download BPx QuickActions &#8201
+                                    <img class="downloadicon" src="images/downloadicon.png">
+                                    </a>
+                                    <p>
+                                    <em> Windows &#x2022 zip  &#x2022  6KB </em>
+                                    </p>
+                              
+
+                            </div>
+                            <br><br>
+
+                        </div>
+
+                        <div class= "center">
+
+
+                            <div class = "grid-buttons">
+                            <h1>
+                            System Requirements
+                            </h1>
+                            <p>
+                               Windows 11, 10, 8.1 <br> Blender 3.1.0 - 3.4.1
+                               </p>
+
+                            </div>
+                            <br><br>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="banner">
+                       <h4>
+                         Explore tools and download add-ons individually
+                        </h4>
+                    </div>
+                    
+
+                <div class="container">
+
+            <div class="grid">
+
 		        <img src="images/quick.png" alt="quick actions panel">
-                <br>
-                The Quick Actions panel is a catch-all for useful tools to reduce clicks for repetitive tasks.
-                <br><br>
-                HDRI world setup creates world nodes using the 
-                default .exr "courtyard".
-                <br><br>
-                Disable Color Management sets the Display Device>Look in Output Properties to 'NONE', rendering in true color
-                <br><br>
-                Reset Color Management sets the Display Device>Look in Output Properties to 'Filmic', Blender's default, for photorealistic rendering puropses.
-                <br><br>
-                Boost Contrast cycles through Display Contrast settings to globally increase contrast in the project.
-                <br><br>
-                Center Location buttons essentially perform "Selection to Cursor (Keep Offset)" if 2 objects are selected.
-                <br><br>
-		        <img src="images/quickrender.png" alt="quick actions panel">
-                <br>
-                Quick Renders and Quick animations are a one-click solution to render and save images. Images are saved in an Images folder at the location of the 
-                .blend file.  The percentages listed act as the scale of the render (i.e. a 50% render of a scene with render resolution 1024x1024 will render at 512x512)
-                <br><br>
-                <em>Note the image may not display while rendering (Blender may appear frozen for large renders), or display incorrectly in Blender when finished rendering, view the saved file (Open Directory in Folder) 
-                to check the actual result when finished.</em>
-		        <img src="images/alignmenu.png" alt="quick actions panel">
-                <br>
-                When Quick Actions is added from the Tool Manager, the Align Menu will be automatically added.
-                <br>
-                The Align Menu can be accessed in the 3D Viewport with the hotkey "E".
-                Align all selected objects to either the Active Object or 3D cursor location by axis.
-                <br><br>
-                <em>This is essentially (Shift+S), but per axis rather than absolute</em>
-                
-                </p>
-            </div>
-        </div>
-    </div>
 
+		        <img src="images/quickrender.png" alt="quick actions panel">
+
+                
+            </div>  
+            </div>
+<div class="footer">
+    &copy;2023 Luke Stilson | Blender Pixels <br>
+    GNU General Public License v3.0 
+</div>
 </body>
 </html>

@@ -8,67 +8,149 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+<div class="bgloop">
+</div>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFMcnz7i94QInG9dqhTHkZ-lhbAXzIsCz4-TeKYYUoVGnBUA/viewform?embedded=true" width="640" height="1174" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div id="downloaddonate" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h1>
+                         Support Future Development
+                        </h1>
+                        <br>
+                        <p>
+                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
+                        </p>
+                        <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'Y352QSKHP2W96',
+                        image: {
+                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        </div>
 
-    <div class= "wrapper">
-        <div class="content">
 
-            <div class="navmenu">
-                <h3>
-                BPx Extensions
-                </h3>
-                    <ul class="nav">
-                        <li><a href="index.html">Back</a></li>
-						<li><a href="setup.html">Setup</a></li>
-                        <li><a href="toolmanager.html">Tool Manager</a></li>
-                        <li><a href="emitters.html">Emitters</a></li>
-                        <li><a href="quickactions.html">Quick Actions</a></li>
-                        <li class="current"><a href="2Dtools.html">2D Tools</a></li>
-                        <li><a href="filemanager.html">File Manager</a></li>
-                        <li><a href="wordartist.html">Word Artist</a></li>
-                        <li><a href="gridpacker.html">Grid Packer</a></li>
-                    </ul>
 
-                    <p>
-                    [BPX] Blender Pixels <br>Extension Library
-                    <br>
-                    <br>
-                    &copy;2023 Luke Stilson
-                </p>
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp()"   class= "grid-button2">
+                        No, Thanks
+                        </a>
+                        </div>
+                     </div>
+                </div>
             </div>
 
-            <div class="main">
-                <h1>
-                    DOCUMENTATION
-                </h1>
+            
+				<script>
+                function openPopUp() {
+					document.getElementById("downloaddonate").style.display = "flex"
+					};
+                function closePopUp() {
+					document.getElementById("downloaddonate").style.display = "none"
+					};
+				</script>
 
-                <h2>
-                    2022 LUKE STILSON
-                </h2>
-
-                <p>
-                    Blender Pixel Perfect Python Extensions and Asset Library
-                    <br>
-                    Created by Luke Stilson 2022
-                </p>
-
-                <h2>
-                    TOOLS DOCUMENTATION
-                </h2>
-
-                <p>
-                    <h3>
-                    BPx 2D Tools
+            <div class="navmenu">
+                <div class="banner">
+                    <h3>             
+                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
                     </h3>
-		        <br>
+                </div>
+                    <ul class="nav">
+                        <li><a href="index.html">About Me</a></li>
+                        <li class="current"><a href="tools.html">Tools</a></li>
+                        <li ><a href="templates.html">Templates</a></li>
+                        <li ><a href="projects.html">Projects</a></li>
+                    </ul>
+                                                  <div onclick="openPopUp()"  id="donatepopup" class= "grid-button3">
+                              Donate &#8201
+                              <img class="downloadicon" src="images/donate.png">
+                              </div>
+                </div>
 
-                <video width="490" height="270" controls>
-                  <source src="images/2D.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
+            </div>
+                <div class="navmenu1">
+
+                    <ul class="nav">
+                        <li><a href="tools.html">Overview</a></li>
+                        <li ><a href="emitters.html">Emitters</a></li>
+                        <li  class="current" ><a href="2dtools.html">2D Tools</a></li>
+                        <li ><a href="wordartist.html">Word Artist</a></li>
+                        <li ><a href="quickactions.html">Quick Actions</a></li>
+                        <li ><a href="filemanager.html">File Manager</a></li>
+                    </ul>
+
+            </div>
+            <div class="main">
+
+
+
+                    <div class="grid">
+                        <div class= "center">
+
+                            <h2>             
+                                2D Tools
+                            </h2>
+
+                            <h3>
+                                Blender Add-on
+                             </h3>
+
+                            <div class = "grid-buttons">
+                            
+                                    <a href="downloads/2DTools.zip"  class= "grid-button">
+                                    Download BPx 2D Tools &#8201
+                                    <img class="downloadicon" src="images/downloadicon.png">
+                                    </a>
+                                    <p>
+                                    <em> Windows &#x2022 zip  &#x2022  173KB </em>
+                                    </p>
+                              
+
+                            </div>
+                            <br><br>
+
+                        </div>
+
+                        <div class= "center">
+
+
+                            <div class = "grid-buttons">
+                            <h1>
+                            System Requirements
+                            </h1>
+                            <p>
+                               Windows 11, 10, 8.1 <br> Blender 3.1.0 - 3.4.1
+                               </p>
+
+                            </div>
+                            <br><br>
+
+                        </div>
+
+
+
+                    </div>
+
+                    
+
+                <div class="container">
+
+            <div class="center3">
 
                 <img src="images/i2dcomp.png" alt="composition panel">
                 <br>
@@ -119,11 +201,18 @@
                 If canvas size (render resolution) or camera size (orthographic camera scale) is changed after adding 2D Layers, 
                 an error message will appear in the panel, with a button "Fix Pixel Size". Select each 2D layer individually, 
                 and click this button for each to make the pixel dimensions of the layer accurate to the render size.
-                
-                </p>
-            </div>
-        </div>
-    </div>
 
+                
+            </div>  
+            </div>
+<div class="footer">
+    &copy;2023 Luke Stilson | Blender Pixels <br>
+    GNU General Public License v3.0 
+</div>
 </body>
 </html>
+
+
+
+
+                
