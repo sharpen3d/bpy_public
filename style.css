@@ -42,6 +42,16 @@ background-color: #eee;
 	background-repeat: no-repeat;
 }
 
+.bgloop2{
+	position: absolute;
+	width:100%;
+	z-index: -1;
+	height: 100%;
+	top: 50px;
+	background-image: url("videos/bgloop2.gif");
+	background-repeat: no-repeat;
+}
+
 .footer{
 	position: flex;
 	align-items: center;
@@ -445,6 +455,16 @@ margin: auto;
 	flex-direction: column;
 	width: 300px;
 	align-items: center;	
+
+}
+
+.grid-buttons2{
+	display: flex;
+	flex-direction: row;
+	width: 800px;
+	align-items: flex-end;	
+	justify-content: flex-start;
+	margin-top: 15px;
 
 }
 

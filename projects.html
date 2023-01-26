@@ -8,48 +8,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
-    <div class= "wrapper">
-        <div class="content">
+            <div id="downloaddonate" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h1>
+                         Support Future Development
+                        </h1>
+                        <br>
+                        <p>
+                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
+                        </p>
+                        <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'Y352QSKHP2W96',
+                        image: {
+                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        </div>
 
-            <div class="navmenu">
-                <h3>
-                LUKE STILSON
-                </h3>
-                    <ul class="nav">
-                        <li><a href="index.html">Overview</a></li>
-                        <li ><a href="tools.html">Tools</a></li>
-                        <li ><a href="templates.html">Templates</a></li>
-                        <li class="current"><a href="projects.html">Projects</a></li>
-                    </ul>
 
-                    <p>
-                    [BPX] Blender Pixels <br>Extension Library
-                    <br>
-                    <br>
-                    &copy;2023 Luke Stilson<br>All Rights Reserved
-                </p>
+
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp()"   class= "grid-button2">
+                        No, Thanks
+                        </a>
+                        </div>
+                     </div>
+                </div>
             </div>
 
+            
+				<script>
+                function openPopUp() {
+					document.getElementById("downloaddonate").style.display = "flex"
+					};
+                function closePopUp() {
+					document.getElementById("downloaddonate").style.display = "none"
+					};
+				</script>
+
+            <div class="navmenu">
+                <div class="banner">
+                    <h3>             
+                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
+                    </h3>
+                </div>
+                    <ul class="nav">
+                        <li ><a href="index.html">About Me</a></li>
+                        <li ><a href="tools.html">Tools</a></li>
+                        <li ><a href="templates.html">Templates</a></li>
+                        <li class="current" ><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
 
             <div class="main">
 
 
 
+         <div class="grid">
+                        <div class= "center">
 
-                <div class="container">
-                    <div class="grid">
+                            <h2>             
+                                Project Showcase
+                            </h2>
+
+                            <h3>
+                                Luke Stilson | 2022
+                             </h3>
+
+                            <br><br>
+
+                        </div>
 
 
-                    <h2>
-             
-                        Project Showcase
-                    </h2>
+                    
 
-                    <div class = "grid-description">
-                    <div  class="grid-item-featured">
+            <div class="center3">
+
+
+                    <!--
+                    <div  class="center3">
 
                         <div class="grid-text">
                             <h3>
@@ -70,10 +123,10 @@
 
                         </div>
                     </div>
+                    -->
 
 
-                    <div class = "grid-description">
-                    <div  class="grid-item-featured">
+                    <div  class="center3">
 
                         <div class="grid-text">
                             <h3>
@@ -95,8 +148,7 @@
                         </div>
                     </div>
 
-                    <div class = "grid-description">
-                    <div  class="grid-item-featured">
+                    <div  class="center3">
 
                         <div class="grid-text">
                             <h3>
@@ -114,19 +166,12 @@
                                 Shaders on the sword are procedural stylized materials simulating reflected light, but in a way which is 
                                 exactly replicable in Unity.
                             </p>
+                        </div>
 
-                         <div class="grid-buttons">
 
-                        <a href="documentation.html" class= grid-button2>
-                        Learn More about BPx
-                        </a>
-                    </div>
-                    </div>
                     </div>
 
-                    <div class = "grid-description">
-                    <div  class="grid-item-featured">
-
+                    <div  class="center3">
                         <div class="grid-text">
                             <h3>
                                 RV Rig + Animation - Blender to Unity (Game-Ready Asset)
@@ -143,97 +188,63 @@
                                 I created multiple variations of each of these states and set the Gameobject up in Unity, complete with scripts for control and 
                                 a concise Animation Controller.
                             </p>
-                    </div>
+                        </div>
                     </div>
 
-                    <div class = "grid-description">
-                    <div  class="grid-item-featured">
+
+
+                    <div  class="center3">
 
                         <div class="grid-text">
                             <h3>
-                                Unity Trailing/Ghosting sprites technique with Amplify/Shadergraph
+                                Donut Generator
                             </h3>
 
                             <video width="95%" controls>
-                                <source src="videos/shadergraph.mp4" type="video/mp4">
+                                <source src="videos/donut.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
 
-                            <p class="grid-description2">
-                                I implemented this effect in a game, associating the speed of a moving sprite determining the distance and amount of 
-                                ghost trails. Created this to function with or without URP. This is an early video demo showing the parameters of the material 
-                                before scripts were attached to control this automatically.
+                            <p class="grid-description">
+                                I thought it fitting I make my donut while improving my skills in Geometry Nodes and Python Scripting. The entire mesh is being created within geometry nodes.
+                                    Although frequently changing and updating through recent versions of Blender, Geometry Nodes continue to be an incrediable resource. This is a project created 
+                                    to improve my understanding of the nodes. I have since gone on to write BPx Emitters and many other time-saving tools using a combonation of geometry nodes and 
+                                    a custom-scripted Python UI panel, as pictured here.
                             </p>
 
+
                         </div>
-                        </div>
-
-                        <div class = "grid-description">
-                        <div  class="grid-item-featured">
-
-                            <div class="grid-text">
-                                <h3>
-                                    Donut Generator
-                                </h3>
-
-                                <video width="95%" controls>
-                                    <source src="videos/donut.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-
-                                <p class="grid-description">
-                                    I thought it fitting I make my donut while improving my skills in Geometry Nodes and Python Scripting. The entire mesh is being created within geometry nodes.
-                                       Although frequently changing and updating through recent versions of Blender, Geometry Nodes continue to be an incrediable resource. This is a project created 
-                                       to improve my understanding of the nodes. I have since gone on to write BPx Emitters and many other time-saving tools using a combonation of geometry nodes and 
-                                       a custom-scripted Python UI panel, as pictured here.
-                                </p>
-
-
-                                <div class="grid-buttons">
-
-                                    <a href="https://github.com/sharpen3d/bpx/tree/main/Templates/Extras/donutGenerator" class= grid-button2>
-                                    Download Source From Github
-                                    </a>
-
-                                 </div>
-                            </div>
-                        </div>
-                        </div>
-
-                        <div class = "grid-description">
-                        <div  class="grid-item-featured">
-
-                            <div class="grid-text">
-                                <h3>
-                                    Mixed 2D/3D Animation in Blender
-                                </h3>
-
-                                <video width="95%" controls>
-                                    <source src="videos/wild.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-
-                                <p class="grid-description">
-                                    Using my BPx 2D Tools and Emitters panel, I have been experimenting with mixed 2D/3D Animation
-                                    using an orthographic camera. All particle systems, dollars, sparks, god rays- were created with my BPx Emitters addon.
-                                    Images for the vault door, lock symbol, etc were created in Illustrator and used via my BPx 2D tools addon.
-                                </p>
-
-
-                         <div class="grid-buttons">
-
-                        <a href="documentation.html" class= grid-button2>
-                        Learn More about BPx
-                        </a>
                     </div>
-                            </div>
-                        </div>
-                        </div>
 
-                </div>   
+                    <div  class="center3">
+
+                        <div class="grid-text">
+                            <h3>
+                                Mixed 2D/3D Animation in Blender
+                            </h3>
+
+                            <video width="95%" controls>
+                                <source src="videos/wild.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+
+                            <p class="grid-description">
+                                Using my BPx 2D Tools and Emitters panel, I have been experimenting with mixed 2D/3D Animation
+                                using an orthographic camera. All particle systems, dollars, sparks, god rays- were created with my BPx Emitters addon.
+                                Images for the vault door, lock symbol, etc were created in Illustrator and used via my BPx 2D tools addon.
+                            </p>
+
+                    </div>
+
             </div>
-        </div>
-    </div>
-
+<div class="footer">
+    &copy;2023 Luke Stilson | Projects <br>
+</div>
 </body>
 </html>
+
+
+
+
+
+

@@ -8,97 +8,158 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+<div class="bgloop2">
+</div>
 
-    <div class= "wrapper">
-        <div class="content">
+            <div id="downloaddonate" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h1>
+                         Support Future Development
+                        </h1>
+                        <br>
+                        <p>
+                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
+                        </p>
+                        <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'Y352QSKHP2W96',
+                        image: {
+                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        </div>
+
+
+
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp()"   class= "grid-button2">
+                        No, Thanks
+                        </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
+				<script>
+                function openPopUp() {
+					document.getElementById("downloaddonate").style.display = "flex"
+					};
+                function closePopUp() {
+					document.getElementById("downloaddonate").style.display = "none"
+					};
+				</script>
 
             <div class="navmenu">
-                <h3>
-                LUKE STILSON
-                </h3>
+                <div class="banner">
+                    <h3>             
+                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
+                    </h3>
+                </div>
                     <ul class="nav">
-                        <li><a href="index.html">Overview</a></li>
+                        <li ><a href="index.html">About Me</a></li>
                         <li ><a href="tools.html">Tools</a></li>
                         <li class="current"><a href="templates.html">Templates</a></li>
                         <li ><a href="projects.html">Projects</a></li>
                     </ul>
-
-                    <p>
-                    [BPX] Blender Pixels <br>Extension Library
-                    <br>
-                    <br>
-                    &copy;2023 Luke Stilson<br>All Rights Reserved
-                </p>
-            </div>
+                              <div onclick="openPopUp()"  id="donatepopup" class= "grid-button3">
+                              Donate &#8201
+                              <img class="downloadicon" src="images/donate.png">
+                              </div>
+                </div>
 
             <div class="main">
 
 
 
+         <div class="grid">
+                        <div class= "center">
+
+                            <h2>             
+                                Blender Templates
+                            </h2>
+
+                            <h3>
+                                Get Organized
+                             </h3>
+
+                            <br><br>
+
+                        </div>
+
+
+                    
 
                 <div class="container">
-                    <div class="grid">
 
-                    <h2>
-             
-                        Template Files - Blender
-                    </h2>
+            <div class="center3">
 
+                    <div class = "grid">
 
-                    <div class = "">
+                    
+                                            <div class = "">
                         <h3>
                             About Template Files
                         </h3>
                         <br>
                         <p >
-                            Template files listed below are Blender files tailored for technical us in various situations, set up with custom window layouts, scripts and assets built-in 
-                            for specific usage. Templates have been designed to speed up your workflow, increase productivity, and reduce clicks. Download individual templates, or branch 
-                            the templates folder from GitHub for access to continous updates.
+                            Template files listed below are Blender files tailored for technical us in various situations, set up with internal scripts and window layouts.
+                            Templates have been designed to speed up your workflow, increase productivity, and reduce clicks.
                         </p>
-
+                        <br>
                     </div>
-                     <div class = "grid-description">
-                    <div  class="grid-item-featured">
+                         <div class = "grid-description">
+                                <div  class="center3">
+                                        <img class="grid-image" src="images/rendercontrol.png">
 
-                            <img class="grid-image" src="images/rendercontrol.png">
+                                        <div class="grid-text">
+                                            <h3>
+                                                Render Controller
+                                            </h3>
+                                            <p class="grid-description">
+                                                Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files.
+                                                Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI.
+                                                Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker.
+                                                Quick-open any referenced .blend files.
+                                                Built specifically for TexturePacker use with Unity.
+                                            </p>
 
-                            <div class="grid-text">
-                                <h3>
-                                    Render Controller
-                                </h3>
-                                <p class="grid-description">
-                                    Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files.
-                                    Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI.
-                                    Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker.
-                                    Quick-open any referenced .blend files.
-                                    Built specifically for TexturePacker use with Unity.
-                                </p>
+                                            <div class="grid-buttons2">
 
-                                <div class="grid-buttons">
+                                                <a href="https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend" class= grid-button>
+                                                Download
+                                                </a>
 
-                                    <a href="https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend" class= grid-button>
-                                    Download
-                                    </a>
-
-                                    <a href="emitters" class= grid-button2>
-                                    Documentation
-                                    </a>
-                                 </div>
-                            </div>
-                        </div>
-                        </div>
-
-
-
-
-
-                    </div>
-                </div>   
+                                                <a href="emitters" class= grid-button2>
+                                                Documentation
+                                                </a>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </div>            
+                    </div>  
             </div>
-        </div>
-    </div>
-
+<div class="footer">
+    &copy;2023 Luke Stilson | Blender Template Files <br>
+    GNU General Public License v3.0 
+</div>
 </body>
 </html>
+
+
+
