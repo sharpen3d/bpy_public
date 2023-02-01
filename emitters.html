@@ -55,12 +55,44 @@
             </div>
 
             
+            <div id="thankyou" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h2>
+                         Thank You
+                        </h2>
+                        <br>
+                        <p>
+                        Your download should begin shortly
+                        </p>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp1()"   class= "grid-button2">
+                        close
+                        </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
 				<script>
                 function openPopUp() {
 					document.getElementById("downloaddonate").style.display = "flex"
 					};
                 function closePopUp() {
 					document.getElementById("downloaddonate").style.display = "none"
+					};
+                function openPopUp1() {
+					document.getElementById("thankyou").style.display = "flex"
+					};
+                function closePopUp1() {
+					document.getElementById("thankyou").style.display = "none"
 					};
 				</script>
 
@@ -91,7 +123,7 @@
                         <li  ><a href="2dtools.html">2D Tools</a></li>
                         <li ><a href="wordartist.html">Word Artist</a></li>
                         <li ><a href="quickactions.html">Quick Actions</a></li>
-                        <li ><a href="">File Manager</a></li>
+                        <li ><a href="filemanager.html">File Manager</a></li>
                     </ul>
 
             </div>
@@ -112,7 +144,7 @@
 
                             <div class = "grid-buttons">
                             
-                                    <a href="downloads/BPx Emitters.zip"  class= "grid-button">
+                                    <a onclick="openPopUp1()" href="downloads/BPx Emitters.zip"  class= "grid-button">
                                     Download BPx Emitters &#8201
                                     <img class="downloadicon" src="images/downloadicon.png">
                                     </a>
@@ -148,16 +180,25 @@
 
                     
 
-                <div class="container">
-
-            <div class="center3">
-
-            	<p>
-                Documentation coming soon...
-                </p>
-             
-            </div>  
-            </div>
+                <div class="grid">
+                
+                 <div class = "">
+                                <!--     <img src="gifs/explo.gif" alt=""> -->
+                        <h3>
+                            Included Custom Node-Groups
+                        </h3>
+                        <p >
+                            These node-groups were specifically designed to help build and create options for particle and VFX flexibility.
+                        </p>
+                    </div>
+                     </div>
+                
+                    <div class="">
+                        <img src="images/emitters/nodegroups.png" alt="">
+                            <img src="images/emitters/0013.png" alt="">
+                            <img src="images/emitters/0014.png" alt="">
+                            <img src="images/emitters/0015.png" alt="">
+                        </div>
 <div class="footer">
     &copy;2023 Luke Stilson | Blender Pixels <br>
     GNU General Public License v3.0 

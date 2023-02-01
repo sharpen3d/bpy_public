@@ -447,7 +447,7 @@ margin: auto;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  box-shadow: 0px 0px 30px RGBA(0,0,0,0.2);
+
 }
 
 .grid-buttons{
@@ -714,4 +714,10 @@ align-items: center;
   text-align: center;
   text-decoration: none;
   margin: 15px;
+}
+
+.emitterimg{
+	display:flex;
+	transform: scale(.1)
+
 }

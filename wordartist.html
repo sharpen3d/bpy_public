@@ -55,12 +55,44 @@
             </div>
 
             
+            <div id="thankyou" class="modal" style="display: none;">
+                <div class="popup">
+                <img src="images/donate.png">
+                <br>
+                    <div class="center2">
+                        <h2>
+                         Thank You
+                        </h2>
+                        <br>
+                        <p>
+                        Your download should begin shortly
+                        </p>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class = "grid-buttons">
+                        <a onclick="closePopUp1()"   class= "grid-button2">
+                        close
+                        </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
 				<script>
                 function openPopUp() {
 					document.getElementById("downloaddonate").style.display = "flex"
 					};
                 function closePopUp() {
 					document.getElementById("downloaddonate").style.display = "none"
+					};
+                function openPopUp1() {
+					document.getElementById("thankyou").style.display = "flex"
+					};
+                function closePopUp1() {
+					document.getElementById("thankyou").style.display = "none"
 					};
 				</script>
 
@@ -112,7 +144,7 @@
 
                             <div class = "grid-buttons">
                             
-                                    <a href="downloads/WordArtist.zip"  class= "grid-button">
+                                    <a onclick="openPopUp1()" href="downloads/WordArtist.zip"  class= "grid-button">
                                     Download BPx WordArtist &#8201
                                     <img class="downloadicon" src="images/downloadicon.png">
                                     </a>
