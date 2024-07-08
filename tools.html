@@ -13,6 +13,120 @@
 </head>
 
 <body>
+<div  id="hiddenresume" class="popup">
+<div class="resume">
+<div class="leftalign">
+    <a href="" class="grid-button">
+    Download as PDF
+    </a>
+    <a href="" class="grid-button2">
+    close
+    </a>
+</div>
+    <h1>Luke Stilson</h1>
+    <h2>Technical Artist</h2>
+
+    <div class="contact-info">
+        <h3>Contact Information:</h3>
+        <ul>
+            <li><strong>Phone:</strong> 779-537-0794</li>
+            <li><strong>Email:</strong> <a href="mailto:stilson.luke@gmail.com">stilson.luke@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-stilson">www.linkedin.com/in/luke-stilson</a></li>
+            <li><strong>Portfolio / Personal Site:</strong> <a href="https://www.lukestilson.com">www.lukestilson.com</a></li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h3>Summary:</h3>
+        <p>Technical Artist with extensive experience in custom tools creation for studio art workflows, shader creation, optimization, game development, and pipeline creation. Adept at bridging the gap between artists and programmers with a strong focus on asset prep and delivery, particle systems, game art optimization, rendering, animation, shader design, and sound design.</p>
+    </div>
+
+    <div class="skills">
+        <h3>Top Skills:</h3>
+        <ul>
+            <li><strong>Tools design for game art:</strong> Python, C#, C++, Blender geometry nodes, Unreal blueprints</li>
+            <li><strong>Shader design and integration:</strong> Substance, Shadergraph, node-based shaders, OpenGL</li>
+            <li><strong>Asset prep and optimization:</strong> pipeline tools, animation setup, gameplay prototyping</li>
+        </ul>
+    </div>
+
+    <div class="experience">
+        <h3>Experience:</h3>
+        
+        <div class="experience-item">
+            <h4>OnChain Studios</h4>
+            <h5>Technical Artist</h5>
+            <p>February 2023 - Present</p>
+            <ul>
+                <li>Asset prep and delivery optimization for Unity</li>
+                <li>Unity asset pipeline creation using OpenPype and Ayon</li>
+                <li>Animation controller design and integration</li>
+                <li>Shader design and optimization using Substance Designer and ShaderGraph</li>
+                <li>Gameplay and real-time cinematic development and rendering</li>
+                <li>VFX design and integration</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Arrow International, Inc.</h4>
+            <h5>Lead Technical Artist</h5>
+            <p>August 2020 - February 2023</p>
+            <ul>
+                <li>Bridged the gap between artists and programmers, leading meetings on structure, pipeline, and organization</li>
+                <li>Converted art assets into game-ready assets, compositing EXR files, prepping rigged models, and creating scene layouts using Blender, Maya, Substance, and Adobe tools for Unity</li>
+                <li>Developed and documented tools for artists and programmers to improve workflow, including Blender Python addons, Unity C# scripts, and GLSL & node-based shaders</li>
+                <li>Prepared and implemented shaders, scene layouts, and gameplay interactions using Animation Controllers and C#</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>ONEFIRE, Inc.</h4>
+            <h5>3D Generalist, Gameplay Programmer</h5>
+            <p>July 2017 - January 2020 (on contract basis)</p>
+            <ul>
+                <li>Pitch, design, and develop advertising games from start to finish using Unreal Engine</li>
+                <li>Designed props, game-ready materials, shaders and UI for Unity and Unreal Engine</li>
+                <li>Created 2D and 3D content for mobile, AR and VR games</li>
+                <li>Created digital music and sound effects for games</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Float</h4>
+            <h5>Designer</h5>
+            <p>July 2017 - February 2018</p>
+            <ul>
+                <li>Created 2D, 3D, and Vector graphic elements for mobile learning applications</li>
+                <li>Designed UI for high-profile client websites and apps</li>
+                <li>Assisted in establishing ideal user flow with regards to UI/UX using flow charts</li>
+                <li>Managed content with CMS tools and GitHub</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>The Iona Group</h4>
+            <h5>Animator / Front-End Developer</h5>
+            <p>July 2017 - February 2018</p>
+            <ul>
+                <li>Created branded informative animations for various clients</li>
+                <li>Designed and pitched detailed storyboarded animations to clients</li>
+                <li>Developed atomic web elements using Twig, SCSS and JavaScript</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="education">
+        <h3>Education:</h3>
+        
+        <div class="education-item">
+            <h4>Bradley University</h4>
+            <p>Bachelor of Science in Game and Interactive Media Design, Music</p>
+            <p>2013 - 2017</p>
+        </div>
+    </div>
+</div>
+</div>
+
     <div class="bgloop"></div>
     <div id="dynamicModal" class="modal" style="display: none;">
         <div class="popup">
@@ -282,6 +396,14 @@
             document.getElementById("moreprojectsbutton").style.display = "flex";
             document.getElementById("lessprojectsbutton").style.display = "none";
         }
+
+        function showResume(){
+            document.getElementById("hiddenresume").style.display = "flex";
+        }
+        function hideResume(){
+            document.getElementById("hiddenresume").style.display = "none";
+        }
+
     </script>
     <div class="navmenu">
         <div class="banner">
@@ -289,10 +411,20 @@
                 LUKE STILSON &#x2022 TECHNICAL ART
             </h3>
         </div>
+        <!--
         <ul class="nav">
             <li><a href="index.html">Contact</a></li>
-            <li class="current"><a href="projects.html">Showcase</a></li>
+            <li class="current"><a href="tools.html">Showcase</a></li>
         </ul>
+                -->
+        <div class="grid">
+        <div onclick="showResume()" class="grid-button">
+        Resume
+        </div>
+        <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">
+        Contact
+        </a>
+        </div>
     </div>
     <div class="width">
         <div class="main">
@@ -341,7 +473,7 @@
                 </div>
                 <div class="center3">
                     <p>
-                        I am proficient with industry-standard tools such as Substance Painter, Substance Designer, Maya, Photoshop, and AfterEffects; however, I primarily showcase work made in Blender because of its full scriptability, integrated Python environment, and the avoidance of data collection and fees. This aligns with my belief in bringing high-quality tools to the greater artist community and completely owning the tools and work I create.
+                        I primarily showcase work made in Blender because of its full scriptability, integrated Python environment, and the avoidance of data collection and fees. This aligns with my belief in bringing high-quality tools to the greater artist community and completely owning the tools and work I create.
                     </p>
                 </div>
             </div>
@@ -450,11 +582,13 @@
             </div>
         </div>
     </div>
-    <div onclick="moreTools()" id="moretoolsbutton" class="grid-button">
-    Show more
-    </div>
-    <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
-    Show less
+    <div class="rightalign">
+        <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
+        Show more
+        </div>
+        <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
+        Show less
+        </div>
     </div>
             <div class="">
                 <div class="width">
@@ -542,22 +676,24 @@
                     </div>
                 </div>
             </div>
-            <div onclick="moreGames()" id="moregamesbutton" class="grid-button">
-                Show more games
-            </div>
-            <div onclick="lessGames()" id="lessgamesbutton" class="grid-button2">
-                Show less games
+            <div class="rightalign">
+                <div onclick="moreGames()" id="moregamesbutton" class="grid-button2">
+                    Show more
+                </div>
+                <div onclick="lessGames()" id="lessgamesbutton" class="grid-button2">
+                    Show less
+                </div>
             </div>
             <div class="grid">
                 <div class="center">
                     <h2>
-                        Experimental
+                        Research &
                     </h2>
                     <h3>
-                        Works
+                        Development
                     </h3>
                     <em>
-                        Geometry Nodes | Shader Design | VFX
+                        Geometry Nodes | Python Tools | Experiments
                     </em>
                 </div>
                 <div class="center3">
@@ -646,11 +782,13 @@
                     </div>
                 </div>
             </div>
-            <div onclick="moreProjects()" id="moreprojectsbutton" class="grid-button">
-                Show more projects
-            </div>
-            <div onclick="lessProjects()" id="lessprojectsbutton" class="grid-button2">
-                Show less projects
+            <div class="rightalign">
+                <div onclick="moreProjects()" id="moreprojectsbutton" class="grid-button2">
+                    Show more
+                </div>
+                <div onclick="lessProjects()" id="lessprojectsbutton" class="grid-button2">
+                    Show less
+                </div>
             </div>
     <div class="footer">
         &copy;2024 Luke Stilson 2024<br>

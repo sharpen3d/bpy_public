@@ -12,6 +12,15 @@ font-family: titlefont;
 src: url("fonts/ShareTechMono.ttf");
 }
 
+.rightalign{
+width: 100%;
+	max-width: 1500px;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	margin-bottom: 100px;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -246,22 +255,31 @@ height: 600px;
 
 }
 
+.resume{
+	padding:60px;
+}
+
+#hiddenresume{
+	display:none;
+	z-index:5;
+}
 
 .popup{
-    width: 80%;
+width: 80%;
     padding: 20px;
     height: 80%;
     position: fixed;
     top: 100px;
     border-radius: 15px;
     background-color: #fff;
-    display: block;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    /* z-index: 5; */
+    z-index: 5;
     box-shadow: 0px 2px 40px RGBA(0, 0, 0, 0.4);
-	            overflow-y: auto;
+    overflow-y: auto;
+    flex-wrap: nowrap;
 }
 
 
@@ -904,4 +922,61 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+}
+
+
+.contact-info, .experience, .education, .summary, .skills {
+    margin-bottom: 20px;
+}
+
+.contact-info ul, .skills ul, .experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+.contact-info li, .skills li, .experience li {
+    margin-bottom: 5px;
+}
+.experience-item, .education-item {
+    margin-bottom: 5px;
+}
+
+.resume{
+	max-width:800px;
+}
+
+.resume li {
+	font-size: 12px;
+}
+
+.experience-item h5 {
+	margin: 0;
+	padding: 0;
+}
+
+.experience-item h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.resume h4 {
+	padding: 0;
+	margin: 0;
+}
+
+.resume h2 {
+	padding: 0;
+}
+
+.resume p {
+	padding-bottom: 0;
+}
+
+.leftalign{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.leftalign .grid-button2{
+	margin-bottom: 50px;
 }
