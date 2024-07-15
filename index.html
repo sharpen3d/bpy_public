@@ -1,146 +1,890 @@
-ï»¿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Tools By Luke Stilson</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 1550px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="bgloop1">
+<div  id="hiddenresume" class="popup">
+     <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">close</span> </a>
+    <div class="center-left">
+    <a href="https://github.com/sharpen3d/bpy_public/raw/4179a2e7feca3adc84ca6ef78215628a3835bba4/downloads/LukeStilsonResume2024.pdf" class="grid-button">
+    Download as PDF
+    </a>
+</div>
+<div class="resume">
+    <h1>Luke Stilson</h1>
+    <h2>Technical Artist</h2>
+
+    <div class="contact-info">
+        <h3>Contact Information:</h3>
+        <ul>
+            <li><strong>Phone:</strong> 779-537-0794</li>
+            <li><strong>Email:</strong> <a href="mailto:stilson.luke@gmail.com">stilson.luke@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-stilson">www.linkedin.com/in/luke-stilson</a></li>
+            <li><strong>Portfolio / Personal Site:</strong> <a href="https://www.lukestilson.com">www.lukestilson.com</a></li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h3>Summary:</h3>
+        <p>Technical Artist with extensive experience in custom tools creation for studio art workflows, shader creation, optimization, game development, and pipeline creation. Adept at bridging the gap between artists and programmers with a strong focus on asset prep and delivery, particle systems, game art optimization, rendering, animation, shader design, and sound design.</p>
+    </div>
+
+    <div class="skills">
+        <h3>Top Skills:</h3>
+        <ul>
+            <li><strong>Tools design for game art:</strong> Python, C#, C++, Blender geometry nodes, Unreal blueprints</li>
+            <li><strong>Shader design and integration:</strong> Substance, Shadergraph, node-based shaders, OpenGL</li>
+            <li><strong>Asset prep and optimization:</strong> pipeline tools, animation setup, gameplay prototyping</li>
+        </ul>
+    </div>
+
+    <div class="experience">
+        <h3>Experience:</h3>
+        
+        <div class="experience-item">
+            <h4>OnChain Studios</h4>
+            <h5>Technical Artist</h5>
+            <p>February 2023 - Present</p>
+            <ul>
+                <li>Asset prep and delivery optimization for Unity</li>
+                <li>Unity asset pipeline creation using OpenPype and Ayon</li>
+                <li>Animation controller design and integration</li>
+                <li>Shader design and optimization using Substance Designer and ShaderGraph</li>
+                <li>Gameplay and real-time cinematic development and rendering</li>
+                <li>VFX design and integration</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Arrow International, Inc.</h4>
+            <h5>Lead Technical Artist</h5>
+            <p>August 2020 - February 2023</p>
+            <ul>
+                <li>Bridged the gap between artists and programmers, leading meetings on structure, pipeline, and organization</li>
+                <li>Converted art assets into game-ready assets, compositing EXR files, prepping rigged models, and creating scene layouts using Blender, Maya, Substance, and Adobe tools for Unity</li>
+                <li>Developed and documented tools for artists and programmers to improve workflow, including Blender Python addons, Unity C# scripts, and GLSL & node-based shaders</li>
+                <li>Prepared and implemented shaders, scene layouts, and gameplay interactions using Animation Controllers and C#</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>ONEFIRE, Inc.</h4>
+            <h5>3D Generalist, Gameplay Programmer</h5>
+            <p>July 2017 - January 2020 (on contract basis)</p>
+            <ul>
+                <li>Pitch, design, and develop advertising games from start to finish using Unreal Engine</li>
+                <li>Designed props, game-ready materials, shaders and UI for Unity and Unreal Engine</li>
+                <li>Created 2D and 3D content for mobile, AR and VR games</li>
+                <li>Created digital music and sound effects for games</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Float</h4>
+            <h5>Designer</h5>
+            <p>July 2017 - February 2018</p>
+            <ul>
+                <li>Created 2D, 3D, and Vector graphic elements for mobile learning applications</li>
+                <li>Designed UI for high-profile client websites and apps</li>
+                <li>Assisted in establishing ideal user flow with regards to UI/UX using flow charts</li>
+                <li>Managed content with CMS tools and GitHub</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>The Iona Group</h4>
+            <h5>Animator / Front-End Developer</h5>
+            <p>July 2017 - February 2018</p>
+            <ul>
+                <li>Created branded informative animations for various clients</li>
+                <li>Designed and pitched detailed storyboarded animations to clients</li>
+                <li>Developed atomic web elements using Twig, SCSS and JavaScript</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="education">
+        <h3>Education:</h3>
+        
+        <div class="education-item">
+            <h4>Bradley University</h4>
+            <p>Bachelor of Science in Game and Interactive Media Design, Music</p>
+            <p>2013 - 2017</p>
+        </div>
+    </div>
+</div>
 </div>
 
-            <div id="downloaddonate" class="modal" style="display: none;">
-                <div class="popup">
-                <img src="images/donate.png">
+    <div class="bgloop1"></div>
+
+    <div id="dynamicModal" class="modal" style="display: none;">
+        <div class="navmenu2">
+                 <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">arrow_back</span></a>  
+ 
+                 </div>
+        <div class="modalcontainer">
+
+            <div class="modal-left">
+
+                <video autoplay loop muted id="modalVideo" controls style="display:none;"></video>
+                <div class="center3b">
+                    <h2 id="modalTitle" class="white"></h2>
+                    <p id="modalDescription" class="white"></p>
+                </div>
+
+                <div class="grid">
+
+                   
+
+                    <div class="grid" id="modalButtons">
+
+                        <!-- Buttons will be inserted here -->
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="popup">
                 <br>
-                    <div class="center2">
-                        <h1>
-                         Support Future Development
-                        </h1>
-                        <br>
-                        <p>
-                        Your donation goes directly towards the supply of coffee<br> needed to continue to develop and improve <br> add-ons, templates and demos.
-                        </p>
-                        <div id="donate-button-container">
-                        <div id="donate-button"></div>
-                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                        <script>
-                        PayPal.Donation.Button({
-                        env:'production',
-                        hosted_button_id:'Y352QSKHP2W96',
-                        image: {
-                        src:'https://pics.paypal.com/00/s/MzQzY2IzMDktMGNkMC00NGJhLWJiZDQtZjg5YTExZTYyYjMx/file.PNG',
-                        alt:'Donate with PayPal button',
-                        title:'PayPal - The safer, easier way to pay online!',
-                        }
-                        }).render('#donate-button');
-                        </script>
-                        </div>
-
-
-
-
-                        <div class = "grid-buttons">
-                        <a onclick="closePopUp()"   class= "grid-button2">
-                        X
-                        </a>
-                        </div>
-                     </div>
-                </div>
-            </div>
-
-            
-				<script>
-                function openPopUp() {
-					document.getElementById("downloaddonate").style.display = "flex"
-					};
-                function closePopUp() {
-					document.getElementById("downloaddonate").style.display = "none"
-					};
-				</script>
-
-            <div class="navmenu">
-                <div class="banner">
-                    <h3>             
-                    LUKE STILSON &#x2022 TECHNICAL ART &#x2022 VISUAL EFFECTS
-                    </h3>
-                </div>
-                    <ul class="nav">
-                        <li class="current"><a href="index.html">About Me</a></li>
-                        <li ><a href="tools.html">Tools</a></li>
-                        <li ><a href="templates.html">Templates</a></li>
-                        <li ><a href="projects.html">Projects</a></li>
-                    </ul>
-                                                  <div onclick="openPopUp()"  id="donatepopup" class= "grid-button3">
-                              Donate &#8201
-                              <img class="downloadicon" src="images/donate.png">
-                              </div>
-                </div>
-
-            <div class="main">
-
-
-                    <div class="grid">
-                        <div class= "center5">
-
-
-
-                            <h2>             
-                                LUKE STILSON <br>
-                                TECHNICAL ARTIST
-                            </h2>
-                                 
-                            <br><br>
-
-                        </div>
-
-                        <div class= "center4">
-
-
-                            <div class = "profile">
-                            <h1>
-                            About Me
-                            </h1>
-                                                        <p>
-                                I have created art and digital media for games, apps, VR experiences, and visualizations, as well as programming production tools and assets for Blender, Unity and Unreal.
-                                Currently working as a Technical Artist, based in in Raleigh, NC.
-                            </p>  
-
-                            </div>
-                            <br><br>
-
-                        </div>
-
-
-
+                <div class="center2">
+                    <div class="grid-text">
+                    <h3> Showcase: </h3>
                     </div>
-
-                    
-
-                <div class="container">
-
-            <div class="center3">
-
-                    <div class = "grid">
-
-                    
-                        <div class = "grid-description">
-
-
-
-                        </div>
-                        <a href="https://www.youtube.com/c/LukeStilson" class="fa fa-youtube"></a>
-                         <a href="https://www.linkedin.com/in/luke-stilson/" class="fa fa-linkedin"></a>
-                         <a href="https://www.instagram.com/3d_luke/" class="fa fa-instagram"></a>
+                
+                    <div class="grid" id="modalImages">
+                        <!-- Images will be inserted here -->
                     </div>
-             
+                </div>
             </div>  
+        </div>
+    </div>
+</div>
+
+    <script>
+        const projectData = {
+            "minesweeperRemastered": {
+                title: "Minesweeper Remastered",
+                videoSrc: "videos/minesweeper.mp4",
+                description: "UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.",
+                images: [
+                    { src: "images/minesweeper1.png", caption: "Image 1 caption" },
+                    { src: "images/minesweeper4.png", caption: "Image 2 caption" },
+                    { src: "images/minesweeper3.png", caption: "Image 3 caption" },
+                    { src: "images/minemat0000.png", caption: "Image 4 caption" },
+                    { src: "images/minemat0001.png", caption: "Image 5 caption" },
+                    { src: "images/minemat0002.png", caption: "Image 6 caption" },
+                    { src: "images/minemat0003.png", caption: "Image 7 caption" }
+                ]
+            },
+                "textureLab": {
+                title: "Texture Laboratory",
+                videoSrc: "videos/texlab.mp4",
+                description: "TexLab is a Blender add-on that provides tools for managing and exporting procedurally-created materials to standard game engine PBR texture maps. It allows users to create detailed normal, roughness, metallic, emission, basecolor and opacity maps with a non-destructive workflow. This has been created as a flexible alternative to the Adobe Substance suite.",
+                images: [
+                    { src: "images/texlab/0.png", caption: "A seamless clover ground texture made with TexLab on a material sphere" },
+                    { src: "images/texlab/1.png", caption: "Viewport view of clover texture, viewing top-down normal in 2D space" },
+                    { src: "images/texlab/2.png", caption: "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material" }
+                ],
+                downloadLink: "downloads/minesweeper.zip",
+                externalLink: "https://example.com"
+            },
+                "bpxemitters": {
+                title: "Bpx Emitters",
+                videoSrc: "videos/emitters.mp4",
+                description: "This Blender addon provides a custom geometry node system and python control panel to create and manage precalculated geometry-based particle effects for EEVEE rendering with real-time editing workflow. The addon includes tools for adding emitters, sprite emitters, dynamic particle materials, and configuring various particle attributes such as spawn rate, lifetime, speed, scale, rotation, and color. In addition to the custom control panel, powerful included geometry node-groups provide endless modification and attribute access.",
+                images: [
+                    { src: "images/emitters/0.png", caption: "Custom emitters panel section 1, spawn attributes" },
+                    { src: "images/emitters/1.png", caption: "Custom emitters panel section 2, behavior control" },
+                    { src: "images/emitters/2.png", caption: "Custom emitters panel section 3, rendering" },
+                ],
+                downloadLink: "downloads/minesweeper.zip",
+                externalLink: "https://example.com"
+            },
+                "rendercontroller": {
+                title: "Render Controller",
+                description: "Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "Pixels": {
+                title: "Blender Pixels (Bpx)",
+                videoSrc: "videos/pixels.mp4",
+                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blender’s 3D Viewport UI, adding custom panels and menus for easy access to its functions.",
+                images: [
+                    { src: "images/pixels/0.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/1.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/2.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/3.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/4.png", caption: "Image 1 caption" }
+                ],
+                downloadLink: "downloads/minesweeper.zip",
+                externalLink: "https://example.com"
+            },
+                "quickactions": {
+                title: "Bpx Quickactions",
+                videoSrc: "videos/quickactions.mp4",
+                description: "quickactions description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "wordartist": {
+                title: "Bpx Wordartist",
+                videoSrc: "videos/wordartist.mp4",
+                description: "wordartist description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "filemanager": {
+                title: "Bpx File Manager",
+                videoSrc: "videos/filemanager.mp4",
+                description: "filemanager description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "terminallauncher": {
+                title: "MacOS Terminal Launcher",
+                videoSrc: "videos/filemanager.mp4",
+                description: "Terminal Launcher description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "blink": {
+                title: "BLiNK",
+                videoSrc: "videos/filemanager.mp4",
+                description: "BLiNK description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "hexscapes": {
+                title: "HexScapes",
+                videoSrc: "videos/filemanager.mp4",
+                description: "Hexscapes description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "die": {
+                title: "Die!",
+                videoSrc: "videos/filemanager.mp4",
+                description: "Die description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "hellomotovr": {
+                title: "HelloMotoVR",
+                videoSrc: "videos/filemanager.mp4",
+                description: "HelloMotoVR description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "donutgenerator": {
+                title: "Donut Generator",
+                videoSrc: "videos/donut.mp4",
+                description: "donutgenerator description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "vatcreator": {
+                title: "Vertex Animated Texture Creator",
+                videoSrc: "videos/vat.mp4",
+                description: "donutgenerator description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "audiovisualizer": {
+                title: "Geometry Node Audio Visualizer",
+                videoSrc: "videos/visualizer.mp4",
+                description: "visualizer description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "loopparticles": {
+                title: "Looping Particles with Geometry Nodes",
+                videoSrc: "videos/particles.mp4",
+                description: "visualizer description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "spritesheetworkflow": {
+                title: "Spritesheet Workflows",
+                description: "spritesheet description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            },
+                "blenderndo": {
+                title: "Blender 'NDO'",
+                description: "blender ndo description",
+                images: [
+                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                ]
+            }
+        };
+
+function openPopUp(projectKey) {
+    const project = projectData[projectKey];
+    document.getElementById("modalTitle").innerText = project.title;
+    const modalVideo = document.getElementById("modalVideo");
+    if (project.videoSrc) {
+        modalVideo.src = project.videoSrc;
+        modalVideo.style.display = "block";
+    } else {
+        modalVideo.style.display = "none";
+    }
+    document.getElementById("modalDescription").innerText = project.description;
+
+    const modalImagesContainer = document.getElementById("modalImages");
+    modalImagesContainer.innerHTML = "";
+    project.images.forEach(image => {
+        const imageContainer = document.createElement("div"); // Create a new div for each image and caption
+        imageContainer.classList.add("image-container"); // Add a class for styling purposes
+
+        const imgElement = document.createElement("img");
+        imgElement.src = image.src;
+        imgElement.alt = image.caption;
+        imgElement.classList.add("projectimage");
+
+        const captionElement = document.createElement("p");
+        captionElement.innerText = image.caption;
+
+        imageContainer.appendChild(imgElement); // Append the image to the div
+        imageContainer.appendChild(captionElement); // Append the caption to the div
+
+        modalImagesContainer.appendChild(imageContainer); // Append the div to the container
+    });
+
+            const modalButtonsContainer = document.getElementById("modalButtons");
+            modalButtonsContainer.innerHTML = "";
+            if (project.downloadLink) {
+                const downloadButton = document.createElement("a");
+                downloadButton.href = project.downloadLink;
+                downloadButton.innerText = "Download" ;
+                downloadButton.classList.add("grid-button2");
+                modalButtonsContainer.appendChild(downloadButton);
+                const downloadIcon = document.createElement("span");
+                downloadIcon.innerText = "download" ;
+                downloadIcon.classList.add("material-symbols-outlined");
+                downloadButton.appendChild(downloadIcon);
+            }                 
+            if (project.externalLink) {
+                const externalButton = document.createElement("a");
+                externalButton.href = project.externalLink;
+                externalButton.innerText = "Documentation";
+                externalButton.classList.add("grid-button2");
+                externalButton.target = "_blank";
+                modalButtonsContainer.appendChild(externalButton);
+                const downloadIcon = document.createElement("span");
+                downloadIcon.innerText = "article_shortcut" ;
+                downloadIcon.classList.add("material-symbols-outlined");
+                externalButton.appendChild(downloadIcon);
+            }
+
+            document.getElementById("dynamicModal").style.display = "flex";
+        }
+
+        function closePopUp() {
+            document.getElementById("dynamicModal").style.display = "none";
+        }
+
+        function moreTools(){
+            document.getElementById("hiddentools").style.display = "flex";
+            document.getElementById("moretoolsbutton").style.display = "none";
+            document.getElementById("lesstoolsbutton").style.display = "flex";
+        }
+
+        function lessTools(){
+            document.getElementById("hiddentools").style.display = "none";
+            document.getElementById("moretoolsbutton").style.display = "flex";
+            document.getElementById("lesstoolsbutton").style.display = "none";
+        }
+
+        function moreGames(){
+            document.getElementById("hiddengames").style.display = "flex";
+            document.getElementById("moregamesbutton").style.display = "none";
+            document.getElementById("lessgamesbutton").style.display = "flex";
+        }
+
+        function lessGames(){
+            document.getElementById("hiddengames").style.display = "none";
+            document.getElementById("moregamesbutton").style.display = "flex";
+            document.getElementById("lessgamesbutton").style.display = "none";
+        }
+
+        function moreProjects(){
+            document.getElementById("hiddenprojects").style.display = "flex";
+            document.getElementById("moreprojectsbutton").style.display = "none";
+            document.getElementById("lessprojectsbutton").style.display = "flex";
+        }
+
+        function lessProjects(){
+            document.getElementById("hiddenprojects").style.display = "none";
+            document.getElementById("moreprojectsbutton").style.display = "flex";
+            document.getElementById("lessprojectsbutton").style.display = "none";
+        }
+
+        function showResume(){
+            document.getElementById("hiddenresume").style.display = "flex";
+        }
+        function hideResume(){
+            document.getElementById("hiddenresume").style.display = "none";
+        }
+
+    </script>
+    <div class="navmenu">
+        <div class="banner">
+            <h3>
+                LUKE STILSON &#x2022 TECHNICAL ART
+            </h3>
+        </div>
+        <!--
+        <ul class="nav">
+            <li><a href="index.html">Contact</a></li>
+            <li class="current"><a href="tools.html">Showcase</a></li>
+        </ul>
+               
+        <div class="grid">
+            <div onclick="showResume()" class="grid-button">
+            Resume &nbsp <span class="material-symbols-outlined">
+work_history
+</span>
             </div>
+            <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">
+                Contact &nbsp <span class="material-symbols-outlined">
+                mail
+                </span>
+            </a>
+        </div>
+         -->
+         <div class="grid"></div>
+         <div class="grid"></div>
+    </div>
+    <div class="width">
+        <div class="main">
+            <div class="grid-top">
+                <div class="center">
+                    <!--
+                    <img class="profileimg" src="images/profile.jpg">
+                   
+                    <h2>
+                        Luke Stilson
+                    </h2>
+                    <h3>
+                        Technical Art
+                    </h3>
+                    <div class="grid">
+                        <a href="https://www.youtube.com/c/LukeStilson" class="fa fa-youtube"></a>
+                        <a href="https://www.linkedin.com/in/luke-stilson/" class="fa fa-linkedin"></a>
+                        <a href="https://www.instagram.com/3d_luke/" class="fa fa-instagram"></a>
+                    </div>
+                    -->
+<h1 class=white>
+    Hi, I'm Luke
+    </h1>
+                    <p class="white">
+                         I create solutions that empower <br> 3D artists and developers. 
+                    </p>
+                    <!--
+                        <div class="grid">
+                            <p class="small"><span class="material-symbols-outlined">
+                            sports_esports
+                            </span></p>
+                            <p class="small"><span class="material-symbols-outlined">
+                            brush
+                            </span></p>
+                            <p class="small"><span class="material-symbols-outlined">
+                            terminal
+                            </span></p>
+                        </div>
+                        -->
+           
+
+                     <h1 class="small">
+                     &nbsp Let's build stuff together.
+                     </h1>
+                             <div class="grid">
+            <div onclick="showResume()" class="grid-button"><span class="material-symbols-outlined">
+            groups
+            </span>
+                        &nbsp Resume
+                        </div>
+                        <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">Contact<span class="material-symbols-outlined">
+                            mail
+                            </span>
+                            
+                        </a>
+
+                     </div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="section-angled">
+            <div class="section-angled-inner"
+                <div class="width">
+                    <div class="grid-center">
+                        <div class="center3a">
+                             <h2 class="white">
+                                Blender Python Add-Ons<br> & Templates
+                            </h2>
+                            <p class="white">
+                                I believe in bringing high-quality tools to the greater artist community. Explore my open-source tools for game art and production.
+                            </p>
+                                <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
+                                More About Add-ons
+                        </div>
+                        <a href=""> View on Github <span class="material-symbols-outlined">chevron_right</span></a>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="grid">
+                    <div onclick="openPopUp('textureLab')" class="grid-item-featured">
+                        <img class="icon" src="images/softwareLogo0000.png">
+                        <img id="background" class="grid-image" src="images/darkroom.png">
+                        <div class="grid-text">
+                            <h3>
+                                Texture Laboratory
+                            </h3>
+                            <p class="grid-description">
+                                Utilize Blender's procedural shading techniques to create game ready PBR textures and normal maps for Unity and Unreal.
+                            </p>
+                        </div>
+                    </div>
+                    <div onclick="openPopUp('bpxemitters')" class="grid-item-featured">
+                        <img class="icon" src="images/softwareLogo0000.png">
+                        <img id="background" class="grid-image" src="images/cover.png">
+                        <div class="grid-text">
+                            <h3>
+                                BPx Emitters
+                            </h3>
+                            <p class="grid-description">
+                                Create animated particles, looping emitters and sprite sheets for engine use as flipbooks, cards and sub-emitter animation.
+                            </p>
+                        </div>
+                    </div>
+                    <div onclick="openPopUp('rendercontroller')" class="grid-item-featured">
+                        <img class="icon" src="images/softwareLogo0001.png">
+                        <img id="background" class="grid-image" src="images/rendercontrol.png">
+                        <div class="grid-text">
+                            <h3>
+                                Render Controller
+                            </h3>
+                            <p class="grid-description">
+                               Easily control batch rendering from multiple Blend files and directly preview results.
+                            </p>
+                        </div>
+                    </div>
+
+                        <div onclick="openPopUp('Pixels')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/2DLarge.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Pixels
+                                </h3>
+                                <p class="grid-description">
+                                    Easily edit manipulate and export images in pixel-perfect mixed 2D/3D space.
+                                </p>
+                            </div>
+                        </div>
+                                            <div id="hiddentools">
+                        <div onclick="openPopUp('quickactions')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0001.png">
+                            <img id="background" class="grid-image" src="images/quickactions.png">
+                            <div class="grid-text">
+                                <h3>
+                                    BPx Quick Actions
+                                </h3>
+                                <p class="grid-description">
+                                    Simple Actions, Tools, and Panels to reduce clicks on repetitive processes and automate redundant tasks.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('wordartist')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/wordart-large.png">
+                            <div class="grid-text">
+                                <h3>
+                                    BPx Word Artist
+                                </h3>
+                                <p class="grid-description">
+                                    Additional text tools and shortcuts panel, allows for live shader isolation front, bevel, depth, and stroke.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('filemanager')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0001.png">
+                            <img id="background" class="grid-image" src="images/filemanager.png">
+                            <div class="grid-text">
+                                <h3>
+                                    BPx File Manager
+                                </h3>
+                                <p class="grid-description">
+                                    Collect referenced Images, Fonts, and Sounds into a single folder. Designed for file sharing and backup management.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('terminallauncher')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/blendTerminal.jfif">
+                            <div class="grid-text">
+                                <h3>
+                                    MacOS Terminal Launcher
+                                </h3>
+                                <p class="grid-description">
+                                    Adds the ability to easily launch the blender terminal window on MacOS within the blender interface.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+        </div>
+    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+                        <div class="section-angled1">
+            <div class="section-angled-inner1"
+
+                            <div class="width">
+                    <div class="grid-center">
+                       
+                    <div class="center3a">
+                                <h2 class="white">
+                                Game Design &<br>& Development
+                                </h2>
+                                <p class="white">
+                                Description
+                            </p>
+
+                               <a href=""> View more gameplay projects <span class="material-symbols-outlined">chevron_right</span></a>
+                            </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="grid-left">
+                    <img class="fillimg" src="images/minesweeper1.png">
+                </div>
+                -->
+                <div class="container-left">
+                    <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured1">
+                                            <div class="center3a">
+                             <h2 class="white">
+                                Minesweeper [remastered]
+                            </h2>
+                            <p class="small-green">In Development</p>
+
+                                                        <p class="white-feature">
+                                A twist on Microsoft's classic minesweeper, brought to a realistic 3D environment to bring attention to real-world de-mining operations in 2024 Ukraine.
+                                </p>
+                        
+                         <a class="grid-button2"href="">View Dev Log <span class="material-symbols-outlined">chevron_right</span></a>
+                         </div>
+
+                </div>
+
+                            <!--
+
+                    <div class="container">
+                        <div id="bpx" class="grid">
+                            <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured1">
+                                <img class="icon1" src="images/enginelogo0001.png">
+                                <img id="background" class="grid-image1" src="images/minesweeper1.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        Minesweeper Remastered
+                                    </h3>
+                                    <p class="grid-description">
+                                        UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.
+                                    </p>
+                                </div>
+                            </div>
+                            <div onclick="openPopUp('blink')" class="grid-item-featured1">
+                                <img class="icon1" src="images/enginelogo0001.png">
+                                <img id="background" class="grid-image1" src="images/blink0000.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        BLiNK
+                                    </h3>
+                                    <p class="grid-description">
+                                        Experimental freerunning tactical shooter with extreme movement abilities.
+                                    </p>
+                                </div>
+                            </div>
+                            <div onclick="openPopUp('hexscapes')" class="grid-item-featured1">
+                                <img class="icon1" src="images/enginelogo0000.png">
+                                <img id="background" class="grid-image1" src="images/hexScape.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        HexScapes
+                                    </h3>
+                                    <p class="grid-description">
+                                        Solve the puzzles by ensuring 1-6 are present on all hexagons in this sudoku-like casual puzzle game. Increment all surrounding numbers by tapping the center of each island.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="hiddengames">
+                                <div onclick="openPopUp('die')" class="grid-item-featured1">
+                                    <img class="icon1" src="images/enginelogo0001.png">
+                                    <img id="background" class="grid-image1" src="images/die1.png">
+                                    <div class="grid-text">
+                                        <h3>
+                                            Die!
+                                        </h3>
+                                        <p class="grid-description">
+                                            Top-down dice roll auto-combat strategy game made in UE5. Made in effort to solidify knowledge with Niagara and Chaos particle and physics systems, AI blackboards, sockets and player controllers.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured1">
+                                    <img class="icon1" src="images/enginelogo0000.png">
+                                    <img id="background" class="grid-image1" src="images/hellomoto.jpeg">
+                                    <div class="grid-text">
+                                        <h3>
+                                            HelloMotoVR - OneFire Media
+                                        </h3>
+                                        <p class="grid-description">
+                                            Daydream VR Unity game made to showcase unique 'snap-on' features of the Motorola z2 Force.
+                                        </p>
+                                    </div>
+                                </div>
+                                            -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="section-angled2">
+            <div class="section-angled-inner">
+                    <div class="grid-center">
+                        <div class="center3a">
+                             <h2 class="white">
+                                R&D Gallery
+                            </h2>
+                            <p class="white">
+                                Miscelanious projects featuring exploration into tools, scripts, shaders and vfx. Check out featured projects or view the feed for my latest posts.
+                            </p>
+                                <a href="">Go to project feed <span class="material-symbols-outlined">chevron_right</span></a>
+                        </div>
+                    </div>
+            <div class="container">
+                    <div class="grid">
+                        <div onclick="openPopUp('vatcreator')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/VATcreator.png">
+                            <div class="grid-text">
+                                <h3>
+                                    VAT Creator - Geometry Nodes/Python
+                                </h3>
+                                <p class="grid-description">
+                                    Blender geometry node driven vertex animated texture source creator.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('audiovisualizer')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/visualizer.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Audio Visualizer - Geometry Nodes
+                                </h3>
+                                <p class="grid-description">
+                                    Driving aspects of geometry nodes from audio pitch and volume.
+                                </p>
+                            </div>
+                        </div>
+
+                                                    <div onclick="openPopUp('blenderndo')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/blenderNdo.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        Blender NDO
+                                    </h3>
+                                    <p class="grid-description">
+                                        Now integrated into Texture Laboratory, this project was to simulate the functionality in Quixel's deprecated NDO photoshop plugin in Blender.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div onclick="openPopUp('spritesheetworkflow')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/animatedSpritesheet.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        Spritesheet Workflows
+                                    </h3>
+                                    <p class="grid-description">
+                                        Math-based shader in blender reflecting what a flipbook shader in Unity/Unreal would look like - with variables for size, frames, start frame, looping.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="hiddenprojects">
+                                                    
+                            <div onclick="openPopUp('loopparticles')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/swordVFX.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        Looping Particle Creator (now BPx Emitters)
+                                    </h3>
+                                    <p class="grid-description">
+                                        Looping particles driven by geometry nodes in this project expanded to become the fully-functional BPx Emitters add-on.
+                                    </p>
+                                </div>
+                            </div>
+
+                                                    <div onclick="openPopUp('donutgenerator')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/donutGenerator.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Modular Donuts
+                                </h3>
+                                <p class="grid-description">
+                                    UE5 project to bring classic
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    <div class="footer">
+        &copy;2024 Luke Stilson
+    </div>
 </body>
+
 </html>
