@@ -3,8 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Tools By Luke Stilson</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 1550px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
@@ -14,15 +17,13 @@
 
 <body>
 <div  id="hiddenresume" class="popup">
-<div class="resume">
-<div class="leftalign">
+     <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">close</span> </a>
+    <div class="center-left">
     <a href="https://github.com/sharpen3d/bpy_public/raw/4179a2e7feca3adc84ca6ef78215628a3835bba4/downloads/LukeStilsonResume2024.pdf" class="grid-button">
     Download as PDF
     </a>
-    <a href="" class="grid-button2">
-    close
-    </a>
 </div>
+<div class="resume">
     <h1>Luke Stilson</h1>
     <h2>Technical Artist</h2>
 
@@ -127,28 +128,51 @@
 </div>
 </div>
 
-    <div class="bgloop"></div>
+    <div class="bgloop1"></div>
+
     <div id="dynamicModal" class="modal" style="display: none;">
-        <div class="popup">
-            <video id="modalVideo" controls style="display:none;"></video>
-            <br>
-            <div class="center2">
-                <div class="grid-text">
-                    <h3 id="modalTitle"></h3>
-                    <p id="modalDescription" class="grid-description2"></p>
+        <div class="navmenu2">
+                 <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">arrow_back</span></a>  
+ 
+                 </div>
+        <div class="modalcontainer">
+
+            <div class="modal-left">
+
+                <video autoplay loop muted id="modalVideo" controls style="display:none;"></video>
+                <div class="center3b">
+                    <h2 id="modalTitle" class="white"></h2>
+                    <p id="modalDescription" class="white"></p>
                 </div>
-                <div class="grid" id="modalImages">
-                    <!-- Images will be inserted here -->
-                </div>
-                <div class="grid-buttons" id="modalButtons">
-                    <!-- Buttons will be inserted here -->
-                </div>
-                <div class="grid-buttons">
-                    <a onclick="closePopUp()" class="grid-button2">No, Thanks</a>
+
+                <div class="grid">
+
+                   
+
+                    <div class="grid" id="modalButtons">
+
+                        <!-- Buttons will be inserted here -->
+                    </div>
+
                 </div>
             </div>
+
+
+            <div class="popup">
+                <br>
+                <div class="center2">
+                    <div class="grid-text">
+                    <h3> Showcase: </h3>
+                    </div>
+                
+                    <div class="grid" id="modalImages">
+                        <!-- Images will be inserted here -->
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
+</div>
 
     <script>
         const projectData = {
@@ -169,35 +193,47 @@
                 "textureLab": {
                 title: "Texture Laboratory",
                 videoSrc: "videos/texlab.mp4",
-                description: "Make PBR Game-Ready Materials in Blender",
+                description: "TexLab is a Blender add-on that provides tools for managing and exporting procedurally-created materials to standard game engine PBR texture maps. It allows users to create detailed normal, roughness, metallic, emission, basecolor and opacity maps with a non-destructive workflow. This has been created as a flexible alternative to the Adobe Substance suite.",
                 images: [
-                    { src: "images/texlab.png", caption: "Image 1 caption" }
+                    { src: "images/texlab/0.png", caption: "A seamless clover ground texture made with TexLab on a material sphere" },
+                    { src: "images/texlab/1.png", caption: "Viewport view of clover texture, viewing top-down normal in 2D space" },
+                    { src: "images/texlab/2.png", caption: "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material" }
                 ],
                 downloadLink: "downloads/minesweeper.zip",
                 externalLink: "https://example.com"
             },
                 "bpxemitters": {
                 title: "Bpx Emitters",
-                videoSrc: "videos/bpxemitters.mp4",
-                description: "emitters description",
+                videoSrc: "videos/emitters.mp4",
+                description: "This Blender addon provides a custom geometry node system and python control panel to create and manage precalculated geometry-based particle effects for EEVEE rendering with real-time editing workflow. The addon includes tools for adding emitters, sprite emitters, dynamic particle materials, and configuring various particle attributes such as spawn rate, lifetime, speed, scale, rotation, and color. In addition to the custom control panel, powerful included geometry node-groups provide endless modification and attribute access.",
                 images: [
-                    { src: "images/emitters.png", caption: "Image 1 caption" }
-                ]
+                    { src: "images/emitters/0.png", caption: "Custom emitters panel section 1, spawn attributes" },
+                    { src: "images/emitters/1.png", caption: "Custom emitters panel section 2, behavior control" },
+                    { src: "images/emitters/2.png", caption: "Custom emitters panel section 3, rendering" },
+                ],
+                downloadLink: "downloads/minesweeper.zip",
+                externalLink: "https://example.com"
             },
                 "rendercontroller": {
                 title: "Render Controller",
-                description: "rendercontroller description",
+                description: "Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
                 images: [
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
             },
-                "2Dtools": {
-                title: "Bpx 2D Tools",
-                videoSrc: "videos/2DTools.mp4",
-                description: "2D tools description",
+                "Pixels": {
+                title: "Blender Pixels (Bpx)",
+                videoSrc: "videos/pixels.mp4",
+                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blender’s 3D Viewport UI, adding custom panels and menus for easy access to its functions.",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
+                    { src: "images/pixels/0.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/1.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/2.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/3.png", caption: "Image 1 caption" },
+                    { src: "images/pixels/4.png", caption: "Image 1 caption" }
+                ],
+                downloadLink: "downloads/minesweeper.zip",
+                externalLink: "https://example.com"
             },
                 "quickactions": {
                 title: "Bpx Quickactions",
@@ -311,47 +347,62 @@
             }
         };
 
-        function openPopUp(projectKey) {
-            const project = projectData[projectKey];
-            document.getElementById("modalTitle").innerText = project.title;
-            const modalVideo = document.getElementById("modalVideo");
-            if (project.videoSrc) {
-                modalVideo.src = project.videoSrc;
-                modalVideo.style.display = "block";
-            } else {
-                modalVideo.style.display = "none";
-            }
-            document.getElementById("modalDescription").innerText = project.description;
+function openPopUp(projectKey) {
+    const project = projectData[projectKey];
+    document.getElementById("modalTitle").innerText = project.title;
+    const modalVideo = document.getElementById("modalVideo");
+    if (project.videoSrc) {
+        modalVideo.src = project.videoSrc;
+        modalVideo.style.display = "block";
+    } else {
+        modalVideo.style.display = "none";
+    }
+    document.getElementById("modalDescription").innerText = project.description;
 
-            const modalImagesContainer = document.getElementById("modalImages");
-            modalImagesContainer.innerHTML = "";
-            project.images.forEach(image => {
-                const imgElement = document.createElement("img");
-                imgElement.src = image.src;
-                imgElement.alt = image.caption;
-                const captionElement = document.createElement("p");
-                captionElement.innerText = image.caption;
-                imgElement.classList.add("projectimage");
-                modalImagesContainer.appendChild(imgElement);
-                modalImagesContainer.appendChild(captionElement);
-            });
+    const modalImagesContainer = document.getElementById("modalImages");
+    modalImagesContainer.innerHTML = "";
+    project.images.forEach(image => {
+        const imageContainer = document.createElement("div"); // Create a new div for each image and caption
+        imageContainer.classList.add("image-container"); // Add a class for styling purposes
+
+        const imgElement = document.createElement("img");
+        imgElement.src = image.src;
+        imgElement.alt = image.caption;
+        imgElement.classList.add("projectimage");
+
+        const captionElement = document.createElement("p");
+        captionElement.innerText = image.caption;
+
+        imageContainer.appendChild(imgElement); // Append the image to the div
+        imageContainer.appendChild(captionElement); // Append the caption to the div
+
+        modalImagesContainer.appendChild(imageContainer); // Append the div to the container
+    });
 
             const modalButtonsContainer = document.getElementById("modalButtons");
             modalButtonsContainer.innerHTML = "";
             if (project.downloadLink) {
                 const downloadButton = document.createElement("a");
                 downloadButton.href = project.downloadLink;
-                downloadButton.innerText = "Download";
+                downloadButton.innerText = "Download" ;
                 downloadButton.classList.add("grid-button2");
                 modalButtonsContainer.appendChild(downloadButton);
-            }
+                const downloadIcon = document.createElement("span");
+                downloadIcon.innerText = "download" ;
+                downloadIcon.classList.add("material-symbols-outlined");
+                downloadButton.appendChild(downloadIcon);
+            }                 
             if (project.externalLink) {
                 const externalButton = document.createElement("a");
                 externalButton.href = project.externalLink;
-                externalButton.innerText = "External Link";
+                externalButton.innerText = "Documentation";
                 externalButton.classList.add("grid-button2");
                 externalButton.target = "_blank";
                 modalButtonsContainer.appendChild(externalButton);
+                const downloadIcon = document.createElement("span");
+                downloadIcon.innerText = "article_shortcut" ;
+                downloadIcon.classList.add("material-symbols-outlined");
+                externalButton.appendChild(downloadIcon);
             }
 
             document.getElementById("dynamicModal").style.display = "flex";
@@ -416,27 +467,30 @@
             <li><a href="index.html">Contact</a></li>
             <li class="current"><a href="tools.html">Showcase</a></li>
         </ul>
-                -->
+               
         <div class="grid">
-        <div onclick="showResume()" class="grid-button">
-        Resume
+            <div onclick="showResume()" class="grid-button">
+            Resume &nbsp <span class="material-symbols-outlined">
+work_history
+</span>
+            </div>
+            <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">
+                Contact &nbsp <span class="material-symbols-outlined">
+                mail
+                </span>
+            </a>
         </div>
-        <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">
-        Contact
-        </a>
-        </div>
+         -->
+         <div class="grid"></div>
+         <div class="grid"></div>
     </div>
     <div class="width">
         <div class="main">
-            <div class="grid">
+            <div class="grid-top">
                 <div class="center">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
                     <!--
                     <img class="profileimg" src="images/profile.jpg">
-                    -->
+                   
                     <h2>
                         Luke Stilson
                     </h2>
@@ -448,41 +502,66 @@
                         <a href="https://www.linkedin.com/in/luke-stilson/" class="fa fa-linkedin"></a>
                         <a href="https://www.instagram.com/3d_luke/" class="fa fa-instagram"></a>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-                <div class="center3">
-                    <p>
-                        <br>
-                        <br>
-                        <br>
-                        <br><br>
-                        Hi, I'm Luke, a passionate technical artist and gameplay developer dedicated to creating engaging 3D experiences and empowering artists. I specialize in designing tools, methods, shaders, and blueprints that streamline workflows and unleash the creativity of my co-workers and peers.
-                        <br><br>
-                        My professional journey in game development started by honing my skills with contract 3D Generalist work for games while working full-time in animation and front-end development. I found my niche in tech art, combining my skill in design and coding with my love of games and 3D art. When I'm not coding or designing, you can find me gaming, playing my bass, disc golfing, or hiking the trails of NC with my wife Nicole and puppy Lorelai.
+                    -->
+<h1 class=white>
+    Hi, I'm Luke
+    </h1>
+                    <p class="white">
+                         I create solutions that empower <br> 3D artists and developers. 
                     </p>
-                    <br>
-                </div>
+                    <!--
+                        <div class="grid">
+                            <p class="small"><span class="material-symbols-outlined">
+                            sports_esports
+                            </span></p>
+                            <p class="small"><span class="material-symbols-outlined">
+                            brush
+                            </span></p>
+                            <p class="small"><span class="material-symbols-outlined">
+                            terminal
+                            </span></p>
+                        </div>
+                        -->
+           
+
+                     <h1 class="small">
+                     &nbsp Let's build stuff together.
+                     </h1>
+                             <div class="grid">
+            <div onclick="showResume()" class="grid-button"><span class="material-symbols-outlined">
+            groups
+            </span>
+                        &nbsp Resume
+                        </div>
+                        <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">Contact<span class="material-symbols-outlined">
+                            mail
+                            </span>
+                            
+                        </a>
+
+                     </div>
+
             </div>
-            <div class="grid">
-                <div class="center">
-                    <h2>
-                        Add-Ons &
-                    </h2>
-                    <h3>
-                        Templates
-                    </h3>
-                </div>
-                <div class="center3">
-                    <p>
-                        I primarily showcase work made in Blender because of its full scriptability, integrated Python environment, and the avoidance of data collection and fees. This aligns with my belief in bringing high-quality tools to the greater artist community and completely owning the tools and work I create.
-                    </p>
-                </div>
             </div>
+            </div>
+            </div>
+            <div class="section-angled">
+            <div class="section-angled-inner"
+                <div class="width">
+                    <div class="grid-center">
+                        <div class="center3a">
+                             <h2 class="white">
+                                Blender Python Add-Ons<br> & Templates
+                            </h2>
+                            <p class="white">
+                                I believe in bringing high-quality tools to the greater artist community. Explore my open-source tools for game art and production.
+                            </p>
+                                <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
+                                More About Add-ons
+                        </div>
+                        <a href=""> View on Github <span class="material-symbols-outlined">chevron_right</span></a>
+                    </div>
+                </div>
             <div class="container">
                 <div class="grid">
                     <div onclick="openPopUp('textureLab')" class="grid-item-featured">
@@ -493,7 +572,7 @@
                                 Texture Laboratory
                             </h3>
                             <p class="grid-description">
-                                Design micro-surface normal maps and game-ready PBR texture maps directly from Blender to engine. This template includes custom panels, shaders, and node-groups to start creating materials for props or environments for Unreal or Unity.
+                                Utilize Blender's procedural shading techniques to create game ready PBR textures and normal maps for Unity and Unreal.
                             </p>
                         </div>
                     </div>
@@ -505,7 +584,7 @@
                                 BPx Emitters
                             </h3>
                             <p class="grid-description">
-                                This add-on utilizes a set of geometry node-groups to create animated particles, allowing for customization through a panel in the 3D Viewport.
+                                Create animated particles, looping emitters and sprite sheets for engine use as flipbooks, cards and sub-emitter animation.
                             </p>
                         </div>
                     </div>
@@ -517,24 +596,24 @@
                                 Render Controller
                             </h3>
                             <p class="grid-description">
-                                This template file acts as a production management tool for image sequences being rendered from multiple blend files, allowing for iteration and background re-rendering, quickly comparing and previewing sequences, and sprite-packing.
+                               Easily control batch rendering from multiple Blend files and directly preview results.
                             </p>
                         </div>
                     </div>
 
-                    <div id="hiddentools">
-                        <div onclick="openPopUp('2Dtools')" class="grid-item-featured">
+                        <div onclick="openPopUp('Pixels')" class="grid-item-featured">
                             <img class="icon" src="images/softwareLogo0000.png">
                             <img id="background" class="grid-image" src="images/2DLarge.png">
                             <div class="grid-text">
                                 <h3>
-                                    BPx 2D Tools
+                                    Pixels
                                 </h3>
                                 <p class="grid-description">
-                                    Load images and scale planes at exact correct pixel-scaling based on your render and camera settings.
+                                    Easily edit manipulate and export images in pixel-perfect mixed 2D/3D space.
                                 </p>
                             </div>
                         </div>
+                                            <div id="hiddentools">
                         <div onclick="openPopUp('quickactions')" class="grid-item-featured">
                             <img class="icon" src="images/softwareLogo0001.png">
                             <img id="background" class="grid-image" src="images/quickactions.png">
@@ -584,36 +663,56 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+        </div>
+    </div>
+                </div>
+                </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="rightalign">
-        <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
-        Show more
-        </div>
-        <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
-        Show less
-        </div>
-    </div>
-            <div class="">
-                <div class="width">
-                    <div class="grid">
-                        <div class="center">
-                            <h2 class="">
-                                Games &
-                            </h2>
-                            <h3>
-                                Experiences
-                            </h3>
-                        </div>
-                        <div class="center3">
-                            <p class="">
-                                In this section, you'll find games I've developed entirely on my own, including all 3D work, development, and animation (unless noted otherwise).
-                                Some games have been developed as a functionality test of certain tools I've been working on, others are ongoing passion projects and springboards to template new ideas such as VFX, shaders, pipeline strategies or mathematical concepts.
+                        <div class="section-angled1">
+            <div class="section-angled-inner1"
+
+                            <div class="width">
+                    <div class="grid-center">
+                       
+                    <div class="center3a">
+                                <h2 class="white">
+                                Game Design &<br>& Development
+                                </h2>
+                                <p class="white">
+                                Description
                             </p>
-                        </div>
+
+                               <a href=""> View more gameplay projects <span class="material-symbols-outlined">chevron_right</span></a>
+                            </div>
                     </div>
+                </div>
+
+                <!--
+                <div class="grid-left">
+                    <img class="fillimg" src="images/minesweeper1.png">
+                </div>
+                -->
+                <div class="container-left">
+                    <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured1">
+                                            <div class="center3a">
+                             <h2 class="white">
+                                Minesweeper [remastered]
+                            </h2>
+                            <p class="small-green">In Development</p>
+
+                                                        <p class="white-feature">
+                                A twist on Microsoft's classic minesweeper, brought to a realistic 3D environment to bring attention to real-world de-mining operations in 2024 Ukraine.
+                                </p>
+                        
+                         <a class="grid-button2"href="">View Dev Log <span class="material-symbols-outlined">chevron_right</span></a>
+                         </div>
+
+                </div>
+
+                            <!--
+
                     <div class="container">
                         <div id="bpx" class="grid">
                             <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured1">
@@ -677,92 +776,70 @@
                                         </p>
                                     </div>
                                 </div>
+                                            -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="rightalign">
-                <div onclick="moreGames()" id="moregamesbutton" class="grid-button2">
-                    Show more
-                </div>
-                <div onclick="lessGames()" id="lessgamesbutton" class="grid-button2">
-                    Show less
-                </div>
             </div>
-            <div class="grid">
-                <div class="center">
-                    <h2>
-                        Research &
-                    </h2>
-                    <h3>
-                        Development
-                    </h3>
-                    <em>
-                        Geometry Nodes | Python Tools | Experiments
-                    </em>
-                </div>
-                <div class="center3">
-                    <p>
-                        I like to refer to these projects as 'sketches' - quickly outlining interesting technical concepts. While not being fully functional or production-ready, having a bank of these experiments is extremely useful to jumpstart R&D for needs on a project.
-                    </p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="width">
-                    <div id="bpx" class="grid">
-                        <div onclick="openPopUp('donutgenerator')" class="grid-item-featured1">
-                            <img class="icon1" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image1" src="images/donutGenerator.png">
-                            <div class="grid-text">
-                                <h3>
-                                    Donut Generator - Geometry Nodes/Python
-                                </h3>
-                                <p class="grid-description">
-                                    UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.
-                                </p>
-                            </div>
+            <div class="section-angled2">
+            <div class="section-angled-inner">
+                    <div class="grid-center">
+                        <div class="center3a">
+                             <h2 class="white">
+                                R&D Gallery
+                            </h2>
+                            <p class="white">
+                                Miscelanious projects featuring exploration into tools, scripts, shaders and vfx. Check out featured projects or view the feed for my latest posts.
+                            </p>
+                                <a href="">Go to project feed <span class="material-symbols-outlined">chevron_right</span></a>
                         </div>
-                        <div onclick="openPopUp('vatcreator')" class="grid-item-featured1">
-                            <img class="icon1" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image1" src="images/VATcreator.png">
+                    </div>
+            <div class="container">
+                    <div class="grid">
+                        <div onclick="openPopUp('vatcreator')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/VATcreator.png">
                             <div class="grid-text">
                                 <h3>
                                     VAT Creator - Geometry Nodes/Python
                                 </h3>
                                 <p class="grid-description">
-                                    Blender geometry node driven vertex animated texture source creator. Apply to any deforming mesh to generate the texture to be used for displacement in game engines.
+                                    Blender geometry node driven vertex animated texture source creator.
                                 </p>
                             </div>
                         </div>
-                        <div onclick="openPopUp('audiovisualizer')" class="grid-item-featured1">
-                            <img class="icon1" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image1" src="images/visualizer.png">
+                        <div onclick="openPopUp('audiovisualizer')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/visualizer.png">
                             <div class="grid-text">
                                 <h3>
-                                    Audio Visualizer - Geometry Nodes/Drivers
+                                    Audio Visualizer - Geometry Nodes
                                 </h3>
                                 <p class="grid-description">
-                                    Driving aspects of geometry nodes from audio pitch and volume, extending functionality of geometry nodes with drivers.
+                                    Driving aspects of geometry nodes from audio pitch and volume.
                                 </p>
                             </div>
                         </div>
-                        <div id="hiddenprojects">
-                            <div onclick="openPopUp('loopparticles')" class="grid-item-featured1">
-                                <img class="icon1" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image1" src="images/swordVFX.png">
+
+                                                    <div onclick="openPopUp('blenderndo')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/blenderNdo.png">
                                 <div class="grid-text">
                                     <h3>
-                                        Looping Particle Creator (now BPx Emitters)
+                                        Blender NDO
                                     </h3>
                                     <p class="grid-description">
-                                        Looping particles driven by geometry nodes in this project expanded to become the fully-functional BPx Emitters add-on.
+                                        Now integrated into Texture Laboratory, this project was to simulate the functionality in Quixel's deprecated NDO photoshop plugin in Blender.
                                     </p>
                                 </div>
                             </div>
-                            <div onclick="openPopUp('spritesheetworkflow')" class="grid-item-featured1">
-                                <img class="icon1" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image1" src="images/animatedSpritesheet.png">
+
+
+                            <div onclick="openPopUp('spritesheetworkflow')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/animatedSpritesheet.png">
                                 <div class="grid-text">
                                     <h3>
                                         Spritesheet Workflows
@@ -772,32 +849,41 @@
                                     </p>
                                 </div>
                             </div>
-                            <div onclick="openPopUp('blenderndo')" class="grid-item-featured1">
-                                <img class="icon1" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image1" src="images/blenderNdo.png">
+                            <div id="hiddenprojects">
+                                                    
+                            <div onclick="openPopUp('loopparticles')" class="grid-item-featured">
+                                <img class="icon" src="images/softwareLogo0000.png">
+                                <img id="background" class="grid-image" src="images/swordVFX.png">
                                 <div class="grid-text">
                                     <h3>
-                                        Blender NDO
+                                        Looping Particle Creator (now BPx Emitters)
                                     </h3>
                                     <p class="grid-description">
-                                        Now integrated into Texture Laboratory, this project was to simulate the functionality in Quixel's deprecated NDO photoshop plugin - for creating normal maps using modeled detail without baking.
+                                        Looping particles driven by geometry nodes in this project expanded to become the fully-functional BPx Emitters add-on.
                                     </p>
                                 </div>
                             </div>
+
+                                                    <div onclick="openPopUp('donutgenerator')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/donutGenerator.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Modular Donuts
+                                </h3>
+                                <p class="grid-description">
+                                    UE5 project to bring classic
+                                </p>
+                            </div>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="rightalign">
-                <div onclick="moreProjects()" id="moreprojectsbutton" class="grid-button2">
-                    Show more
-                </div>
-                <div onclick="lessProjects()" id="lessprojectsbutton" class="grid-button2">
-                    Show less
                 </div>
             </div>
     <div class="footer">
-        &copy;2024 Luke Stilson 2024<br>
+        &copy;2024 Luke Stilson
     </div>
 </body>
 
