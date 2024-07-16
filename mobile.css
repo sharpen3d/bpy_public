@@ -124,11 +124,11 @@ h1 {
 }
 
 h2 {
-  margin: 0;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 2rem;
   color: #333;
+  margin: 0.625rem;
 }
 
 h3 {
@@ -275,7 +275,7 @@ ul.access li a {
 }
 
 .modalcontainer {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: unset;
   display: flex;
@@ -309,6 +309,14 @@ ul.access li a {
 .resume, .contact-info ul, .skills ul, .experience ul, .leftalign .grid-button2, .experience-item, .education-item {
   margin: 0;
   padding: 0;
+}
+
+.grid-center{
+	width:100%;
+}
+
+.grid{
+	width: 100%;
 }
 
 .resume {
@@ -422,4 +430,15 @@ p {
 
 .grid-button2 span {
   margin-left: 0.9375rem; /* 15px */
+}
+
+.grid-buttons{
+	flex-direction:column;
+}
+
+.center3a{
+width:100%;
+padding:0;
+display: block;
+
 }
