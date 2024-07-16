@@ -207,9 +207,12 @@
                 videoSrc: "videos/emitters.mp4",
                 description: "This Blender addon provides a custom geometry node system and python control panel to create and manage precalculated geometry-based particle effects for EEVEE rendering with real-time editing workflow. The addon includes tools for adding emitters, sprite emitters, dynamic particle materials, and configuring various particle attributes such as spawn rate, lifetime, speed, scale, rotation, and color. In addition to the custom control panel, powerful included geometry node-groups provide endless modification and attribute access.",
                 images: [
-                    { src: "images/emitters/0.png", caption: "Custom emitters panel section 1, spawn attributes" },
+                    { src: "images/emitters0.png", caption: "Custom emitters panel section 1, spawn one" },
+                    { src: "images/emitters/0.png", caption: "Custom emitters panel section 1, spawn one" },
                     { src: "images/emitters/1.png", caption: "Custom emitters panel section 2, behavior control" },
                     { src: "images/emitters/2.png", caption: "Custom emitters panel section 3, rendering" },
+                    { src: "images/emitters/3.gif", caption: "Custom emitters panel section 1, spawn test" },
+                    { src: "videos/dieparticle.mp4", caption: "Custom emitters panel section 1, spawn one" },
                 ],
                 downloadLink: "downloads/minesweeper.zip",
                 externalLink: "https://example.com"
@@ -348,6 +351,9 @@
         };
 
 function openPopUp(projectKey) {
+
+    document.body.classList.add('no-scroll');
+
     const project = projectData[projectKey];
     document.getElementById("modalTitle").innerText = project.title;
     const modalVideo = document.getElementById("modalVideo");
@@ -361,22 +367,34 @@ function openPopUp(projectKey) {
 
     const modalImagesContainer = document.getElementById("modalImages");
     modalImagesContainer.innerHTML = "";
-    project.images.forEach(image => {
-        const imageContainer = document.createElement("div"); // Create a new div for each image and caption
-        imageContainer.classList.add("image-container"); // Add a class for styling purposes
+    project.images.forEach(media => {
+        const mediaContainer = document.createElement("div");
+        mediaContainer.classList.add("image-container");
 
-        const imgElement = document.createElement("img");
-        imgElement.src = image.src;
-        imgElement.alt = image.caption;
-        imgElement.classList.add("projectimage");
+        // Check if the media is a video or image based on the file extension
+        if (media.src.endsWith(".mp4") || media.src.endsWith(".webm") || media.src.endsWith(".ogg")) {
+            const videoElement = document.createElement("video");
+            videoElement.src = media.src;
+            videoElement.controls = false;
+            videoElement.autoplay = true;
+            videoElement.loop = true;
+            videoElement.classList.add("projectimage");
+
+            mediaContainer.appendChild(videoElement);
+        } else {
+            const imgElement = document.createElement("img");
+            imgElement.src = media.src;
+            imgElement.alt = media.caption;
+            imgElement.classList.add("projectimage");
+
+            mediaContainer.appendChild(imgElement);
+        }
 
         const captionElement = document.createElement("p");
-        captionElement.innerText = image.caption;
+        captionElement.innerText = media.caption;
 
-        imageContainer.appendChild(imgElement); // Append the image to the div
-        imageContainer.appendChild(captionElement); // Append the caption to the div
-
-        modalImagesContainer.appendChild(imageContainer); // Append the div to the container
+        mediaContainer.appendChild(captionElement);
+        modalImagesContainer.appendChild(mediaContainer);
     });
 
             const modalButtonsContainer = document.getElementById("modalButtons");
@@ -406,9 +424,11 @@ function openPopUp(projectKey) {
             }
 
             document.getElementById("dynamicModal").style.display = "flex";
-        }
+}
+        
 
         function closePopUp() {
+            document.body.classList.remove('no-scroll');
             document.getElementById("dynamicModal").style.display = "none";
         }
 
@@ -551,15 +571,18 @@ work_history
                     <div class="grid-center">
                         <div class="center3a">
                              <h2 class="white">
-                                Blender Python Add-Ons<br> & Templates
+                                Blender Add-Ons
                             </h2>
                             <p class="white">
                                 I believe in bringing high-quality tools to the greater artist community. Explore my open-source tools for game art and production.
                             </p>
                                 <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
-                                More About Add-ons
+                                Show All
                         </div>
-                        <a href=""> View on Github <span class="material-symbols-outlined">chevron_right</span></a>
+                         <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
+                                Show Featured
+                        </div>
+                        <a href="https://github.com/sharpen3d/bpy_public/tree/854d3ed0adc3185dc3de42f2af20c2b8bc9eb501/downloads"> View on Github <span class="material-symbols-outlined">chevron_right</span></a>
                     </div>
                 </div>
             <div class="container">
@@ -678,13 +701,49 @@ work_history
                        
                     <div class="center3a">
                                 <h2 class="white">
-                                Game Design &<br>& Development
+                                Game Design & Development
                                 </h2>
                                 <p class="white">
-                                Description
+                               Beyond my professional role as a technical artist, I independently create game experiences to stay proficient with industry-leading engines and tools.
                             </p>
 
-                               <a href=""> View more gameplay projects <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="grid-buttons">
+                            <div onclick="openPopUp('blink')" class="grid-item-featured">
+                                <img class="icon" src="images/enginelogo0001.png">
+                                <img id="background" class="grid-image" src="images/blink0000.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        BLiNK
+                                    </h3>
+                                    <p class="grid-description">
+                                        Experimental freerunning search and destroy.
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                            <div onclick="openPopUp('hexscape')" class="grid-item-featured">
+                                <img class="icon" src="images/enginelogo0000.png">
+                                <img id="background" class="grid-image" src="images/hexscape.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        HexScapes
+                                    </h3>
+                                    <p class="grid-description">
+                                        Interlocking hexagon casual puzzle game.
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                            <!--
+                               <div onclick="moreGames()" id="moregamesbutton" class="grid-button2">
+                                Show More Gameplay Projects
+                        </div>
+                                                       <div onclick="lessGames()" id="lessgamesbutton" class="grid-button2">
+                                Show More Gameplay Projects
+                        </div>
+                        -->
+
                             </div>
                     </div>
                 </div>
@@ -706,67 +765,34 @@ work_history
                                 A twist on Microsoft's classic minesweeper, brought to a realistic 3D environment to bring attention to real-world de-mining operations in 2024 Ukraine.
                                 </p>
                         
-                         <a class="grid-button2"href="">View Dev Log <span class="material-symbols-outlined">chevron_right</span></a>
+                         <a onclick="openPopUp('minesweeperRemastered')" class="grid-button2">View Project <span class="material-symbols-outlined">tactic</span> </a>
+                         <a onclick="openPopUp('minesweeperRemastered')" class="grid-button2">Design Document <span class="material-symbols-outlined">description</span> </a>
                          </div>
 
                 </div>
+                </div>
+                </div>
+                <!--
 
-                            <!--
-
+                     <div class="container-left">
                     <div class="container">
                         <div id="bpx" class="grid">
-                            <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured1">
-                                <img class="icon1" src="images/enginelogo0001.png">
-                                <img id="background" class="grid-image1" src="images/minesweeper1.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        Minesweeper Remastered
-                                    </h3>
-                                    <p class="grid-description">
-                                        UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.
-                                    </p>
-                                </div>
-                            </div>
-                            <div onclick="openPopUp('blink')" class="grid-item-featured1">
-                                <img class="icon1" src="images/enginelogo0001.png">
-                                <img id="background" class="grid-image1" src="images/blink0000.png">
+
+                            <div onclick="openPopUp('blink')" class="grid-item-featured">
+                                <img class="icon" src="images/enginelogo0001.png">
+                                <img id="background" class="grid-image" src="images/blink0000.png">
                                 <div class="grid-text">
                                     <h3>
                                         BLiNK
                                     </h3>
                                     <p class="grid-description">
-                                        Experimental freerunning tactical shooter with extreme movement abilities.
+                                        Experimental freerunning search and destroy.
                                     </p>
                                 </div>
                             </div>
-                            <div onclick="openPopUp('hexscapes')" class="grid-item-featured1">
-                                <img class="icon1" src="images/enginelogo0000.png">
-                                <img id="background" class="grid-image1" src="images/hexScape.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        HexScapes
-                                    </h3>
-                                    <p class="grid-description">
-                                        Solve the puzzles by ensuring 1-6 are present on all hexagons in this sudoku-like casual puzzle game. Increment all surrounding numbers by tapping the center of each island.
-                                    </p>
-                                </div>
-                            </div>
-                            <div id="hiddengames">
-                                <div onclick="openPopUp('die')" class="grid-item-featured1">
-                                    <img class="icon1" src="images/enginelogo0001.png">
-                                    <img id="background" class="grid-image1" src="images/die1.png">
-                                    <div class="grid-text">
-                                        <h3>
-                                            Die!
-                                        </h3>
-                                        <p class="grid-description">
-                                            Top-down dice roll auto-combat strategy game made in UE5. Made in effort to solidify knowledge with Niagara and Chaos particle and physics systems, AI blackboards, sockets and player controllers.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured1">
-                                    <img class="icon1" src="images/enginelogo0000.png">
-                                    <img id="background" class="grid-image1" src="images/hellomoto.jpeg">
+                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured">
+                                    <img class="icon" src="images/enginelogo0000.png">
+                                    <img id="background" class="grid-image" src="images/hellomoto.jpeg">
                                     <div class="grid-text">
                                         <h3>
                                             HelloMotoVR - OneFire Media
@@ -776,6 +802,8 @@ work_history
                                         </p>
                                     </div>
                                 </div>
+                                         
+                                            </div>
                                             -->
                             </div>
                         </div>
@@ -784,21 +812,32 @@ work_history
             </div>
             </div>
             <div class="section-angled2">
-            <div class="section-angled-inner">
+            <div class="section-angled-inner2">
                     <div class="grid-center">
                         <div class="center3a">
                              <h2 class="white">
-                                R&D Gallery
+                                Gallery
                             </h2>
                             <p class="white">
                                 Miscelanious projects featuring exploration into tools, scripts, shaders and vfx. Check out featured projects or view the feed for my latest posts.
                             </p>
-                                <a href="">Go to project feed <span class="material-symbols-outlined">chevron_right</span></a>
                         </div>
                     </div>
             <div class="container">
                     <div class="grid">
                         <div onclick="openPopUp('vatcreator')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/VATcreator.png">
+                            <div class="grid-text">
+                                <h3>
+                                    VAT Creator - Geometry Nodes/Python
+                                </h3>
+                                <p class="grid-description">
+                                    Blender geometry node driven vertex animated texture source creator.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('railway')" class="grid-item-featured">
                             <img class="icon" src="images/softwareLogo0000.png">
                             <img id="background" class="grid-image" src="images/VATcreator.png">
                             <div class="grid-text">
