@@ -1180,7 +1180,8 @@ align-items: center;
     margin-bottom: 5px;
 }
 .experience-item, .education-item {
-    margin-bottom: 5px;
+        margin-bottom: 1.5rem;
+    margin-top: 1rem;
 }
 
 .resume li {
@@ -1208,6 +1209,7 @@ align-items: center;
 
 .resume p {
 	padding-bottom: 0;
+	font-size:1rem;
 }
 
 .leftalign{

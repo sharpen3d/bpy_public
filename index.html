@@ -180,7 +180,7 @@
         const projectData = {
             "railway": {
                 title: "Abandoned Railway",
-                videoSrc: "videos/minesweeper.mp4",
+                videoSrc: "videos/ar.mp4",
                 description: "UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.",
                 images: [
                     { src: "images/ar/0001.png", caption: "Image 1 caption" },
@@ -198,7 +198,7 @@
             },
             "minesweeperRemastered": {
                 title: "Minesweeper Remastered",
-                videoSrc: "videos/minesweeper.mp4",
+                videoSrc: "videos/minesweeper1.mp4",
                 description: "UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.",
                 images: [
                     { src: "images/minesweeper1.png", caption: "Image 1 caption" },
@@ -215,6 +215,12 @@
                 videoSrc: "videos/texlab.mp4",
                 description: "TexLab is a Blender add-on that provides tools for managing and exporting procedurally-created materials to standard game engine PBR texture maps. It allows users to create detailed normal, roughness, metallic, emission, basecolor and opacity maps with a non-destructive workflow. This has been created as a flexible alternative to the Adobe Substance suite.",
                 images: [
+                    { src: "images/texlab/0000.png", caption: "" },
+                    { src: "images/texlab/0001.png", caption: "" },
+                    { src: "images/texlab/0002.png", caption: "" },
+                    { src: "images/texlab/0003.png", caption: "" },
+                    { src: "images/texlab/0004.png", caption: "" },
+                    { src: "images/texlab/0005.png", caption: "" },
                     { src: "images/texlab/0.png", caption: "A seamless clover ground texture made with TexLab on a material sphere" },
                     { src: "images/texlab/1.png", caption: "Viewport view of clover texture, viewing top-down normal in 2D space" },
                     { src: "images/texlab/2.png", caption: "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material" }
@@ -239,9 +245,15 @@
             },
                 "rendercontroller": {
                 title: "Render Controller",
+                videoSrc: "videos/rendercontroller.mp4",
                 description: "Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                    { src: "images/rendercontroller/0.png", caption: "" },
+                    { src: "images/rendercontroller/1.png", caption: "" },
+                    { src: "images/rendercontroller/2.png", caption: "" },
+                    { src: "images/rendercontroller/3.png", caption: "" },
+                    { src: "images/rendercontroller/4.png", caption: "" },
+                    { src: "images/rendercontroller/5.png", caption: "" },
                 ]
             },
                 "Pixels": {
@@ -305,7 +317,7 @@
             },
                 "hexscapes": {
                 title: "HexScapes",
-                videoSrc: "videos/filemanager.mp4",
+                videoSrc: "videos/hex.mp4",
                 description: "Hexscapes description",
                 images: [
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
@@ -400,7 +412,7 @@ function openPopUp(projectKey) {
         if (media.src.endsWith(".mp4") || media.src.endsWith(".webm") || media.src.endsWith(".ogg")) {
             const videoElement = document.createElement("video");
             videoElement.src = media.src;
-            videoElement.controls = false;
+            videoElement.controls = true;
             videoElement.autoplay = false;
             videoElement.loop = true;
             videoElement.classList.add("projectimage");
@@ -749,15 +761,15 @@ work_history
                             </div>
 
                             
-                            <div onclick="openPopUp('hexscape')" class="grid-item-featured">
+                            <div onclick="openPopUp('hexscapes')" class="grid-item-featured">
                                 <img class="icon" src="images/enginelogo0000.png">
-                                <img id="background" class="grid-image" src="images/hexscape.png">
+                                <img id="background" class="grid-image" src="images/hexscape.PNG">
                                 <div class="grid-text">
                                     <h3>
                                         HexScapes
                                     </h3>
                                     <p class="grid-description">
-                                        Interlocking hexagon casual puzzle game.
+                                        Challenging hexagon puzzle game made in Unity.
                                     </p>
                                 </div>
                             </div>
@@ -922,7 +934,7 @@ work_history
                                     </p>
                                 </div>
                             </div>
-                            <div id="hiddenprojects">
+                           <!-- <div id="hiddenprojects"> -->
                                                     
                             <div onclick="openPopUp('loopparticles')" class="grid-item-featured">
                                 <img class="icon" src="images/softwareLogo0000.png">
@@ -949,7 +961,7 @@ work_history
                                 </p>
                             </div>
                         </div>
-                        </div>
+                      <!--  </div> -->
                         </div>
                     </div>
                 </div>
