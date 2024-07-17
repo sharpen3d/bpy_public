@@ -453,9 +453,9 @@ position: fixed;
 }
 
 .banner h3{
-	color: #fff;
-	font-size: 14px;
-	font-weight: unset;
+color: #909090;
+    font-size: .9rem;
+    font-weight: 700;
 }
 
 .banner h1{

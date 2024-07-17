@@ -141,7 +141,7 @@
 
             <div class="modal-left">
 
-                <video autoplay loop muted id="modalVideo" controls style="display:none;"></video>
+                <video loop muted id="modalVideo" controls style="display:none;"></video>
                 <div class="center3b">
                     <h2 id="modalTitle" class="white"></h2>
                     <p id="modalDescription" class="white"></p>
@@ -219,8 +219,8 @@
                     { src: "images/texlab/1.png", caption: "Viewport view of clover texture, viewing top-down normal in 2D space" },
                     { src: "images/texlab/2.png", caption: "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material" }
                 ],
-                downloadLink: "downloads/minesweeper.zip",
-                externalLink: "https://example.com"
+                downloadLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md",
+                externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md"
             },
                 "bpxemitters": {
                 title: "Bpx Emitters",
@@ -255,8 +255,8 @@
                     { src: "images/pixels/3.png", caption: "Image 1 caption" },
                     { src: "images/pixels/4.png", caption: "Image 1 caption" }
                 ],
-                downloadLink: "downloads/minesweeper.zip",
-                externalLink: "https://example.com"
+                downloadLink: "https://github.com/sharpen3d/bpy_public/raw/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/2DTools.zip",
+                externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md"
             },
                 "quickactions": {
                 title: "Bpx Quickactions",
@@ -401,7 +401,7 @@ function openPopUp(projectKey) {
             const videoElement = document.createElement("video");
             videoElement.src = media.src;
             videoElement.controls = false;
-            videoElement.autoplay = true;
+            videoElement.autoplay = false;
             videoElement.loop = true;
             videoElement.classList.add("projectimage");
 

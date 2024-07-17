@@ -43,6 +43,10 @@ body {
   background-color: rgba(3, 2, 5, 1);
 }
 
+.banner{
+	width:200%;
+}
+
 .bgloop {
   position: absolute;
   top: 0;
@@ -254,7 +258,7 @@ ul.access li a {
   align-items: center;
 }
 
-.modal, .popup {
+.modal {
   width: 100%;
   height: -webkit-fill-available;
   margin: 0;
@@ -270,6 +274,22 @@ ul.access li a {
   backdrop-filter: blur(6.25rem); /* 100px */
 }
 
+.popup{
+	  width: 100%;
+  margin: 0;
+  border-radius: 0.625rem; /* 10px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 5;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.8); /* 40px */
+  overflow-y: auto;
+  flex-wrap: nowrap;
+  backdrop-filter: blur(6.25rem); /* 100px */
+	margin:3rem;
+}
+
 .modal {
   height: -webkit-fill-available;
 }
@@ -281,11 +301,10 @@ ul.access li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #111;
   z-index: 4;
   top: 0;
-  overflow-y: auto;
-  backdrop-filter: blur(6.25rem); /* 100px */
+  overflow-y: unset;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -314,6 +333,11 @@ ul.access li a {
 .grid-center{
 	width:100%;
 	display: flex;
+}
+
+.center3a{
+	padding:0;
+	padding-top: 2rem;
 }
 
 .grid{
@@ -404,6 +428,12 @@ ul.access li a {
 /* Ensuring inner content is aligned properly */
 .container {
   margin: 0;
+  margin-bottom: 2rem;
+}
+
+.container-left {
+  margin: 0;
+  margin-top: 2rem;
 }
 
 p {
