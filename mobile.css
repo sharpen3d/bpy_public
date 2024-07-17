@@ -313,6 +313,7 @@ ul.access li a {
 
 .grid-center{
 	width:100%;
+	display: flex;
 }
 
 .grid{
@@ -323,9 +324,14 @@ ul.access li a {
   max-width: 50rem; /* 800px */
 }
 
-.resume li {
-  font-size: 0.75rem; /* 12px */
+.resume ul{
+	margin:bottom: 1rem;
 }
+
+.resume h3{
+	font-size: 1.3rem;
+}
+
 
 .experience-item h5, .experience-item h4, .resume h4, .resume h2 {
   margin: 0;
@@ -434,11 +440,5 @@ p {
 
 .grid-buttons{
 	flex-direction:column;
-}
-
-.center3a{
-width:100%;
-padding:0;
-display: block;
-
+	margin-bottom:2rem;
 }

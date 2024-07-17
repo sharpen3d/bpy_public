@@ -16,12 +16,14 @@
 </head>
 
 <body>
-<div  id="hiddenresume" class="popup">
-     <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">close</span> </a>
+<div  id="hiddenresume" class="popup1">
+<div class="grid-buttons">
+     <a href="" class="grid-button2">  close  <span class="material-symbols-outlined">close</span> </a>
     <div class="center-left">
     <a href="https://github.com/sharpen3d/bpy_public/raw/4179a2e7feca3adc84ca6ef78215628a3835bba4/downloads/LukeStilsonResume2024.pdf" class="grid-button">
     Download as PDF
     </a>
+</div>
 </div>
 <div class="resume">
     <h1>Luke Stilson</h1>
@@ -46,8 +48,8 @@
         <h3>Top Skills:</h3>
         <ul>
             <li><strong>Tools design for game art:</strong> Python, C#, C++, Blender geometry nodes, Unreal blueprints</li>
-            <li><strong>Shader design and integration:</strong> Substance, Shadergraph, node-based shaders, OpenGL</li>
-            <li><strong>Asset prep and optimization:</strong> pipeline tools, animation setup, gameplay prototyping</li>
+            <li><strong>Shader design and integration:</strong> Substance, Shadergraph, node-based shaders (Unreal, Blender, Shadergraph, Amplify)</li>
+            <li><strong>Asset prep and optimization:</strong> Pipeline tools, profiling, asset integration (animation, blueprints), gameplay prototyping</li>
         </ul>
     </div>
 
@@ -176,6 +178,24 @@
 
     <script>
         const projectData = {
+            "railway": {
+                title: "Abandoned Railway",
+                videoSrc: "videos/minesweeper.mp4",
+                description: "UE5 project to bring classic minesweeper to a 3D environment and highlight real-world de-mining operations in 2024 Ukraine.",
+                images: [
+                    { src: "images/ar/0001.png", caption: "Image 1 caption" },
+                    { src: "images/ar/0002.png", caption: "Image 2 caption" },
+                    { src: "images/ar/0003.png", caption: "Image 3 caption" },
+                    { src: "images/ar/0004.png", caption: "Image 4 caption" },
+                    { src: "images/ar/0005.png", caption: "Image 5 caption" },
+                    { src: "images/ar/0006.png", caption: "Image 6 caption" },
+                    { src: "images/ar/0007.png", caption: "Image 7 caption" },
+                    { src: "images/ar/0008.png", caption: "Image 7 caption" },
+                    { src: "images/ar/0009.png", caption: "Image 7 caption" },
+                    { src: "images/ar/0010.png", caption: "Image 7 caption" },
+                    { src: "images/ar/0011.png", caption: "Image 7 caption" }
+                ]
+            },
             "minesweeperRemastered": {
                 title: "Minesweeper Remastered",
                 videoSrc: "videos/minesweeper.mp4",
@@ -272,10 +292,15 @@
             },
                 "blink": {
                 title: "BLiNK",
-                videoSrc: "videos/filemanager.mp4",
+                videoSrc: "images/blink/blink.mp4",
                 description: "BLiNK description",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                    { src: "images/blink/0.png", caption: "Image 1 caption" },
+                    { src: "images/blink/1.png", caption: "Image 1 caption" },
+                    { src: "images/blink/2.png", caption: "Image 1 caption" },
+                    { src: "images/blink/3.png", caption: "Image 1 caption" },
+                    { src: "images/blink/4.png", caption: "Image 1 caption" },
+                    { src: "images/blink/5.png", caption: "Image 1 caption" }
                 ]
             },
                 "hexscapes": {
@@ -710,7 +735,7 @@ work_history
                             <div class="grid-buttons">
                             <div onclick="openPopUp('blink')" class="grid-item-featured">
                                 <img class="icon" src="images/enginelogo0001.png">
-                                <img id="background" class="grid-image" src="images/blink0000.png">
+                                <img id="background" class="grid-image" src="images/blink/0.png">
                                 <div class="grid-text">
                                     <h3>
                                         BLiNK
@@ -825,15 +850,15 @@ work_history
                     </div>
             <div class="container">
                     <div class="grid">
-                        <div onclick="openPopUp('vatcreator')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/VATcreator.png">
+                        <div onclick="openPopUp('railway')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0001.png">
+                            <img id="background" class="grid-image" src="images/ar/0000.png">
                             <div class="grid-text">
                                 <h3>
-                                    VAT Creator - Geometry Nodes/Python
+                                    Evnironment Art - Railway
                                 </h3>
                                 <p class="grid-description">
-                                    Blender geometry node driven vertex animated texture source creator.
+                                    Asset Creation | Material Creation | Set Dressing | Asset Prep
                                 </p>
                             </div>
                         </div>
