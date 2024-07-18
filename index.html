@@ -16,6 +16,139 @@
 </head>
 
 <body>
+<div id="hiddengdd" class="popup1">
+    <div class="grid-buttons">
+        <a onclick="hideGDD()" class="grid-button2">close<span class="material-symbols-outlined">close</span></a>
+    </div>
+    <div class="resume">
+        <h1>Game Design Document: Minesweeper [remastered]</h1>
+        <h2>Game Overview</h2>
+        
+        <div class="game-overview">
+            <h3>Title:</h3>
+            <p>First-Person 3D Minesweeper</p>
+            <h3>Genre:</h3>
+            <p>Puzzle, Strategy</p>
+            <h3>Platform:</h3>
+            <p>PC (with potential for console and VR)</p>
+            <h3>Target Audience:</h3>
+            <p>Puzzle enthusiasts, strategy game fans, and players interested in supporting humanitarian causes</p>
+        </div>
+
+        <div class="vision-statement">
+            <h3>Vision Statement:</h3>
+            <p>My remastered parody of Minesweeper aims to bring the classic puzzle experience into an immersive first-person 3D environment, combining nostalgia with modern gameplay. The game also seeks to raise awareness, education and support for real demining efforts in the world today.</p>
+        </div>
+
+        <div class="core-gameplay">
+            <h3>Core Gameplay:</h3>
+            
+            <h4>Objective:</h4>
+            <p>The primary objective is to clear a 3D minefield without detonating any mines. Players use a remote with a digital screen displaying numbers, similar to classic Minesweeper, to identify the number of adjacent mines.</p>
+
+            <h4>Game Modes:</h4>
+            <p><strong>Simulation Mode:</strong> Players play in this mode freely on randomly-generated boards, selecting a difficulty: beginner, intermediate, or expert.</p>
+            <p><strong>Challenge Mode:</strong> Preset random-seed maps challenge every player equally and cost a wager of ‘life points’ to enter. Players start with a set amount of points, which regenerate over time. Losing a life in challenge mode results in losing life points, clearing a board results in player xp increase, earning in-game rewards, badges, additional life-points, and leaderboard ranking.</p>
+
+            <h4>Game Mechanics:</h4>
+            <ul>
+                <li><strong>Movement:</strong> Players move around the minefield in a first-person perspective.</li>
+                <li><strong>Interaction:</strong> Players use a remote device to interact with the tiles. The remote displays numbers indicating how many mines are adjacent to the selected tile. The player may find scarce items on the map that can be used for throwing at suspected mine tiles (tires, debris) to attempt to detonate the tile without stepping on it. These items are destroyed upon mine hit.</li>
+                <li><strong>Marking Mines:</strong> Players can mark suspected mines using the remote. Marked mines are visually distinct from unmarked tiles with realistic caution taping. Marked mines are blocking volumes for the player. The player cannot move over these spaces after they have been marked, saving them from accidental detonation.</li>
+                <li><strong>Leveling System:</strong> Life points are wagered in challenge mode. XP is calculated based on earned life points and average clear time. “Easier” levels allow the player to throw more items at suspected mines, and chance of detonating when hit with an object decreases as levels increase. Detection equipment is improved as levels increase, showing larger grids on screen on the device, robotic mine clearing devices, and more real-world equipment is to be unlocked for the player as they progress through difficulties. Upon death, all leveling upgrades are lost and the player must start from the very beginning.</li>
+            </ul>
+
+            <h4>User Interface:</h4>
+            <ul>
+                <li><strong>Heads-Up Display (HUD):</strong> The HUD is simple and includes only a flag counter and timer. The remote’s screen displays the number of adjacent mines resembling the classic game - flagged areas on screen are marked yellow with a flag, safe areas are blank, and numbers show where necessary.</li>
+                <li><strong>Visual Indicators:</strong> Safe tiles, marked mines, and uncovered tiles are visually distinct on the ground as well as the remote - uncovered tiles are blank, and unknown tiles are marked with a red laser grid on the terrain surface (projection decal).</li>
+            </ul>
+
+            <h4>Win/Loss Conditions:</h4>
+            <ul>
+                <li><strong>Winning:</strong> The player wins by uncovering all non-mine tiles.</li>
+                <li><strong>Losing:</strong> The player loses by uncovering a tile containing a mine. Boom.</li>
+            </ul>
+        </div>
+
+        <div class="game-world">
+            <h3>Game World:</h3>
+            
+            <h4>Setting:</h4>
+            <p>The game is set in a realistic, yet stylized environment resembling a demining zone (Level 1 largely resembling areas of northeastern Ukraine). The environment is designed to be visually large and barren to provide a sense of unease. Setting may be improved to use real terrain data from affected areas of Ukraine and Africa.</p>
+
+            <h4>Art Style:</h4>
+            <p>The art style combines realistic textures with a slight stylization to balance immersion and readability of game elements. The environment includes varied terrains, such as grassy fields, sandy deserts, and rocky landscapes – meant to resemble real places in the world where demining operations occur today.</p>
+
+            <h4>Audio:</h4>
+            <p>The game features ambient sounds to enhance immersion, including environmental sounds like wind, distant explosions, and birds. Interactive sounds provide feedback, such as a click when selecting a tile, a beep from the remote, and a distinct sound for marking mines.</p>
+        </div>
+
+        <div class="technical-requirements">
+            <h3>Technical Requirements:</h3>
+            
+            <h4>Engine:</h4>
+            <p>The game is developed using Unreal Engine 5, leveraging its capabilities for realistic graphics, and leaning towards a PC-first development strategy. Some technical features of the game include the implementation of softbody physics, nanite materials, Niagara particle effects, data-driven random seed map creation.</p>
+        </div>
+
+        <div class="development-roadmap">
+            <h3>Development Roadmap:</h3>
+            
+            <h4>Phase 1: Pre-production</h4>
+            <ul>
+                <li>Define game mechanics and core gameplay loop.</li>
+                <li>Develop initial prototypes and test gameplay concepts.</li>
+                <li>Create concept art and define the visual style.</li>
+            </ul>
+
+            <h4>Phase 2: Production</h4>
+            <ul>
+                <li>Develop the game world and create assets.</li>
+                <li>Implement game mechanics and UI elements.</li>
+                <li>Integrate audio and visual effects.</li>
+                <li>Test and refine the gameplay experience.</li>
+            </ul>
+
+            <h4>Phase 3: Testing and Polish</h4>
+            <ul>
+                <li>Conduct thorough playtesting and gather feedback.</li>
+                <li>Optimize performance and fix bugs.</li>
+                <li>Polish visuals and audio for final release quality.</li>
+            </ul>
+
+            <h4>Phase 4: Release and Post-release</h4>
+            <ul>
+                <li>Launch the game on PC via Steam.</li>
+                <li>Provide post-launch support and updates based on player feedback.</li>
+            </ul>
+        </div>
+
+        <div class="marketing-and-community-engagement">
+            <h3>Marketing and Community Engagement:</h3>
+            
+            <h4>Promotion:</h4>
+            <ul>
+                <li>Create a website highlighting the game’s features, development process, and humanitarian cause.</li>
+                <li>Develop a trailer showcasing gameplay and the immersive experience.</li>
+                <li>Engage with gaming communities and puzzle enthusiasts on social media.</li>
+            </ul>
+
+            <h4>Partnership & Monetization:</h4>
+            <ul>
+                <li>Include in-game information and education on current demining efforts, potential to partner with organizations such as u24.gov.ua to raise awareness and support for the cause.</li>
+                <li>Life Points can be made purchasable, valuable by scarcity and regeneration speed.</li>
+            </ul>
+
+            <h4>Community:</h4>
+            <ul>
+                <li>Encourage player feedback and suggestions through forums and social media.</li>
+                <li>Implement community-driven features and updates to keep the game engaging and relevant.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <div  id="hiddenresume" class="popup1">
 <div class="grid-buttons">
      <a href="" class="grid-button2">  close  <span class="material-symbols-outlined">close</span> </a>
@@ -512,6 +645,13 @@ function openPopUp(projectKey) {
             document.getElementById("hiddenresume").style.display = "none";
         }
 
+        function showGDD(){
+            document.getElementById("hiddengdd").style.display = "flex";
+        }
+        function hideGDD(){
+            document.getElementById("hiddengdd").style.display = "none";
+        }
+
     </script>
     <div class="navmenu">
         <div class="banner">
@@ -663,6 +803,19 @@ work_history
                         </div>
                     </div>
 
+                                            <div onclick="openPopUp('terminallauncher')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0001.png">
+                            <img id="background" class="grid-image" src="images/blendTerminal.jfif">
+                            <div class="grid-text">
+                                <h3>
+                                    MacOS Terminal Launcher
+                                </h3>
+                                <p class="grid-description">
+                                    Adds the ability to easily launch the blender terminal window on MacOS within the blender interface.
+                                </p>
+                            </div>
+                        </div>
+
                         <div onclick="openPopUp('Pixels')" class="grid-item-featured">
                             <img class="icon" src="images/softwareLogo0000.png">
                             <img id="background" class="grid-image" src="images/2DLarge.png">
@@ -747,53 +900,68 @@ work_history
                             </p>
 
                             <div class="grid-buttons">
-                            <div onclick="openPopUp('blink')" class="grid-item-featured">
-                                <img class="icon" src="images/enginelogo0001.png">
-                                <img id="background" class="grid-image" src="images/blink/0.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        BLiNK
-                                    </h3>
-                                    <p class="grid-description">
-                                        Experimental freerunning search and destroy.
-                                    </p>
+                                <div onclick="openPopUp('blink')" class="grid-item-featured">
+                                    <img class="icon" src="images/enginelogo0001.png">
+                                    <img id="background" class="grid-image" src="images/blink/6.png">
+                                    <div class="grid-text">
+                                        <h3>
+                                            BLiNK
+                                        </h3>
+                                        <p class="grid-description">
+                                           <em>Experimental Release | Indie Dev</em> <br> Tactical freerunning search and destroy.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
 
                             
-                            <div onclick="openPopUp('hexscapes')" class="grid-item-featured">
-                                <img class="icon" src="images/enginelogo0000.png">
-                                <img id="background" class="grid-image" src="images/hexscape.PNG">
-                                <div class="grid-text">
-                                    <h3>
-                                        HexScapes
-                                    </h3>
-                                    <p class="grid-description">
-                                        Challenging hexagon puzzle game made in Unity.
-                                    </p>
+                                <div onclick="openPopUp('hexscapes')" class="grid-item-featured">
+                                    <img class="icon" src="images/enginelogo0000.png">
+                                    <img id="background" class="grid-image" src="images/hexscape.PNG">
+                                    <div class="grid-text">
+                                        <h3>
+                                            HexScapes
+                                        </h3>
+                                        <p class="grid-description">
+                                           <em> Gameplay Concept | Indie Dev</em> <br> Challenging hexagon puzzle game.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
-                            <!--
-                               <div onclick="moreGames()" id="moregamesbutton" class="grid-button2">
-                                Show More Gameplay Projects
-                        </div>
-                                                       <div onclick="lessGames()" id="lessgamesbutton" class="grid-button2">
-                                Show More Gameplay Projects
-                        </div>
-                        -->
+                                </div>
+                                <div class="grid-buttons">
 
-                            </div>
-                    </div>
+                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured">
+                                    <img class="icon" src="images/enginelogo0000.png">
+                                    <img id="background" class="grid-image" src="images/hellomoto.jpeg">
+                                    <div class="grid-text">
+                                        <h3>
+                                            HelloMotoVR 
+                                        </h3>
+                                        <p class="grid-description">
+                                            <em>Mobile Release | OneFire Media </em> <br> Daydream VR Unity feature-focused minigame collection.
+                                        </p>
+                                    </div>
+                                 </div>
+
+
+                                <div onclick="openPopUp('die')" class="grid-item-featured">
+                                        <img class="icon" src="images/engineLogo0001.png">
+                                        <img id="background" class="grid-image" src="images/die/0.png">
+                                        <div class="grid-text">
+                                            <h3>
+                                                Die!
+                                            </h3>
+                                            <p class="grid-description">
+                                               <em> Gameplay Concept | Indie Dev</em> <br> Turn-based strategy game, where dice are playable characters.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                         </div>
                 </div>
 
-                <!--
-                <div class="grid-left">
-                    <img class="fillimg" src="images/minesweeper1.png">
-                </div>
-                -->
                 <div class="container-left">
-                    <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured2">
+                    <div class="grid-item-featured2">
                     
                     <img id="background" class="grid-image" src="images/minesweeper1.png">
                                             <div class="center3a">
@@ -811,46 +979,13 @@ work_history
                                         </div>
                                         <div class="grid-center">
                          <a onclick="openPopUp('minesweeperRemastered')" class="grid-button2">View Project <span class="material-symbols-outlined">tactic</span> </a>
-                         <a onclick="openPopUp('minesweeperRemastered')" class="grid-button2">Design Doc <span class="material-symbols-outlined">description</span> </a>
+                         <a onclick="showGDD()" class="grid-button2">Design Doc <span class="material-symbols-outlined">description</span> </a>
                          </div>
                          </div>
                          </div>
 
                 </div>
                 </div>
-                <!--
-
-                     <div class="container-left">
-                    <div class="container">
-                        <div id="bpx" class="grid">
-
-                            <div onclick="openPopUp('blink')" class="grid-item-featured">
-                                <img class="icon" src="images/enginelogo0001.png">
-                                <img id="background" class="grid-image" src="images/blink0000.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        BLiNK
-                                    </h3>
-                                    <p class="grid-description">
-                                        Experimental freerunning search and destroy.
-                                    </p>
-                                </div>
-                            </div>
-                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured">
-                                    <img class="icon" src="images/enginelogo0000.png">
-                                    <img id="background" class="grid-image" src="images/hellomoto.jpeg">
-                                    <div class="grid-text">
-                                        <h3>
-                                            HelloMotoVR - OneFire Media
-                                        </h3>
-                                        <p class="grid-description">
-                                            Daydream VR Unity game made to showcase unique 'snap-on' features of the Motorola z2 Force.
-                                        </p>
-                                    </div>
-                                </div>
-                                         
-                                            </div>
-                                            -->
                             </div>
                         </div>
                     </div>
@@ -880,6 +1015,30 @@ work_history
                                 </h3>
                                 <p class="grid-description">
                                     Asset Creation | Material Creation | Set Dressing | Asset Prep
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('books')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/books/0.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Book Generator
+                                </h3>
+                                <p class="grid-description">
+                                    Geometry node system for creating game-ready book models for bookshelves.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('gold')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0000.png">
+                            <img id="background" class="grid-image" src="images/gold/0.jpg">
+                            <div class="grid-text">
+                                <h3>
+                                    Stylized Gold Shaders
+                                </h3>
+                                <p class="grid-description">
+                                    Mobile and low-end device focused simulated gold methods.
                                 </p>
                             </div>
                         </div>
@@ -921,6 +1080,19 @@ work_history
                                 </div>
                             </div>
 
+                            <div onclick="openPopUp('magicwall')" class="grid-item-featured">
+                                <img class="icon" src="images/engineLogo0001.png">
+                                <img id="background" class="grid-image" src="images/magicwall/0.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        Modular Building Tools
+                                    </h3>
+                                    <p class="grid-description">
+                                        Unreal 4 Blueprint tool for creating basic buildings, walls, stairways, and more.
+                                    </p>
+                                </div>
+                            </div>
+
 
                             <div onclick="openPopUp('spritesheetworkflow')" class="grid-item-featured">
                                 <img class="icon" src="images/softwareLogo0000.png">
@@ -941,7 +1113,7 @@ work_history
                                 <img id="background" class="grid-image" src="images/swordVFX.png">
                                 <div class="grid-text">
                                     <h3>
-                                        Looping Particle Creator (now BPx Emitters)
+                                        Looping Particle Creator
                                     </h3>
                                     <p class="grid-description">
                                         Looping particles driven by geometry nodes in this project expanded to become the fully-functional BPx Emitters add-on.
@@ -957,7 +1129,7 @@ work_history
                                     Modular Donuts
                                 </h3>
                                 <p class="grid-description">
-                                    UE5 project to bring classic
+                                    The classic donut project, done soley with geometry node systems and custom python.
                                 </p>
                             </div>
                         </div>

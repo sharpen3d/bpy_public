@@ -1207,6 +1207,10 @@ align-items: center;
 	padding: 0;
 }
 
+#hiddengdd{
+	display: none;
+}
+
 .resume p {
 	padding-bottom: 0;
 	font-size:1rem;
