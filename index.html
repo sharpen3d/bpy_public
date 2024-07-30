@@ -480,13 +480,16 @@
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
             },
-                "vatcreator": {
-                title: "Vertex Animated Texture Creator",
-                videoSrc: "videos/vat.mp4",
-                description: "donutgenerator description",
+                "openvat": {
+                title: "Vertex Animation Texture Encoding / Decoding",
+                videoSrc: "videos/openvat.mp4",
+                description: "Encode vertex animated textures (VATs) from your animated mesh for use in game engines and VFX. Bake any type of vertex animation: animated modifiers, animated geometry nodes, simulations, armature, shape keys, and more. Exports an optimized VAT, a mesh with VAT-compatible additional UV set, JSON remapping data (to inform engine shaders), and optionally exports relative vertex normals in a secondary (VNRM) texture",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
+                    { src: "videos/openvat1.mp4", caption: "Showing the process of encoding a simple twist modifier into a vertex animated texture with OpenVAT - and opening it inside Unity with OpenVAT for Unity (package)" }
+                ],
+                downloadLink: "https://github.com/sharpen3d/openvat/raw/9ab8828d712b85632dac05a531c66ed0a2c0a2ff/OpenVAT.zip",
+                externalLink: "https://github.com/sharpen3d/openvat"
+           
             },
                 "audiovisualizer": {
                 title: "Geometry Node Audio Visualizer",
@@ -651,7 +654,7 @@ function openPopUp(projectKey) {
         function hideGDD(){
             document.getElementById("hiddengdd").style.display = "none";
         }
-
+        
     </script>
     <div class="navmenu">
         <div class="banner">
@@ -766,6 +769,18 @@ work_history
                 </div>
             <div class="container">
                 <div class="grid">
+                    <div onclick="openPopUp('openvat')" class="grid-item-featured">
+                        <img class="icon" src="images/softwareLogo0000.png">
+                        <img id="background" class="grid-image" src="images/openvat.png">
+                        <div class="grid-text">
+                            <h3>
+                                OpenVAT
+                            </h3>
+                            <p class="grid-description">
+                               One-click Vertex Animation Texture encoding from Blender to your engine of choice.
+                            </p>
+                        </div>
+                    </div>
                     <div onclick="openPopUp('textureLab')" class="grid-item-featured">
                         <img class="icon" src="images/softwareLogo0000.png">
                         <img id="background" class="grid-image" src="images/darkroom.png">
@@ -1037,18 +1052,6 @@ work_history
                                 </h3>
                                 <p class="grid-description">
                                     Mobile and low-end device focused simulated gold methods.
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('railway')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/VATcreator.png">
-                            <div class="grid-text">
-                                <h3>
-                                    VAT Creator - Geometry Nodes/Python
-                                </h3>
-                                <p class="grid-description">
-                                    Blender geometry node driven vertex animated texture source creator.
                                 </p>
                             </div>
                         </div>
