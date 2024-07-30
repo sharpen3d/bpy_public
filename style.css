@@ -339,7 +339,6 @@ position: fixed;
 #modalVideo{
 	max-width: 80%;
 	padding-top: 30px;
-		border-radius:10px;
 }
 
 .resume{
@@ -604,7 +603,7 @@ margin: auto;
 .container-left {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -616,7 +615,7 @@ margin: auto;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-
+	max-width:100rem;
 }
 
 .grid-left {
@@ -633,7 +632,7 @@ margin: auto;
       display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 	width:50%;
 }
@@ -1009,6 +1008,19 @@ flex-direction: column;
 
 .center3b{
 display: flex;
+align-items: centert;
+justify-content: center;
+text-align: left;
+padding: 20px;
+max-width:600px;
+flex-direction: column;
+	text-align: justify-left;
+	flex-wrap: nowrap;
+
+}
+
+.center3b{
+display: flex;
 align-items: flex-start;
 justify-content: flex-start;
 text-align: left;
@@ -1017,8 +1029,8 @@ flex-direction: column;
 	text-align: justify-left;
 	flex-wrap: nowrap;
 	margin: 30px;
-	padding-bottom: 0;
-	margin-bottom:0;
+	margin-top:0;
+	max-width:60rem;
 
 }
 
@@ -1260,12 +1272,14 @@ align-items: center;
 }
 
 .section-angled-inner {
-  width:100%;
-  padding: 4em;
-  display: flex;
-  flex-direction: row;
+    width: 100%;
+    padding: 4em;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-  align-items: space-around;
+    align-items: space-around;
 }
 
 /* Slightly angled section */
@@ -1284,8 +1298,21 @@ align-items: center;
         /* padding: 120px 100px; */
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: space-around;
+		    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.section-angled-inner2 {
+        width: 100%;
+        /* padding: 120px 100px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 

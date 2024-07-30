@@ -333,6 +333,7 @@ ul.access li a {
 .grid-center{
 	width:100%;
 	display: flex;
+	justify-content:center;
 }
 
 .center3a{
@@ -434,6 +435,7 @@ ul.access li a {
 .container-left {
   margin: 0;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 p {
