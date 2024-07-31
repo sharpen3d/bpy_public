@@ -358,7 +358,6 @@
                     { src: "images/texlab/1.png", caption: "Viewport view of clover texture, viewing top-down normal in 2D space" },
                     { src: "images/texlab/2.png", caption: "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material" }
                 ],
-                downloadLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md",
                 externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md"
             },
                 "bpxemitters": {
@@ -373,13 +372,12 @@
                     { src: "images/emitters/3.gif", caption: "Custom emitters panel section 1, spawn test" },
                     { src: "videos/dieparticle.mp4", caption: "Custom emitters panel section 1, spawn one" },
                 ],
-                downloadLink: "downloads/minesweeper.zip",
-                externalLink: "https://example.com"
+                downloadLink: "https://github.com/sharpen3d/bpx/raw/main/BPxSuite/BPx%20Emitters.zip",
             },
                 "rendercontroller": {
                 title: "Render Controller",
                 videoSrc: "videos/rendercontroller.mp4",
-                description: "Preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
+                description: "With this .blend template, preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
                 images: [
                     { src: "images/rendercontroller/0.png", caption: "" },
                     { src: "images/rendercontroller/1.png", caption: "" },
@@ -387,18 +385,18 @@
                     { src: "images/rendercontroller/3.png", caption: "" },
                     { src: "images/rendercontroller/4.png", caption: "" },
                     { src: "images/rendercontroller/5.png", caption: "" },
-                ]
+                ],
+                downloadLink: "https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend"
             },
                 "Pixels": {
-                title: "Blender Pixels (Bpx)",
+                title: "Pixels (2D Tools for Blender)",
                 videoSrc: "videos/pixels.mp4",
-                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blender’s 3D Viewport UI, adding custom panels and menus for easy access to its functions.",
+                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blender’s 3D Viewport UI, adding custom panels and menus for easy access to its functions. Scrips and nodes created in this project were incredibly helpful in creating OpenVAT, which relies on pixel-perfect output from an orthographic scene",
                 images: [
-                    { src: "images/pixels/0.png", caption: "Image 1 caption" },
-                    { src: "images/pixels/1.png", caption: "Image 1 caption" },
-                    { src: "images/pixels/2.png", caption: "Image 1 caption" },
-                    { src: "images/pixels/3.png", caption: "Image 1 caption" },
-                    { src: "images/pixels/4.png", caption: "Image 1 caption" }
+                    { src: "images/pixels/0.png", caption: "" },
+                    { src: "images/pixels/1.png", caption: "" },
+                    { src: "images/pixels/2.png", caption: "" },
+                    { src: "images/pixels/3.png", caption: "" }
                 ],
                 downloadLink: "https://github.com/sharpen3d/bpy_public/raw/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/2DTools.zip",
                 externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md"
@@ -422,7 +420,7 @@
                 "filemanager": {
                 title: "Bpx File Manager",
                 videoSrc: "videos/filemanager.mp4",
-                description: "filemanager description",
+                description: "Similar to the Collect All Files functionality in AfterEffects, this helps to identify, condense, and re-link all external resources in a blend file. This is useful in sharing blender files and keeping track of relative references when migrating projects between workstations or drives",
                 images: [
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
@@ -430,15 +428,18 @@
                 "terminallauncher": {
                 title: "MacOS Terminal Launcher",
                 videoSrc: "videos/filemanager.mp4",
-                description: "Terminal Launcher description",
+                description: "This is an honestly fairly involved plugin, which launches the Blender terminal window on MacOS. To do this, I had to write a python script that launches a shell script and some additional processes to access a terminal window and launch Blender from within that environment. The Blender Terminal is always a must-have for creating addons within Blender (to recieve python erros and print statements), and when testing my tools on Mac, this was always a time-consuming, janky process that I felt the need to solve.",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
+                    { src: "images/terminal/0.jpg", caption: "" },
+                    { src: "images/terminal/1.jpg", caption: "" },
+                    { src: "images/terminal/2.jpg", caption: "" }
+                ],
+                downloadLink: "https://github.com/sharpen3d/bpy_public/raw/main/downloads/macosterminallauncher.zip"
             },
                 "blink": {
                 title: "BLiNK",
                 videoSrc: "images/blink/blink.mp4",
-                description: "BLiNK description",
+                description: "BLiNK is a Tactical freerunning search and destroy game concept I started and obsessed over in my free time in 2020. Through this project I learned an immense amount about level design, game concepting and practical application of blueprint scripting in UE4. The game features 8 unique weapons, a leveling and unlock system AI enemy bots, and your main weapon, which acts as a grapple hook, crossbow, enemy detecting device, enemy grapple, spawn/respawn point generator, and teleporting throwing star - available through loadout and a quick-select menu",
                 images: [
                     { src: "images/blink/0.png", caption: "Image 1 caption" },
                     { src: "images/blink/1.png", caption: "Image 1 caption" },
@@ -451,9 +452,9 @@
                 "hexscapes": {
                 title: "HexScapes",
                 videoSrc: "videos/hex.mp4",
-                description: "Hexscapes description",
+                description: "Hexscapes is a simple game concept based on the six sides of a hexagon. Each island center (without a number) is tapped to increment all surrounding islands by 1. To complete the level, a player must represent 1 through 6 on the sides of each major island. Creating the game board generator for this game was a fun learning experience in methods of recursive solving. This was originally concepted in Unreal, then transferred and rebuilt in Unity for an excersize in C# arrays - and to better fit the intended possible release of this game on web or mobile.",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                    { src: "images/hexscape.png", caption: "Image of an incomplete game-board, after puzzle generation" }
                 ]
             },
                 "die": {
@@ -461,29 +462,13 @@
                 videoSrc: "videos/die.mp4",
                 description: "Sharing early exploration into this UE5 game started in 2024. The initial concept is based on dice as characters, with their numbers representing relative power levels. When dice engage eachother, the game has been built to calculate an odds ratio based on the opposing numbers, rather than higher numbers winning outright. Dice positioning and grouping also impacts potential win, akin to games like auto-chess. This exploration was started in part to refresh and solidify my skills in complex gameplay and animation mechanics in unreal blueprints.",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
-            },
-                "hellomotovr": {
-                title: "HelloMotoVR",
-                videoSrc: "videos/filemanager.mp4",
-                description: "HelloMotoVR description",
-                images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
-            },
-                "donutgenerator": {
-                title: "Donut Generator",
-                videoSrc: "videos/donut.mp4",
-                description: "donutgenerator description",
-                images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                    { src: "images/die/0.png", caption: "A 1 charges into a 6, with reckless abandon" }
                 ]
             },
                 "openvat": {
                 title: "Vertex Animation Texture Encoding / Decoding",
                 videoSrc: "videos/openvat.mp4",
-                description: "Encode vertex animated textures (VATs) from your animated mesh for use in game engines and VFX. Bake any type of vertex animation: animated modifiers, animated geometry nodes, simulations, armature, shape keys, and more. Exports an optimized VAT, a mesh with VAT-compatible additional UV set, JSON remapping data (to inform engine shaders), and optionally exports relative vertex normals in a secondary (VNRM) texture",
+                description: "My latest Blender extension in 2024. Following new guidelines for Blender 4.2+. Groundbreaking extension for creating vertex animated textures (VATs) from your animated mesh for use in game engines and VFX. Created with extensive python and intricate geometry nodes and shaders. Bake any type of vertex animation: animated modifiers, animated geometry nodes, simulations, armature, shape keys, and more. Exports an optimized VAT, a mesh with VAT-compatible additional UV set, JSON remapping data (to inform engine shaders), and optionally exports relative vertex normals in a secondary (VNRM) texture",
                 images: [
                     { src: "videos/openvat1.mp4", caption: "Showing the process of encoding a simple twist modifier into a vertex animated texture with OpenVAT - and opening it inside Unity with OpenVAT for Unity (package)" }
                 ],
@@ -494,32 +479,14 @@
                 "audiovisualizer": {
                 title: "Geometry Node Audio Visualizer",
                 videoSrc: "videos/visualizer.mp4",
-                description: "visualizer description",
+                description: "I used drivers measuring frequency and pitch altering aspects of a geometry node system for this exploration into audio visuilization. This came about when I realized drivers could be accessed within geometry node systems, and I hadn't seen geometry nodes be utilized for this possible application of visualization",
                 images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
-            },
-                "loopparticles": {
-                title: "Looping Particles with Geometry Nodes",
-                videoSrc: "videos/particles.mp4",
-                description: "visualizer description",
-                images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
-            },
-                "spritesheetworkflow": {
-                title: "Spritesheet Workflows",
-                description: "spritesheet description",
-                images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
+                    { src: "images/visualizer.png", caption: "" }
                 ]
             },
                 "blenderndo": {
                 title: "Blender 'NDO'",
-                description: "blender ndo description",
-                images: [
-                    { src: "images/rendercontrol.png", caption: "Image 1 caption" }
-                ]
+                description: "Quixel's NDO was one of my favorite tools for making ultra-clean normal maps. With Adobe's acquisition of Quixel, the tools for photoshop became depricated and this technology outdated. I revived this workflow, but in a much more concise and quicker addon for Blender, using a custom shader, color-space, and rendering techniques to be able to create top-down geometry acting as normals for my models. This same technology was re-purposed in my more recent extension Texture Lab.",
             }
         };
 
@@ -944,18 +911,6 @@ work_history
                                 </div>
                                 <div class="grid-buttons">
 
-                                <div onclick="openPopUp('hellomotovr')" class="grid-item-featured">
-                                    <img class="icon" src="images/enginelogo0000.png">
-                                    <img id="background" class="grid-image" src="images/hellomoto.jpeg">
-                                    <div class="grid-text">
-                                        <h3>
-                                            HelloMotoVR 
-                                        </h3>
-                                        <p class="grid-description">
-                                            <em>Mobile Release | OneFire Media </em> <br> Daydream VR Unity feature-focused minigame collection.
-                                        </p>
-                                    </div>
-                                 </div>
 
 
                                 <div onclick="openPopUp('die')" class="grid-item-featured">
@@ -1031,18 +986,6 @@ work_history
                                 </p>
                             </div>
                         </div>
-                        <div onclick="openPopUp('books')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/books/0.png">
-                            <div class="grid-text">
-                                <h3>
-                                    Book Generator
-                                </h3>
-                                <p class="grid-description">
-                                    Geometry node system for creating game-ready book models for bookshelves.
-                                </p>
-                            </div>
-                        </div>
                         <div onclick="openPopUp('gold')" class="grid-item-featured">
                             <img class="icon" src="images/engineLogo0000.png">
                             <img id="background" class="grid-image" src="images/gold/0.jpg">
@@ -1094,46 +1037,9 @@ work_history
                                 </div>
                             </div>
 
-
-                            <div onclick="openPopUp('spritesheetworkflow')" class="grid-item-featured">
-                                <img class="icon" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image" src="images/animatedSpritesheet.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        Spritesheet Workflows
-                                    </h3>
-                                    <p class="grid-description">
-                                        Math-based shader in blender reflecting what a flipbook shader in Unity/Unreal would look like - with variables for size, frames, start frame, looping.
-                                    </p>
-                                </div>
-                            </div>
                            <!-- <div id="hiddenprojects"> -->
                                                     
-                            <div onclick="openPopUp('loopparticles')" class="grid-item-featured">
-                                <img class="icon" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image" src="images/swordVFX.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        Looping Particle Creator
-                                    </h3>
-                                    <p class="grid-description">
-                                        Looping particles driven by geometry nodes in this project expanded to become the fully-functional BPx Emitters add-on.
-                                    </p>
-                                </div>
-                            </div>
 
-                                                    <div onclick="openPopUp('donutgenerator')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/donutGenerator.png">
-                            <div class="grid-text">
-                                <h3>
-                                    Modular Donuts
-                                </h3>
-                                <p class="grid-description">
-                                    The classic donut project, done soley with geometry node systems and custom python.
-                                </p>
-                            </div>
-                        </div>
                       <!--  </div> -->
                         </div>
                 </div>
