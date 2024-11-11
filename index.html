@@ -13,263 +13,264 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div id="hiddengdd" class="popup1">
-    <div class="grid-buttons">
-        <a onclick="hideGDD()" class="grid-button2">Close<span class="material-symbols-outlined">close</span></a>
-    </div>
-    <div class="resume">
-        <h1>Game Design Document: Minesweeper [remastered]</h1>
-        <h2>Game Overview</h2>
-        
-        <div class="game-overview">
-            <h3>Title:</h3>
-            <p>First-Person 3D Minesweeper</p>
-            <h3>Genre:</h3>
-            <p>Puzzle, Strategy</p>
-            <h3>Platform:</h3>
-            <p>PC (with potential for console and VR)</p>
-            <h3>Target Audience:</h3>
-            <p>Puzzle enthusiasts, strategy game fans, and players interested in supporting humanitarian causes</p>
+    <div id="hiddengdd" class="popup1">
+        <div class="grid-buttons">
+            <a onclick="hideGDD()" class="grid-button2">Close<span class="material-symbols-outlined">close</span></a>
         </div>
+        <div class="resume">
+            <h1>Game Design Document: Minesweeper [remastered]</h1>
+            <h2>Game Overview</h2>
 
-        <div class="vision-statement">
-            <h3>Vision Statement:</h3>
-            <p>My remastered parody of Minesweeper aims to bring the classic puzzle experience into an immersive first-person 3D environment, combining nostalgia with modern gameplay. The game also seeks to raise awareness, education and support for real demining efforts in the world today.</p>
-        </div>
+            <div class="game-overview">
+                <h3>Title:</h3>
+                <p>First-Person 3D Minesweeper</p>
+                <h3>Genre:</h3>
+                <p>Puzzle, Strategy</p>
+                <h3>Platform:</h3>
+                <p>PC (with potential for console and VR)</p>
+                <h3>Target Audience:</h3>
+                <p>Puzzle enthusiasts, strategy game fans, and players interested in supporting humanitarian causes</p>
+            </div>
 
-        <div class="core-gameplay">
-            <h3>Core Gameplay:</h3>
-            
-            <h4>Objective:</h4>
-            <p>The primary objective is to clear a 3D minefield without detonating any mines. Players use a remote with a digital screen displaying numbers, similar to classic Minesweeper, to identify the number of adjacent mines.</p>
+            <div class="vision-statement">
+                <h3>Vision Statement:</h3>
+                <p>My remastered parody of Minesweeper aims to bring the classic puzzle experience into an immersive first-person 3D environment, combining nostalgia with modern gameplay. The game also seeks to raise awareness, education and support for real demining efforts in the world today.</p>
+            </div>
 
-            <h4>Game Modes:</h4>
-            <p><strong>Simulation Mode:</strong> Players play in this mode freely on randomly-generated boards, selecting a difficulty: beginner, intermediate, or expert.</p>
-            <p><strong>Challenge Mode:</strong> Preset random-seed maps challenge every player equally and cost a wager of ‘life points’ to enter. Players start with a set amount of points, which regenerate over time. Losing a life in challenge mode results in losing life points, clearing a board results in player xp increase, earning in-game rewards, badges, additional life-points, and leaderboard ranking.</p>
+            <div class="core-gameplay">
+                <h3>Core Gameplay:</h3>
 
-            <h4>Game Mechanics:</h4>
-            <ul>
-                <li><strong>Movement:</strong> Players move around the minefield in a first-person perspective.</li>
-                <li><strong>Interaction:</strong> Players use a remote device to interact with the tiles. The remote displays numbers indicating how many mines are adjacent to the selected tile. The player may find scarce items on the map that can be used for throwing at suspected mine tiles (tires, debris) to attempt to detonate the tile without stepping on it. These items are destroyed upon mine hit.</li>
-                <li><strong>Marking Mines:</strong> Players can mark suspected mines using the remote. Marked mines are visually distinct from unmarked tiles with realistic caution taping. Marked mines are blocking volumes for the player. The player cannot move over these spaces after they have been marked, saving them from accidental detonation.</li>
-                <li><strong>Leveling System:</strong> Life points are wagered in challenge mode. XP is calculated based on earned life points and average clear time. “Easier” levels allow the player to throw more items at suspected mines, and chance of detonating when hit with an object decreases as levels increase. Detection equipment is improved as levels increase, showing larger grids on screen on the device, robotic mine clearing devices, and more real-world equipment is to be unlocked for the player as they progress through difficulties. Upon death, all leveling upgrades are lost and the player must start from the very beginning.</li>
-            </ul>
+                <h4>Objective:</h4>
+                <p>The primary objective is to clear a 3D minefield without detonating any mines. Players use a remote with a digital screen displaying numbers, similar to classic Minesweeper, to identify the number of adjacent mines.</p>
 
-            <h4>User Interface:</h4>
-            <ul>
-                <li><strong>Heads-Up Display (HUD):</strong> The HUD is simple and includes only a flag counter and timer. The remote’s screen displays the number of adjacent mines resembling the classic game - flagged areas on screen are marked yellow with a flag, safe areas are blank, and numbers show where necessary.</li>
-                <li><strong>Visual Indicators:</strong> Safe tiles, marked mines, and uncovered tiles are visually distinct on the ground as well as the remote - uncovered tiles are blank, and unknown tiles are marked with a red laser grid on the terrain surface (projection decal).</li>
-            </ul>
+                <h4>Game Modes:</h4>
+                <p><strong>Simulation Mode:</strong> Players play in this mode freely on randomly-generated boards, selecting a difficulty: beginner, intermediate, or expert.</p>
+                <p><strong>Challenge Mode:</strong> Preset random-seed maps challenge every player equally and cost a wager of ï¿½life pointsï¿½ to enter. Players start with a set amount of points, which regenerate over time. Losing a life in challenge mode results in losing life points, clearing a board results in player xp increase, earning in-game rewards, badges, additional life-points, and leaderboard ranking.</p>
 
-            <h4>Win/Loss Conditions:</h4>
-            <ul>
-                <li><strong>Winning:</strong> The player wins by uncovering all non-mine tiles.</li>
-                <li><strong>Losing:</strong> The player loses by uncovering a tile containing a mine. Boom.</li>
-            </ul>
-        </div>
+                <h4>Game Mechanics:</h4>
+                <ul>
+                    <li><strong>Movement:</strong> Players move around the minefield in a first-person perspective.</li>
+                    <li><strong>Interaction:</strong> Players use a remote device to interact with the tiles. The remote displays numbers indicating how many mines are adjacent to the selected tile. The player may find scarce items on the map that can be used for throwing at suspected mine tiles (tires, debris) to attempt to detonate the tile without stepping on it. These items are destroyed upon mine hit.</li>
+                    <li><strong>Marking Mines:</strong> Players can mark suspected mines using the remote. Marked mines are visually distinct from unmarked tiles with realistic caution taping. Marked mines are blocking volumes for the player. The player cannot move over these spaces after they have been marked, saving them from accidental detonation.</li>
+                    <li><strong>Leveling System:</strong> Life points are wagered in challenge mode. XP is calculated based on earned life points and average clear time. ï¿½Easierï¿½ levels allow the player to throw more items at suspected mines, and chance of detonating when hit with an object decreases as levels increase. Detection equipment is improved as levels increase, showing larger grids on screen on the device, robotic mine clearing devices, and more real-world equipment is to be unlocked for the player as they progress through difficulties. Upon death, all leveling upgrades are lost and the player must start from the very beginning.</li>
+                </ul>
 
-        <div class="game-world">
-            <h3>Game World:</h3>
-            
-            <h4>Setting:</h4>
-            <p>The game is set in a realistic, yet stylized environment resembling a demining zone (Level 1 largely resembling areas of northeastern Ukraine). The environment is designed to be visually large and barren to provide a sense of unease. Setting may be improved to use real terrain data from affected areas of Ukraine and Africa.</p>
+                <h4>User Interface:</h4>
+                <ul>
+                    <li><strong>Heads-Up Display (HUD):</strong> The HUD is simple and includes only a flag counter and timer. The remoteï¿½s screen displays the number of adjacent mines resembling the classic game - flagged areas on screen are marked yellow with a flag, safe areas are blank, and numbers show where necessary.</li>
+                    <li><strong>Visual Indicators:</strong> Safe tiles, marked mines, and uncovered tiles are visually distinct on the ground as well as the remote - uncovered tiles are blank, and unknown tiles are marked with a red laser grid on the terrain surface (projection decal).</li>
+                </ul>
 
-            <h4>Art Style:</h4>
-            <p>The art style combines realistic textures with a slight stylization to balance immersion and readability of game elements. The environment includes varied terrains, such as grassy fields, sandy deserts, and rocky landscapes – meant to resemble real places in the world where demining operations occur today.</p>
+                <h4>Win/Loss Conditions:</h4>
+                <ul>
+                    <li><strong>Winning:</strong> The player wins by uncovering all non-mine tiles.</li>
+                    <li><strong>Losing:</strong> The player loses by uncovering a tile containing a mine. Boom.</li>
+                </ul>
+            </div>
 
-            <h4>Audio:</h4>
-            <p>The game features ambient sounds to enhance immersion, including environmental sounds like wind, distant explosions, and birds. Interactive sounds provide feedback, such as a click when selecting a tile, a beep from the remote, and a distinct sound for marking mines.</p>
-        </div>
+            <div class="game-world">
+                <h3>Game World:</h3>
 
-        <div class="technical-requirements">
-            <h3>Technical Requirements:</h3>
-            
-            <h4>Engine:</h4>
-            <p>The game is developed using Unreal Engine 5, leveraging its capabilities for realistic graphics, and leaning towards a PC-first development strategy. Some technical features of the game include the implementation of softbody physics, nanite materials, Niagara particle effects, data-driven random seed map creation.</p>
-        </div>
+                <h4>Setting:</h4>
+                <p>The game is set in a realistic, yet stylized environment resembling a demining zone (Level 1 largely resembling areas of northeastern Ukraine). The environment is designed to be visually large and barren to provide a sense of unease. Setting may be improved to use real terrain data from affected areas of Ukraine and Africa.</p>
 
-        <div class="development-roadmap">
-            <h3>Development Roadmap:</h3>
-            
-            <h4>Phase 1: Pre-production</h4>
-            <ul>
-                <li>Define game mechanics and core gameplay loop.</li>
-                <li>Develop initial prototypes and test gameplay concepts.</li>
-                <li>Create concept art and define the visual style.</li>
-            </ul>
+                <h4>Art Style:</h4>
+                <p>The art style combines realistic textures with a slight stylization to balance immersion and readability of game elements. The environment includes varied terrains, such as grassy fields, sandy deserts, and rocky landscapes ï¿½ meant to resemble real places in the world where demining operations occur today.</p>
 
-            <h4>Phase 2: Production</h4>
-            <ul>
-                <li>Develop the game world and create assets.</li>
-                <li>Implement game mechanics and UI elements.</li>
-                <li>Integrate audio and visual effects.</li>
-                <li>Test and refine the gameplay experience.</li>
-            </ul>
+                <h4>Audio:</h4>
+                <p>The game features ambient sounds to enhance immersion, including environmental sounds like wind, distant explosions, and birds. Interactive sounds provide feedback, such as a click when selecting a tile, a beep from the remote, and a distinct sound for marking mines.</p>
+            </div>
 
-            <h4>Phase 3: Testing and Polish</h4>
-            <ul>
-                <li>Conduct thorough playtesting and gather feedback.</li>
-                <li>Optimize performance and fix bugs.</li>
-                <li>Polish visuals and audio for final release quality.</li>
-            </ul>
+            <div class="technical-requirements">
+                <h3>Technical Requirements:</h3>
 
-            <h4>Phase 4: Release and Post-release</h4>
-            <ul>
-                <li>Launch the game on PC via Steam.</li>
-                <li>Provide post-launch support and updates based on player feedback.</li>
-            </ul>
-        </div>
+                <h4>Engine:</h4>
+                <p>The game is developed using Unreal Engine 5, leveraging its capabilities for realistic graphics, and leaning towards a PC-first development strategy. Some technical features of the game include the implementation of softbody physics, nanite materials, Niagara particle effects, data-driven random seed map creation.</p>
+            </div>
 
-        <div class="marketing-and-community-engagement">
-            <h3>Marketing and Community Engagement:</h3>
-            
-            <h4>Promotion:</h4>
-            <ul>
-                <li>Create a website highlighting the game’s features, development process, and humanitarian cause.</li>
-                <li>Develop a trailer showcasing gameplay and the immersive experience.</li>
-                <li>Engage with gaming communities and puzzle enthusiasts on social media.</li>
-            </ul>
+            <div class="development-roadmap">
+                <h3>Development Roadmap:</h3>
 
-            <h4>Partnership & Monetization:</h4>
-            <ul>
-                <li>Include in-game information and education on current demining efforts, potential to partner with organizations such as u24.gov.ua to raise awareness and support for the cause.</li>
-                <li>Life Points can be made purchasable, valuable by scarcity and regeneration speed.</li>
-            </ul>
+                <h4>Phase 1: Pre-production</h4>
+                <ul>
+                    <li>Define game mechanics and core gameplay loop.</li>
+                    <li>Develop initial prototypes and test gameplay concepts.</li>
+                    <li>Create concept art and define the visual style.</li>
+                </ul>
 
-            <h4>Community:</h4>
-            <ul>
-                <li>Encourage player feedback and suggestions through forums and social media.</li>
-                <li>Implement community-driven features and updates to keep the game engaging and relevant.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+                <h4>Phase 2: Production</h4>
+                <ul>
+                    <li>Develop the game world and create assets.</li>
+                    <li>Implement game mechanics and UI elements.</li>
+                    <li>Integrate audio and visual effects.</li>
+                    <li>Test and refine the gameplay experience.</li>
+                </ul>
 
+                <h4>Phase 3: Testing and Polish</h4>
+                <ul>
+                    <li>Conduct thorough playtesting and gather feedback.</li>
+                    <li>Optimize performance and fix bugs.</li>
+                    <li>Polish visuals and audio for final release quality.</li>
+                </ul>
 
-<div  id="hiddenresume" class="popup1">
-<div class="grid-buttons">
-     <a href="" class="grid-button2">  close  <span class="material-symbols-outlined">close</span> </a>
-    <div class="center-left">
-    <a href="https://github.com/sharpen3d/bpy_public/raw/4179a2e7feca3adc84ca6ef78215628a3835bba4/downloads/LukeStilsonResume2024.pdf" class="grid-button">
-    Download as PDF
-    </a>
-</div>
-</div>
-<div class="resume">
-    <h1>Luke Stilson</h1>
-    <h2>Technical Artist</h2>
+                <h4>Phase 4: Release and Post-release</h4>
+                <ul>
+                    <li>Launch the game on PC via Steam.</li>
+                    <li>Provide post-launch support and updates based on player feedback.</li>
+                </ul>
+            </div>
 
-    <div class="contact-info">
-        <h3>Contact Information:</h3>
-        <ul>
-            <li><strong>Phone:</strong> 779-537-0794</li>
-            <li><strong>Email:</strong> <a href="mailto:stilson.luke@gmail.com">stilson.luke@gmail.com</a></li>
-            <li><strong>Portfolio / Personal Site:</strong> <a href="https://www.lukestilson.com">www.lukestilson.com</a></li>
-        </ul>
-    </div>
+            <div class="marketing-and-community-engagement">
+                <h3>Marketing and Community Engagement:</h3>
 
-    <div class="summary">
-        <h3>Summary:</h3>
-        <p>Technical Artist with extensive experience in custom tools creation for studio art workflows, shader creation, asset optimization, and pipeline creation. Adept at bridging the gap between artists and programmers with a strong multidisciplinary background.</p>
-    </div>
+                <h4>Promotion:</h4>
+                <ul>
+                    <li>Create a website highlighting the gameï¿½s features, development process, and humanitarian cause.</li>
+                    <li>Develop a trailer showcasing gameplay and the immersive experience.</li>
+                    <li>Engage with gaming communities and puzzle enthusiasts on social media.</li>
+                </ul>
 
-    <div class="skills">
-        <h3>Top Skills:</h3>
-        <ul>
-            <li><strong>Tools design for game art:</strong> Python, C#, C++, Blender/Geometry Nodes, Unreal blueprints</li>
-            <li><strong>Shader design and integration:</strong> Substance, Shadergraph, UE node-based shaders, openGL/HLSL</li>
-            <li><strong>Asset design and optimization:</strong> pipeline systems, visual effects, simulations, modular design tools</li>
-        </ul>
-    </div>
+                <h4>Partnership & Monetization:</h4>
+                <ul>
+                    <li>Include in-game information and education on current demining efforts, potential to partner with organizations such as u24.gov.ua to raise awareness and support for the cause.</li>
+                    <li>Life Points can be made purchasable, valuable by scarcity and regeneration speed.</li>
+                </ul>
 
-    <div class="experience">
-        <h3>Experience:</h3>
-
-        <div class="experience-item">
-            <h4>OnChain Studios</h4>
-            <h5>Technical Artist</h5>
-            <p>February 2023 - Present</p>
-            <ul>
-                <li>Facilitate Cross-Team Communication: Align art and dev teams goals by shedding light on abilities and limitations, proposing solutions through practical examples, drawing from research and experience</li>
-                <li>Develop Tools: Create Python and C# tools for pipeline setup, performance analysis, art implementation, level-design, lookdev and rendering</li>
-                <li>Optimize and Prepare 3D Assets: Streamline prep and delivery workflows with OpenPype, Ayon, and custom toolsets to ensure consistency and ease of engine implementation</li>
-                <li>Design and Integrate Animation: Create complex animation control methods for character animation, VFX and simulations with a focus on system scalability</li>
-                <li>Develop gameplay and systems: Create complete experiences and games that seamlessly integrate into systems managed by the back-end dev team</li>
-                <li>Author and Optimize Shaders: Design and optimize shaders in Unity and create tools and methods for texture compression, channel-packing, optimization and procedural techniques</li>
-                <li>Design and Integrate VFX: Implement VFX and particle systems in various software for use on target platforms</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>Arrow International, Inc.</h4>
-            <h5>Lead Technical Artist</h5>
-            <p>August 2020 - February 2023</p>
-            <ul>
-                <li>Managed Workflows: Bridged the gap between artists and programmers, leading meetings on structure, pipeline, and organization</li>
-                <li>Created and Integrated Art: Converted art assets into game-ready assets, compositing EXR files, prepping rigged models, and creating assets using Blender, Maya, Substance, and Adobe tools for Unity</li>
-                <li>Developed Tools: Scripted and documented tools for artists and programmers to improve workflow, including Blender Python addons, Unity C# scripts, and GLSL & node-based shaders</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>ONEFIRE, Inc.</h4>
-            <h5>3D Generalist, Gameplay Programmer</h5>
-            <p>July 2017 - January 2020 (on contract basis)</p>
-            <ul>
-                <li>Developed Experiences: Pitch, design, create and develop AR, VR, and mobile games from start to finish using Unreal Engine and Unity with a small team</li>
-                <li>Implemented Game-Art: Designed props, game-ready materials, shaders and UI for Unity and Unreal</li>
-                <li>Modeling, Texturing, Design: Created 2D and 3D content for mobile, AR and VR games</li>
-                <li>Composed Audio: Created digital music and sound effects for games using various DAWs and Unity/Unreal</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>Float</h4>
-            <h5>Designer</h5>
-            <p>July 2017 - February 2018</p>
-            <ul>
-                <li>Created Art: Created 2D, 3D, and Vector graphic elements for a broad range of clients in mobile-learning and novel AR instructional industrial applications</li>
-                <li>Front-End Development: Designed UI for high-profile client websites and apps</li>
-                <li>Established UX: Assisted in establishing ideal user flow with regards to UI/UX</li>
-                <li>Maintained Content: Managed large mobile-learning content systems with CMS tools and Git</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h4>The Iona Group</h4>
-            <h5>Animator / Front-End Developer</h5>
-            <p>July 2017 - February 2018</p>
-            <ul>
-                <li>Animated Content: Created branded informative animations for various clients</li>
-                <li>Pitched and Executed: Designed and pitched detailed storyboarded animations to clients</li>
-                <li>Implemented Designs: Developed atomic web elements using Twig, SCSS and JavaScript</li>
-                <li>Re-Skinned Games: Implemented custom art in learning experience games, games following client branding guidelines</li>
-            </ul>
+                <h4>Community:</h4>
+                <ul>
+                    <li>Encourage player feedback and suggestions through forums and social media.</li>
+                    <li>Implement community-driven features and updates to keep the game engaging and relevant.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div class="education">
-        <h3>Education:</h3>
-        
-        <div class="education-item">
-            <h4>Bradley University</h4>
-            <p>Bachelor of Science in Interactive Media, Bachelor of Science in Music</p>
-            <p>2013 - 2017</p>
+
+    <div id="hiddenresume" class="popup1">
+        <div class="grid-buttons">
+            <a href="" class="grid-button2">  close  <span class="material-symbols-outlined">close</span> </a>
+            <div class="center-left">
+                <a href="https://github.com/sharpen3d/bpy_public/raw/4179a2e7feca3adc84ca6ef78215628a3835bba4/downloads/LukeStilsonResume2024.pdf" class="grid-button">
+                    Download as PDF
+                </a>
+            </div>
+        </div>
+        <div class="resume">
+            <h1>Luke Stilson</h1>
+            <h2>Technical Artist</h2>
+
+            <div class="contact-info">
+                <h3>Contact Information:</h3>
+                <ul>
+                    <li><strong>Phone:</strong> 779-537-0794</li>
+                    <li><strong>Email:</strong> <a href="mailto:stilson.luke@gmail.com">stilson.luke@gmail.com</a></li>
+                    <li><strong>Portfolio / Personal Site:</strong> <a href="https://www.lukestilson.com">www.lukestilson.com</a></li>
+                </ul>
+            </div>
+
+            <div class="summary">
+                <h3>Summary:</h3>
+                <p>Technical Artist with extensive experience in custom tools creation for studio art workflows, shader creation, asset optimization, and pipeline creation. Adept at bridging the gap between artists and programmers with a strong multidisciplinary background.</p>
+            </div>
+
+            <div class="skills">
+                <h3>Top Skills:</h3>
+                <ul>
+                    <li><strong>Tools design for game art:</strong> Python, C#, C++, Blender/Geometry Nodes, Unreal blueprints</li>
+                    <li><strong>Shader design and integration:</strong> Substance, Shadergraph, UE node-based shaders, openGL/HLSL</li>
+                    <li><strong>Asset design and optimization:</strong> pipeline systems, visual effects, simulations, modular design tools</li>
+                </ul>
+            </div>
+
+            <div class="experience">
+                <h3>Experience:</h3>
+
+                <div class="experience-item">
+                    <h4>OnChain Studios</h4>
+                    <h5>Technical Artist</h5>
+                    <p>February 2023 - Present</p>
+                    <ul>
+                        <li>Facilitate Cross-Team Communication: Align art and dev teams goals by shedding light on abilities and limitations, proposing solutions through practical examples, drawing from research and experience</li>
+                        <li>Develop Tools: Create Python and C# tools for pipeline setup, performance analysis, art implementation, level-design, lookdev and rendering</li>
+                        <li>Optimize and Prepare 3D Assets: Streamline prep and delivery workflows with OpenPype, Ayon, and custom toolsets to ensure consistency and ease of engine implementation</li>
+                        <li>Design and Integrate Animation: Create complex animation control methods for character animation, VFX and simulations with a focus on system scalability</li>
+                        <li>Develop gameplay and systems: Create complete experiences and games that seamlessly integrate into systems managed by the back-end dev team</li>
+                        <li>Author and Optimize Shaders: Design and optimize shaders in Unity and create tools and methods for texture compression, channel-packing, optimization and procedural techniques</li>
+                        <li>Design and Integrate VFX: Implement VFX and particle systems in various software for use on target platforms</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Arrow International, Inc.</h4>
+                    <h5>Lead Technical Artist</h5>
+                    <p>August 2020 - February 2023</p>
+                    <ul>
+                        <li>Managed Workflows: Bridged the gap between artists and programmers, leading meetings on structure, pipeline, and organization</li>
+                        <li>Created and Integrated Art: Converted art assets into game-ready assets, compositing EXR files, prepping rigged models, and creating assets using Blender, Maya, Substance, and Adobe tools for Unity</li>
+                        <li>Developed Tools: Scripted and documented tools for artists and programmers to improve workflow, including Blender Python addons, Unity C# scripts, and GLSL & node-based shaders</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h4>ONEFIRE, Inc.</h4>
+                    <h5>3D Generalist, Gameplay Programmer</h5>
+                    <p>July 2017 - January 2020 (on contract basis)</p>
+                    <ul>
+                        <li>Developed Experiences: Pitch, design, create and develop AR, VR, and mobile games from start to finish using Unreal Engine and Unity with a small team</li>
+                        <li>Implemented Game-Art: Designed props, game-ready materials, shaders and UI for Unity and Unreal</li>
+                        <li>Modeling, Texturing, Design: Created 2D and 3D content for mobile, AR and VR games</li>
+                        <li>Composed Audio: Created digital music and sound effects for games using various DAWs and Unity/Unreal</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Float</h4>
+                    <h5>Designer</h5>
+                    <p>July 2017 - February 2018</p>
+                    <ul>
+                        <li>Created Art: Created 2D, 3D, and Vector graphic elements for a broad range of clients in mobile-learning and novel AR instructional industrial applications</li>
+                        <li>Front-End Development: Designed UI for high-profile client websites and apps</li>
+                        <li>Established UX: Assisted in establishing ideal user flow with regards to UI/UX</li>
+                        <li>Maintained Content: Managed large mobile-learning content systems with CMS tools and Git</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h4>The Iona Group</h4>
+                    <h5>Animator / Front-End Developer</h5>
+                    <p>July 2017 - February 2018</p>
+                    <ul>
+                        <li>Animated Content: Created branded informative animations for various clients</li>
+                        <li>Pitched and Executed: Designed and pitched detailed storyboarded animations to clients</li>
+                        <li>Implemented Designs: Developed atomic web elements using Twig, SCSS and JavaScript</li>
+                        <li>Re-Skinned Games: Implemented custom art in learning experience games, games following client branding guidelines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education">
+                <h3>Education:</h3>
+
+                <div class="education-item">
+                    <h4>Bradley University</h4>
+                    <p>Bachelor of Science in Interactive Media, Bachelor of Science in Music</p>
+                    <p>2013 - 2017</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 
     <div class="bgloop1"></div>
 
     <div id="dynamicModal" class="modal" style="display: none;">
         <div class="navmenu2">
-                 <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">arrow_back</span></a>  
- 
-                 </div>
+            <a onclick="closePopUp()" class="closebutton">    <span class="material-symbols-outlined">arrow_back</span></a>
+
+        </div>
         <div class="modalcontainer">
 
             <div class="modal-left">
@@ -282,7 +283,7 @@
 
                 <div class="grid">
 
-                   
+
 
                     <div class="grid" id="modalButtons">
 
@@ -297,20 +298,20 @@
                 <br>
                 <div class="center2">
                     <div class="grid-text">
-                    <h3> Showcase: </h3>
+                        <h3> Showcase: </h3>
                     </div>
-                
+
                     <div class="grid" id="modalImages">
                         <!-- Images will be inserted here -->
                     </div>
                 </div>
-            </div>  
-        </div>
-    </div>
-</div>
+            </div>
 
-    <script>
-        const projectData = {
+        </div> <!--End of modalcontainer-->
+
+    </div>
+
+    <script>const projectData = {
             "railway": {
                 title: "Abandoned Railway",
                 videoSrc: "videos/ar.mp4",
@@ -343,7 +344,7 @@
                     { src: "images/minemat0003.png", caption: "" }
                 ]
             },
-                "textureLab": {
+            "textureLab": {
                 title: "Texture Laboratory",
                 videoSrc: "videos/texlab.mp4",
                 description: "TexLab is a Blender add-on that provides tools for managing and exporting procedurally-created materials to standard game engine PBR texture maps. It allows users to create detailed normal, roughness, metallic, emission, basecolor and opacity maps with a non-destructive workflow. This has been created as a flexible alternative to the Adobe Substance suite.",
@@ -360,7 +361,7 @@
                 ],
                 externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md"
             },
-                "bpxemitters": {
+            "bpxemitters": {
                 title: "Bpx Emitters",
                 videoSrc: "videos/emitters.mp4",
                 description: "This Blender addon provides a custom geometry node system and python control panel to create and manage precalculated geometry-based particle effects for EEVEE rendering with real-time editing workflow. The addon includes tools for adding emitters, sprite emitters, dynamic particle materials, and configuring various particle attributes such as spawn rate, lifetime, speed, scale, rotation, and color. In addition to the custom control panel, powerful included geometry node-groups provide endless modification and attribute access.",
@@ -374,7 +375,7 @@
                 ],
                 downloadLink: "https://github.com/sharpen3d/bpx/raw/main/BPxSuite/BPx%20Emitters.zip",
             },
-                "rendercontroller": {
+            "rendercontroller": {
                 title: "Render Controller",
                 videoSrc: "videos/rendercontroller.mp4",
                 description: "With this .blend template, preview rendered image sequences as videos in a simple UI within the Video Sequencer. Set up batch rendering processes through a set of .blend files. Migrate sequences to new folders. Automatically run TexturePacker processes on sequences or sets of sequences without running TexturePacker GUI. Render .blend files in the background, pack resulting image sequences or any image sequence automatically in the background with TexturePacker. Quick-open any referenced .blend files. Built specifically for TexturePacker use with Unity.",
@@ -388,10 +389,10 @@
                 ],
                 downloadLink: "https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend"
             },
-                "Pixels": {
+            "Pixels": {
                 title: "Pixels (2D Tools for Blender)",
                 videoSrc: "videos/pixels.mp4",
-                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blender’s 3D Viewport UI, adding custom panels and menus for easy access to its functions. Scrips and nodes created in this project were incredibly helpful in creating OpenVAT, which relies on pixel-perfect output from an orthographic scene",
+                description: "This Blender add-on provides a comprehensive set of tools for managing 2D layers, materials, and camera settings within the Blender environment. The primary features include adding 2D planes, managing image textures, setting pivot points, and configuring camera settings for orthographic views. The add-on integrates with Blenderï¿½s 3D Viewport UI, adding custom panels and menus for easy access to its functions. Scrips and nodes created in this project were incredibly helpful in creating OpenVAT, which relies on pixel-perfect output from an orthographic scene",
                 images: [
                     { src: "images/pixels/0.png", caption: "" },
                     { src: "images/pixels/1.png", caption: "" },
@@ -401,7 +402,7 @@
                 downloadLink: "https://github.com/sharpen3d/bpy_public/raw/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/2DTools.zip",
                 externalLink: "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md"
             },
-                "quickactions": {
+            "quickactions": {
                 title: "Bpx Quickactions",
                 videoSrc: "videos/quickactions.mp4",
                 description: "quickactions description",
@@ -409,7 +410,7 @@
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
             },
-                "wordartist": {
+            "wordartist": {
                 title: "Bpx Wordartist",
                 videoSrc: "videos/wordartist.mp4",
                 description: "wordartist description",
@@ -417,7 +418,7 @@
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
             },
-                "filemanager": {
+            "filemanager": {
                 title: "Bpx File Manager",
                 videoSrc: "videos/filemanager.mp4",
                 description: "Similar to the Collect All Files functionality in AfterEffects, this helps to identify, condense, and re-link all external resources in a blend file. This is useful in sharing blender files and keeping track of relative references when migrating projects between workstations or drives",
@@ -425,7 +426,7 @@
                     { src: "images/rendercontrol.png", caption: "Image 1 caption" }
                 ]
             },
-                "terminallauncher": {
+            "terminallauncher": {
                 title: "MacOS Terminal Launcher",
                 videoSrc: "videos/filemanager.mp4",
                 description: "This is an honestly fairly involved plugin, which launches the Blender terminal window on MacOS. To do this, I had to write a python script that launches a shell script and some additional processes to access a terminal window and launch Blender from within that environment. The Blender Terminal is always a must-have for creating addons within Blender (to recieve python erros and print statements), and when testing my tools on Mac, this was always a time-consuming, janky process that I felt the need to solve.",
@@ -436,7 +437,7 @@
                 ],
                 downloadLink: "https://github.com/sharpen3d/bpy_public/raw/main/downloads/macosterminallauncher.zip"
             },
-                "blink": {
+            "blink": {
                 title: "BLiNK",
                 videoSrc: "images/blink/blink.mp4",
                 description: "BLiNK is a Tactical freerunning search and destroy game concept I started and obsessed over in my free time in 2020. Through this project I learned an immense amount about level design, game concepting and practical application of blueprint scripting in UE4. The game features 8 unique weapons, a leveling and unlock system AI enemy bots, and your main weapon, which acts as a grapple hook, crossbow, enemy detecting device, enemy grapple, spawn/respawn point generator, and teleporting throwing star - available through loadout and a quick-select menu",
@@ -449,7 +450,7 @@
                     { src: "images/blink/5.png", caption: "" }
                 ]
             },
-                "hexscapes": {
+            "hexscapes": {
                 title: "HexScapes",
                 videoSrc: "videos/hex.mp4",
                 description: "Hexscapes is a simple game concept based on the six sides of a hexagon. Each island center (without a number) is tapped to increment all surrounding islands by 1. To complete the level, a player must represent 1 through 6 on the sides of each major island. Creating the game board generator for this game was a fun learning experience in methods of recursive solving. This was originally concepted in Unreal, then transferred and rebuilt in Unity for an excersize in C# arrays - and to better fit the intended possible release of this game on web or mobile.",
@@ -457,7 +458,7 @@
                     { src: "images/hexscape.png", caption: "Image of an incomplete game-board, after puzzle generation" }
                 ]
             },
-                "die": {
+            "die": {
                 title: "Die!",
                 videoSrc: "videos/die.mp4",
                 description: "Sharing early exploration into this UE5 game started in 2024. The initial concept is based on dice as characters, with their numbers representing relative power levels. When dice engage eachother, the game has been built to calculate an odds ratio based on the opposing numbers, rather than higher numbers winning outright. Dice positioning and grouping also impacts potential win, akin to games like auto-chess. This exploration was started in part to refresh and solidify my skills in complex gameplay and animation mechanics in unreal blueprints.",
@@ -465,7 +466,7 @@
                     { src: "images/die/0.png", caption: "A 1 charges into a 6, with reckless abandon" }
                 ]
             },
-                "openvat": {
+            "openvat": {
                 title: "Vertex Animation Texture Encoding / Decoding",
                 videoSrc: "videos/openvat.mp4",
                 description: "My latest Blender extension in 2024. Following new guidelines for Blender 4.2+. Groundbreaking extension for creating vertex animated textures (VATs) from your animated mesh for use in game engines and VFX. Created with extensive python and intricate geometry nodes and shaders. Bake any type of vertex animation: animated modifiers, animated geometry nodes, simulations, armature, shape keys, and more. Exports an optimized VAT, a mesh with VAT-compatible additional UV set, JSON remapping data (to inform engine shaders), and optionally exports relative vertex normals in a secondary (VNRM) texture",
@@ -474,9 +475,9 @@
                 ],
                 downloadLink: "https://github.com/sharpen3d/openvat/raw/9ab8828d712b85632dac05a531c66ed0a2c0a2ff/OpenVAT.zip",
                 externalLink: "https://github.com/sharpen3d/openvat"
-           
+
             },
-                "audiovisualizer": {
+            "audiovisualizer": {
                 title: "Geometry Node Audio Visualizer",
                 videoSrc: "videos/visualizer.mp4",
                 description: "I used drivers measuring frequency and pitch altering aspects of a geometry node system for this exploration into audio visuilization. This came about when I realized drivers could be accessed within geometry node systems, and I hadn't seen geometry nodes be utilized for this possible application of visualization",
@@ -484,72 +485,72 @@
                     { src: "images/visualizer.png", caption: "" }
                 ]
             },
-                "blenderndo": {
+            "blenderndo": {
                 title: "Blender 'NDO'",
                 description: "Quixel's NDO was one of my favorite tools for making ultra-clean normal maps. With Adobe's acquisition of Quixel, the tools for photoshop became depricated and this technology outdated. I revived this workflow, but in a much more concise and quicker addon for Blender, using a custom shader, color-space, and rendering techniques to be able to create top-down geometry acting as normals for my models. This same technology was re-purposed in my more recent extension Texture Lab.",
             }
         };
 
-function openPopUp(projectKey) {
+        function openPopUp(projectKey) {
 
-    document.body.classList.add('no-scroll');
+            document.body.classList.add('no-scroll');
 
-    const project = projectData[projectKey];
-    document.getElementById("modalTitle").innerText = project.title;
-    const modalVideo = document.getElementById("modalVideo");
-    if (project.videoSrc) {
-        modalVideo.src = project.videoSrc;
-        modalVideo.style.display = "block";
-    } else {
-        modalVideo.style.display = "none";
-    }
-    document.getElementById("modalDescription").innerText = project.description;
+            const project = projectData[projectKey];
+            document.getElementById("modalTitle").innerText = project.title;
+            const modalVideo = document.getElementById("modalVideo");
+            if (project.videoSrc) {
+                modalVideo.src = project.videoSrc;
+                modalVideo.style.display = "block";
+            } else {
+                modalVideo.style.display = "none";
+            }
+            document.getElementById("modalDescription").innerText = project.description;
 
-    const modalImagesContainer = document.getElementById("modalImages");
-    modalImagesContainer.innerHTML = "";
-    project.images.forEach(media => {
-        const mediaContainer = document.createElement("div");
-        mediaContainer.classList.add("image-container");
+            const modalImagesContainer = document.getElementById("modalImages");
+            modalImagesContainer.innerHTML = "";
+            project.images.forEach(media => {
+                const mediaContainer = document.createElement("div");
+                mediaContainer.classList.add("image-container");
 
-        // Check if the media is a video or image based on the file extension
-        if (media.src.endsWith(".mp4") || media.src.endsWith(".webm") || media.src.endsWith(".ogg")) {
-            const videoElement = document.createElement("video");
-            videoElement.src = media.src;
-            videoElement.controls = true;
-            videoElement.autoplay = false;
-            videoElement.loop = true;
-            videoElement.classList.add("projectimage");
+                // Check if the media is a video or image based on the file extension
+                if (media.src.endsWith(".mp4") || media.src.endsWith(".webm") || media.src.endsWith(".ogg")) {
+                    const videoElement = document.createElement("video");
+                    videoElement.src = media.src;
+                    videoElement.controls = true;
+                    videoElement.autoplay = false;
+                    videoElement.loop = true;
+                    videoElement.classList.add("projectimage");
 
-            mediaContainer.appendChild(videoElement);
-        } else {
-            const imgElement = document.createElement("img");
-            imgElement.src = media.src;
-            imgElement.alt = media.caption;
-            imgElement.classList.add("projectimage");
+                    mediaContainer.appendChild(videoElement);
+                } else {
+                    const imgElement = document.createElement("img");
+                    imgElement.src = media.src;
+                    imgElement.alt = media.caption;
+                    imgElement.classList.add("projectimage");
 
-            mediaContainer.appendChild(imgElement);
-        }
+                    mediaContainer.appendChild(imgElement);
+                }
 
-        const captionElement = document.createElement("p");
-        captionElement.innerText = media.caption;
+                const captionElement = document.createElement("p");
+                captionElement.innerText = media.caption;
 
-        mediaContainer.appendChild(captionElement);
-        modalImagesContainer.appendChild(mediaContainer);
-    });
+                mediaContainer.appendChild(captionElement);
+                modalImagesContainer.appendChild(mediaContainer);
+            });
 
             const modalButtonsContainer = document.getElementById("modalButtons");
             modalButtonsContainer.innerHTML = "";
             if (project.downloadLink) {
                 const downloadButton = document.createElement("a");
                 downloadButton.href = project.downloadLink;
-                downloadButton.innerText = "Download" ;
+                downloadButton.innerText = "Download";
                 downloadButton.classList.add("grid-button2");
                 modalButtonsContainer.appendChild(downloadButton);
                 const downloadIcon = document.createElement("span");
-                downloadIcon.innerText = "download" ;
+                downloadIcon.innerText = "download";
                 downloadIcon.classList.add("material-symbols-outlined");
                 downloadButton.appendChild(downloadIcon);
-            }                 
+            }
             if (project.externalLink) {
                 const externalButton = document.createElement("a");
                 externalButton.href = project.externalLink;
@@ -558,106 +559,91 @@ function openPopUp(projectKey) {
                 externalButton.target = "_blank";
                 modalButtonsContainer.appendChild(externalButton);
                 const downloadIcon = document.createElement("span");
-                downloadIcon.innerText = "article_shortcut" ;
+                downloadIcon.innerText = "article_shortcut";
                 downloadIcon.classList.add("material-symbols-outlined");
                 externalButton.appendChild(downloadIcon);
             }
 
             document.getElementById("dynamicModal").style.display = "flex";
-}
-        
+        }
+
 
         function closePopUp() {
             document.body.classList.remove('no-scroll');
             document.getElementById("dynamicModal").style.display = "none";
         }
 
-        function moreTools(){
+        function moreTools() {
             document.getElementById("hiddentools").style.display = "flex";
             document.getElementById("moretoolsbutton").style.display = "none";
             document.getElementById("lesstoolsbutton").style.display = "flex";
         }
 
-        function lessTools(){
+        function lessTools() {
             document.getElementById("hiddentools").style.display = "none";
             document.getElementById("moretoolsbutton").style.display = "flex";
             document.getElementById("lesstoolsbutton").style.display = "none";
         }
 
-        function moreGames(){
+        function moreGames() {
             document.getElementById("hiddengames").style.display = "flex";
             document.getElementById("moregamesbutton").style.display = "none";
             document.getElementById("lessgamesbutton").style.display = "flex";
         }
 
-        function lessGames(){
+        function lessGames() {
             document.getElementById("hiddengames").style.display = "none";
             document.getElementById("moregamesbutton").style.display = "flex";
             document.getElementById("lessgamesbutton").style.display = "none";
         }
 
-        function moreProjects(){
+        function moreProjects() {
             document.getElementById("hiddenprojects").style.display = "flex";
             document.getElementById("moreprojectsbutton").style.display = "none";
             document.getElementById("lessprojectsbutton").style.display = "flex";
         }
 
-        function lessProjects(){
+        function lessProjects() {
             document.getElementById("hiddenprojects").style.display = "none";
             document.getElementById("moreprojectsbutton").style.display = "flex";
             document.getElementById("lessprojectsbutton").style.display = "none";
         }
 
-        function showResume(){
+        function showResume() {
             document.getElementById("hiddenresume").style.display = "flex";
         }
-        function hideResume(){
+        function hideResume() {
             document.getElementById("hiddenresume").style.display = "none";
         }
 
-        function showGDD(){
+        function showGDD() {
             document.getElementById("hiddengdd").style.display = "flex";
         }
-        function hideGDD(){
+        function hideGDD() {
             document.getElementById("hiddengdd").style.display = "none";
-        }
-        
-    </script>
+        }</script>
+
+
+    <!--NAVMENU-->
     <div class="navmenu">
-        <div class="banner">
-            <h3>
-                LUKE STILSON &#x2022 TECHNICAL ART
-            </h3>
-        </div>
-        <!--
-        <ul class="nav">
-            <li><a href="index.html">Contact</a></li>
-            <li class="current"><a href="tools.html">Showcase</a></li>
-        </ul>
-               
-        <div class="grid">
-            <div onclick="showResume()" class="grid-button">
-            Resume &nbsp <span class="material-symbols-outlined">
-work_history
-</span>
+        <a href="index.html" class="grid-item-featured-link">
+            <div class="banner">
+                <h3>
+                    LUKE STILSON &#x2022; TECHNICAL ART
+                </h3>
             </div>
-            <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">
-                Contact &nbsp <span class="material-symbols-outlined">
-                mail
-                </span>
-            </a>
-        </div>
-         -->
-         <div class="grid"></div>
-         <div class="grid"></div>
+        </a>
+        <div class="grid"></div>
+        <div class="grid"></div>
     </div>
+
     <div class="width">
         <div class="main">
             <div class="grid-top">
                 <div class="center">
                     <!--
                     <img class="profileimg" src="images/profile.jpg">
-                   
+
                     <h2>
                         Luke Stilson
                     </h2>
@@ -670,134 +656,132 @@ work_history
                         <a href="https://www.instagram.com/3d_luke/" class="fa fa-instagram"></a>
                     </div>
                     -->
-<h1 class=white>
-    Hi, I'm Luke
-    </h1>
-                    <p class="white">
-                         I create solutions that empower <br> 3D artists and developers. 
+                    <h1 class="standard">
+                        Luke Stilson &#x2022; Technical Art
+                    </h1>
+                    <p class="standard">
+                        Creating solutions that empower <br> 3D artists and developers.
                     </p>
                     <!--
-                        <div class="grid">
-                            <p class="small"><span class="material-symbols-outlined">
-                            sports_esports
-                            </span></p>
-                            <p class="small"><span class="material-symbols-outlined">
-                            brush
-                            </span></p>
-                            <p class="small"><span class="material-symbols-outlined">
-                            terminal
-                            </span></p>
-                        </div>
-                        -->
-           
+                    <div class="grid">
+                        <p class="small"><span class="material-symbols-outlined">
+                        sports_esports
+                        </span></p>
+                        <p class="small"><span class="material-symbols-outlined">
+                        brush
+                        </span></p>
+                        <p class="small"><span class="material-symbols-outlined">
+                        terminal
+                        </span></p>
+                    </div>
+                    -->
 
-                     <h1 class="small">
-                     &nbsp Let's build stuff together.
-                     </h1>
-                             <div class="grid">
-            <div onclick="showResume()" class="grid-button"><span class="material-symbols-outlined">
-            groups
-            </span>
-                        &nbsp Resume
-                        </div>
-                        <a  href="mailto:stilson.luke@gmail.com" class="grid-button2">Contact<span class="material-symbols-outlined">
-                            mail
+                    <h1 class="small">
+                        &nbsp; Let's build something together.
+                    </h1>
+                    <div class="grid">
+                        <div onclick="showResume()" class="grid-button">
+                            <span class="material-symbols-outlined">
+                                groups
                             </span>
-                            
+                            &nbsp; Resume
+                        </div>
+                        <a href="mailto:stilson.luke@gmail.com" class="grid-button2">
+                            Contact <span class="material-symbols-outlined">
+                                mail
+                            </span>
                         </a>
-
-                     </div>
-
-            </div>
-            </div>
-            </div>
-            </div>
-            <div class="section-angled">
-            <div class="section-angled-inner"
-                <div class="width">
-                    <div class="grid-center">
-                        <div class="center3a">
-                             <h2 class="white">
-                                Blender Add-Ons
-                            </h2>
-                            <p class="white">
-                                I believe in bringing high-quality tools to the greater artist community. Developed independently from my work for studios, these tools are the core of my personal workflow, unbinding me from malicious subscriptions and data collection in the digital art world of today. <br><br> Scripted with Python and released under <a class="inline" href"https://github.com/sharpen3d/bpx/blob/main/LICENSE">GNU General Public License v3.0</a>. Dive in to the examples and documentation, and feel free to use these tools in your own process.
-                            </p>
-                            <!--
-                                <div onclick="moreTools()" id="moretoolsbutton" class="grid-button2">
-                                Show All
-                        </div>
-                        -->
-                         <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
-                                Show Featured
-                        </div>
-                        <a href="https://github.com/sharpen3d/bpy_public/tree/854d3ed0adc3185dc3de42f2af20c2b8bc9eb501/downloads"> View on Github <span class="material-symbols-outlined">chevron_right</span></a>
                     </div>
                 </div>
-            <div class="container">
-                <div class="grid">
-                    <div onclick="openPopUp('openvat')" class="grid-item-featured">
-                        <img class="icon" src="images/softwareLogo0000.png">
-                        <img id="background" class="grid-image" src="images/openvat.png">
-                        <div class="grid-text">
-                            <h3>
-                                OpenVAT
-                            </h3>
-                            <p class="grid-description">
-                               One-click Vertex Animation Texture encoding from Blender to your engine of choice.
-                            </p>
-                        </div>
-                    </div>
-                    <div onclick="openPopUp('textureLab')" class="grid-item-featured">
-                        <img class="icon" src="images/softwareLogo0000.png">
-                        <img id="background" class="grid-image" src="images/darkroom.png">
-                        <div class="grid-text">
-                            <h3>
-                                Texture Laboratory
-                            </h3>
-                            <p class="grid-description">
-                                Utilize Blender's procedural shading techniques to create game ready PBR textures and normal maps for Unity and Unreal.
-                            </p>
-                        </div>
-                    </div>
-                    <div onclick="openPopUp('bpxemitters')" class="grid-item-featured">
-                        <img class="icon" src="images/softwareLogo0000.png">
-                        <img id="background" class="grid-image" src="images/cover.png">
-                        <div class="grid-text">
-                            <h3>
-                                BPx Emitters
-                            </h3>
-                            <p class="grid-description">
-                                Create animated particles, looping emitters and sprite sheets for engine use as flipbooks, cards and sub-emitter animation.
-                            </p>
-                        </div>
-                    </div>
-                    <div onclick="openPopUp('rendercontroller')" class="grid-item-featured">
-                        <img class="icon" src="images/softwareLogo0001.png">
-                        <img id="background" class="grid-image" src="images/rendercontrol.png">
-                        <div class="grid-text">
-                            <h3>
-                                Render Controller
-                            </h3>
-                            <p class="grid-description">
-                               Easily control batch rendering from multiple Blend files and directly preview results.
-                            </p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
 
-                                            <div onclick="openPopUp('terminallauncher')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0001.png">
-                            <img id="background" class="grid-image" src="images/blendTerminal.jfif">
+    <div class="section-angled">
+        <div class="section-angled-inner">
+            <div class="width">
+                <div class="grid-center">
+                    <div class="center3b">
+                        <h2 class="standard">
+                            Featured Tools
+                        </h2>
+                        <p class="standard">
+                            I believe in bringing high-quality tools to the greater artist community. Developed independently from my work for studios, these tools are the core of my personal workflow, freeing me from costly subscriptions and intrusive data collection prevalent in the digital art world today.<br><br>Scripted with Python and released under <a class="inlinestandard" href="https://github.com/sharpen3d/bpx/blob/main/LICENSE">GNU General Public License v3.0</a>. Dive into the examples and documentation, and feel free to use these tools in your own process.
+                        </p>
+                        <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
+                            Show Featured
+                        </div>
+                        <a class="grid-button2" href="https://github.com/sharpen3d/bpy_public/tree/main/downloads">View More on GitHub <span class="material-symbols-outlined">chevron_right</span></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grid">
+                        <div onclick="openPopUp('xbake')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/xbake-cover.png">
                             <div class="grid-text">
                                 <h3>
-                                    MacOS Terminal Launcher
+                                    xBake
                                 </h3>
                                 <p class="grid-description">
-                                    Adds the ability to easily launch the blender terminal window on MacOS within the blender interface.
+                                    All-in-one texture baking solution, designed to offer users an intuitive and powerful interface for creating industry-standard texture bakes.
                                 </p>
                             </div>
                         </div>
-
+                        <div onclick="openPopUp('openvat')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img class="iconA" src="images/engineLogo0000.png">
+                            <img class="iconB" src="images/engineLogo0001.png">
+                            <img class="iconC" src="images/softwareLogo0003.png">
+                            <img id="background" class="grid-image" src="images/openvat.png">
+                            <div class="grid-text">
+                                <h3>
+                                    OpenVAT
+                                </h3>
+                                <p class="grid-description">
+                                    One-click Vertex Animation Texture encoding from Blender to your engine of choice.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('textureLab')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img class="iconA" src="images/engineLogo0000.png">
+                            <img class="iconB" src="images/engineLogo0001.png">
+                            <img id="background" class="grid-image" src="images/darkroom.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Texture Laboratory
+                                </h3>
+                                <p class="grid-description">
+                                    Utilize Blender's procedural shading techniques to create game-ready PBR textures and normal maps for Unity and Unreal.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('bpxemitters')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0000.png">
+                            <img id="background" class="grid-image" src="images/cover.png">
+                            <div class="grid-text">
+                                <h3>
+                                    BPx Emitters
+                                </h3>
+                                <p class="grid-description">
+                                    Create animated particles, looping emitters, and sprite sheets for engine use as flipbooks, cards, and sub-emitter animation.
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('rendercontroller')" class="grid-item-featured">
+                            <img class="icon" src="images/softwareLogo0001.png">
+                            <img class="iconA" src="images/softwareLogo0002.png">
+                            <img id="background" class="grid-image" src="images/rendercontrol.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Render Controller
+                                </h3>
+                                <p class="grid-description">
+                                    Easily control batch rendering from multiple Blend files and directly preview results.
+                                </p>
+                            </div>
+                        </div>
                         <div onclick="openPopUp('Pixels')" class="grid-item-featured">
                             <img class="icon" src="images/softwareLogo0000.png">
                             <img id="background" class="grid-image" src="images/2DLarge.png">
@@ -806,248 +790,183 @@ work_history
                                     Pixels
                                 </h3>
                                 <p class="grid-description">
-                                    Easily edit manipulate and export images in pixel-perfect mixed 2D/3D space.
-                                </p>
-                            </div>
-                        </div>
-                                            <div id="hiddentools">
-                        <div onclick="openPopUp('quickactions')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0001.png">
-                            <img id="background" class="grid-image" src="images/quickactions.png">
-                            <div class="grid-text">
-                                <h3>
-                                    BPx Quick Actions
-                                </h3>
-                                <p class="grid-description">
-                                    Simple Actions, Tools, and Panels to reduce clicks on repetitive processes and automate redundant tasks.
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('wordartist')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/wordart-large.png">
-                            <div class="grid-text">
-                                <h3>
-                                    BPx Word Artist
-                                </h3>
-                                <p class="grid-description">
-                                    Additional text tools and shortcuts panel, allows for live shader isolation front, bevel, depth, and stroke.
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('filemanager')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0001.png">
-                            <img id="background" class="grid-image" src="images/filemanager.png">
-                            <div class="grid-text">
-                                <h3>
-                                    BPx File Manager
-                                </h3>
-                                <p class="grid-description">
-                                    Collect referenced Images, Fonts, and Sounds into a single folder. Designed for file sharing and backup management.
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('terminallauncher')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/blendTerminal.jfif">
-                            <div class="grid-text">
-                                <h3>
-                                    MacOS Terminal Launcher
-                                </h3>
-                                <p class="grid-description">
-                                    Adds the ability to easily launch the blender terminal window on MacOS within the blender interface.
+                                    Easily edit, manipulate, and export images in pixel-perfect mixed 2D/3D space.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    </div>
-        </div>
-    </div>
-                </div>
-                </div>
                 </div>
             </div>
-                        <div class="section-angled1">
-            <div class="section-angled-inner1"
+        </div>
+    </div>
 
-                            <div class="width">
-                    <div class="grid-center">
-                       
-                    <div class="center3a">
-                                <h2 class="white">
-                                Game Design & Development
-                                </h2>
-                                <p class="white">
-                               Beyond my professional role as a technical artist, I independently create game experiences to stay proficient with industry-leading engines and tools.
-                            </p>
+    <div class="section-angled2">
+        <div class="section-angled-inner1">
+            <div class="width1">
+                <div class="grid-center">
+                    <div class="center3b">
+                        <h2 class="standard">
+                            Shipped Experiences
+                        </h2>
+                        <p class="standard">
+                            I've played a major role in each release I've been involved with, generally working on small development teams where the line between technical art and development is blurred.
+                            <br>
+                            <br>
+                            With contributions ranging from art creation to complete game development, these releases highlight my flexibility and growth.
+                        </p>
+                        <a class="grid-button2" href="">More About Experiences<span class="material-symbols-outlined">chevron_right</span></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="grid">
 
-                            <div class="grid-buttons">
+                        <a href="zfominigamecollection.html" class="grid-item-featured-link">
+                            <div class="grid-item-featured">
+                                <img class="icon" src="images/engineLogo0000.png">
+                                <img id="background" class="grid-image" src="images/releases/zoom3.png">
+                                <div class="grid-text">
+                                    <h3>
+                                        ZFO Minigame Collection
+                                    </h3>
+                                    <p class="grid-description">
+                                        Race your collectible Cryptoy NFTs against AI players in this innovative web experience.<br><br><em>Responsibilities: game development, engine rigging & animation, sound design, UI, asset preparation</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div onclick="openPopUp('voidvoyager')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0000.png">
+                            <img id="background" class="grid-image" src="images/releases/unboxing.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Cryptoys: The Unboxing Experience
+                                </h3>
+                                <p class="grid-description">
+                                    Unbox any of over 200 unique characters, revealing their rarity and personality in this core experience.<br><br><em>Responsibilities: asset management, VFX, lighting & rendering</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('hellomoto')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0000.png">
+                            <img id="background" class="grid-image" src="images/releases/hellomotovr2.png">
+                            <div class="grid-text">
+                                <h3>
+                                    Motorola: Z2 Force VR Training
+                                </h3>
+                                <p class="grid-description">
+                                    A collection of games designed to train Verizon employees on Google Daydream capabilities.<br><br><em>Responsibilities: 3D modeling, animation, sound design, environment art</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('stackattack')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0001.png">
+                            <img id="background" class="grid-image" src="images/releases/stackattack-logo.png">
+                            <div class="grid-text">
+                                <h3>
+                                    AIIT: Stack Attack
+                                </h3>
+                                <p class="grid-description">
+                                    Physics-based balancing gameâ€”part of a marketing campaign for Appraisal Institute Insurance Trust.<br><br><em>Responsibilities: end-to-end solo development, animation, sound design</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopUp('egaming')" class="grid-item-featured">
+                            <img class="icon" src="images/engineLogo0000.png">
+                            <img id="background" class="grid-image" src="images/releases/pulltabs.png">
+                            <div class="grid-text">
+                                <h3>
+                                    E-Gaming Releases
+                                </h3>
+                                <p class="grid-description">
+                                    My time at Arrow International resulted in the successful release of several titles.<br><br><em>Responsibilities: 2D/3D art, in-engine setup, asset management, animation, technical support</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-angled">
+        <div class="section-angled-inner">
+            <div class="width">
+                <div class="grid-center">
+                    <div class="center3b">
+                        <h2 class="standard">
+                            Independent Showcase
+                        </h2>
+                        <p class="standard">
+                            Browse my personal miscellaneous projects featuring exploration into game concepts, tools, scripts, shaders, and VFX.
+                        </p>
+                        <div onclick="lessTools()" id="lesstoolsbutton" class="grid-button2">
+                            Show Featured
+                        </div>
+                        <a class="grid-button2" href="https://github.com/sharpen3d/bpy_public/tree/main/downloads">See More Projects<span class="material-symbols-outlined">chevron_right</span></a>
+                    </div>
+                </div>
+                <div class="container">
+
+
+                            <div class="grid">
+                                <div onclick="openPopUp('minesweeperRemastered')" class="grid-item-featured">
+                                    <img class="icon" src="images/engineLogo0001.png">
+                                    <img id="background" class="grid-image" src="images/minesweeper1.png">
+                                    <div class="grid-text">
+                                        <h3>
+                                            Minesweeper [Remastered]
+                                        </h3>
+                                        <p class="grid-description">
+                                            <em>Gameplay Concept</em> A twist on Microsoft's classic Minesweeper, brought to a realistic 3D environment.
+                                        </p>
+                                    </div>
+                                </div>
                                 <div onclick="openPopUp('blink')" class="grid-item-featured">
-                                    <img class="icon" src="images/enginelogo0001.png">
+                                    <img class="icon" src="images/engineLogo0001.png">
                                     <img id="background" class="grid-image" src="images/blink/6.png">
                                     <div class="grid-text">
                                         <h3>
                                             BLiNK
                                         </h3>
                                         <p class="grid-description">
-                                           <em>Experimental Release | Indie Dev</em> <br> Tactical freerunning search and destroy.
+                                            <em>Experimental Release | Indie Dev</em><br>Tactical freerunning search and destroy.
                                         </p>
                                     </div>
                                 </div>
-
-                            
-                                <div onclick="openPopUp('hexscapes')" class="grid-item-featured">
-                                    <img class="icon" src="images/enginelogo0000.png">
-                                    <img id="background" class="grid-image" src="images/hexscape.PNG">
+                                <div onclick="openPopUp('railway')" class="grid-item-featured">
+                                    <img class="icon" src="images/engineLogo0001.png">
+                                    <img id="background" class="grid-image" src="images/ar/0000.png">
                                     <div class="grid-text">
                                         <h3>
-                                            HexScapes
+                                            Environment Art - Railway
                                         </h3>
                                         <p class="grid-description">
-                                           <em> Gameplay Concept | Indie Dev</em> <br> Challenging hexagon puzzle game.
+                                            Asset Creation | Material Creation | Set Dressing | Asset Preparation
                                         </p>
                                     </div>
                                 </div>
-                                </div>
-                                <div class="grid-buttons">
-
-
-
-                                <div onclick="openPopUp('die')" class="grid-item-featured">
-                                        <img class="icon" src="images/engineLogo0001.png">
-                                        <img id="background" class="grid-image" src="images/die/0.png">
-                                        <div class="grid-text">
-                                            <h3>
-                                                Die!
-                                            </h3>
-                                            <p class="grid-description">
-                                               <em> Gameplay Concept | Indie Dev</em> <br> Turn-based strategy game, where dice are playable characters.
-                                            </p>
-                                        </div>
+                                <div onclick="openPopUp('audiovisualizer')" class="grid-item-featured">
+                                    <img class="icon" src="images/softwareLogo0000.png">
+                                    <img id="background" class="grid-image" src="images/visualizer.png">
+                                    <div class="grid-text">
+                                        <h3>
+                                            Audio Visualizer - Geometry Nodes
+                                        </h3>
+                                        <p class="grid-description">
+                                            Driving aspects of geometry nodes from audio pitch and volume.
+                                        </p>
                                     </div>
                                 </div>
-                             </div>
-                         </div>
-                </div>
-
-                <div class="container-left">
-                    <div class="grid-item-featured2">
-                    
-                    <img id="background" class="grid-image" src="images/minesweeper1.png">
-                                            <div class="center3a">
-                                             <div class="grid-buttons">
-                                            <div class="featuredescription">
-                             <h2 class="white">
-                                Minesweeper [remastered]
-                            </h2>
-                           
-                            <p class="small-green">In Development</p>
-
-                                                        <p class="white-feature">
-                                A twist on Microsoft's classic minesweeper, brought to a realistic 3D environment to bring attention to real-world de-mining operations in 2024 Ukraine.
-                                </p>
-                                        </div>
-                                        <div class="grid-center">
-                         <a onclick="openPopUp('minesweeperRemastered')" class="grid-button2">View Project <span class="material-symbols-outlined">tactic</span> </a>
-                         <a onclick="showGDD()" class="grid-button2">Design Doc <span class="material-symbols-outlined">description</span> </a>
-                         </div>
-                         </div>
-                         </div>
-
-                </div>
-                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-            </div>
-            <div class="section-angled2">
-            <div class="section-angled-inner2">
-                    <div class="center3b">
-                                 <h2 class="white">
-                                    Gallery
-                                </h2>
-                                <p class="white">
-                                    Miscelanious projects featuring exploration into tools, scripts, shaders and vfx. Check out featured projects or view the feed for my latest posts.
-                                </p>
-                     
+        </div>
+                    <div class="footer">
+                        &copy;2024 Luke Stilson
                     </div>
-                    <div class="grid">
-                        <div onclick="openPopUp('railway')" class="grid-item-featured">
-                            <img class="icon" src="images/engineLogo0001.png">
-                            <img id="background" class="grid-image" src="images/ar/0000.png">
-                            <div class="grid-text">
-                                <h3>
-                                    Evnironment Art - Railway
-                                </h3>
-                                <p class="grid-description">
-                                    Asset Creation | Material Creation | Set Dressing | Asset Prep
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('gold')" class="grid-item-featured">
-                            <img class="icon" src="images/engineLogo0000.png">
-                            <img id="background" class="grid-image" src="images/gold/0.jpg">
-                            <div class="grid-text">
-                                <h3>
-                                    Stylized Gold Shaders
-                                </h3>
-                                <p class="grid-description">
-                                    Mobile and low-end device focused simulated gold methods.
-                                </p>
-                            </div>
-                        </div>
-                        <div onclick="openPopUp('audiovisualizer')" class="grid-item-featured">
-                            <img class="icon" src="images/softwareLogo0000.png">
-                            <img id="background" class="grid-image" src="images/visualizer.png">
-                            <div class="grid-text">
-                                <h3>
-                                    Audio Visualizer - Geometry Nodes
-                                </h3>
-                                <p class="grid-description">
-                                    Driving aspects of geometry nodes from audio pitch and volume.
-                                </p>
-                            </div>
-                        </div>
 
-                                                    <div onclick="openPopUp('blenderndo')" class="grid-item-featured">
-                                <img class="icon" src="images/softwareLogo0000.png">
-                                <img id="background" class="grid-image" src="images/blenderNdo.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        Blender NDO
-                                    </h3>
-                                    <p class="grid-description">
-                                        Now integrated into Texture Laboratory, this project was to simulate the functionality in Quixel's deprecated NDO photoshop plugin in Blender.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div onclick="openPopUp('magicwall')" class="grid-item-featured">
-                                <img class="icon" src="images/engineLogo0001.png">
-                                <img id="background" class="grid-image" src="images/magicwall/0.png">
-                                <div class="grid-text">
-                                    <h3>
-                                        Modular Building Tools
-                                    </h3>
-                                    <p class="grid-description">
-                                        Unreal 4 Blueprint tool for creating basic buildings, walls, stairways, and more.
-                                    </p>
-                                </div>
-                            </div>
-
-                           <!-- <div id="hiddenprojects"> -->
-                                                    
-
-                      <!--  </div> -->
-                        </div>
-                </div>
-                </div>
-            </div>
-    <div class="footer">
-        &copy;2024 Luke Stilson
-    </div>
 </body>
 
 </html>

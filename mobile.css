@@ -44,7 +44,7 @@ body {
 }
 
 .banner{
-	width:200%;
+	width:300%;
 }
 
 .bgloop {
@@ -61,18 +61,14 @@ body {
 }
 
 .bgloop1 {
-  background-image: linear-gradient(90deg, #000, transparent);
-  position: fixed;
-  width: 100%;
-  z-index: -1;
-  height: 100%;
-  top: 3.125rem; /* 50px */
-  right: 0;
-  background-image: url("images/cover.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: #020019;
-  opacity: 0.5;
+	background-image: linear-gradient(90deg, #000, transparent);
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	height: 100%;
+	top: 3.125rem; /* 50px */
+	background-image: url("videos/bgloop1.gif");
+	background-repeat: repeat-x;
 }
 
 .bgloop2 {
@@ -93,11 +89,10 @@ body {
   margin-top: 5rem; /* 80px */
   color: #fff;
   bottom: 0;
-  height: 9.375rem; /* 150px */
+  height: 4rem; /* 150px */
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #292d32;
 }
 
 .gifhover, .gifhide {
@@ -117,7 +112,7 @@ body {
 .small {
   font-size: 0.875rem; /* 14px */
   font-weight: 550;
-  color: #fff;
+  color: #000;
 }
 
 h1 {
@@ -144,7 +139,6 @@ h3 {
 }
 
 a {
-  color: #fff;
   padding: 0.9375rem; /* 15px */
   text-decoration: none;
   font-weight: 600;
@@ -174,13 +168,15 @@ ul.access li a {
 
 .width, .width1 {
   width: 100%;
+display:flex;
+flex-direction: column;
 }
 
 .main {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 4.6875rem; /* 75px */
+  margin-top: 2rem; /* 75px */
 }
 
 .main_2 {
@@ -231,7 +227,6 @@ ul.access li a {
   position: fixed;
   top: 0;
   height: 3.5rem; /* 56px */
-  background-color: #292d32;
 }
 
 .navmenu2 {
@@ -393,23 +388,21 @@ ul.access li a {
   width: 100%;
   padding: 0;
   display: flex;
-  flex-direction: column;
   margin-bottom: 0;
   box-shadow: 0.125rem 0.3125rem 0.3125rem #000; /* 2px 5px 5px */
 }
 
-.section-angled {
-  background: linear-gradient(-350deg, #a061ff, #479bf5);
-}
 
-.section-angled-inner, .section-angled-inner1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+.section-angled-inner, .section-angled-inner1, .section-angled-inner2 {
+	transform: scale(1);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding:0;
+	padding-top: 4em;
 }
 
 .section-angled1 {
@@ -417,13 +410,8 @@ ul.access li a {
   flex-direction: column-reverse;
 }
 
-.section-angled-inner1 {
-  flex-direction: row;
-}
-
 .section-angled2 {
-  background: #d0253f;
-  transform: 200x, 0;
+	transform: 200x, 0;
 }
 
 /* Ensuring inner content is aligned properly */

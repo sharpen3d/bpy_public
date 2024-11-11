@@ -8,8 +8,8 @@
 }
 
 @font-face {
-font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-src: url("fonts/ShareTechMono.ttf");
+	font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	src: url("fonts/ShareTechMono.ttf");
 }
 
 .rightalign{
@@ -21,16 +21,35 @@ width: 100%;
 	margin-bottom: 100px;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    background:  #020019;
-    flex-direction: column;
-    align-items: center;
+.grid-item-featured-link {
+	text-decoration: unset;
+	color: inherit;
+	display: block; /* ensures the anchor behaves like a block element */
+	margin:0;
+	padding:0;
+	font-weight: inherit;
+}
 
+.material-symbols-outlined1{
+	padding-left:0;
+
+}
+
+body {
+	/*
+	transform: scale(0.8);
+	transform-origin: top left;
+	width: 125%;
+	*/
+
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	background: #0D0D0D;
+	flex-direction: column;
+	align-items: center;
 }
 
 .body1{
@@ -52,26 +71,22 @@ justify-content: center;
   left: 0;
   width: 100%; /* Full width of the viewport */
   height: 100%; /* Full height of the viewport, adjust as needed */
-  background-size: cover; /* Ensures the entire image is visible */
+  background-size: initial; /* Ensures the entire image is visible */
   background-position: top center; /* Positions the image at the top center */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-repeat: repeat;
   z-index: -1; /* Places the div behind other content */
-  background-color: #020019
+  /*background-color: #020019*/
 }
 
-.bgloop1{
-background-image: linear-gradient(90deg, var(#000), transparent);
-	position: fixed;
-	width:100%;
+.bgloop1 {
+	background-image: linear-gradient(90deg, #000, transparent);
+	position: absolute;
+	width: 100%;
 	z-index: -1;
 	height: 100%;
-	top: 50px;
-	right:0;
-	background-image: url("images/cover.png");
-	background-repeat: no-repeat;
-	background-position: top;
-	  background-color: #020019;
-	  opacity: 50%;
+	top: 3.125rem; /* 50px */
+	background-image: url("videos/bgloop1.gif");
+	background-repeat: repeat-x;
 }
 
 .bgloop2{
@@ -92,11 +107,11 @@ background-image: linear-gradient(90deg, var(#000), transparent);
 	margin-top: 80px;
 	color: #fff;
 	bottom: 0;
-	height: 150px;
+	height: 4rem;
 	width:100%;
 	margin:0;
 	padding: 0;
-	background: #292d32;
+	background: #0D0D0D;
 }
 
 .gifhover{
@@ -117,7 +132,8 @@ background-image: linear-gradient(90deg, var(#000), transparent);
 .small{
 	font-size: 14px;
 	font-weight: 550;
-	color: #fff;
+	color: #000;
+	margin-bottom:1.5em;
 }
 
 .small-green{
@@ -153,7 +169,7 @@ h3
 }
 
 a{
-	color: #fff;
+	color: #3B8BF2;
 	padding: 15px;
 	text-decoration: none;
 	font-weight: 600;
@@ -186,11 +202,15 @@ ul.access li a
 
 .width{
 	width:100%;
+	display: flex;
 }
 
-.width1{
+.width1 {
 	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
 }
+
 .main
 {
 	display: block;
@@ -245,7 +265,7 @@ height: 600px;
 	width: 100%;
 	display: flex;
 	height: 56px;
-	background-color: #292d32;
+	background-color: #0D0D0D;
 	justify-content: space-around;
 	align-items: center;
 	z-index:1;
@@ -433,7 +453,7 @@ position: fixed;
 }
 
 .banner{
-	width:100%;
+	width:300%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -634,7 +654,7 @@ margin: auto;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-	width:50%;
+	width:40%;
 }
 .grid-top {
     display: flex;
@@ -647,30 +667,35 @@ margin: auto;
 }
 
 .grid-item {
-  width: 310px;
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 5px;
-  overflow: elipsis;
-  position: relative;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: row;
-      text-decoration: none;
+	width: 310px;
+	padding: 5px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin: 5px;
+	overflow: elipsis;
+	position: relative;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
 }
 .grid-item-featured {
-  width: 350px;
-  height: 200px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 15px;
-  position: relative;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
+	width: 356px;
+	height: 300px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin: 15px;
+	position: relative;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
+.grid-item-featured:hover {
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .grid-item-featured2 {
@@ -779,6 +804,25 @@ justify-content: center;
 	  
 }
 
+.grid-button4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(350deg, #a061ff, #479bf5);
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	margin: 10px;
+	overflow: elipsis;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	border-style: none;
+	padding: 8px 25px;
+	font-size: 15px;
+	height: 2.75rem;
+	cursor: pointer;
+}
+
 .popupexit{
 	display: flex;
     align-items: center;
@@ -821,7 +865,7 @@ justify-content: center;
 
 .grid-image {
   width: 100%;
-  height: 100px;;
+  height: 56.25%;
   object-fit: cover;
   opacity: 1;
   top: 0;
@@ -870,7 +914,7 @@ justify-content: center;
   color: #333;
   padding:0;
   margin:0;
-  padding-top:5px;
+  padding-top:10px;
   padding-bottom: 0px;
 }
 
@@ -890,8 +934,32 @@ justify-content: center;
 
 img.icon{
 	position: absolute;
-	top: 110px;;
+	top: 177px;
 	right: 10px;
+	height: 20px;
+	width: 20px;
+}
+
+img.iconA {
+	position: absolute;
+	top: 177px;
+	right: 40px;
+	height: 20px;
+	width: 20px;
+}
+
+img.iconB {
+	position: absolute;
+	top: 177px;
+	right: 70px;
+	height: 20px;
+	width: 20px;
+}
+
+img.iconC {
+	position: absolute;
+	top: 177px;
+	right: 100px;
 	height: 20px;
 	width: 20px;
 }
@@ -1261,70 +1329,66 @@ align-items: center;
 
 /* Slightly angled section */
 .section-angled {
-  background: linear-gradient(-350deg, #a061ff, #479bf5);
-  margin: 0;
-  transform: 200x, 0;
-    width: 100%;
-	padding:0;
-	display: flex;
+	background: #eee;
+	margin: 0;
+	width: 100%;
+	padding: 0;
 	margin-bottom: 0px;
-	    box-shadow: 2px 5px 5px #000);
 }
 
 .section-angled-inner {
-    width: 100%;
-    padding: 4em;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: space-around;
+	transform: scale(0.8);
+	width: auto;
+	padding: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: space-around;
 }
 
 /* Slightly angled section */
 .section-angled1 {
-        background-color: #292d32;
-        width: 100%;
-        margin: 0;
-        flex-direction: row;
-        width: 100%;
-        padding: 0;
-        display: flex;
+	background-color: #292d32;
+	width: 100%;
+	margin: 0;
+	flex-direction: row;
+	padding: 0;
+	display: flex;
 }
 
 .section-angled-inner1 {
-        width: 100%;
-        /* padding: 120px 100px; */
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: space-around;
-		    padding-top: 8rem;
-    padding-bottom: 8rem;
+	transform: scale(0.8);
+	width: auto;
+	padding: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: space-around;
 }
 
 .section-angled-inner2 {
-        width: 100%;
-        /* padding: 120px 100px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-		    padding-top: 8rem;
-    padding-bottom: 8rem;
+	transform: scale(0.8);
+	width: 100%;
+	/* padding: 120px 100px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	/*padding-top: 4rem;
+	padding-bottom: 4rem;*/
 }
 
 
 .section-angled2 {
-  background: hsl(271deg 73% 40%);
-  margin: 0;
-  transform: 200x, 0;
-    width: 100%;
-	padding:0;
+	background: #eee;
+	margin: 0;
+	width: 100%;
+	padding: 0;
 	display: flex;
+	flex-direction: row-reverse;
 	margin-bottom: 0px;
-	    box-shadow: 2px 5px 5px #000);
+	box-shadow: 2px 5px 5px #000;
 }
 
 /* Ensuring inner content is aligned properly */
@@ -1402,6 +1466,20 @@ h2{
 	margin-left: 15px;
 }
 
+.grid-button4 span {
+	margin-right: 15px;
+}
+
 .image-container p{
 	color: #eee;
+}
+
+.standard{
+	color: #262627;
+}
+
+.inlinestandard {
+	color: #262627;
+	display: unset;
+	padding: 0;
 }

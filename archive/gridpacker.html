@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class= "wrapper">
+        <div class="content">
+
+            <div class="navmenu">
+                <h3>
+                BPx Extensions
+                </h3>
+                    <ul class="nav">
+                        <li><a href="index.html">Back</a></li>
+						<li><a href="setup.html">Setup</a></li>
+                        <li><a href="toolmanager.html">Tool Manager</a></li>
+                        <li><a href="emitters.html">Emitters</a></li>
+                        <li><a href="quickactions.html">Quick Actions</a></li>
+                        <li><a href="2Dtools.html">2D Tools</a></li>
+                        <li><a href="filemanager.html">File Manager</a></li>
+                        <li><a href="wordartist.html">Word Artist</a></li>
+                        <li class="current"><a href="gridpacker.html">Grid Packer</a></li>
+                    </ul>
+
+                    <p>
+                    [BPX] Blender Pixels <br>Extension Library
+                    <br>
+                    <br>
+                    &copy;2023 Luke Stilson<br>All Rights Reserved
+                </p>
+            </div>
+
+            <div class="main">
+                <h1>
+                    DOCUMENTATION
+                </h1>
+
+                <h2>
+                    2022 LUKE STILSON
+                </h2>
+
+                <p>
+                    Blender Pixel Perfect Python Extensions and Asset Library
+                    <br>
+                    Created by Luke Stilson 2022
+                </p>
+
+                <h2>
+                    TOOLS DOCUMENTATION
+                </h2>
+
+                <p>
+                    <h3>
+                    Grid Packer
+                    </h3>
+                    The Grid Packer Panel will be available at the bottom of the Properties Panel > Output Properties.
+
+                    <br>
+		            <img src="images/grid.png" alt="2D tools panel">
+                    <br>
+                    This allows for a Scene or any external image sequence to be rendered to a grid. To get started, set the Source to Scene 
+                    or Image Sequence.
+                    <br><br>
+                    If source is set to Scene, set the source scene in the dropdown (Scene should never be "packScene", but "packScene" is always default before a scene is set).
+                    <br><br>
+                    Then set the Packed Image Size and Packed Canvas Size.  To pack to a grid, render size has to be square, so these options represent X and Y simultaniously. 
+                    <br>
+                    Packed Canvas size must be relative to Packed Image Size (i.e. if Packed Image Size = 512, Packed Canvas Size should be set to 1024 for a 2x2 grid, 2048 for a 4x4 grid, etc.).
+                    <br><br>
+                    <em>For best results always use power of 2 numbers (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096)</em>
+                    <br><br>
+                    If source is set to image sequence, use the buttons to open the sequence from your computer. Select the first frame, Shift+Select the end frame, then click Open Image.
+                    <br>
+                    Be sure the "Source Size" is set to the size of the image you just added (again X and Y must be the same, and a Source Size of 512 means 512px by 512 px). Then follow the same instructions above.
+
+                    <br><br>
+                    When everything is set, click Pack Image. Blender will appear frozen for a significant amount of time while the image renders in the background. The resulting image will be saved 
+                    at the location of the .blend file, in a new folder named "Packed"
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
