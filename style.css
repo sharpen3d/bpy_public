@@ -117,11 +117,16 @@ justify-content: center;
 }
 
 .project-list{
-	margin-top: 0;
+	margin: 0;
 }
 
 .project-list li {
-	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.grid p{
+	margin-bottom: 1em;
+	padding-bottom: 0;
 }
 
 .centerimg {
@@ -227,7 +232,6 @@ a{
 p
 {
 	font-weight: thin;
-	font-size: 14px;
 	padding-top: 0;
 	padding-bottom: 1em;
 	margin: 0;
@@ -249,6 +253,7 @@ ul.access li a
 .width{
 	width:100%;
 	display: flex;
+	justify-content: center;
 }
 
 .width1 {
@@ -682,6 +687,10 @@ margin: auto;
     align-items: flex-start;
     width: 100%;
 	max-width:100rem;
+}
+
+.container .grid{
+	max-width: 1200px;
 }
 
 .grid-left {
@@ -1442,7 +1451,6 @@ align-items: center;
 	width: 100%;
 	padding: 0;
 	display: flex;
-	flex-direction: row-reverse;
 	margin-bottom: 0px;
 	box-shadow: 2px 5px 5px #000;
 }
@@ -1453,7 +1461,6 @@ align-items: center;
 }
 
 p{
-	font-size: 1.2rem;
 	margin:10px;
 }
 
@@ -1538,4 +1545,15 @@ h2{
 	color: #262627;
 	display: unset;
 	padding: 0;
+}
+
+.center2 .grid h2, .center2 .grid h3, .center2 .grid h1 {
+	font-size: 1.2rem;
+	color: #000;
+	padding-bottom: 0;
+	padding-left: 10px;
+}
+
+.grid h1{
+	padding-left: 10px;
 }

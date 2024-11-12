@@ -149,7 +149,6 @@ a {
 
 p {
   font-weight: 300;
-  font-size: 0.875rem; /* 14px */
   padding-top: 0;
   padding-bottom: 1em;
   margin: 0;
@@ -427,7 +426,6 @@ flex-direction: column;
 }
 
 p {
-  font-size: 1.2rem;
   margin: 0.625rem; /* 10px */
 }
 

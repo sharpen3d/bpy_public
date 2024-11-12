@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Tools By Luke Stilson</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 1550px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bgloop1"></div>
+
+    <!--NAVMENU-->
+    <div class="navmenu" >
+        <a href="index.html" class="grid-item-featured-link">
+            <div class="banner">
+                <h3>
+                    LUKE STILSON &#x2022; TECHNICAL ART
+                </h3>
+            </div>
+        </a>
+        <div class="grid"></div>
+        <div class="grid"></div>
+    </div>
+
+    <div class="section-angled">
+        <div class="section-angled-innerA">
+            <div class="center2">
+                <div class="grid">
+                    <div class="centerimg">
+                        <!--PROJECT FEATURE IMAGE-->
+                        <img class="projectimage" src="images/xbake-cover.png" />
+                    </div>
+
+                    <div class="center3b">
+                        <!--TITLE-->
+                        <h1 class="standard">
+                            xBake: Comprehensive Texture Baking Tool
+                        </h1>
+                        <!--PROJECT CONTENT-->
+                        <!--MAIN DESCRIPTION-->
+
+                        <h3>
+                            Purpose & Philosophy
+                        </h3>
+                        <p>
+                            I designed xBake to have more ownership over my own process of asset creation. Baking is a feature provided in Blender, but has numerous steps and is time-consuming and inconsistent.
+                            I took features I found useful from Substance Designer and xNormal and created this interface to be a smooth tool to provide quality baked maps for my own texturing needs, without the use of
+                            external or paid software. All extensions I release for Blender (if not company-specific), are released as open-source to the community, to provide access to artists without payment or subscription.
+                        </p>
+
+                        <h3>
+                            Bake Formatting
+                        </h3>
+                        <p class="standard">
+                            All baked outputs are rendered with industry-standard map conventions, ensuring:
+
+                            <ul class="project-list">
+                                <li>
+                                    16-bit depth
+                                </li>
+                                <li>
+                                    Raw color space (where applicable)
+                                </li>
+                                <li>
+                                    Range Normalization (where applicable)
+                                </li>
+                            </ul>
+                        </p>
+
+
+                        <h2>
+                            Workflow Simplification
+                        </h2>
+
+                        <p>
+                            Blender’s Cycles engine offers powerful texture baking, but the default workflow is time-consuming and requires multiple steps. xBake streamlines this process, enhancing efficiency and output consistency.
+                        </p>
+
+                        <h2>
+                            Key Features
+                        </h2>
+                        <div class="inlineproject">
+                            <div class="inlinetext">
+                                <p>
+                                    <b>Batch Bake Types</b><br>
+                                    Render multiple bake types in sequence. Simply select the types of bakes you need, and xBake will process them in a single batch.
+                                </p>
+
+                                <p>
+                                    <b>External Exports</b><br>
+                                    Baked outputs are saved to an external location, organized and named according to industry-standard conventions. Users can customize naming options and choose directory locations relative to the .blend file. The .blend file remains clean, as xBake performs automatic clean-up post-bake.
+                                </p>
+
+                                <p>
+                                    <b>Source and Target Designation</b><br>
+                                    xBake improves upon the standard ‘Selected to Active’ method by allowing users to directly assign source and target objects. Users can choose between this mode or a 'Single-Object Mode'. Selection management is integrated within the baking process, eliminating the need for pre-bake scene setup.
+                                </p>
+
+                                <h2>
+                                    Bake Types
+                                </h2>
+                                <p>
+                                    <b>Unlit Bake Types</b><br>
+                                    These bakes ensure that any materials applied to the source and target do not interfere with the process:
+
+                                    <ul class="project-list">
+                                        <li>
+                                            Normal: Includes a clear interface option for OpenGL or DirectX formatting.
+                                        </li>
+                                        <li>
+                                            Ambient Occlusion
+                                        </li>
+                                        <li>
+                                            Curvature: Added as a custom xBake type.
+                                        </li>
+                                        <li>
+                                            UV Layout: Enhanced for more practical exports, with a fill opacity option.
+                                        </li>
+                                        <li>
+                                            Position: Returns world position with normalized X, Y, and Z coordinates, including axis swivel options.
+                                        </li>
+                                        <li>
+                                            World Space Normal: Normalized with improved axis swivel options.
+                                        </li>
+                                    </ul>
+
+                                </p>
+
+                                <p>
+                                    <b>Standard Bake Types</b><br>
+                                    These material-dependent bakes follow standard Cycles methods and can be batched alongside unlit types. Materials are restored as needed for these bakes:
+
+                                    <ul class="project-list">
+                                        <li>
+                                            Combined
+                                        </li>
+                                        <li>
+                                            Shadow
+                                        </li>
+                                        <li>
+                                            Roughness
+                                        </li>
+                                        <li>
+                                            Emit
+                                        </li>
+                                        <li>
+                                            Environment
+                                        </li>
+                                        <li>
+                                            Diffuse
+                                        </li>
+                                        <li>
+                                            Glossy
+                                        </li>
+                                        <li>
+                                            Transmission
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="inlineimage">
+                                <img class="inlineimage" src="images/releases/xbake/xbakesettings.webp" />
+                            </div>
+                        </div>
+
+                        <h2>
+                            Output Settings
+                        </h2>
+                        <div class="inlineproject">
+                            <div class="inlinetext">
+                                <p>
+                                    All output settings are accessible through a streamlined UI, independent of the scene’s render engine (Cycles/EEVEE). The bake process automatically switches to Cycles as needed.
+                                </p>
+                                <p>
+                                    Improved margin settings are defined as a percentage, maintaining consistent post-process margins around UV islands regardless of output resolution.
+                                </p>
+
+                                <p>
+                                    Users can select automatic output setup, resulting in a consistent relative folder convention, named after the baked object; Or a user can select Custom output, where they can define a number of options including what types of folders and sub-folders to use, naming conventions for map names and separators, custom naming to override the object's name, directory location and more. Despite settings set here, all outputs are ensured to be in correct color-space for the map type, and consistent defined resolution and render settings.
+                                </p>
+
+
+
+                            </div>
+                            <div class="inlineimage">
+                                <img class="inlineimage" src="images/releases/xbake/xbakeoutput.webp" />
+                            </div>
+                        </div>
+                        <!--RETURN BUTTON-->
+                        <a class="grid-button4" href="index.html"><span class="material-symbols-outlined">chevron_left</span>Back to Home</a>
+                    </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy;2024 Luke Stilson
+    </div>
+
+</body>
+
+</html>
