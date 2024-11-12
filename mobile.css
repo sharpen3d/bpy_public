@@ -361,12 +361,19 @@ flex-direction: column;
   padding-bottom: 0;
 }
 
+.inlineproject{
+	flex-direction: column-reverse;
+}
+
 .leftalign {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+.inlinetext{
+	width: 100%;
+}
 .white {
   color: #fff;
 }
@@ -386,7 +393,7 @@ flex-direction: column;
   margin: 0;
   width: 100%;
   padding: 0;
-  display: flex;
+  /*display: flex;*/
   margin-bottom: 0;
   box-shadow: 0.125rem 0.3125rem 0.3125rem #000; /* 2px 5px 5px */
 }
