@@ -1547,10 +1547,14 @@ h2{
 	padding: 0;
 }
 
-.center2 .grid h2, .center2 .grid h3, .center2 .grid h1 {
+.center2 .grid h2, .inlineimage h2, .center2 .grid h3, .center2 .grid h1 {
 	font-size: 1.2rem;
 	color: #000;
 	padding-bottom: 0;
+	padding-left: 10px;
+}
+
+.center2 .inlinetext p, .inlinetext p, .inlinetext h2 {
 	padding-left: 10px;
 }
 
