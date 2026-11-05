@@ -1,0 +1,82 @@
+{
+  "name": "Luke Stilson",
+  "title": "Lead Technical Artist",
+  "focus": "Technical Art  •  Cross-Disciplinary Pipelines  •  Real-Time Rendering  •  Tools Development",
+  "location": "Wake Forest, NC",
+  "email": "stilson.luke@gmail.com",
+  "phone": "779-537-0794",
+  "profile": "Lead Technical Artist with a multidisciplinary background in 3D art, shader and material authoring, real-time rendering, game development, and production software. Builds and maintains the workflows connecting creative teams, digital content creation tools, and game engines. Combines hands-on modeling, animation, and visual development with C#/Python tooling, runtime integration, and performance optimization.",
+  "skills": [
+    "Cross-disciplinary art/engineering pipelines",
+    "Blender and procedural modeling",
+    "Shader/material development (HLSL, GLSL, node-based)",
+    "Python and C# tooling",
+    "Unity integration",
+    "Animation systems and GPU/VAT workflows",
+    "VFX and look development",
+    "Asset optimization, atlasing and compression",
+    "Editor and runtime systems",
+    "Technical leadership"
+  ],
+  "experience": [
+    {
+      "company": "Bad Dog Games",
+      "title": "Lead Technical Artist",
+      "dates": "Dec 2024–Present",
+      "bullets": [
+        "Lead technical-art workflows for real-money slot and skill-game production, connecting visual development, asset preparation, Unity implementation, and developer handoff.",
+        "Create and integrate polished game art, shader effects, animation, and reusable presentation systems with attention to visual quality and constrained target hardware.",
+        "Develop a flexible 2D shader framework with SDF-based outlines and shadows, light sweeps, gradients, color treatments, and reveal effects using per-instance controls.",
+        "Replace Animator-heavy content workflows with lightweight state-based animation control; improve atlas organization, texture compression, and runtime behavior."
+      ]
+    },
+    {
+      "company": "OnChain Studios",
+      "title": "Technical Artist",
+      "dates": "Feb 2023–2024",
+      "bullets": [
+        "Produced art and real-time experiences for licensed properties including Disney’s Mickey and Friends, Star Wars, and Masters of the Universe.",
+        "Built Python and C# production tools for asset preparation, look development, performance analysis, and engine integration; collaborated across art and engineering.",
+        "Authored and optimized shaders, animation systems, VFX, and texture workflows for web, mobile, and desktop delivery."
+      ]
+    },
+    {
+      "company": "Arrow International",
+      "title": "Lead Technical Artist / 3D Generalist",
+      "dates": "Aug 2020–Feb 2023",
+      "bullets": [
+        "Led technical-art workflow coordination across artists and developers, including pipeline decisions, documentation, and production problem-solving.",
+        "Modeled, animated, authored materials and VFX, and integrated game-ready content; developed Blender Python tools, Unity C# scripts, and shaders to streamline production."
+      ]
+    },
+    {
+      "company": "ONEFIRE",
+      "title": "3D Generalist / Gameplay Programmer (Contract)",
+      "dates": "Jul 2017–Jan 2020",
+      "bullets": [
+        "Helped design and build AR, VR, and mobile experiences in Unity and Unreal, contributing gameplay, 3D assets, shaders, materials, UI, and audio."
+      ]
+    }
+  ],
+  "earlier": "Float — Designer (2017–2018); The Iona Group — Animator / Front-End Developer (2017–2018).",
+  "projects": [
+    {
+      "title": "OpenVAT",
+      "role": "Creator / Open-source Blender Extension ",
+      "bullets": [
+        "Created a vertex-animation-texture authoring pipeline and Unity/Unreal decoders, including full-range EXR export, channel normalization, normal packing, multi-track playback, and artist-facing optimization tools."
+      ]
+    },
+    {
+      "title": "PlushEngine",
+      "role": "Creator / Independent Game Engine, Editor & Runtime",
+      "bullets": [
+        "Developing a C# game engine and Avalonia editor with real-time PBR rendering, HDR/ACES, ambient occlusion, shader translation, physics integration, and Blender-inspired datablock architecture.",
+        "Building scene, behavior, pooling, rendering, and asset workflows informed by hands-on technical-art production."
+      ]
+    }
+  ],
+  "education": "Bradley University — B.S. Interactive Media; B.S. Music  |  Peoria, IL  |  2013–2017",
+  "year": 2026,
+  "download": "downloads/Luke_Stilson_Resume_2026.docx"
+}

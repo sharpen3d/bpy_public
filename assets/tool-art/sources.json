@@ -1,0 +1,26 @@
+{
+  "openvat-mark.png": {
+    "source": "/Users/lukestilson/Documents/GitHub/ovat_web/images/openvat_logo.png",
+    "note": "Existing OpenVAT mark; temporary until the linked replacement image is attached accessibly."
+  },
+  "aether-bake.webp": {
+    "source": "images/xbake-cover.png",
+    "crop": [
+      1220,
+      250,
+      1780,
+      810
+    ],
+    "note": "Final bake from the earlier xBake image, now part of Aether."
+  },
+  "attrio-mesh.webp": {
+    "source": "assets/attrio-preview.webp",
+    "crop": [
+      870,
+      230,
+      1230,
+      610
+    ],
+    "note": "Geometry example cropped from the author’s official Blender Extensions screenshot."
+  }
+}

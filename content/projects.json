@@ -1,0 +1,1159 @@
+{
+  "railway": {
+    "title": "Abandoned Railway",
+    "videoSrc": "videos/ar.mp4",
+    "description": "An environment built in a week, with original models and materials carried through to a complete Unreal scene.",
+    "images": [
+      {
+        "src": "images/ar/0001.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0002.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0003.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0004.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0005.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0006.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0007.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0008.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0009.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0010.png",
+        "caption": ""
+      },
+      {
+        "src": "images/ar/0011.png",
+        "caption": ""
+      }
+    ],
+    "id": "railway",
+    "published": false,
+    "sections": [
+      {
+        "title": "Building the whole scene",
+        "text": "I created the assets from scratch using Maya, Substance Designer, Substance Painter, and Blender, then assembled and lit the environment in Unreal Engine 4."
+      }
+    ],
+    "links": [],
+    "category": "experiments",
+    "label": "Environment art · Unreal",
+    "image": "images/ar/0001.png",
+    "role": "Environment art, modeling, materials & scene setup",
+    "tools": "Unreal Engine 4 · Maya · Substance · Blender",
+    "context": "Independent study"
+  },
+  "minesweeperRemastered": {
+    "title": "Minesweeper Remastered",
+    "videoSrc": "videos/minesweeper1.mp4",
+    "description": "A first-person 3D interpretation of Minesweeper, exploring a familiar puzzle in a physical environment.",
+    "images": [
+      {
+        "src": "images/minesweeper1.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minesweeper4.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minesweeper3.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minemat0000.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minemat0001.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minemat0002.png",
+        "caption": ""
+      },
+      {
+        "src": "images/minemat0003.png",
+        "caption": ""
+      }
+    ],
+    "id": "minesweeperRemastered",
+    "published": false,
+    "sections": [
+      {
+        "title": "A different perspective on a familiar game",
+        "text": "The concept reimagines the puzzle with first-person navigation, physical objects, and a handheld display. The original design also explored how the game could draw attention to real-world demining."
+      },
+      {
+        "title": "Development context",
+        "text": "This is an independent game concept and exploration, rather than a released game. The original 2024 design notes are kept separately."
+      }
+    ],
+    "links": [
+      {
+        "label": "Read the original 2024 concept notes",
+        "href": "minesweeper-notes.html"
+      }
+    ],
+    "category": "experiments",
+    "label": "Game concept · Unreal",
+    "image": "images/minesweeper1.png",
+    "role": "Game concept, environment & gameplay exploration",
+    "tools": "Unreal Engine 5 · Blueprints",
+    "context": "Independent concept · 2024"
+  },
+  "textureLab": {
+    "title": "Texture Laboratory",
+    "videoSrc": "videos/texlab.mp4",
+    "description": "Build and edit game-ready materials inside Blender, with procedural layers and a live texture-space workflow.",
+    "images": [
+      {
+        "src": "images/texlab/0000.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0001.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0002.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0003.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0004.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0005.png",
+        "caption": ""
+      },
+      {
+        "src": "images/texlab/0.png",
+        "caption": "A seamless clover ground texture made with TexLab on a material sphere"
+      },
+      {
+        "src": "images/texlab/1.PNG",
+        "caption": "Viewport view of clover texture, viewing top-down normal in 2D space"
+      },
+      {
+        "src": "images/texlab/2.PNG",
+        "caption": "This clover texture, rendered and combined with other TexLab ground textures in Unreal engine, blended in a landscape material"
+      }
+    ],
+    "externalLink": "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md",
+    "id": "textureLab",
+    "published": false,
+    "sections": [
+      {
+        "title": "Why this tool exists",
+        "text": "I wanted a material workflow that kept the parts I liked from dedicated texturing software while letting me work directly in Blender. Texture Laboratory grew from that need."
+      },
+      {
+        "title": "A live texture-space workspace",
+        "text": "A geometry node system represents the model’s UV layout in a separate scene and follows changes to the source mesh. I can work in that space while switching between the individual maps and a lit preview."
+      },
+      {
+        "title": "Editing the surface",
+        "text": "The system combines procedural materials, image inputs, and top-down geometry for normal-map detail and cleanup. It produces familiar maps such as base color, normal, roughness, metallic, emission, and opacity."
+      },
+      {
+        "title": "Making the workflow reusable",
+        "text": "A shared material setup keeps the map outputs connected while leaving room for more complex materials. The gallery shows the authoring setup, material studies, and examples used in Unreal."
+      }
+    ],
+    "links": [
+      {
+        "label": "Source & documentation",
+        "href": "https://github.com/sharpen3d/texturelab"
+      },
+      {
+        "label": "Download original release",
+        "href": "https://github.com/sharpen3d/texturelab/raw/refs/heads/main/TextureLab.zip"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · Materials",
+    "image": "images/darkroom.png",
+    "page": "texlab.html",
+    "role": "Tool design, procedural materials & Python",
+    "tools": "Blender · Geometry Nodes · Shaders",
+    "context": "Independent tool"
+  },
+  "bpxemitters": {
+    "title": "BPx Emitters",
+    "videoSrc": "videos/emitters.mp4",
+    "description": "Author repeatable particle effects and sprite sequences with a Blender control panel and editable node groups.",
+    "images": [
+      {
+        "src": "images/emitters/0.png",
+        "caption": "Custom emitters panel section 1, spawn one"
+      },
+      {
+        "src": "images/emitters/1.png",
+        "caption": "Custom emitters panel section 2, behavior control"
+      },
+      {
+        "src": "images/emitters/2.png",
+        "caption": "Custom emitters panel section 3, rendering"
+      },
+      {
+        "src": "images/emitters/3.gif",
+        "caption": "Custom emitters panel section 1, spawn test"
+      },
+      {
+        "src": "videos/dieparticle.mp4",
+        "caption": "Custom emitters panel section 1, spawn one"
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/bpx/raw/main/BPxSuite/BPx%20Emitters.zip",
+    "id": "bpxemitters",
+    "published": false,
+    "sections": [
+      {
+        "title": "The workflow",
+        "text": "A custom Python panel sits over geometry node groups for emitters, sprites, and particle materials. Spawn rate, lifetime, motion, scale, rotation, and color can be tuned while editing."
+      },
+      {
+        "title": "Working with the output",
+        "text": "The workflow supports animated particles, looping emitters, and image sequences for flipbooks and game-engine effects. The node groups remain available for deeper adjustments."
+      }
+    ],
+    "links": [
+      {
+        "label": "Download original release",
+        "href": "downloads/BPx Emitters.zip"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · Effects tools",
+    "image": "images/geoemitterscover.png",
+    "role": "Python interface & geometry node systems",
+    "tools": "Blender · Geometry Nodes · EEVEE",
+    "context": "Independent tool"
+  },
+  "rendercontroller": {
+    "title": "Render Controller",
+    "videoSrc": "videos/rendercontroller.mp4",
+    "description": "Queue renders across Blender files, preview image sequences, and prepare packed output for Unity.",
+    "images": [
+      {
+        "src": "images/rendercontroller/0.png",
+        "caption": ""
+      },
+      {
+        "src": "images/rendercontroller/1.png",
+        "caption": ""
+      },
+      {
+        "src": "images/rendercontroller/2.png",
+        "caption": ""
+      },
+      {
+        "src": "images/rendercontroller/3.png",
+        "caption": ""
+      },
+      {
+        "src": "images/rendercontroller/4.png",
+        "caption": ""
+      },
+      {
+        "src": "images/rendercontroller/5.png",
+        "caption": ""
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend",
+    "id": "rendercontroller",
+    "published": false,
+    "sections": [
+      {
+        "title": "Taking care of the repetitive parts",
+        "text": "The template combines batch rendering, sequence previews, moving output folders, and background TexturePacker jobs in one Blender workspace."
+      },
+      {
+        "title": "Built around a working pipeline",
+        "text": "Referenced Blender files can be opened directly. Rendered sequences can be previewed in the Video Sequencer and packed without repeatedly managing separate applications."
+      }
+    ],
+    "links": [
+      {
+        "label": "Download original release",
+        "href": "https://github.com/sharpen3d/bpx/raw/main/Templates/Extras/renderControl/RenderController.blend"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · Pipeline tooling",
+    "image": "images/rendercontrol.png",
+    "role": "Python automation & rendering workflow",
+    "tools": "Blender · Video Sequencer · TexturePacker",
+    "context": "Independent tool"
+  },
+  "Pixels": {
+    "title": "Pixels",
+    "videoSrc": "videos/pixels.mp4",
+    "description": "Work with images and layers in Blender while keeping cameras, pivots, and output aligned to pixels.",
+    "images": [
+      {
+        "src": "images/pixels/0.png",
+        "caption": ""
+      },
+      {
+        "src": "images/pixels/1.png",
+        "caption": ""
+      },
+      {
+        "src": "images/pixels/2.png",
+        "caption": ""
+      },
+      {
+        "src": "images/pixels/3.png",
+        "caption": ""
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/bpy_public/raw/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/2DTools.zip",
+    "externalLink": "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md",
+    "id": "Pixels",
+    "published": false,
+    "sections": [
+      {
+        "title": "A 2D workspace inside Blender",
+        "text": "The tools manage image planes, textures, pivots, and orthographic camera settings. They make it easier to combine pixel-conscious 2D work with a 3D scene."
+      },
+      {
+        "title": "A foundation for later tools",
+        "text": "The pixel-aligned scenes and node work developed here also helped shape OpenVAT’s encoding workflow."
+      }
+    ],
+    "links": [
+      {
+        "label": "Download original release",
+        "href": "downloads/Pixels/2DTools.zip"
+      },
+      {
+        "label": "Source & documentation",
+        "href": "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · 2D workflow",
+    "image": "images/2DLarge.png",
+    "role": "Python, scene tools & pixel alignment",
+    "tools": "Blender · Orthographic cameras",
+    "context": "Independent tool"
+  },
+  "quickactions": {
+    "title": "Bpx Quickactions",
+    "description": "quickactions description",
+    "images": [
+      {
+        "src": "images/rendercontrol.png",
+        "caption": "Image 1 caption"
+      }
+    ],
+    "id": "quickactions",
+    "published": false,
+    "sections": [],
+    "links": []
+  },
+  "wordartist": {
+    "title": "Bpx Wordartist",
+    "description": "wordartist description",
+    "images": [
+      {
+        "src": "images/rendercontrol.png",
+        "caption": "Image 1 caption"
+      }
+    ],
+    "id": "wordartist",
+    "published": false,
+    "sections": [],
+    "links": []
+  },
+  "filemanager": {
+    "title": "File Manager",
+    "description": "Find, collect, and relink external resources when moving Blender projects between machines.",
+    "images": [],
+    "id": "filemanager",
+    "published": false,
+    "sections": [
+      {
+        "title": "Keeping a project together",
+        "text": "The tool identifies external resources in a Blender file and helps condense and relink them when sharing work or moving between drives."
+      }
+    ],
+    "links": [],
+    "category": "tools",
+    "label": "Blender · File management",
+    "image": "images/filemanager.png",
+    "role": "Python & resource management",
+    "tools": "Blender · Python",
+    "context": "Independent tool"
+  },
+  "terminallauncher": {
+    "title": "macOS Terminal Launcher",
+    "description": "Make Blender’s terminal output accessible on macOS for extension development and debugging.",
+    "images": [
+      {
+        "src": "images/terminal/0.jpg",
+        "caption": ""
+      },
+      {
+        "src": "images/terminal/1.jpg",
+        "caption": ""
+      },
+      {
+        "src": "images/terminal/2.jpg",
+        "caption": ""
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/bpy_public/raw/main/downloads/macosterminallauncher.zip",
+    "id": "terminallauncher",
+    "published": false,
+    "sections": [
+      {
+        "title": "A small friction worth fixing",
+        "text": "When developing Blender extensions on Mac, opening a useful terminal session was a repeated interruption. The tool connects Python, shell scripts, and process launching to make that workflow accessible."
+      }
+    ],
+    "links": [
+      {
+        "label": "Download original release",
+        "href": "downloads/macosterminallauncher.zip"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · Development tools",
+    "image": "images/terminal/0.jpg",
+    "role": "Python & shell automation",
+    "tools": "Blender · macOS · Shell",
+    "context": "Independent tool"
+  },
+  "blink": {
+    "title": "BLiNK",
+    "videoSrc": "images/blink/blink.mp4",
+    "description": "A freerunning combat concept built around a multipurpose grapple, weapon, and traversal tool.",
+    "images": [
+      {
+        "src": "images/blink/0.png",
+        "caption": ""
+      },
+      {
+        "src": "images/blink/1.png",
+        "caption": ""
+      },
+      {
+        "src": "images/blink/2.png",
+        "caption": ""
+      },
+      {
+        "src": "images/blink/3.png",
+        "caption": ""
+      },
+      {
+        "src": "images/blink/4.png",
+        "caption": ""
+      },
+      {
+        "src": "images/blink/5.png",
+        "caption": ""
+      }
+    ],
+    "id": "blink",
+    "published": false,
+    "sections": [
+      {
+        "title": "Learning through a game",
+        "text": "BLiNK became a place to explore level design, gameplay systems, weapons, AI opponents, and progression in Unreal."
+      },
+      {
+        "title": "One tool with several jobs",
+        "text": "The main device combines grappling, combat, detection, respawning, and traversal ideas, selected through loadouts and a quick menu."
+      }
+    ],
+    "links": [],
+    "category": "experiments",
+    "label": "Game concept · Unreal",
+    "image": "images/blink/1.png",
+    "role": "Game design, level design & Blueprint systems",
+    "tools": "Unreal Engine 4 · Blueprints",
+    "context": "Independent concept · 2020"
+  },
+  "hexscapes": {
+    "title": "HexScapes",
+    "videoSrc": "videos/hex.mp4",
+    "description": "A hexagonal puzzle concept that became an exploration of recursive solving and generated game boards.",
+    "images": [
+      {
+        "src": "images/hex/0.png",
+        "caption": "A generated puzzle board."
+      }
+    ],
+    "id": "hexscapes",
+    "published": false,
+    "sections": [
+      {
+        "title": "The idea",
+        "text": "Tapping an island changes its neighbors. The goal is to arrange the surrounding numbers so each central island is complete."
+      },
+      {
+        "title": "Following the problem",
+        "text": "I first explored the concept in Unreal, then rebuilt it in Unity to work through the C# data and puzzle-generation problems and consider web or mobile delivery."
+      }
+    ],
+    "links": [],
+    "category": "experiments",
+    "label": "Puzzle systems · Unity",
+    "image": "images/hexScape.png",
+    "role": "Game design, puzzle generation & gameplay",
+    "tools": "Unity · C# · Unreal prototype",
+    "context": "Independent concept"
+  },
+  "die": {
+    "title": "Die!",
+    "videoSrc": "videos/die.mp4",
+    "description": "A gameplay study where dice become characters and their numbers influence the odds of each encounter.",
+    "images": [
+      {
+        "src": "images/die/0.png",
+        "caption": "A 1 charges into a 6, with reckless abandon"
+      }
+    ],
+    "id": "die",
+    "published": false,
+    "sections": [
+      {
+        "title": "An exercise in game systems",
+        "text": "The study combines dice values, positioning, groups, and probability rather than deciding every encounter through the larger number. It was also a way to work on animation and more involved Blueprint mechanics."
+      }
+    ],
+    "links": [],
+    "category": "experiments",
+    "label": "Gameplay & animation · Unreal",
+    "image": "images/die1.png",
+    "role": "Game design, animation & gameplay systems",
+    "tools": "Unreal Engine 5 · Blueprints",
+    "context": "Independent concept · 2024"
+  },
+  "openvat": {
+    "title": "OpenVAT",
+    "videoSrc": "videos/openvat.mp4",
+    "description": "OpenVAT is a Blender-native toolkit for baking Vertex Animation Textures (VATs).",
+    "images": [
+      {
+        "src": "videos/openvat1.mp4",
+        "caption": "A modifier-driven deformation, baked with OpenVAT in Blender and played back in Unity."
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/openvat/raw/9ab8828d712b85632dac05a531c66ed0a2c0a2ff/OpenVAT.zip",
+    "externalLink": "https://github.com/sharpen3d/openvat",
+    "id": "openvat",
+    "published": true,
+    "sections": [
+      {
+        "title": "Why I made it",
+        "text": "I wanted an understandable, open-source route from Blender’s procedural deformation to a game engine. OpenVAT captures the motion in textures, then a shader uses that data to move the mesh on the GPU."
+      },
+      {
+        "title": "My work",
+        "text": "I built the Blender tool and the Unity and Unreal integrations. Geometry Nodes drives the baking itself; Python handles the interface and the surrounding workflow. Working on the engine side let me explore how each renderer exposes its vertex stage, and where precision, normals, and import settings get in the way."
+      },
+      {
+        "title": "Release and community",
+        "text": "OpenVAT is free and open source, with walkthroughs and engine examples on its own site. AntzGames also built a separate Godot integration. The links below cover the current tool, documentation, and source."
+      }
+    ],
+    "links": [
+      {
+        "label": "OpenVAT.org · Documentation & integrations",
+        "href": "https://openvat.org/"
+      },
+      {
+        "label": "Get OpenVAT on Blender Extensions",
+        "href": "https://extensions.blender.org/add-ons/openvat/"
+      },
+      {
+        "label": "Source code",
+        "href": "https://github.com/sharpen3d/openvat"
+      },
+      {
+        "label": "Tutorials & demonstrations",
+        "href": "https://youtube.com/playlist?list=PLxoaj1mvYohtaPyN0qmhTVHZJqLh8VTlt"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender → Game engines",
+    "image": "images/openvat.png",
+    "role": "Creator · Tool design, Geometry Nodes, Python & engine shaders",
+    "tools": "Blender · Geometry Nodes · Unity · Unreal",
+    "context": "Independent open-source project · Released 2024",
+    "recognition": [
+      {
+        "value": "17,416",
+        "label": "Downloads on Blender Extensions",
+        "note": "Listing checked November 5, 2026. Downloads include repeat downloads and updates.",
+        "href": "https://extensions.blender.org/add-ons/openvat/",
+        "action": "View the listing"
+      },
+      {
+        "value": "80 Level",
+        "label": "Featured June 26, 2025",
+        "note": "Coverage of OpenVAT’s Blender-to-engine workflow.",
+        "href": "https://80.lv/articles/get-this-blender-add-on-that-encodes-vats-from-animated-geometry",
+        "action": "Read the feature"
+      },
+      {
+        "value": "Built on by others",
+        "label": "Community Godot integration",
+        "note": "OpenVAT for Godot by AntzGames, including animated MultiMesh support.",
+        "href": "https://github.com/antzGames/OpenVAT-for-Godot",
+        "action": "Explore their project"
+      }
+    ],
+    "listingSnapshot": {
+      "date": "2026-11-05",
+      "downloads": 17416,
+      "displayedRating": "5.0",
+      "reviewCount": 12,
+      "source": "https://extensions.blender.org/add-ons/openvat/"
+    }
+  },
+  "audiovisualizer": {
+    "title": "Audio & Geometry",
+    "videoSrc": "videos/visualizer.mp4",
+    "description": "Connect pitch and frequency measurements to geometry, bringing music and procedural motion together.",
+    "images": [
+      {
+        "src": "images/visualizer.png",
+        "caption": ""
+      }
+    ],
+    "id": "audiovisualizer",
+    "published": false,
+    "sections": [
+      {
+        "title": "Two interests in the same experiment",
+        "text": "I used audio measurements and Blender drivers to change a geometry node system. The study connects my interest in music with procedural art and animation."
+      }
+    ],
+    "links": [],
+    "category": "experiments",
+    "label": "Audio visualization · Blender",
+    "image": "images/visualizer.png",
+    "role": "Geometry nodes & audio-driven motion",
+    "tools": "Blender · Geometry Nodes · Drivers",
+    "context": "Independent study"
+  },
+  "blenderndo": {
+    "title": "Normal Map Editing in Blender",
+    "description": "Explore precise normal-map editing with top-down geometry, custom shading, and controlled color handling.",
+    "id": "blenderndo",
+    "images": [],
+    "published": false,
+    "sections": [
+      {
+        "title": "A workflow I wanted to keep",
+        "text": "This study recreated a favorite approach to drawing clean normal-map details using geometry. The shading and rendering techniques later became part of Texture Laboratory."
+      }
+    ],
+    "links": [],
+    "category": "tools",
+    "label": "Blender · Surface tools",
+    "image": "images/blenderNdo.png",
+    "role": "Shader design & normal-map workflows",
+    "tools": "Blender · Shaders",
+    "context": "Independent study"
+  },
+  "plush": {
+    "id": "plush",
+    "links": [],
+    "published": true,
+    "title": "PlushEngine",
+    "category": "engine",
+    "label": "Personal game engine",
+    "image": "assets/plush-editor.jpg",
+    "page": "plush.html",
+    "role": "Engine, editor, tools & game development",
+    "tools": "C# / .NET · Vulkan · Python",
+    "context": "Independent · In development",
+    "description": "Plush started because I wanted to own more of that process.",
+    "imageAlt": "PlushEngine editor showing fur and metal materials in Material Lab, alongside shared-data nodes and the Inspector",
+    "mediaCaption": "A 44-second look at games and tools in PlushEngine. My development recordings, October 2026. Silent; each section is labeled.",
+    "videoSrc": "assets/plush-reel.mp4",
+    "videoPoster": "assets/plush-reel-poster.jpg",
+    "videoTranscript": [
+      {
+        "time": "0:00",
+        "text": "Laser Planet: moving through the neon-lit lobby."
+      },
+      {
+        "time": "0:05",
+        "text": "FPS Template: the factory shooting course in the editor."
+      },
+      {
+        "time": "0:10",
+        "text": "Shared project data: Material Lab, its data graph, and the Inspector."
+      },
+      {
+        "time": "0:13",
+        "text": "Music tracker: the Lobby music sequence open alongside Laser Planet."
+      },
+      {
+        "time": "0:16",
+        "text": "Materials: fur, reflective surfaces, and refraction in Material Lab."
+      },
+      {
+        "time": "0:20",
+        "text": "Scene tunneling: the editor camera moves between two linked rooms."
+      },
+      {
+        "time": "0:28",
+        "text": "Foliage: moving through a densely planted scene."
+      },
+      {
+        "time": "0:32",
+        "text": "Destruction: impacts break apart test objects."
+      },
+      {
+        "time": "0:36",
+        "text": "Local version control: reviewing changes inside the editor."
+      },
+      {
+        "time": "0:39",
+        "text": "Water and physics: a watercraft turns and leaves a wake."
+      }
+    ],
+    "presentation": "feature-story",
+    "storyHero": {
+      "src": "assets/plush-factory.jpg",
+      "alt": "A factory game scene open in PlushEngine, with the reusable sentry library, shared object graph, and inspector visible",
+      "caption": "A factory scene in PlushEngine, with its reusable object library and shared-data graph."
+    },
+    "storyFeatures": [
+      {
+        "id": "project-data",
+        "title": "Shared project data",
+        "paragraphs": [
+          "I can define something once, use it across a game, and choose what can vary. Shared changes reach every use, while the editor keeps those relationships visible.",
+          "Libraries and bundles carry work between projects. Integrated Git lets me keep its history on my own SSDs and NAS."
+        ],
+        "image": "assets/plush-data-detail.jpg",
+        "imageAlt": "Close-up of a shared mesh, material, and script in PlushEngine’s data graph",
+        "original": "assets/plush-editor.jpg",
+        "caption": "A detail from the shared-data graph.",
+        "width": 1098,
+        "height": 684
+      },
+      {
+        "id": "mcp",
+        "title": "MCP tools",
+        "paragraphs": [
+          "I built the editor’s MCP server and tools so assistants can inspect a project, look up the API, and help with authoring or scripts. They work through an interface I define inside the editor.",
+          "The point is less friction. I make the creative decisions."
+        ],
+        "image": "assets/plush-code-detail.jpg",
+        "imageAlt": "C# gameplay code open in PlushEngine’s Code tab",
+        "original": "assets/plush-code.jpg",
+        "caption": "C# gameplay in the built-in Code tab.",
+        "detailLabel": "How I’ve bounded the MCP tools",
+        "detailParagraphs": [
+          "I’m interested in shaping how assistants fit into creative tools, so I built the editor’s MCP server and the tools it exposes. MCP (Model Context Protocol) lets an assistant work with software through a defined interface. Building that connection myself means I can decide what useful assistance looks like inside the engine.",
+          "The tools work with the open game project: inspecting the scene, looking up the API, making authoring edits through plupy, and reading or changing project scripts. The assistant works through the editor’s APIs rather than clicking around the interface.",
+          "The integrated Codex and Claude Code connections use this same interface, with their usual shell, web, and file tools disabled. Authoring edits use the editor’s Undo system; C# script edits are compiled and have recovery copies. Those boundaries are part of the tool design.",
+          "I want help with repetitive setup, finding the right API, and understanding the systems I’m working with. I’m not building this to have an assistant generate games for me. The point is to reduce friction so I can spend more time making them, with the creative decisions staying with me."
+        ],
+        "width": 1445,
+        "height": 1025
+      },
+      {
+        "id": "music",
+        "title": "Music in the same project",
+        "paragraphs": [
+          "I’ve made music with trackers for years. Building one into PlushEngine brings patterns, instruments, and effects alongside the game. It’s something I’ve always wanted in an editor."
+        ],
+        "image": "assets/plush-tracker-detail.jpg",
+        "imageAlt": "A close-up of pattern notes in the integrated music tracker",
+        "original": "assets/plush-tracker.jpg",
+        "caption": "Notes from Laser Planet’s lobby sequence.",
+        "width": 1495,
+        "height": 335
+      }
+    ],
+    "technicalNotes": "PlushEngine uses C# and .NET 10, an Avalonia editor, a Vulkan renderer through Silk.NET, and Slang shaders. Jolt and Box2D provide physics. Python supports authoring and automation; exported games use a separate runtime without the editor or Python. Mac and Windows exports are available in the engine; Linux and browser targets are experimental.",
+    "website": "https://plushengine.com/",
+    "storyIntro": [
+      "I've spent most of my career making tools that help other people make things. I'm a technical artist, which means I've spent an unreasonable amount of time learning how 3D software, game engines, animation systems, shaders, and all the other stuff underneath a game actually work (often just to find ways around limitations that probably shouldn't have existed in the first place).",
+      "Plush started because I wanted to own more of that process.",
+      "There are already some incredible game engines out there. I'm not making Plush because I think Unity, Unreal, or Godot are bad (although I certainly have opinions about some of their decisions). I just wanted to build an environment where the underlying systems made sense to me, where I could change things when I wanted to, and where I wasn't constantly working around decisions somebody else had made about how I should be making games.",
+      "I also wanted to see if I could actually do it."
+    ],
+    "storyNotes": [
+      {
+        "title": "Making things",
+        "paragraphs": [
+          "I've spent my career making tools that remove friction from creative work. The goal has always been to make artists and developers more efficient, so they can spend less time fighting software and more time actually making something. But there's a distinction between eliminating unnecessary parts of a process and eliminating the process entirely.",
+          "If a five-year-old can ask a computer to make a game about trucks, and it just makes the game, that's pretty incredible. I'm not opposed to that existing. But personally, I don't particularly want a computer to make a game for me. I want to make the game. I want to understand how it works, mess around with the systems, break something, figure out why it broke, and occasionally discover something I hadn't even considered when I started.",
+          "That's the part I enjoy.",
+          "And I think there's value in preserving that experience, even if the technology eventually makes it unnecessary."
+        ]
+      },
+      {
+        "title": "Ownership",
+        "paragraphs": [
+          "I don't particularly like that so much of the software we use has become something we rent. Subscriptions, mandatory accounts, online authentication, services that can disappear, updates that change things whether you want them to or not. You can spend years creating something with a tool and still depend on the company that made the tool to continue granting you access to it.",
+          "I think there's something important about that kind of ownership that we've gradually lost with digital software.",
+          "That doesn't mean I think every program needs to be open source, or that buying something should entitle you to every future version of it. Developers need to make money, and intellectual property rights exist for good reasons. But I do think that when you buy a piece of software, you should be able to keep using the version you bought without needing continued permission from whoever sold it to you.",
+          "I want Plush to work that way.",
+          "And perhaps more importantly, I want to be able to use Plush without depending on AI, or Adobe, or Epic, or whoever else might decide to change the terms of something I rely on. I want to open the editor, write some ordinary C#, use Python to automate whatever I need, import my own models and animations, and make games. If I want an AI agent to help me do something, great. But I don't want the agent to become a requirement for understanding or operating my own software."
+        ]
+      },
+      {
+        "title": "Using AI",
+        "paragraphs": [
+          "I've been using AI to help me program for years, long before agents could directly modify entire codebases. Initially that meant asking ChatGPT questions about APIs, getting code snippets, figuring out how to structure projects, and generally using it as a much more interactive version of Stack Overflow. I learned a tremendous amount of Python and C# that way (my formal programming education was primarily C++, and I don't think making tic-tac-toe for a college final particularly prepared me to write a game engine).",
+          "Now AI can implement entire systems, and I've used that extensively while developing Plush. I'm not going to pretend I wrote every line myself, because I didn't. But I also don't particularly like the idea of calling it a collaborative effort between myself and an AI. I wouldn't say Visual Studio co-authored my software, or that a shader I wrote was co-authored by the person whose research paper I referenced. AI is an incredibly powerful tool, and it's changed what I'm capable of accomplishing, but the decisions about what I'm building and why I'm building it are mine.",
+          "There's a certain irony in using AI to build a game engine partly because I don't want to depend on AI to make games. I'm aware of that (and I think it's a pretty interesting distinction)."
+        ]
+      }
+    ]
+  },
+  "xbake": {
+    "id": "xbake",
+    "images": [
+      {
+        "src": "images/releases/xbake/xbakesettings.webp",
+        "caption": "The baking controls: source and target selection, batch map types, and export settings."
+      },
+      {
+        "src": "images/releases/xbake/xbakeoutput.webp",
+        "caption": "A selection of baked output maps."
+      }
+    ],
+    "sections": [
+      {
+        "title": "The problem",
+        "text": "Blender already has capable texture baking, but repeatedly selecting objects, preparing scenes, and organizing outputs made the process slower and more fragile than I wanted."
+      },
+      {
+        "title": "What I built",
+        "text": "xBake puts source and target selection, batches of map types, and export formatting into one interface. It takes the parts of my baking workflow I used most and makes them easier to repeat."
+      },
+      {
+        "title": "A more deliberate workflow",
+        "text": "Source and target objects can be assigned directly, with a single-object mode for simpler jobs. Outputs use configurable names and destinations, and the tool cleans up after the bake to keep the working file manageable."
+      },
+      {
+        "title": "The technical work",
+        "text": "The tool handles a range of bake types and map conventions, including 16-bit output where appropriate, raw color space, and normalization. It combines interface design with the details that make maps usable in a game art pipeline."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "xBake",
+    "category": "tools",
+    "label": "Blender · Texture baking",
+    "image": "images/xbake-cover.png",
+    "page": "xbake.html",
+    "role": "Tool design, Python & baking workflow",
+    "tools": "Blender · Python · Cycles",
+    "context": "Independent tool",
+    "description": "A texture baking workflow built around explicit source objects, consistent outputs, and less setup."
+  },
+  "zfo": {
+    "id": "zfo",
+    "images": [
+      {
+        "src": "images/Cryptoys/zoomfo1.png",
+        "caption": "ZoomFo: racing with the character collection."
+      },
+      {
+        "src": "images/Cryptoys/vvoyagerscreencap.png",
+        "caption": "Void Voyagers: a second game in the collection."
+      },
+      {
+        "src": "images/Cryptoys/blockscreencap.png",
+        "caption": "Block Battle: another playable use for the characters."
+      }
+    ],
+    "sections": [
+      {
+        "title": "The brief",
+        "text": "The team needed playable experiences for a collection of 26 characters. Another technical artist and I took on the development of three web games, working with the backend team to connect them to the wider platform."
+      },
+      {
+        "title": "My contribution",
+        "text": "My responsibilities included gameplay development, in-engine rigging and animation, sound design, UI, and preparing art for the engine. The project brought together the sides of technical art that often cross into complete game development."
+      },
+      {
+        "title": "A collection of games",
+        "text": "ZoomFo, Void Voyagers, and Block Battle each gave the characters a different playable context. Building several experiences around a shared collection made consistent character preparation and integration important."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "ZFO Minigame Collection",
+    "category": "shipped",
+    "label": "OnChain Studios · Unity",
+    "image": "images/releases/zoom3.png",
+    "page": "zfominigamecollection.html",
+    "role": "Game development, animation systems, sound & UI",
+    "tools": "Unity · C# · Web delivery",
+    "context": "Shipped team project",
+    "description": "Three web games built with another technical artist, taking character collections into playable experiences."
+  },
+  "unboxing": {
+    "id": "unboxing",
+    "images": [
+      {
+        "src": "images/unboxing/1.png",
+        "caption": "Character reveal work in Unity."
+      },
+      {
+        "src": "images/unboxing/2.png",
+        "caption": "Scene and presentation work for the unboxing experience."
+      },
+      {
+        "src": "images/unboxing/3.png",
+        "caption": "A further view of the reveal presentation."
+      },
+      {
+        "src": "images/unboxing/4.png",
+        "caption": "Lighting and visual effects in the unboxing scenes."
+      },
+      {
+        "src": "images/unboxing/starwars-wave1.webp",
+        "caption": "One of the character collections supported by the production workflow."
+      }
+    ],
+    "sections": [
+      {
+        "title": "The work",
+        "text": "I worked on rendering, asset management, scene setup, and pipeline optimization for character reveals, including Star Wars and Mickey and Friends collections."
+      },
+      {
+        "title": "Keeping assets moving",
+        "text": "I built UnityLink to connect Unity with the Ayon/OpenPype asset pipeline. It detected updates to models, textures, animations, and rigs, supporting a collection of more than 400 characters through look development, reviews, and implementation."
+      },
+      {
+        "title": "From review to real time",
+        "text": "I produced approval renders and built reveal scenes in Unity, with lighting, shaders, particle effects, and sprite sequences. Batch rendering supported cinematic output and review."
+      },
+      {
+        "title": "The production details",
+        "text": "I also worked on nested item attachments, naming and rigging standards, and final quality checks. That meant following problems across animation, textures, rigs, and the tools connecting them."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "Cryptoys: The Unboxing Experience",
+    "category": "shipped",
+    "label": "OnChain Studios · Unity",
+    "image": "images/releases/unboxing.png",
+    "page": "cryptoysunboxing.html",
+    "role": "Asset pipelines, look development, VFX & rendering",
+    "tools": "Unity · Ayon / OpenPype · Art tools",
+    "context": "Shipped team project",
+    "description": "Character reveals and the pipeline behind them, spanning asset integration, visual effects, lighting, and reviews."
+  },
+  "hellomoto": {
+    "id": "hellomoto",
+    "images": [
+      {
+        "src": "images/releases/hellomotovr3.jpeg",
+        "caption": "A view of the VR training experience."
+      }
+    ],
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "My work covered 3D modeling, animation, sound design, and environment art for the collection of training games."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "Motorola: Z2 Force VR Training",
+    "category": "shipped",
+    "label": "VR training · Game art",
+    "image": "images/releases/hellomotovr2.png",
+    "role": "3D modeling, animation, sound & environments",
+    "tools": "VR · Game art · Audio",
+    "context": "Shipped team project",
+    "description": "A collection of VR training games introducing Verizon employees to Google Daydream capabilities."
+  },
+  "stackattack": {
+    "id": "stackattack",
+    "images": [],
+    "sections": [
+      {
+        "title": "A complete small game",
+        "text": "I handled the development, animation, and sound design for a physics-based balancing game used in the campaign."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "AIIT: Stack Attack",
+    "category": "shipped",
+    "label": "Client game · Physics",
+    "image": "images/releases/stackattack.png",
+    "role": "End-to-end solo development, animation & sound",
+    "tools": "Game development · Physics · Audio",
+    "context": "Shipped client project",
+    "description": "A physics-based balancing game created for an Appraisal Institute Insurance Trust campaign."
+  },
+  "egaming": {
+    "id": "egaming",
+    "images": [],
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "The work included 2D and 3D art, in-engine setup, asset management, animation, and technical support across several releases."
+      }
+    ],
+    "links": [],
+    "published": false,
+    "title": "E-Gaming Releases",
+    "category": "shipped",
+    "label": "Arrow International",
+    "image": "images/releases/pulltabs.png",
+    "role": "2D/3D art, integration, animation & technical support",
+    "tools": "Game art · Unity · Production tooling",
+    "context": "Shipped studio work",
+    "description": "Art and technical production work across several released titles at Arrow International."
+  },
+  "aether": {
+    "title": "Aether",
+    "videoSrc": "videos/texlab.mp4",
+    "description": "My material creation and texture baking tools for Blender. Aether brings the earlier xBake and TextureLab work together.",
+    "images": [
+      {
+        "src": "images/xbake-cover.png",
+        "caption": "Earlier xBake output: geometry, the baked normal map, and the textured model."
+      },
+      {
+        "src": "images/darkroom.png",
+        "caption": "TextureLab material creation and texture-space workflow."
+      },
+      {
+        "src": "images/texlab/0.png",
+        "caption": "A clover ground material created with TextureLab."
+      },
+      {
+        "src": "images/texlab/2.PNG",
+        "caption": "TextureLab ground materials blended in an Unreal landscape."
+      }
+    ],
+    "externalLink": "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/TexLab/TexLab_ReadMe.md",
+    "id": "aether",
+    "published": true,
+    "sections": [
+      {
+        "title": "What it is",
+        "text": "Aether is the current home for xBake and TextureLab. I’m bringing texture baking and material creation into one Blender tool, so preparing a model, working on its surface, and exporting the maps can happen in the same workflow."
+      },
+      {
+        "title": "The material tools",
+        "text": "The TextureLab side uses a live texture-space workspace built with Geometry Nodes. It combines procedural materials, image inputs, and geometry-based detail, with previews of the individual maps and the finished surface."
+      },
+      {
+        "title": "The baking tools",
+        "text": "The xBake side handles source and target objects, batches of maps, naming, and output settings. Aether adds the scene setup and material-building work around that process, including source-map baking and material conversion."
+      },
+      {
+        "title": "Current work and earlier images",
+        "text": "I’m actively developing Aether. The videos and images here are from xBake and TextureLab, the tools it grew from; they show the material work and workflow ideas rather than the latest interface."
+      }
+    ],
+    "links": [
+      {
+        "label": "Aether on GitHub",
+        "href": "https://github.com/sharpen3d/Aether"
+      }
+    ],
+    "category": "tools",
+    "label": "Blender · In development",
+    "image": "images/xbake-cover.png",
+    "page": "aether.html",
+    "role": "Tool design, Python, material systems & baking",
+    "tools": "Blender · Python · Geometry Nodes · Cycles",
+    "context": "Independent · In development",
+    "mediaCaption": "Earlier TextureLab workflow. Aether now brings TextureLab and xBake together."
+  },
+  "sprite": {
+    "title": "Sprite Toolkit",
+    "videoSrc": "videos/pixels.mp4",
+    "description": "The current version of my 2D tools for Blender: working with images, layers, and pixel-aligned scenes.",
+    "images": [
+      {
+        "src": "images/pixels/0.png",
+        "caption": "Earlier 2D Tools / Pixels interface and workflow."
+      },
+      {
+        "src": "images/pixels/1.png",
+        "caption": "Earlier 2D Tools / Pixels interface and workflow."
+      }
+    ],
+    "downloadLink": "https://github.com/sharpen3d/bpy_public/raw/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/2DTools.zip",
+    "externalLink": "https://github.com/sharpen3d/bpy_public/blob/a6e9bf4531fc0f84e62d8c83b95c8a8eb828e57e/downloads/Pixels/Pixels_ReadMe.md",
+    "id": "sprite",
+    "published": true,
+    "sections": [
+      {
+        "title": "What I’m working on",
+        "text": "Sprite Toolkit is the current home for my Blender 2D tools, previously shown here as Pixels and 2D Tools. I’m continuing the work on image and layer editing, pixel alignment, and getting useful 2D output from a Blender scene."
+      },
+      {
+        "title": "The workflow",
+        "text": "The earlier tools manage image planes, pivots, orthographic cameras, and the relationship between scene units and output pixels. The current code expands that work with layers, masks, effects, compositions, and export tools."
+      },
+      {
+        "title": "Development status",
+        "text": "This is an active personal tool. The public repository still needs updating, so the media here shows the earlier workflow rather than a current release. I’ll add the updated source when it is ready to share."
+      }
+    ],
+    "links": [],
+    "category": "tools",
+    "label": "Blender · In development",
+    "image": "images/2DLarge.png",
+    "role": "Tool design, Python, 2D workflows & shaders",
+    "tools": "Blender · Orthographic cameras",
+    "context": "Independent · In development",
+    "page": "sprite-toolkit.html",
+    "mediaCaption": "Earlier 2D Tools / Pixels workflow. Sprite Toolkit is the current development project."
+  },
+  "attrio": {
+    "id": "attrio",
+    "title": "Attrio CSV",
+    "category": "tools",
+    "label": "Released Blender extension",
+    "published": false,
+    "page": "https://extensions.blender.org/add-ons/attrio-csv/",
+    "image": "assets/attrio-preview.webp",
+    "description": "Geometry and attributes ↔ CSV.",
+    "links": [],
+    "imageSource": "https://extensions.blender.org/media/thumbnails/91/91de1269fd4a1ac5c1512e9e865677f7e834cca176f9e98836f1348492e9c559_1920x1080.webp"
+  }
+}

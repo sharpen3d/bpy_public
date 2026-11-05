@@ -1,0 +1,193 @@
+{
+  "title": "PlushEngine development reel",
+  "date": "2026-10-30",
+  "duration": 44,
+  "output": "assets/plush-reel.mp4",
+  "notes": "Silent edit of Luke’s development recordings and actual editor captures. Footage fitted without cropping; chapter labels added below the footage. Source movies remain outside this repository. Scene tunneling shows editor-camera traversal between linked scenes.",
+  "shots": [
+    {
+      "label": "Laser Planet",
+      "reelStart": 0,
+      "duration": 5,
+      "source": "Screen Recording 2026-10-08 at 12.12.29 AM.mov",
+      "sourceStart": 20,
+      "type": "video"
+    },
+    {
+      "label": "FPS Template",
+      "reelStart": 5,
+      "duration": 5,
+      "source": "Screen Recording 2026-10-24 at 4.27.45 PM.mov",
+      "sourceStart": 18,
+      "type": "video"
+    },
+    {
+      "label": "Shared project data",
+      "reelStart": 10,
+      "duration": 3,
+      "source": "plush-editor.jpg",
+      "sourceStart": 0,
+      "type": "still"
+    },
+    {
+      "label": "Music tracker",
+      "reelStart": 13,
+      "duration": 3,
+      "source": "tracker-source.jpg",
+      "sourceStart": 0,
+      "type": "still"
+    },
+    {
+      "label": "Materials",
+      "reelStart": 16,
+      "duration": 4,
+      "source": "mats2.mov",
+      "sourceStart": 9,
+      "type": "video"
+    },
+    {
+      "label": "Scene tunneling · linked scenes",
+      "reelStart": 20,
+      "duration": 8,
+      "source": "Screen Recording 2026-10-30 at 6.59.57 PM.mov",
+      "sourceStart": 46,
+      "type": "video"
+    },
+    {
+      "label": "Foliage",
+      "reelStart": 28,
+      "duration": 4,
+      "source": "Screen Recording 2026-10-30 at 11.44.58 AM.mov",
+      "sourceStart": 8,
+      "type": "video"
+    },
+    {
+      "label": "Destruction",
+      "reelStart": 32,
+      "duration": 4,
+      "source": "physics.mov",
+      "sourceStart": 5,
+      "type": "video"
+    },
+    {
+      "label": "Local version control",
+      "reelStart": 36,
+      "duration": 3,
+      "source": "git.mov",
+      "sourceStart": 12,
+      "type": "video"
+    },
+    {
+      "label": "Water & physics",
+      "reelStart": 39,
+      "duration": 5,
+      "source": "jetski.mov",
+      "sourceStart": 5,
+      "type": "video"
+    }
+  ],
+  "detailMedia": [
+    {
+      "output": "assets/plush-tracker.jpg",
+      "source": "tracker-source.jpg",
+      "project": "LaserPlanet",
+      "notes": "Actual editor capture using a scratch copy; Lobby music pattern 02."
+    },
+    {
+      "output": "assets/plush-library.jpg",
+      "source": "fps-library-source.jpg",
+      "project": "FpsTemplate",
+      "notes": "Actual editor capture using a scratch copy; reusable Sentry turret selected."
+    },
+    {
+      "output": "assets/plush-tunneling.mp4",
+      "source": "Screen Recording 2026-10-30 at 6.59.57 PM.mov",
+      "sourceStart": 46,
+      "duration": 12,
+      "notes": "Editor camera moves between the linked Amber and Blue rooms."
+    },
+    {
+      "output": "assets/plush-code.jpg",
+      "source": "code-source.jpg",
+      "project": "FpsTemplate",
+      "notes": "Actual editor capture from the scratch project; Scripts/FpsDoor.cs open in the Code tab. No source edits."
+    },
+    {
+      "output": "assets/plush-vehicle.jpg",
+      "source": "vehicle-source.jpg",
+      "notes": "Gameplay captured from a scratch copy of the vehicle proof. Cropped to the game world; no scene or source changes.",
+      "crop": [
+        1420,
+        390,
+        2504,
+        1000
+      ]
+    },
+    {
+      "output": "assets/plush-surface.jpg",
+      "source": "mats2.mov",
+      "sourceStart": 13.4,
+      "crop": [
+        830,
+        750,
+        1980,
+        1200
+      ],
+      "notes": "Renderer-only material close-up from original recording."
+    },
+    {
+      "output": "assets/plush-eye-detail.jpg",
+      "source": "mats2.mov",
+      "sourceStart": 13.4,
+      "crop": [
+        1350,
+        350,
+        2180,
+        1150
+      ],
+      "notes": "Earlier fur crop, retained as an unused asset. The current eye is an abstract SVG."
+    },
+    {
+      "output": "assets/plush-data-detail.jpg",
+      "source": "plush-materiallab-source.jpg",
+      "cropAt2000PixelWidth": [
+        865,
+        785,
+        1475,
+        1165
+      ]
+    },
+    {
+      "output": "assets/plush-code-detail.jpg",
+      "source": "code-source.jpg",
+      "crop": [
+        835,
+        1145,
+        2280,
+        2170
+      ]
+    },
+    {
+      "output": "assets/plush-tracker-detail.jpg",
+      "source": "tracker-source.jpg",
+      "crop": [
+        830,
+        1830,
+        2325,
+        2165
+      ]
+    },
+    {
+      "output": "assets/plush-factory.jpg",
+      "source": "fps-library-source.jpg",
+      "project": "FpsTemplate",
+      "notes": "Full editor capture from the scratch project, resized to 2000px wide. Current homepage and project hero; no authored scene or source changes."
+    }
+  ],
+  "homeFeature": {
+    "source": "/Users/lukestilson/Desktop/Screen Recording 2026-10-08 at 12.12.29 AM.mov",
+    "posterAtSourceSeconds": 12,
+    "output": "assets/plush-laser-still.jpg",
+    "notes": "Uncropped still from original Laser Planet viewport recording, chosen without selection outlines."
+  }
+}

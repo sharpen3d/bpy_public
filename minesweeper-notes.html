@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minesweeper: original concept notes · Luke Stilson</title><meta name="description" content="Original 2024 design notes for an independent concept. These describe ideas and plans, rather than features of a released game.">
+<meta name="theme-color" content="#0a0b0d"><link rel="stylesheet" href="assets/portfolio.css">
+<script src="assets/portfolio.js" defer></script><script src="assets/related-sites.js" defer></script></head>
+<body id="top" class=""><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="identity" href="index.html" aria-label="Luke Stilson home">Luke Stilson<span>Technical art & tools</span></a><nav aria-label="Main navigation"><a href="index.html#work" aria-current="page">Work</a><a href="tutorials.html">Tutorials</a><a href="index.html#about">About</a><a href="resume.html">Résumé</a><a href="mailto:stilson.luke@gmail.com">Email</a></nav></header><main id="main" class="document-page wrap"><a class="back-link" href="index.html">← Back to the portfolio</a><p class="eyebrow">Archive · 2024</p><h1>Minesweeper: original concept notes</h1><p class="document-intro">Original 2024 design notes for an independent concept. These describe ideas and plans, rather than features of a released game.</p><article class="document-content">
+            
+            <h2>Game Overview</h2>
+
+            <div class="game-overview">
+                <h3>Title:</h3>
+                <p>First-Person 3D Minesweeper</p>
+                <h3>Genre:</h3>
+                <p>Puzzle, Strategy</p>
+                <h3>Platform:</h3>
+                <p>PC (with potential for console and VR)</p>
+                <h3>Target Audience:</h3>
+                <p>Puzzle enthusiasts, strategy game fans, and players interested in supporting humanitarian causes</p>
+            </div>
+
+            <div class="vision-statement">
+                <h3>Vision Statement:</h3>
+                <p>My remastered parody of Minesweeper aims to bring the classic puzzle experience into an immersive first-person 3D environment, combining nostalgia with modern gameplay. The game also seeks to raise awareness, education and support for real demining efforts in the world today.</p>
+            </div>
+
+            <div class="core-gameplay">
+                <h3>Core Gameplay:</h3>
+
+                <h4>Objective:</h4>
+                <p>The primary objective is to clear a 3D minefield without detonating any mines. Players use a remote with a digital screen displaying numbers, similar to classic Minesweeper, to identify the number of adjacent mines.</p>
+
+                <h4>Game Modes:</h4>
+                <p><strong>Simulation Mode:</strong> Players play in this mode freely on randomly-generated boards, selecting a difficulty: beginner, intermediate, or expert.</p>
+                <p><strong>Challenge Mode:</strong> Preset random-seed maps challenge every player equally and cost a wager of �life points� to enter. Players start with a set amount of points, which regenerate over time. Losing a life in challenge mode results in losing life points, clearing a board results in player xp increase, earning in-game rewards, badges, additional life-points, and leaderboard ranking.</p>
+
+                <h4>Game Mechanics:</h4>
+                <ul>
+                    <li><strong>Movement:</strong> Players move around the minefield in a first-person perspective.</li>
+                    <li><strong>Interaction:</strong> Players use a remote device to interact with the tiles. The remote displays numbers indicating how many mines are adjacent to the selected tile. The player may find scarce items on the map that can be used for throwing at suspected mine tiles (tires, debris) to attempt to detonate the tile without stepping on it. These items are destroyed upon mine hit.</li>
+                    <li><strong>Marking Mines:</strong> Players can mark suspected mines using the remote. Marked mines are visually distinct from unmarked tiles with realistic caution taping. Marked mines are blocking volumes for the player. The player cannot move over these spaces after they have been marked, saving them from accidental detonation.</li>
+                    <li><strong>Leveling System:</strong> Life points are wagered in challenge mode. XP is calculated based on earned life points and average clear time. �Easier� levels allow the player to throw more items at suspected mines, and chance of detonating when hit with an object decreases as levels increase. Detection equipment is improved as levels increase, showing larger grids on screen on the device, robotic mine clearing devices, and more real-world equipment is to be unlocked for the player as they progress through difficulties. Upon death, all leveling upgrades are lost and the player must start from the very beginning.</li>
+                </ul>
+
+                <h4>User Interface:</h4>
+                <ul>
+                    <li><strong>Heads-Up Display (HUD):</strong> The HUD is simple and includes only a flag counter and timer. The remote�s screen displays the number of adjacent mines resembling the classic game - flagged areas on screen are marked yellow with a flag, safe areas are blank, and numbers show where necessary.</li>
+                    <li><strong>Visual Indicators:</strong> Safe tiles, marked mines, and uncovered tiles are visually distinct on the ground as well as the remote - uncovered tiles are blank, and unknown tiles are marked with a red laser grid on the terrain surface (projection decal).</li>
+                </ul>
+
+                <h4>Win/Loss Conditions:</h4>
+                <ul>
+                    <li><strong>Winning:</strong> The player wins by uncovering all non-mine tiles.</li>
+                    <li><strong>Losing:</strong> The player loses by uncovering a tile containing a mine. Boom.</li>
+                </ul>
+            </div>
+
+            <div class="game-world">
+                <h3>Game World:</h3>
+
+                <h4>Setting:</h4>
+                <p>The game is set in a realistic, yet stylized environment resembling a demining zone (Level 1 largely resembling areas of northeastern Ukraine). The environment is designed to be visually large and barren to provide a sense of unease. Setting may be improved to use real terrain data from affected areas of Ukraine and Africa.</p>
+
+                <h4>Art Style:</h4>
+                <p>The art style combines realistic textures with a slight stylization to balance immersion and readability of game elements. The environment includes varied terrains, such as grassy fields, sandy deserts, and rocky landscapes � meant to resemble real places in the world where demining operations occur today.</p>
+
+                <h4>Audio:</h4>
+                <p>The game features ambient sounds to enhance immersion, including environmental sounds like wind, distant explosions, and birds. Interactive sounds provide feedback, such as a click when selecting a tile, a beep from the remote, and a distinct sound for marking mines.</p>
+            </div>
+
+            <div class="technical-requirements">
+                <h3>Technical Requirements:</h3>
+
+                <h4>Engine:</h4>
+                <p>The game is developed using Unreal Engine 5, leveraging its capabilities for realistic graphics, and leaning towards a PC-first development strategy. Some technical features of the game include the implementation of softbody physics, nanite materials, Niagara particle effects, data-driven random seed map creation.</p>
+            </div>
+
+            <div class="development-roadmap">
+                <h3>Development Roadmap:</h3>
+
+                <h4>Phase 1: Pre-production</h4>
+                <ul>
+                    <li>Define game mechanics and core gameplay loop.</li>
+                    <li>Develop initial prototypes and test gameplay concepts.</li>
+                    <li>Create concept art and define the visual style.</li>
+                </ul>
+
+                <h4>Phase 2: Production</h4>
+                <ul>
+                    <li>Develop the game world and create assets.</li>
+                    <li>Implement game mechanics and UI elements.</li>
+                    <li>Integrate audio and visual effects.</li>
+                    <li>Test and refine the gameplay experience.</li>
+                </ul>
+
+                <h4>Phase 3: Testing and Polish</h4>
+                <ul>
+                    <li>Conduct thorough playtesting and gather feedback.</li>
+                    <li>Optimize performance and fix bugs.</li>
+                    <li>Polish visuals and audio for final release quality.</li>
+                </ul>
+
+                <h4>Phase 4: Release and Post-release</h4>
+                <ul>
+                    <li>Launch the game on PC via Steam.</li>
+                    <li>Provide post-launch support and updates based on player feedback.</li>
+                </ul>
+            </div>
+
+            <div class="marketing-and-community-engagement">
+                <h3>Marketing and Community Engagement:</h3>
+
+                <h4>Promotion:</h4>
+                <ul>
+                    <li>Create a website highlighting the game�s features, development process, and humanitarian cause.</li>
+                    <li>Develop a trailer showcasing gameplay and the immersive experience.</li>
+                    <li>Engage with gaming communities and puzzle enthusiasts on social media.</li>
+                </ul>
+
+                <h4>Partnership & Monetization:</h4>
+                <ul>
+                    <li>Include in-game information and education on current demining efforts, potential to partner with organizations such as u24.gov.ua to raise awareness and support for the cause.</li>
+                    <li>Life Points can be made purchasable, valuable by scarcity and regeneration speed.</li>
+                </ul>
+
+                <h4>Community:</h4>
+                <ul>
+                    <li>Encourage player feedback and suggestions through forums and social media.</li>
+                    <li>Implement community-driven features and updates to keep the game engaging and relevant.</li>
+                </ul>
+            </div>
+        </article></main><footer class="site-footer"><span>© 2026 Luke Stilson</span><div><a class="text-link" href="https://github.com/sharpen3d" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="text-link" href="https://www.linkedin.com/in/luke-stilson/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="text-link" href="https://www.youtube.com/@LukeStilson" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a class="text-link" href="https://www.instagram.com/3d_luke/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="text-link" href="https://github.com/sponsors/sharpen3d" target="_blank" rel="noopener noreferrer">Sponsor ↗</a><a class="text-link" href="mailto:stilson.luke@gmail.com">Email ↗</a></div><a href="#top">Back to top ↑</a></footer></body></html>

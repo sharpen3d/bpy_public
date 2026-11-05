@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bad-dog",
+    "company": "Bad Dog Games",
+    "website": "https://www.baddoggames.com/",
+    "paragraphs": [
+      "I lead technical art here, which means following the work from the art side into Unity and making sure it holds up on the hardware it actually has to run on. Some days that’s making art and effects; other days it’s figuring out why getting them into the game takes more work than it should.",
+      "A lot of my attention goes into reusable shaders and animation systems, and giving artists useful controls without making every asset its own special case. There’s also the less glamorous work of atlases, compression, and keeping the handoff between artists and developers straightforward."
+    ]
+  },
+  {
+    "id": "onchain",
+    "company": "OnChain Studios",
+    "website": "https://www.onchainstudios.com/",
+    "paragraphs": [
+      "My work sat between character production and the real-time experience. I helped get art through preparation, look development, and review, then into Unity with the shaders, animation, and effects it needed.",
+      "I built tools in Python and C# to make that process less manual, and spent plenty of time working through the details with artists and engineers. It was a mix of making things look right and making sure the workflow still made sense when there was a lot of content moving through it."
+    ]
+  },
+  {
+    "id": "arrow",
+    "company": "Arrow International",
+    "website": "https://www.arrowinternational.com/",
+    "paragraphs": [
+      "I worked across the art itself and the systems around it: modeling, materials, animation, effects, and getting everything working in the engine. As lead technical artist, I also helped artists and developers work through pipeline decisions and the production problems that came up along the way.",
+      "Blender Python tools, Unity scripts, and shaders were all part of that. So was documenting how things worked and trying to remove the steps that kept slowing people down."
+    ]
+  },
+  {
+    "id": "earlier",
+    "company": "ONEFIRE",
+    "website": "https://onefire.com/",
+    "paragraphs": [
+      "This was a broad contract role across AR, VR, and mobile projects in Unity and Unreal. I contributed gameplay, 3D assets, materials, shaders, UI, and audio, depending on what the project needed.",
+      "I liked being able to work across those parts of an experience rather than stopping at the edge of one discipline."
+    ]
+  }
+]

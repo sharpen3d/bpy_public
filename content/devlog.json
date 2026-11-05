@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "pca-shape-keys",
+    "title": "PCA for shape key reduction",
+    "date": "2025-07-30",
+    "dateLabel": "July 2025",
+    "category": "Blender · Facial animation",
+    "excerpt": "Ok update: 52 ARKit shapes compressed to 16 worked pretty well!",
+    "lede": "I've been working on a method of shape key reduction using Principal Component Analysis PCA via Singular Value Decomposition.",
+    "thumbnail": "assets/devlog/pca-preview.webp",
+    "thumbnailAlt": "The sixteen distorted PCA basis shapes from my facial animation test",
+    "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697",
+    "sourceLabel": "My posts from July 27–30, 2025. The replies are in the original thread.",
+    "hero": {
+      "src": "assets/devlog/pca-comparison.png",
+      "alt": "My original comparison: a face with 52 shape keys beside a reconstruction using 16 basis shape keys",
+      "caption": "An early comparison from the thread: the original 52-shape setup on the left, the 16-shape reconstruction on the right.",
+      "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/14",
+      "sourceImage": "https://blenderartists.org/uploads/default/original/4X/8/d/b/8db458ce948e7a66607233b8cd4dabd731fb1a17.png"
+    },
+    "sections": [
+      {
+        "title": "July 27, 2025",
+        "paragraphs": [
+          "Not too much information is normally shared on Shape Keys - specifically how they are used in game engines (as Blendshapes and Morph Targets). And it should be common knowledge that using too many shape keys in game engines causes extreme performance loss when certain thresholds are crossed.",
+          "I’ve been working on a method of shape key reduction using Principal Component Analysis PCA via Singular Value Decomposition - which in theory can reduce say 52 shape keys into ~16 with minimal quality loss <1%.",
+          "I’ve seen this mentioned in SIGGRAPH papers and talks for AAA games like Uncharted and The Last of Us - but I’m curious why this is not more commonly utilized in the indie community?",
+          "Metahuman does something similar - but seems to be a black box, and I have not found any open source tooling to perform PCA on shape keys (or in general).",
+          "I’ll be updating here with the research and demos once I have this verified to work (specifically inside blender and with Unity as my initial target)- and intend to release this as an extension in the future.",
+          "Curious on thoughts on this - it kind of irked me when I saw vtuber rigs for ARkit use 52 shape keys (absolutely ridiculous to me, but it seems to be extremely poorly documented in unreal or unity documentation that this causes such a performance impact - and on top of this, the internals for GPU skinning in unity and morph targets is also underdocumented – it will kick to CPU at unknown limits based on your mesh, your scene, your specific scenario – somewhere around 8 concurrent shapes on a mesh with ~20k verts as far as I can tell)",
+          "It’s obviously an issue major AAA studios have solved, mention, and promptly black-box, but isn’t that crazy, just a little linear algebra."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/1"
+      },
+      {
+        "title": "July 27, 2025",
+        "paragraphs": [
+          "Yep it is tricky. My initial focus is on the 52 ARKit standard face shapes to get this working as a POC - but you bring up a good point- how do you control as an artist the reduced PCA keys?",
+          "This is done via a projection coefficient matrix. This is essentially a list of all your original shape keys and the percentage of each of the PCA reduced shape keys to reconstruct each of your original shapes. This will make more sense when I upload the support (likely later this afternoon).",
+          "Initially I will create a separate shape key menu which will look identical to your original list of keys (all 52) to animate / use. These will drive the PCA reduced set based on the matrix. Further down the line, I’ll have to integrate some kind of keyframe remapping to drive the PCA, for if you have already animated (via bones or directly) and remap drivers to control my custom menu instead of direct shape keys.",
+          "I was kind of tongue in cheek saying “just linear algebra” - it is a very complex project to get right. I’d honestly be really interested in testing it out on a file like your example once my baseline is tested and working, I don’t have a big bank of “real world” examples I can pull from right now."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/5"
+      },
+      {
+        "title": "July 27, 2025",
+        "paragraphs": [
+          "Yep that PCA Basis value I’ve been referencing is essentially the compression quality (how many shapes should it try to compress into)",
+          "And what you are asking is exactly where I’m at right now, even to me, a linear blend between 2 PCA shapes describing specific shape keys seems like there might be weird artifacting or deformation (but in everything I’ve read so far this is a non-issue) so I’m excited to figure this out and report back.",
+          "In terms of depsgraph… It could be heavy- because it’s an additional step, less overall shapes but still an additional compute step to figure them out. My focus is for game engines though. The ‘correct’ implementation of this long term would be moreso on export- you really shouldn’t have to think about it (like how metahuman just does something similar and in the background but user does not notice). Like on export convert all your shape keys, redefine your animation curves to PCA- in engine you’d see idk 8-20 shapes (whatever you define) instead of 100+ but your workflow for animation in theory should not change (in a perfect world)"
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/10"
+      },
+      {
+        "title": "July 27, 2025",
+        "paragraphs": [
+          "ABSOLUTELY could cause turmoil in the pipeline. New shape keys and altering existing will require new PCA to be ran and all animation could very well break. Not much use in film because of this (I did see some comments of feature films using this in a different way, but I think that is more of an early 2000s mindset when PCs would stall with 200+ shape keys on advanced rigs). But yeah everything you are saying is on point I’m glad people can follow and I’m not just going insane."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/12"
+      },
+      {
+        "title": "July 28, 2025",
+        "paragraphs": [
+          "Ok update: 52 ARKit shapes compressed to 16 worked pretty well! I’ll post images or video later. But @sozap was right in saying this will be difficult for extreme stylization. The most telling indication of this is “eye_blink_left” (and right) essentially do not come through whatsoever. This is because they are a small amount of localized verts that are not utilized in many of the shapes.",
+          "My plan is to first run at least 3 PCA tests: 52 → 16 (the one I’ve done) 52 → 24 (see if it catches blinking) 52 → 8 (see how far we can go and what shapes get compressed too far)",
+          "I think the final form of this may be a selection menu for shapes to keep vs shapes to compress OR I can use the PCA result to analyze which shapes did not get good representation.",
+          "Will be doing a little research into what kind of layering AAA does for this method (do they compress left side of face and right side separately? Are there shapes they always keep uncompressed like blinks and jaw movement? What shapes are typically bone driven rather than shapes when PCA is utilized?)",
+          "I finished a scrappy menu which controlls the PCA basis shapes by altering slider values mocking the original shapes, but needs some improvement so I can run ROM animation tests and comparisons without as much manual work. Thanks for sticking with me if you’re reading this, some cool images and video to support this research coming very soon."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/13"
+      },
+      {
+        "title": "July 28, 2025",
+        "paragraphs": [
+          "This got me some good information (video on google drive going though all current compressed shapes vs original https://drive.google.com/drive/folders/1ZT4C08ZB2g3Y_ZNsBqYj7wmz29xUYKdz?usp=sharing ). I will be running PCA on grouped sections and working on my algorithm - right now, it takes into account all vertices, where it should only take into account localized verts modified by a ‘specific set’ of keys (i.e. something like eyes, mouth, main). Each of these sets can probably be reduced to less, so I can get a result of 16 (my general target).",
+          "I still think this is impressive (minus the eyes) seeing as the face on the right only has 16 shape keys and probably 30 of these are passable even though my math is not locked in."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/14"
+      },
+      {
+        "title": "July 28, 2025",
+        "paragraphs": [
+          "if you are curious what these 16 basis shapes look like isolated – here is the nightmare"
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/15",
+        "figure": {
+          "src": "assets/devlog/pca-basis-shapes.png",
+          "alt": "A four-by-four grid showing the sixteen isolated PCA basis shapes",
+          "caption": "The isolated basis shapes. Definitely not a new set of animator-friendly expressions.",
+          "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/15",
+          "sourceImage": "https://blenderartists.org/uploads/default/original/4X/f/c/a/fcaabc399d8503a744875ec39bb37efedca9f4da.png"
+        }
+      },
+      {
+        "title": "July 29, 2025",
+        "paragraphs": [
+          "I just finished a UI to be able to separate out groups based on naming and apply specific basis numbers per group, on top of that, it will need to retain certain keys in full. Takes about 20 min each time I run the algorithm so I’m just trying to carefully chip away at this on a dedicated machine. Btw term for what your saying would be ‘heatmap’ and yes totally want to do this once I am closer and calculate visually and with a value the percentage error"
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/17"
+      },
+      {
+        "title": "July 30, 2025",
+        "paragraphs": [
+          "The work continues. I see why no one has tackled this. Grouping keywords work wonders, but L/R splits on geometry without perfect mirroring still takes a hit, I’ve localized subgroups of groups to a act on left and right basis within groups."
+        ],
+        "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/18",
+        "figure": {
+          "src": "assets/devlog/pca-groups.png",
+          "alt": "My Blender prototype UI with keyword groups, component budgets, and left and right splitting controls",
+          "caption": "The prototype UI from July 30: groups, component budgets, and left/right splits.",
+          "source": "https://blenderartists.org/t/pca-for-shape-key-reduction/1603697/18",
+          "layout": "portrait",
+          "sourceImage": "https://blenderartists.org/uploads/default/original/4X/a/b/7/ab75579d6b430bb16ef7463f45389e7f8e0bf071.png"
+        }
+      }
+    ],
+    "thumbnailSource": "assets/devlog/pca-basis-shapes.png"
+  },
+  {
+    "slug": "foliage-in-plush",
+    "title": "Foliage in Plush",
+    "date": "2026-11-05",
+    "dateLabel": "November 2026 · archive notes",
+    "category": "Plush / Blender",
+    "excerpt": "Tree Studio in Blender, then the foliage in Plush. Two recordings from the experiments.",
+    "lede": "Tree Studio in Blender, then the foliage in Plush. Two recordings from the experiments.",
+    "thumbnail": "assets/devlog/plush-foliage.jpg",
+    "thumbnailAlt": "Foliage in the Plush editor",
+    "sourceLabel": "Local development recordings. Notes assembled November 2026; recording dates are not established.",
+    "hero": {
+      "src": "assets/devlog/plush-foliage.jpg",
+      "alt": "Looking into the tree canopy in Plush",
+      "caption": "Foliage in the Plush editor."
+    },
+    "sections": [
+      {
+        "title": "Tree Studio",
+        "paragraphs": [
+          "A Geometry Nodes tree generator in Blender. Presets, branching, leaves, and an export to GLB."
+        ],
+        "video": {
+          "src": "assets/devlog/tree-studio.mp4",
+          "poster": "assets/devlog/tree-studio.jpg"
+        }
+      },
+      {
+        "title": "In Plush",
+        "paragraphs": [
+          "The foliage test in the editor. The Blender-to-Plush workflow keeps trunk and leaf meshes separate, with shared bark and canopy shaders. Leaf depth affects the color and occlusion; wind is handled in the shader."
+        ],
+        "video": {
+          "src": "assets/devlog/plush-foliage.mp4",
+          "poster": "assets/devlog/plush-foliage.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "blender-camera-textures",
+    "title": "Render textures in Blender",
+    "date": "2026-06-10",
+    "dateLabel": "From the Instagram archive · June 2026",
+    "category": "Blender / Eevee",
+    "excerpt": "Blender realtime camera texture in Eevee — a custom build.",
+    "lede": "I think I might be cooking.",
+    "sourceLabel": "Original caption and clip from my Instagram export. The archive timestamp may differ from the recording date.",
+    "thumbnail": "assets/devlog/blender-camera-textures.jpg",
+    "thumbnailAlt": "Blender camera feeding its view back onto surfaces in Eevee",
+    "hero": {
+      "src": "assets/devlog/blender-camera-textures.jpg",
+      "alt": "Two planes showing the camera view inside Blender",
+      "caption": "Realtime camera textures in Eevee.",
+      "layout": "portrait"
+    },
+    "sections": [
+      {
+        "title": "Camera textures in Eevee",
+        "paragraphs": [
+          "I think I might be cooking. Blender realtime camera texture in Eevee - fully internal, no hacks,branched custom build to make this happen"
+        ],
+        "video": {
+          "src": "assets/devlog/blender-camera-textures.mp4",
+          "poster": "assets/devlog/blender-camera-textures.jpg"
+        }
+      },
+      {
+        "title": "What the clip shows",
+        "paragraphs": [
+          "A camera view is being used as a texture inside Eevee. The scene includes surfaces displaying the camera output, so moving through the scene makes the relationship visible.",
+          "This is a custom Blender build experiment, rather than a claim that the same setup works in an ordinary release. The short recording shows the result; it is not a complete setup tutorial."
+        ]
+      },
+      {
+        "title": "More experiments",
+        "paragraphs": [
+          "I share shorter tests on Instagram, and longer explanations on YouTube."
+        ],
+        "source": "https://www.instagram.com/3d_luke/"
+      }
+    ]
+  }
+]

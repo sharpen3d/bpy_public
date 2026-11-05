@@ -1,0 +1,411 @@
+[
+  {
+    "id": "NGniucSk4hU",
+    "title": "No Rig Required - Vertex Animation for Gameplay [OpenVAT]",
+    "topic": "OpenVAT / Unity",
+    "group": "openvat",
+    "description": "Vertex animation for gameplay, using OpenVAT. The Unity side of the workflow gets its own attention here: taking baked motion into an engine and making it useful in a game.",
+    "featured": true,
+    "resources": [
+      {
+        "href": "https://github.com/sharpen3d/openvat/blob/main/OpenVAT-Engine_Tools/UnityURP/OpenVAT_Unity1.1.0.unitypackage",
+        "label": "Download OpenVAT_Unity1.1.0.unitypackage"
+      },
+      {
+        "href": "https://github.com/sponsors/sharpen3d",
+        "label": "Sponsor development"
+      }
+    ],
+    "chapters": [],
+    "originalDescription": "In this video, I showcase the new features for OpenVAT in Unity, including:\n-New Animation data system\n-Runtime playback system (no timeline/anim controller required, gpu batchable, shader-controlled timers)\n-Smooth frame-over-frame interpolation\n-Flexible animation blending\n\n📦 Download the new Unity package here:\nhttps://github.com/sharpen3d/openvat/blob/main/OpenVAT-Engine_Tools/UnityURP/OpenVAT_Unity1.1.0.unitypackage\n\nOpenVAT is completely free and Open source- consider donating to future development and ongoing improvements:\nhttps://github.com/sponsors/sharpen3d\n\nThis provides a stable, lightweight alternative to Alembic for simulation (viable on AR/VR/Mobile), and/or allows for scenarios like crowd simulations where animation controllers and rigs become too heavy for practical use. Check out previous videos on Vertex Animation Textures or take a look at OpenVAT.org for common use cases, limitations and detailed technical information.\n\n**new full written documentation for this system is in the works and will be linked here when complete**",
+    "source": "https://www.youtube.com/watch?v=NGniucSk4hU",
+    "published": "20250822",
+    "duration": 623
+  },
+  {
+    "id": "xoLxKinzBwI",
+    "title": "Fluid Simulations As Vertex Animation Textures For Game Engine Use | OpenVAT - Blender 4.5",
+    "topic": "OpenVAT / Engine workflows",
+    "group": "openvat",
+    "description": "This video documents two experimental techniques for encoding fluid simulation into Vertex Animation Textures using OpenVAT.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://github.com/sharpen3d/openvat/tree/main/Experimental",
+        "label": "openvat on GitHub"
+      },
+      {
+        "href": "https://openvat.org",
+        "label": "OpenVAT documentation"
+      },
+      {
+        "href": "https://github.com/sponsors/sharpen3d",
+        "label": "Sponsor development"
+      }
+    ],
+    "chapters": [
+      {
+        "time": "00:48",
+        "title": "Triangle Soup Explained",
+        "seconds": 48
+      },
+      {
+        "time": "07:50",
+        "title": "Triangle Soup Setup + Unity Look",
+        "seconds": 470
+      },
+      {
+        "time": "11:26",
+        "title": "Triangle Soup Geometry Nodes Overview",
+        "seconds": 686
+      },
+      {
+        "time": "15:22",
+        "title": "Triangle Soup Result & Analysis",
+        "seconds": 922
+      },
+      {
+        "time": "16:11",
+        "title": "Sparse SDF VAT (Splat) Explained",
+        "seconds": 971
+      },
+      {
+        "time": "20:30",
+        "title": "Blender SDF via Geometry Nodes",
+        "seconds": 1230
+      },
+      {
+        "time": "25:42",
+        "title": "Sparse SDF VAT Result",
+        "seconds": 1542
+      },
+      {
+        "time": "27:28",
+        "title": "Final Thoughts & Considerations",
+        "seconds": 1648
+      }
+    ],
+    "originalDescription": "This video documents two experimental techniques for encoding fluid simulation into Vertex Animation Textures using OpenVAT.\n\nMethod 1\n00:48 – Triangle Soup Explained\n07:50 – Triangle Soup Setup + Unity Look\n11:26 – Triangle Soup Geometry Nodes Overview\n15:22 – Triangle Soup Result & Analysis\n\nMethod 2\n16:11 – Sparse SDF VAT (Splat) Explained\n20:30 – Blender SDF via Geometry Nodes\n25:42 – Sparse SDF VAT Result\n\n27:28 – Final Thoughts & Considerations\n\nHeads up — If you saw a mid-video ad, I didn’t put it there. YouTube did.\n\nI’m not monetized yet, but they still run ads and keep all the money.\nIf you want to help me actually earn from these uploads — consider subscribing.\nIt pushes me toward the Partner Program where I can finally turn that stuff off or control it properly.\n\nAppreciate you watching — especially on a technical deep-dive like this\n\nThese techniques enable game engines to read baked fluid simulations entirely using GPU - making them viable in mobile, AR, VR and in any engine with a vertex shader system. (These are uniquly effective approaches, not currently being used by any other publicly-available software (to the best of my knowledge)\n\nWhile it’s typically impossible to encode meshes with changing vertex count or face connections, these are methods that have proven successful, and especially clean with the set normal node in Blender 4.5.\n\nDownload OpenVAT through Blender Extensions or through openvat.org, then grab the experimental fluid sim template here: https://github.com/sharpen3d/openvat/tree/main/Experimental\n\nImproved engine shaders and finalization for corrected smoothness coming soon -- tools and nodes in this file are not 'Finalized' and therefore may cause unexpected errors in the file. Some nodegroups are specific for use in Blender 4.5\n\nIntended for technical artists, pipeline developers, and studios exploring alternative simulation workflows.\n\nLearn more: https://openvat.org\nSupport the project by becoming a GitHub Sponsor: https://github.com/sponsors/sharpen3d",
+    "source": "https://www.youtube.com/watch?v=xoLxKinzBwI",
+    "published": "20250725",
+    "duration": 1765
+  },
+  {
+    "id": "_5yb3CXH7Qk",
+    "title": "CSV + Geometry Nodes Just Got More Powerful | AttrioCSV (Free Extension)",
+    "topic": "Tools & materials",
+    "group": "tools",
+    "description": "Import CSV node is already a game-changer, but what if it could export as well? Learn how to utilize the CSV node for more than arbitrary data - as a raw, human-readable, scriptable attribute cache. ",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://extensions.blender.org/add-ons/attrio-csv/",
+        "label": "Get the Blender extension"
+      },
+      {
+        "href": "https://github.com/sharpen3d/AttrioCSV",
+        "label": "AttrioCSV on GitHub"
+      },
+      {
+        "href": "https://github.com/sponsors/sharpen3d",
+        "label": "Sponsor development"
+      },
+      {
+        "href": "https://openvat.org/",
+        "label": "OpenVAT documentation"
+      }
+    ],
+    "chapters": [],
+    "originalDescription": "Import CSV node is already a game-changer, but what if it could export as well? Learn how to utilize the CSV node for more than arbitrary data - as a raw, human-readable, scriptable attribute cache. \n\nGrab it here or directly in Preferences - Get Extensions  https://extensions.blender.org/add-ons/attrio-csv/\n\nGitHub Repo is live - report issues, branch, clone and grab the source https://github.com/sharpen3d/AttrioCSV\n\nSupport my tools development\nhttps://github.com/sponsors/sharpen3d\n\nLearn more about OpenVAT\nhttps://openvat.org/",
+    "source": "https://www.youtube.com/watch?v=_5yb3CXH7Qk",
+    "published": "20250722",
+    "duration": 330
+  },
+  {
+    "id": "cLP6ZKOyClM",
+    "title": "VAT Encoding Tips and Tricks [OpenVAT 1.0.4]",
+    "topic": "OpenVAT / Engine workflows",
+    "group": "openvat",
+    "description": "OpenVAT (recently featured multiple times by 80.lv) is a Blender extension I've created to bridge the gap between complex vertex animation and game engine playback. Compatible with Blender 4.0 - Blender 4.5LTS.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://github.com/sponsors/sharpen3d",
+        "label": "Sponsor development"
+      }
+    ],
+    "chapters": [],
+    "originalDescription": "OpenVAT (recently featured multiple times by 80.lv) is a Blender extension I've created to bridge the gap between complex vertex animation and game engine playback. Compatible with Blender 4.0 - Blender 4.5LTS.\n\nTo get started and to learn more about engine integrations, check out the OpenVAT playlist on my channel. This video covers initial encoding setup mentality, encoding from collections, how vertex normal options work, single-row mode vs wrapped, object vs world transform and other settings to consider when encoding your VAT.\n\nSupport the project on GitHub \nhttps://github.com/sponsors/sharpen3d\n\nGet the Extension via Blender Preferences - Get Extensions - (search OpenVAT)\n\nVisit openvat.org for more technical information and links",
+    "source": "https://www.youtube.com/watch?v=cLP6ZKOyClM",
+    "published": "20250718",
+    "duration": 1097
+  },
+  {
+    "id": "uQ9egD4Wb1M",
+    "title": "Understanding Geometry Nodes (Part 1)",
+    "topic": "Geometry Nodes",
+    "group": "fundamentals",
+    "description": "The system behind the nodes. A longer explanation to go alongside the short Geometry Nodes clips on Instagram.",
+    "featured": true,
+    "resources": [],
+    "chapters": [],
+    "originalDescription": "Blender 4.5LTS (valid for all Blender 4.x)\n\nWhen geometry nodes were introduced, this was a game-changer. They’ve changed over time, but have only gotten more robust and easier to use.\n\nWith my extension OpenVAT, I’ve released features allowing for capture of animation through the depsgraph via vertex attributes as VAT for game-engine playback via GPU. This video was initially created to provide some foundational understanding to users capturing custom VATs. \n\nBut whether you are a power user looking to use GN within your scripts or a beginner starting to learn how GN work, this video will give you the foundational understanding that most tutorials skip. This is the core of my own mental model of the current system, explained the best I can.",
+    "source": "https://www.youtube.com/watch?v=uQ9egD4Wb1M",
+    "published": "20250717",
+    "duration": 341
+  },
+  {
+    "id": "uZ4-0MxR3CU",
+    "title": "OpenVAT 1.0.4 - Animate ANY Vertex Attribute For Unity, Unreal, Godot",
+    "topic": "OpenVAT / Engine workflows",
+    "group": "openvat",
+    "description": "OpenVAT 1.0.4 is here. \nI've been stalling the release of more demo content and tutorials so I could get this update published - here, I'm releasing the full power of vertex animation texture encoding, and expanding the capabilities of VAT as a concept.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://github.com/sharpen3d/openvat",
+        "label": "openvat on GitHub"
+      },
+      {
+        "href": "https://extensions.blender.org/add-ons/openvat/",
+        "label": "Get the Blender extension"
+      },
+      {
+        "href": "https://github.com/sponsors/sharpen3d",
+        "label": "Sponsor development"
+      }
+    ],
+    "chapters": [],
+    "originalDescription": "OpenVAT 1.0.4 is here. \nI've been stalling the release of more demo content and tutorials so I could get this update published - here, I'm releasing the full power of vertex animation texture encoding, and expanding the capabilities of VAT as a concept.\n\n-- In-depth walkthroughs with demo files are in the works and will be coming shortly --\n\nGet OpenVAT\n[Download or update directly in Blender via \"Get Extensions\"]\nGitHub: https://github.com/sharpen3d/openvat\nBlender Extensions: https://extensions.blender.org/add-ons/openvat/\n\n❤️ Support development\nSponsor: https://github.com/sponsors/sharpen3d",
+    "source": "https://www.youtube.com/watch?v=uZ4-0MxR3CU",
+    "published": "20250706",
+    "duration": 172
+  },
+  {
+    "id": "--sxJpag6No",
+    "title": "I Tried to Fix Blender’s FBX Export and Lost My Mind",
+    "topic": "Pipeline notes",
+    "group": "pipeline",
+    "description": "The Issue (As I See It):\n - Blender cannot use Autodesk’s FBX SDK due to GPL license incompatibility.\n - Blender’s exporter is a reverse-engineered C implementation.\n - FBX exports are always tagged as Y-Up in metadata—even if you select Z-Up.\n - Blender bakes transforms into bones/meshes instead of relying on clean FBX metadata.\n - Armature space is used directly; this results in a phantom -90° X rotation baked into the root .",
+    "featured": false,
+    "resources": [],
+    "chapters": [],
+    "originalDescription": "The Issue (As I See It):\n - Blender cannot use Autodesk’s FBX SDK due to GPL license incompatibility.\n - Blender’s exporter is a reverse-engineered C implementation.\n - FBX exports are always tagged as Y-Up in metadata—even if you select Z-Up.\n - Blender bakes transforms into bones/meshes instead of relying on clean FBX metadata.\n - Armature space is used directly; this results in a phantom -90° X rotation baked into the root bone only.\n - Unreal, Unity, and Maya interpret this as an actual transform—leading to inconsistent rigs without user intent.\n - Blender's FBX documentation is too high-level, incomplete, and misleading\n\nWhy BetterFBX (and Similar Tools) Work Differently:\n - BetterFBX links to the official Autodesk FBX SDK (closed-source).\n - Can export binary FBX, set true Up/Forward axes, and preserve exact rest/bind poses.\n - Any extension for Blender that uses the FBX SDK is not allowed on Blender’s Extensions platform due to use of binaries and license conflicts.\n - Add-ons using the FBX SDK must bundle a precompiled binary (e.g. .exe or .so). This introduces a security risk—malicious knockoffs of BetterFBX have been reported.\n\nCreate Your Own Solution?\n - Like BetterFBX, you can create your own FBX exporter using the FBX SDK\n - It is incredibly tricky to create an exporter that accurately describes data with true axial adaptation.\n- FBX SDK documentation is notoriously poorly documented",
+    "source": "https://www.youtube.com/watch?v=--sxJpag6No",
+    "published": "20250628",
+    "duration": 157
+  },
+  {
+    "id": "APCNjLdEa_k",
+    "title": "Game-Ready Material Authoring in Blender (Aether Extension Preview)",
+    "topic": "Tools & materials",
+    "group": "tools",
+    "description": "Welcome to Aether – a (completely free) advanced material authoring toolset I'm building for Blender.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://github.com/sharpen3d/Aether",
+        "label": "Aether on GitHub"
+      }
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "title": "Introduction & What Aether Is  ",
+        "seconds": 0
+      },
+      {
+        "time": "00:41",
+        "title": "Installing Aether from GitHub  ",
+        "seconds": 41
+      },
+      {
+        "time": "01:52",
+        "title": "Setting Up an Aether Scene  ",
+        "seconds": 112
+      },
+      {
+        "time": "03:45",
+        "title": "Creating and Converting Materials  ",
+        "seconds": 225
+      },
+      {
+        "time": "04:20",
+        "title": "Rendering and Previewing PBR Maps  ",
+        "seconds": 260
+      },
+      {
+        "time": "05:50",
+        "title": "Using Geometry for Decals and Detail  ",
+        "seconds": 350
+      },
+      {
+        "time": "09:58",
+        "title": "Source Maps & Seamless Texturing Techniques  ",
+        "seconds": 598
+      },
+      {
+        "time": "18:51",
+        "title": "Final Thoughts & What’s Next  ",
+        "seconds": 1131
+      }
+    ],
+    "originalDescription": "Welcome to Aether – a (completely free) advanced material authoring toolset I'm building for Blender.\n\nGet the latest build of Aether here:\nhttps://github.com/sharpen3d/Aether\n\nThis is a quick introduction to the core workflow: setting up your scene, preparing materials, and understanding how Aether streamlines PBR texture export inside Blender.\n\nWhether you're a tech artist, a game dev, or just tired of giving your money to Adobe, Aether is designed to make your map authoring smart, fast and flexible.\n\nIn this video:\n\n00:00 Introduction & What Aether Is  \n00:41 Installing Aether from GitHub  \n01:52 Setting Up an Aether Scene  \n03:45 Creating and Converting Materials  \n04:20 Rendering and Previewing PBR Maps  \n05:50 Using Geometry for Decals and Detail  \n09:58 Source Maps & Seamless Texturing Techniques  \n18:51 Final Thoughts & What’s Next  \n\nThis is just the beginning — future videos will dive deeper into custom maps, batch exports, and advanced usage. Subscribe if you want to follow the full Aether workflow series!\n\nReport bugs, send comments, and help shape the future of this add-on by contacting me directly or by reporting an issue on Github.",
+    "source": "https://www.youtube.com/watch?v=APCNjLdEa_k",
+    "published": "20250625",
+    "duration": 1283
+  },
+  {
+    "id": "T1KVvUIduGI",
+    "title": "[OpenVAT] Blender to UE5 Vertex Animation Texture Workflow",
+    "topic": "OpenVAT / Engine workflows",
+    "group": "openvat",
+    "description": "In this video, I’ll walk you through the full pipeline: exporting VATs from Blender using OpenVAT, importing into Unreal, and setting up real-time playback with the included UE5 shader template.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://extensions.blender.org/add-ons/openvat/#new",
+        "label": "Get the Blender extension"
+      },
+      {
+        "href": "https://github.com/sharpen3d/openvat/blob/main/OpenVAT-Engine_Tools/Unreal5/OpenVAT_Unreal.zip",
+        "label": "Download OpenVAT_Unreal.zip"
+      },
+      {
+        "href": "https://github.com/sharpen3d/openvat",
+        "label": "openvat on GitHub"
+      }
+    ],
+    "chapters": [],
+    "originalDescription": "In this video, I’ll walk you through the full pipeline: exporting VATs from Blender using OpenVAT, importing into Unreal, and setting up real-time playback with the included UE5 shader template.\n\n🔗 Links and Resources:\n🧩 Get OpenVAT (Free Blender Extension)\nhttps://extensions.blender.org/add-ons/openvat/#new\n\n🎮 Download the Unreal Engine 5 Template Material\nhttps://github.com/sharpen3d/openvat/blob/main/OpenVAT-Engine_Tools/Unreal5/OpenVAT_Unreal.zip\n\n📚 Read the OpenVAT Docs on GitHub\nhttps://github.com/sharpen3d/openvat\n\nIf this helped you, drop a like and subscribe for more real-time technical art deep dives, and be sure to leave a review on Blender Extensions. \nQuestions or feature requests? Drop them in the comments or open an issue on GitHub.",
+    "source": "https://www.youtube.com/watch?v=T1KVvUIduGI",
+    "published": "20250519",
+    "duration": 257
+  },
+  {
+    "id": "eTBuDbZxwFg",
+    "title": "OpenVAT Overview - How Do Vertex Animation Textures Actually Work?",
+    "topic": "OpenVAT / Engine workflows",
+    "group": "openvat",
+    "description": "In this video, we break down what a Vertex Animation Texture (VAT) is and how they can be encoded — allowing you to turn any deforming animation (including Geometry Nodes, simulations, rigs, and modifiers) into a compact texture that can be decoded in real-time inside game engines like Unity, Unreal, Godot, and more.",
+    "featured": false,
+    "resources": [
+      {
+        "href": "https://extensions.blender.org/add-ons/openvat/",
+        "label": "Get the Blender extension"
+      },
+      {
+        "href": "https://github.com/sharpen3d/openvat",
+        "label": "openvat on GitHub"
+      }
+    ],
+    "chapters": [
+      {
+        "time": "0:00",
+        "title": "Intro & Showcase",
+        "seconds": 0
+      },
+      {
+        "time": "1:35",
+        "title": "What is a vertex animation texture ",
+        "seconds": 95
+      },
+      {
+        "time": "5:49",
+        "title": "Encoding approaches (proxy vs world offset)",
+        "seconds": 349
+      },
+      {
+        "time": "9:41",
+        "title": "Use cases, proximity shader ideation",
+        "seconds": 581
+      },
+      {
+        "time": "11:23",
+        "title": "Masking and blending example",
+        "seconds": 683
+      },
+      {
+        "time": "13:02",
+        "title": "Do it yourself (getting openVAT)",
+        "seconds": 782
+      },
+      {
+        "time": "13:25",
+        "title": "OpenVAT panel overview",
+        "seconds": 805
+      },
+      {
+        "time": "15:49",
+        "title": "Creating source animation",
+        "seconds": 949
+      },
+      {
+        "time": "17:23",
+        "title": "Analyzing baked VAT results",
+        "seconds": 1043
+      },
+      {
+        "time": "18:19",
+        "title": "Decoding the VAT in shader",
+        "seconds": 1099
+      },
+      {
+        "time": "20:38",
+        "title": "How encoding happens",
+        "seconds": 1238
+      },
+      {
+        "time": "25:39",
+        "title": "Outro, what’s next",
+        "seconds": 1539
+      }
+    ],
+    "originalDescription": "0:00 - Intro & Showcase\n1:35 - What is a vertex animation texture \n5:49 - Encoding approaches (proxy vs world offset)\n9:41 - Use cases, proximity shader ideation\n11:23 - Masking and blending example\n13:02 - Do it yourself (getting openVAT)\n13:25 - OpenVAT panel overview\n15:49 - Creating source animation\n17:23 - Analyzing baked VAT results\n18:19 - Decoding the VAT in shader\n20:38 - How encoding happens\n25:39 - Outro, what’s next\n\nIn this video, we break down what a Vertex Animation Texture (VAT) is and how they can be encoded — allowing you to turn any deforming animation (including Geometry Nodes, simulations, rigs, and modifiers) into a compact texture that can be decoded in real-time inside game engines like Unity, Unreal, Godot, and more.\n\nOpenVAT is the first free, open source VAT baking tool – verified on the official Blender Extensions platform.\n\nDownload the Extension within the Blender Preferences, or online here:\nBlender Extensions: https://extensions.blender.org/add-ons/openvat/\n\nGet the Source Code and Documentation, Report Issues, or Reach Out through the Github, \nGitHub Source Code: https://github.com/sharpen3d/openvat\n\nIn this video:\nWhat are Vertex Animation Textures?\nExplanation of encoding types.\nUse-Case examples of VATs\nA look into how OpenVAT encodes VATs inside Blender — (encode your first VAT)",
+    "source": "https://www.youtube.com/watch?v=eTBuDbZxwFg",
+    "published": "20250418",
+    "duration": 1606
+  },
+  {
+    "id": "RD7hQlBFZYs",
+    "title": "Blender's Data API (Part 2 |External Data)",
+    "topic": "Blender fundamentals",
+    "group": "fundamentals",
+    "description": "Learn how relative vs absolute paths work, when to pack your files, how to unpack them, and what dangers come with packed data.\nWe’ll cover practical scripts to reload external data and tips for building a clean, portable file structure in real production workflows.",
+    "featured": false,
+    "resources": [],
+    "chapters": [],
+    "originalDescription": "Learn how relative vs absolute paths work, when to pack your files, how to unpack them, and what dangers come with packed data.\nWe’ll cover practical scripts to reload external data and tips for building a clean, portable file structure in real production workflows.\n\nMissed Part 1? Watch here: https://youtu.be/_aracv2CA6o\n\nTopics Covered:\nAsset portability and pipeline-friendly practices\nWhere does external data fall in the data structure\nRelative vs Absolute file paths and Blender-specific quirks\nWhat actually happens when you pack/unpack data\nReloading images and file references via Python",
+    "source": "https://www.youtube.com/watch?v=RD7hQlBFZYs",
+    "published": "20250414",
+    "duration": 945
+  },
+  {
+    "id": "_aracv2CA6o",
+    "title": "Understanding Blender's Data API (Part 1: Datablocks and Users)",
+    "topic": "Datablocks & users",
+    "group": "fundamentals",
+    "description": "A look underneath Blender’s interface: datablocks, users, and how the pieces of a scene relate to each other. A useful starting point for understanding what a script is changing, and why one edit can show up somewhere else.",
+    "featured": true,
+    "resources": [],
+    "chapters": [],
+    "originalDescription": "In this first episode of the Understanding Blender’s Data API series, we dive deep into the foundation of Blender's architecture: datablocks, users, and fake users. Whether you’re a technical artist, use Blender in a production setting, or just someone who wants to stop losing materials mysteriously—this is essential knowledge.\n\nWe'll explore:\n-What datablocks actually are\n-How Blender tracks usage through the \"user count\" system\n-What makes a datablock an orphan\n-How the mysterious fake user checkbox works\n-Why deleting the default cube can teach you everything you need to know",
+    "source": "https://www.youtube.com/watch?v=_aracv2CA6o",
+    "published": "20250409",
+    "duration": 1734
+  },
+  {
+    "id": "3TqQH1fZAtM",
+    "title": "Modular Modeling and Lightmapping Overview | Blender to UE4",
+    "topic": "Pipeline notes",
+    "group": "pipeline",
+    "description": "Grid spacing/snapping, best practices for materials and UVs, exports and imports, basic lighting setup, and post processing - get rid of those ugly seams between your modular walls.  \n \nI cut out most rambling and build/loading screens. Feel free to leave a comment if I missed anything or if you have any further questions!",
+    "featured": false,
+    "resources": [],
+    "chapters": [],
+    "originalDescription": "lukestilson3d.com\n\nGrid spacing/snapping, best practices for materials and UVs, exports and imports, basic lighting setup, and post processing - get rid of those ugly seams between your modular walls.  \n \nI cut out most rambling and build/loading screens. Feel free to leave a comment if I missed anything or if you have any further questions!\n\nUsing UE4 version 4.18.1 and blender v2.78.",
+    "source": "https://www.youtube.com/watch?v=3TqQH1fZAtM",
+    "published": "20171127",
+    "duration": 1571
+  }
+]
