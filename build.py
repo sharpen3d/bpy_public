@@ -10,7 +10,7 @@ PROJECTS=json.loads((ROOT/'content/projects.json').read_text())
 ARCHIVED=json.loads((ROOT/'content/archived-documents.json').read_text())
 RESUME=json.loads((ROOT/'content/resume.json').read_text())
 DEVLOG=sorted(json.loads((ROOT/'content/devlog.json').read_text()),key=lambda entry:entry['date'],reverse=True)
-SITES=json.loads((ROOT.parent/'sites.json').read_text())
+SITES=json.loads((ROOT.parent/'sites.json' if (ROOT.parent/'sites.json').exists() else ROOT/'sites.json').read_text())
 TUTORIALS=json.loads((ROOT/'content/tutorials.json').read_text())
 EMAIL='stilson.luke@gmail.com'
 esc=lambda value:html.escape(str(value),quote=True)
