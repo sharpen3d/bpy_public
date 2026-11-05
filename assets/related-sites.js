@@ -7,19 +7,6 @@
     const site = sites[a.dataset.site];
     if (!site) continue;
     const path = a.dataset.sitePath || '';
-    a.href = local ? new URL('../../' + a.dataset.site + '/' + path, source).href : site.url.replace(/\/$/, '') + '/' + path;
+    a.href = local ? new URL('../../' + a.dataset.site + '/' + (path || 'index.html'), source).href : site.url.replace(/\/$/, '') + '/' + path;
   }
-  const nav = document.createElement('nav');
-  nav.setAttribute('aria-label', 'Related sites');
-  nav.style.cssText = 'position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;gap:1.4em;padding:12px;font:12px system-ui;';
-  if ("portfolio" === 'plush' && document.body.classList.contains('home')) nav.style.cssText += 'position:fixed;bottom:0;left:0;right:0;';
-  for (const [key, site] of Object.entries(sites)) {
-    if (key === "portfolio") continue;
-    const a = document.createElement('a');
-    a.textContent = site.label;
-    a.href = local ? new URL('../../' + key + '/index.html', source).href : site.url;
-    a.style.cssText = 'color:inherit;text-decoration:underline;text-underline-offset:3px;';
-    nav.append(a);
-  }
-  document.body.append(nav);
 })();

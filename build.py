@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the static portfolio. Edit content/projects.json and assets/portfolio.css; no dependencies required."""
 from pathlib import Path
+from site_credit import author_footer
 import html
 import json
 from datetime import date
@@ -29,13 +30,14 @@ def header(root='',active=''):
     nav=''.join(f'<a href="{esc(path if path.startswith(("mailto:","https:")) else root+path)}"'+(' aria-current="page"' if name==active else '')+f'>{name}</a>' for name,path in items)
     return f'<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="identity" href="{root}index.html" aria-label="Luke Stilson home">Luke Stilson<span>Technical art & tools</span></a><nav aria-label="Main navigation">{nav}</nav></header>'
 def footer(root=''):
-    return f'<footer class="site-footer"><span>© {date.today().year} Luke Stilson</span><div>{link("https://github.com/sharpen3d","GitHub ↗")}{link("https://www.linkedin.com/in/luke-stilson/","LinkedIn ↗")}{link("https://www.youtube.com/@LukeStilson","YouTube ↗")}{link("https://www.instagram.com/3d_luke/","Instagram ↗")}{link("https://github.com/sponsors/sharpen3d","Sponsor ↗")}{link("mailto:"+EMAIL,"Email ↗")}</div><a href="#top">Back to top ↑</a></footer>'
+    return author_footer(root)
+
 def page(title,description,body,root='',active='',body_class=''):
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} · Luke Stilson</title><meta name="description" content="{esc(description)}">
-<meta name="theme-color" content="#0a0b0d"><link rel="stylesheet" href="{root}assets/portfolio.css">
-<script src="{root}assets/portfolio.js" defer></script><script src="{root}assets/related-sites.js" defer></script></head>
+<meta name="theme-color" content="#0a0b0d"><link rel="stylesheet" href="{root}assets/portfolio.css?v=20261105-credits"><link rel="stylesheet" href="{root}assets/authorship.css?v=2">
+<script src="{root}assets/portfolio.js" defer></script><script src="{root}assets/related-sites.js?v=20261105-credit2" defer></script></head>
 <body id="top" class="{body_class}">{header(root,active)}{body}{footer(root)}</body></html>'''
 def recognition(p, compact=False):
     if compact:
