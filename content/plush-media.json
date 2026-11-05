@@ -185,9 +185,14 @@
     }
   ],
   "homeFeature": {
-    "source": "/Users/lukestilson/Desktop/Screen Recording 2026-10-08 at 12.12.29 AM.mov",
-    "posterAtSourceSeconds": 12,
-    "output": "assets/plush-laser-still.jpg",
-    "notes": "Uncropped still from original Laser Planet viewport recording, chosen without selection outlines."
+    "source": "assets/plush-editor.jpg",
+    "crop": [
+      480,
+      135,
+      1580,
+      685
+    ],
+    "output": "assets/plush-materials-home.jpg",
+    "notes": "Close crop of the actual Material Lab viewport: fur, fabric, and reflective material tests. Removes surrounding editor panels so the rendering reads at homepage size."
   }
 }
