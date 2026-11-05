@@ -1,0 +1,25 @@
+{
+  "intro": "Bake Blender animation into textures, then play it back in a game engine. Geometry Nodes, modifiers, rigs, and simulations can all be the starting point.",
+  "origamiTitle": "The animation is in the texture.",
+  "origamiText": "OpenVAT records the evaluated mesh, frame by frame. A shader reads that motion back as vertex offsets, so the engine doesn’t need to reproduce the original rig, modifier stack, or simulation.",
+  "origamiNote": "This folding example shows the same animation as texture data, vertex offsets, and the final mesh. It’s a useful way to see what the texture is actually doing.",
+  "videoId": "eTBuDbZxwFg",
+  "explainer": "Each vertex gets a location in a texture, and time runs through the frames. The values stored there describe how the mesh moves. Playback happens on the GPU.",
+  "features": [
+    [
+      "Blender-native",
+      "I built the baking around Blender’s evaluated geometry. If a modifier, Geometry Nodes setup, or rig deforms the mesh, OpenVAT can capture the result."
+    ],
+    [
+      "More than positions",
+      "Normals and custom per-vertex attributes can be encoded too. That gives a shader more to work with than a single position animation."
+    ],
+    [
+      "Playback you can change",
+      "The texture holds the data; a shader decides how to use it. Timing, per-instance offsets, masks, and blending can make the same bake useful in different ways."
+    ]
+  ],
+  "work": "I made the Blender tool and the Unity and Unreal integrations. Geometry Nodes handles the baking; Python handles the interface and workflow. Working on both sides meant dealing with the practical bits too: vertex mapping, normals, precision, and engine import settings.",
+  "limit": "The mesh needs stable topology: the vertex count and order must stay consistent through the animation. VAT playback is baked motion, so any runtime interaction needs to be handled in the shader.",
+  "mediaSource": "OpenVAT website: assets/frogdemo.mp4 and assets/frogdemo-poster.jpg"
+}

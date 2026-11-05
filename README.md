@@ -44,3 +44,7 @@ All current pages share the compact Luke Stilson credit and portfolio backlink.
 `../update_links.py`; standalone page builders use the local template copy.
 The related-sites script only resolves explicit local/production links and does
 not append a second footer or automatic links between product sites.
+
+The portfolio’s OpenVAT feature is generated from `content/openvat-feature.json`
+and the overview video in `content/tutorials.json`. Its origami demo is a local
+copy of the OpenVAT site’s folding example, with playback on demand.

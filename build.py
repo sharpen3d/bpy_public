@@ -36,7 +36,7 @@ def page(title,description,body,root='',active='',body_class=''):
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} · Luke Stilson</title><meta name="description" content="{esc(description)}">
-<meta name="theme-color" content="#0a0b0d"><link rel="stylesheet" href="{root}assets/portfolio.css?v=20261105-credits"><link rel="stylesheet" href="{root}assets/authorship.css?v=2">
+<meta name="theme-color" content="#0a0b0d"><link rel="stylesheet" href="{root}assets/portfolio.css?v=20261105-openvat-feature"><link rel="stylesheet" href="{root}assets/authorship.css?v=2">
 <script src="{root}assets/portfolio.js" defer></script><script src="{root}assets/related-sites.js?v=20261105-credit2" defer></script></head>
 <body id="top" class="{body_class}">{header(root,active)}{body}{footer(root)}</body></html>'''
 def recognition(p, compact=False):
@@ -174,7 +174,29 @@ def plush_case(p):
     (ROOT/'plush.html').write_text(page(p['title'],feature['intro'],body,active='Work',body_class='project-page plush-story'))
 
 
+def openvat_case(p):
+    feature=json.loads((ROOT/'content/openvat-feature.json').read_text())
+    video=next(v for v in TUTORIALS if v['id']==feature['videoId'])
+    watch='https://www.youtube.com/watch?v='+video['id']
+    chapters=''.join(link(watch+'&t='+str(seconds)+'s',label+' ↗') for seconds,label in [(95,'What a VAT stores'),(581,'Use cases'),(1099,'Decoding in a shader')])
+    features=''.join('<section><h2>'+esc(title)+'</h2><p>'+esc(text)+'</p></section>' for title,text in feature['features'])
+    workflow=''.join('<div><span>'+number+'</span><h2>'+title+'</h2><p>'+text+'</p></div>' for number,title,text in [('01','Animate','Use the Blender tools you already work with.'),('02','Encode','Bake the evaluated deformation into textures.'),('03','Deploy','Read the textures in an engine’s vertex shader.')])
+    body=f'''<main id="main" class="plush-brief openvat-brief wrap"><a class="back-link" href="../index.html#work">← Back to the portfolio</a>
+<header class="plush-brief-heading"><p class="eyebrow">My Blender tools · Free & open source</p><h1>OpenVAT</h1><p>{esc(feature['intro'])}</p><nav class="brief-actions" aria-label="OpenVAT links">{link('https://extensions.blender.org/add-ons/openvat/','Get OpenVAT ↗','button')}{site_link('openvat','','OpenVAT.org ↗')}{link('https://github.com/sharpen3d/openvat','Source code ↗')}</nav></header>
+<div class="vat-workflow" aria-label="OpenVAT workflow">{workflow}</div>
+<section class="brief-data vat-origami"><div><p class="eyebrow">Vertex animation textures</p><h2>{esc(feature['origamiTitle'])}</h2><p>{esc(feature['origamiText'])}</p><p>{esc(feature['origamiNote'])}</p></div><figure class="origami-media"><video controls muted playsinline preload="none" poster="../assets/openvat-origami-poster.jpg" width="405" height="720" aria-label="Origami folding shown as a vertex animation texture, vertex offsets, and the final mesh"><source src="../assets/openvat-origami.mp4" type="video/mp4"></video><figcaption>Texture data → vertex offsets → the folding mesh.</figcaption></figure></section>
+<section class="brief-data vat-explainer"><figure><a class="vat-video-link" href="{watch}" aria-label="Watch {esc(video['title'])}"><img src="https://i.ytimg.com/vi/{video['id']}/hqdefault.jpg" alt="{esc(video['title'])}" width="480" height="360" loading="lazy"><span>Watch the explanation on YouTube ↗</span></a><figcaption>{esc(video['title'])}</figcaption></figure><div><p class="eyebrow">The idea behind it</p><h2>How vertex animation textures work</h2><p>{esc(feature['explainer'])}</p><p>I walk through the format, the encoding, and the shader side in this video, with examples of what you can do with the result.</p><nav class="vat-chapters" aria-label="Video chapters">{chapters}</nav></div></section>
+<div class="brief-extras vat-features">{features}</div>
+<section class="brief-stack vat-project"><div><p class="eyebrow">My part in it</p><h2>From Blender to the engine</h2><p>{esc(feature['work'])}</p></div><div class="vat-engine-notes"><h3>Engine examples</h3><p>Unity and Unreal integrations, GLSL templates, and a separate community Godot integration by AntzGames.</p><nav>{site_link('openvat','#engines','Integrations & setup →')}{link('https://github.com/antzGames/OpenVAT-for-Godot','Community Godot project ↗')}</nav><h3>One constraint to know</h3><p>{esc(feature['limit'])}</p></div></section>
+{recognition(p)}
+<footer class="brief-end"><p>The extension is free and open source. The OpenVAT site has the technical details, engine setup, and documentation; my YouTube channel has the walkthroughs.</p><nav class="brief-actions" aria-label="Explore OpenVAT">{site_link('openvat','','OpenVAT.org ↗','button')}{link('../tutorials.html#openvat','More OpenVAT tutorials →')}{link('https://github.com/sharpen3d/openvat','GitHub ↗')}</nav></footer></main>'''
+    (ROOT/url(p)).write_text(page('OpenVAT',feature['intro'],body,'../',active='Work',body_class='project-page openvat-story'))
+
+
 def case(p):
+    if p["id"] == "openvat":
+        openvat_case(p)
+        return
     if p.get("presentation")=="feature-story":
         plush_case(p)
         return

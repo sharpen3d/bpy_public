@@ -159,3 +159,48 @@ body{background:var(--bg)}
 /* One compact author footer replaces the old footer plus related-sites row. */
 body{overflow-x:clip}
 @media(max-width:700px){.contact-section{padding-block:32px}.contact-links{gap:12px 24px}.author-footer{margin-top:0}}
+
+/* OpenVAT feature: the same staggered rhythm as the Plush project page. */
+.openvat-brief{--vat-accent:#94d4ca}
+.openvat-brief .plush-brief-heading{max-width:780px}
+.openvat-brief .brief-actions>a:not(.button),.openvat-brief .eyebrow{color:var(--vat-accent)}
+.vat-workflow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;border-block:1px solid var(--line);padding-block:25px;margin:8px 0 0}
+.vat-workflow>div{display:grid;grid-template-columns:30px minmax(0,1fr);gap:7px 12px;align-items:baseline}
+.vat-workflow span{font:10px/1.6 var(--mono);color:var(--vat-accent)}
+.vat-workflow h2{font-size:19px;letter-spacing:-.02em}
+.vat-workflow p{grid-column:2;color:var(--muted);font-size:12px;line-height:1.75;margin:0;max-width:29ch}
+.vat-origami{grid-template-columns:1.15fr .85fr;gap:70px;padding-block:40px}
+.vat-origami>div{max-width:56ch}
+.origami-media{width:min(100%,290px);justify-self:center}
+.origami-media video{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#183872}
+.origami-media figcaption{font-size:10px}
+.vat-explainer{grid-template-columns:1.1fr 1fr;gap:48px}
+.vat-video-link{display:block;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.vat-explainer .vat-video-link img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:0;border-radius:0}
+.vat-video-link>span{display:flex;align-items:center;min-height:46px;padding:12px 16px;font-size:12px;color:var(--vat-accent);border-top:1px solid var(--line)}
+.vat-video-link:hover{border-color:var(--vat-accent)}
+.vat-chapters{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:20px}
+.vat-chapters a{display:flex;align-items:center;min-height:36px;font-size:11px;color:var(--vat-accent)}
+.vat-features{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding-block:34px}
+.vat-features h2{font-size:21px;line-height:1.35}
+.vat-project{border-top:1px solid var(--line);grid-template-columns:1fr 1fr;align-items:start}
+.vat-engine-notes{padding:25px 28px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.vat-engine-notes h3{font-size:17px;line-height:1.4;margin-bottom:14px}
+.vat-engine-notes h3:not(:first-child){margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.vat-engine-notes nav{display:flex;flex-direction:column;gap:4px}
+.vat-engine-notes nav a{display:flex;align-items:center;min-height:36px;font-size:12px;color:var(--vat-accent)}
+.openvat-brief .recognition{margin-block:32px}
+.openvat-brief .brief-end>.brief-actions{margin-top:12px}
+@media(max-width:700px){
+ .vat-workflow{grid-template-columns:1fr;gap:20px;padding-block:22px}
+ .vat-workflow>div{gap:5px 12px}
+ .vat-workflow p{max-width:none;font-size:13px}
+ .vat-origami,.vat-explainer,.vat-project{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:30px}
+ .origami-media{width:min(100%,270px)}
+ .vat-explainer>figure{order:2}
+ .vat-features{grid-template-columns:1fr;gap:22px;padding-block:28px}
+ .vat-features section+section{padding-top:22px;border-top:1px solid var(--line)}
+ .vat-engine-notes{padding:22px}
+ .vat-chapters{gap:4px 18px}
+ .vat-chapters a{min-height:40px}
+}
