@@ -321,5 +321,7 @@ def main():
     legacy_pages()
     resume_page()
     document_page('minesweeper-notes.html','Minesweeper: original concept notes','Original 2024 design notes for an independent concept. These describe ideas and plans, rather than features of a released game.',ARCHIVED['minesweeper'])
+    from editor_overrides import apply_all
+    apply_all()
     print('Built portfolio: PlushEngine, three Blender tools, studio work, experiments, résumé, and legacy links.')
 if __name__=='__main__':main()

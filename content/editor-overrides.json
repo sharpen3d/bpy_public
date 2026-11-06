@@ -1,0 +1,134 @@
+{
+  "index.html": {
+    "5cc78a12d7aa6e61-1": {
+      "kind": "text",
+      "value": "I’ve spent most of my career making tools that help other people make things. Most projects here are personal work: my own tools, games, and experiments."
+    },
+    "1c3380c874cc68d2-1": {
+      "kind": "text",
+      "value": "Plush"
+    },
+    "5517cbb6cf212d5c-1": {
+      "kind": "text",
+      "value": "A flexible game engine"
+    },
+    "de27b7ec7cc73bd3-1": {
+      "kind": "text",
+      "value": "game engine · In development"
+    },
+    "5961f619b333934a-1": {
+      "kind": "text",
+      "value": "C# gameplay, a datablock-based model, integrated python authoring, and a space I can learn in while pushing boundaries."
+    },
+    "4dcf50d7cb955c2d-1": {
+      "kind": "text",
+      "value": "Overview →"
+    },
+    "8833952b237cefb3-1": {
+      "kind": "text",
+      "value": "PlushEngine.com ↗"
+    },
+    "8d31aba286a06cd5-1": {
+      "kind": "text",
+      "value": "See more →"
+    }
+  },
+  "plush.html": {
+    "1c3380c874cc68d2-1": {
+      "kind": "text",
+      "value": "Plush"
+    },
+    "de27b7ec7cc73bd3-1": {
+      "kind": "text",
+      "value": "plush · In development"
+    },
+    "128b6ea30cfb82e1-1": {
+      "kind": "text",
+      "value": "Plush is a full-featured game engine, a standalone editor I am creating with my best customer in mind, myself. After working for years in Unity and Unreal personally and in my professional career, I have opinions on how things *should* work in a game engine. So I started building my own. This project is meant to challenge myself, gain deeper understanding and provide a comfortable, moldable surface to create games and experiences within."
+    },
+    "b5bdb0c12cd58ee8-1": {
+      "kind": "text",
+      "value": "Rendering"
+    },
+    "4e84647c21827ede-1": {
+      "kind": "text",
+      "value": "Vulkan · Silk.NET · Slang"
+    },
+    "7d8432c919eae181-1": {
+      "kind": "text",
+      "value": "Physics"
+    },
+    "42ed6064fe88a51b-1": {
+      "kind": "text",
+      "value": "Jolt · Box2D"
+    },
+    "16889c244c06763f-1": {
+      "kind": "text",
+      "value": "Authoring"
+    },
+    "6af1ee5d662e5503-1": {
+      "kind": "text",
+      "value": "Python · plupy"
+    },
+    "ba3072f30ee93602-1": {
+      "kind": "text",
+      "value": "Game builds"
+    },
+    "7d56518f11ba133d-1": {
+      "kind": "text",
+      "value": "Separate runtime; no editor or Python"
+    },
+    "651e41ff2fb74741-1": {
+      "kind": "text",
+      "value": "Target Platforms"
+    },
+    "96bc6e977bf712f9-1": {
+      "kind": "text",
+      "value": "Desktop (MacOS, Windows), Web, iOS, Android"
+    },
+    "dbad8c7538e9c5a5-1": {
+      "kind": "text",
+      "value": "under the engine"
+    },
+    "edc725a1d8f98596-1": {
+      "kind": "text",
+      "value": "The stack"
+    },
+    "23d7992379f53da7-1": {
+      "kind": "text",
+      "value": "I like having ordinary code I can read. C# for the gameplay, Python for authoring and automation during the creation process. "
+    },
+    "3b3bb9ba68f51d7d-1": {
+      "kind": "text",
+      "value": "A datablock is just repeatable data. Using this data becomes simply a pointer in a graph system, properties are transferrable up the chain."
+    },
+    "0cf2411b918aa1a3-1": {
+      "kind": "text",
+      "value": "My fascination with datablocks comes directly from working deeply in Blender, but in practice Blender's game engine became un-usable because of the way data works in runtime. I attacked this problem head-on in plush, allowing authoring, bundles, and packages to benefit from this model, and a clear efficient conversion into efficient runtime data."
+    },
+    "7cf07d2155ccd259-1": {
+      "kind": "text",
+      "value": "The data"
+    },
+    "cc0001eff6b3c5c7-1": {
+      "kind": "text",
+      "value": "Robots"
+    },
+    "1c742a55b895fc4b-1": {
+      "kind": "text",
+      "value": "I have mixed feelings on AI in development, but have landed on a personal policy I am comfortable with. A MCP tooling integration in Plush not only helps me to track and remember my own ridiculously large codebase, but also allows me to establish exactly how it functions and what models and services (preferring local models) I intend to use, and at what capacity."
+    },
+    "0fd648a56ac2fd5d-1": {
+      "kind": "text",
+      "value": "I'm actively working on this and still determining capacity of release. This has not yet been deemed to become open-source like many of my other tools, and I intend to release complete projects before considering engine distribution. This being said, drop me an email if you are interested in exploring the engine and I'm sure we can work something out."
+    },
+    "b2d6d6a05f242e51-1": {
+      "kind": "text",
+      "value": "Extras"
+    },
+    "68e682f704a7c525-1": {
+      "kind": "text",
+      "value": "There's stuff in Plush that no company in their right mind would build into an engine, but that's the beauty of it to me. Built-in local git tracking save behavior and a vertical scrolling soundfont midi-based tracker DAW system for sound are a couple examples. "
+    }
+  }
+}
