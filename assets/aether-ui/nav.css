@@ -1,0 +1,12 @@
+/* Shared Aether navigation, matching the API reference across all three pages. */
+.aether-bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;height:48px;padding:0 20px;background:rgba(10,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1f2024;font:14px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+.aether-bar .project-identity{display:flex;flex-direction:column;align-items:flex-start;gap:2px;flex:none}
+.aether-bar .mark{display:flex;align-items:center;gap:10px;color:#f1f2f6;font-weight:500;letter-spacing:.02em;text-decoration:none}
+.aether-bar .creator-link{font:10px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#8b8f9c;text-decoration:none}
+.aether-bar nav{display:flex;gap:4px}
+.aether-bar nav a{color:#8b8f9c;padding:4px 10px;border-radius:6px;text-decoration:none;white-space:nowrap}
+.aether-bar nav a:hover{color:#f1f2f6;background:#131417}
+.aether-bar nav a.on{color:#f1f2f6;background:#1a1b1f}
+.aether-bar a:focus-visible{outline:1px solid #7c86c2;outline-offset:2px}
+@media(max-width:860px){.aether-bar{position:static;height:auto;min-height:48px;flex-wrap:wrap;padding-block:8px}.aether-bar nav{flex-wrap:wrap}.aether-bar nav a{display:inline-flex;align-items:center;min-height:44px}}
+@media(max-width:480px){.aether-bar{gap:12px;padding:8px 12px}.aether-bar nav a{padding:4px 8px}}
