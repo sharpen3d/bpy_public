@@ -194,6 +194,11 @@ def openvat_case(p):
 
 
 def case(p):
+    if p['id'] == 'aether':
+        from aether_portfolio import build_page, build_api
+        build_api()
+        build_page(page, p)
+        return
     if p["id"] == "openvat":
         openvat_case(p)
         return

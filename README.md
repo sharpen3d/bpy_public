@@ -48,3 +48,7 @@ not append a second footer or automatic links between product sites.
 The portfolio’s OpenVAT feature is generated from `content/openvat-feature.json`
 and the overview video in `content/tutorials.json`. Its origami demo is a local
 copy of the OpenVAT site’s folding example, with playback on demand.
+
+## Aether page and API reference
+
+`aether_portfolio.py` generates the project page and searchable API site from `content/aether-api.json`. To update it, regenerate Aether’s `docs/api/api.json` with `tools/api_reference.py`, copy it to `content/aether-api.json`, then run `python3 build.py`. The API is a source-derived snapshot. The UI screenshots are verified captures of Aether 1.0.24 in Blender 5.2.3.

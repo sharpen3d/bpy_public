@@ -1,0 +1,2110 @@
+{
+  "aether_version": "1.0.24",
+  "operators": [
+    {
+      "description": "Reserved bevel-detail action.\n\nContext: No supported use.\nLimit: Returns CANCELLED and creates no geometry.\nStatus: placeholder",
+      "id": "aether.add_beveled_object",
+      "label": "Add Beveled Object",
+      "line": 106,
+      "options": [
+        "INTERNAL"
+      ],
+      "properties": [],
+      "source": "aether/blender_ops/object_add_ops.py",
+      "status": "placeholder"
+    },
+    {
+      "description": "Reserved image-decal action.\n\nContext: No supported use.\nLimit: Returns CANCELLED and loads no image.\nStatus: placeholder",
+      "id": "aether.add_image_decal",
+      "label": "Add Image Decal",
+      "line": 120,
+      "options": [
+        "INTERNAL"
+      ],
+      "properties": [],
+      "source": "aether/blender_ops/object_add_ops.py",
+      "status": "placeholder"
+    },
+    {
+      "description": "Add original-surface position, normal and material-index fields to the current node tree.\n\nContext: A Shader or Geometry Nodes editor with an editable tree and configured source object.\nLimit: Geometry sampling requires a separate UV-mapped source. It does not supply live AO, thickness or tangent normals.\nStatus: current",
+      "id": "aether.add_live_surface",
+      "label": "Add Live Surface Data",
+      "line": 269,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/live_surface.py",
+      "status": "current"
+    },
+    {
+      "description": "Add a named trim strip or decal region fitted to the selected objects.\n\nContext: A scene with an orthographic camera; select the objects that make the strip or piece.\nEffects: Appends one region to the scene list. Trim strips span the full width; a decal fits its pieces plus the margin.\nLimit: Bounds are evaluated bounding boxes seen by the scene camera, not exact silhouettes. Nothing selected gives the whole capture.\nStatus: experimental",
+      "id": "aether.add_region",
+      "label": "Add Region",
+      "line": 114,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "default": "DECAL",
+          "description": "Trim strips repeat along U; decals are separate pieces",
+          "items": {
+            "expression": "KINDS"
+          },
+          "label": "Kind",
+          "line": 126,
+          "name": "kind",
+          "source": "aether/utils/regions.py",
+          "type": "EnumProperty"
+        },
+        {
+          "default": 4,
+          "description": "Texels added around the fitted bounds",
+          "label": "Margin",
+          "line": 128,
+          "max": 256,
+          "min": 0,
+          "name": "margin_px",
+          "source": "aether/utils/regions.py",
+          "type": "IntProperty"
+        }
+      ],
+      "source": "aether/utils/regions.py",
+      "status": "experimental"
+    },
+    {
+      "description": "Add an overlapping feathered shader-patch layer above the canvas.\n\nContext: An Aether authoring scene in Object Mode.\nLimit: Feathers patch coverage; it does not repeat authored scatter geometry.\nStatus: current",
+      "id": "aether.add_seamless_layer",
+      "label": "Add Feathered Texture Layer",
+      "line": 9,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/blender_ops/object_add_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Add an Aether smart group (surface data, wear, scratches, dents, grime or a finish) to the edited material.\n\nContext: Shader Editor with an edited material tree.\nEffects: Builds the group once per file (versioned) and adds one node at the cursor.\nStatus: current",
+      "id": "aether.add_smart_group",
+      "label": "Add Smart Group",
+      "line": 889,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "description": "Smart group to add",
+          "items": {
+            "expression": "[(k, k, f'Add {PREFIX}{k}') for k in BUILDERS]"
+          },
+          "label": "Group",
+          "line": 900,
+          "name": "group",
+          "source": "aether/utils/smart_groups.py",
+          "type": "EnumProperty"
+        }
+      ],
+      "source": "aether/utils/smart_groups.py",
+      "status": "current"
+    },
+    {
+      "description": "Reserved UV-layer action.\n\nContext: No supported use.\nLimit: Returns CANCELLED and creates no geometry.\nStatus: placeholder",
+      "id": "aether.add_uv_layer",
+      "label": "Add UV Layer",
+      "line": 92,
+      "options": [
+        "INTERNAL"
+      ],
+      "properties": [],
+      "source": "aether/blender_ops/object_add_ops.py",
+      "status": "placeholder"
+    },
+    {
+      "description": "Arrange the edited node tree as a left-to-right dependency tree.\n\nContext: A Shader or Geometry Nodes editor with an edited tree (a material, a modifier group or an open group).\nEffects: Moves every node of that tree; links and values are unchanged. Undo restores the previous layout.\nStatus: current",
+      "id": "aether.arrange_nodes",
+      "label": "Arrange as Tree",
+      "line": 74,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/node_layout.py",
+      "status": "current"
+    },
+    {
+      "description": "Bake the enabled mesh-derived source maps and publish a completed source-map manifest.\n\nContext: Set the target mesh, UV map, folder and optional high-resolution source in Source Map Baking.\nLimit: Runs synchronously. Projection requires one 0\u20131 UV tile; published files remain outside Blender Undo.\nStatus: current",
+      "id": "aether.bake_source_maps",
+      "label": "Bake Source Maps",
+      "line": 913,
+      "options": [],
+      "properties": [],
+      "source": "aether/utils/aetherbake.py",
+      "status": "current"
+    },
+    {
+      "description": "Make the saved project folder self-contained: unpack images and reference them relatively.\n\nContext: A saved blend; its folder is the project folder.\nLimit: Writes packed or external images into //sources/ (identical files are reused) and rewrites image paths; existing files are never overwritten. Image sequences, movies and UDIM tiles are reported and left unchanged. Save the blend afterwards to keep the new references. File writes are not undone by Blender Undo.\nStatus: current",
+      "id": "aether.collect_project_files",
+      "label": "Make Project Self-Contained",
+      "line": 160,
+      "options": [
+        "REGISTER"
+      ],
+      "properties": [],
+      "source": "aether/utils/project_files.py",
+      "status": "current"
+    },
+    {
+      "description": "Replace the first Principled shader in the active material with an Aether master group.\n\nContext: An active mesh with a node-based material containing a Principled BSDF.\nLimit: Transfers supported sockets and links in that shared material; unsupported Principled features are not translated.\nStatus: current",
+      "id": "aether.convert_to_dmmt",
+      "label": "Convert to aether_master",
+      "line": 139,
+      "options": [],
+      "properties": [],
+      "source": "aether/utils/convert_principled.py",
+      "status": "current"
+    },
+    {
+      "description": "Replace an Aether master group in the active material with a Principled shader.\n\nContext: An active object with an Aether master material.\nLimit: Transfers supported sockets and links; returns without conversion when no compatible group is found.\nStatus: current",
+      "id": "aether.convert_to_principled",
+      "label": "Convert to Principled BSDF",
+      "line": 153,
+      "options": [],
+      "properties": [],
+      "source": "aether/utils/convert_principled.py",
+      "status": "current"
+    },
+    {
+      "description": "Create a one-unit-square source and open its Aether authoring scene.\n\nContext: A window and scene with Aether registered.\nLimit: Creates source and authoring data; arbitrary shader fields and edge geometry are not made periodic automatically.\nStatus: current",
+      "id": "aether.create_tile_scene",
+      "label": "Create Tile Material Scene",
+      "line": 341,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/scene_setup_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Capture the construction in horizontal slabs for near-field relief in an engine.\n\nContext: A working project with an orthographic scene camera and an export folder.\nLimit: Writes <export folder>/nearfield/: per slab 16-bit PNGs (Base Color with coverage alpha, Normal, Roughness, Metallic, AO, Height over the slab's range) and <name>_nearfield.json. Each slab is a clip-range capture, so only geometry within it is seen; relief that exists only in the shader appears in normals and Height, never in coverage. AO lacks occlusion from geometry outside the slab. Experimental: no engine consumes it yet.\nStatus: experimental",
+      "id": "aether.export_near_field",
+      "label": "Export Near-Field Slabs",
+      "line": 328,
+      "options": [
+        "REGISTER"
+      ],
+      "properties": [],
+      "source": "aether/utils/near_field.py",
+      "status": "experimental"
+    },
+    {
+      "description": "Wrap selected mesh-layer materials with shared feather coverage controls.\n\nContext: Selected mesh layers in Object Mode.\nLimit: Preserves editable geometry and original material sources; closed meshes need bounds, patch UV or an authored mask for a meaningful outline.\nStatus: current",
+      "id": "aether.feather_layer",
+      "label": "Feather Selected Layer",
+      "line": 298,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/feather.py",
+      "status": "current"
+    },
+    {
+      "description": "Refit the active layer footprint to its evaluated geometry.\n\nContext: An active mesh layer with feather controls.\nLimit: Updates captured footprint data; it does not flatten geometry or alter tile spacing.\nStatus: current",
+      "id": "aether.fit_feather",
+      "label": "Fit Footprint to Geometry",
+      "line": 316,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/feather.py",
+      "status": "current"
+    },
+    {
+      "description": "Copy the last measured Z range into the remap of the selected layers.\n\nContext: Selected objects that were part of a Height capture.\nLimit: Measured values come from the last export or preview that rendered Height. Sets From to Manual with the measured range and leaves To unchanged unless Match is enabled.\nStatus: current",
+      "id": "aether.height_use_measured",
+      "label": "Use Measured Range",
+      "line": 211,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "default": false,
+          "description": "Also set To Min/Max to the measured range (identity remap)",
+          "label": "Match",
+          "line": 222,
+          "name": "match_target",
+          "source": "aether/utils/layer_height.py",
+          "type": "BoolProperty"
+        }
+      ],
+      "source": "aether/utils/layer_height.py",
+      "status": "current"
+    },
+    {
+      "description": "Set output participation and AO casting on selected mesh layers.\n\nContext: Selected meshes in Object Mode.\nLimit: Normal Only also disables AO casting. Individual checkboxes edit the active object, while the preset affects all selected meshes.\nStatus: current",
+      "id": "aether.layer_preset",
+      "label": "Set Layer Contributions",
+      "line": 147,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "description": "ALL, NORMAL_ONLY or NO_AO participation for every selected mesh",
+          "items": [
+            [
+              "ALL",
+              "All Maps",
+              ""
+            ],
+            [
+              "NORMAL_ONLY",
+              "Normal Only",
+              ""
+            ],
+            [
+              "NO_AO",
+              "No AO",
+              ""
+            ]
+          ],
+          "label": "preset",
+          "line": 158,
+          "name": "preset",
+          "source": "aether/utils/layer_channels.py",
+          "type": "EnumProperty"
+        }
+      ],
+      "source": "aether/utils/layer_channels.py",
+      "status": "current"
+    },
+    {
+      "description": "Assign a renderer-owned texture preview for the active map on a supporting custom build.\n\nContext: An Aether authoring scene using EEVEE and ShaderNodeTexCameraOutput.\nLimit: Experimental single-map path. Selective AO falls back to rendered cache preview; simultaneous live PBR is not implemented.\nStatus: experimental",
+      "id": "aether.live_camera_preview",
+      "label": "Live Camera Preview",
+      "line": 96,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/camera_preview.py",
+      "status": "experimental"
+    },
+    {
+      "description": "Integrate the active photo normal map into a height image and drive Bump with it.\n\nContext: The active node of the active object's material is an Image Texture holding a tangent-space normal map that feeds the Aether master.\nLimit: Writes <image>_height.png into //sources/; the blend must be saved. The normal image node is kept but unlinked from the master. The metre scale comes from the surface/UV area of the meshes using the material (otherwise the camera tile), divided by any Mapping repeat; adjust Distance or Strength by eye.\nStatus: current",
+      "id": "aether.normal_to_bump",
+      "label": "Normal Map to Bump Height",
+      "line": 167,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "default": "OPENGL",
+          "description": "Green-channel convention of the input normal map",
+          "items": [
+            [
+              "OPENGL",
+              "OpenGL (+Y)",
+              ""
+            ],
+            [
+              "DIRECTX",
+              "DirectX (-Y)",
+              ""
+            ]
+          ],
+          "label": "Convention",
+          "line": 178,
+          "name": "convention",
+          "source": "aether/utils/normal_height.py",
+          "type": "EnumProperty"
+        }
+      ],
+      "source": "aether/utils/normal_height.py",
+      "status": "current"
+    },
+    {
+      "description": "Open the target source-map folder in the operating system file browser.\n\nContext: A selected source-bake target and a resolvable map folder.\nLimit: Opens an external application; it does not open the final PBR export folder.\nStatus: current",
+      "id": "aether.open_export_dir",
+      "label": "Open Export Directory",
+      "line": 993,
+      "options": [],
+      "properties": [],
+      "source": "aether/utils/aetherbake.py",
+      "status": "current"
+    },
+    {
+      "description": "Render the full map set into the 3D PBR preview with layer contributions applied.\n\nContext: An Aether authoring scene with output maps and a preview object.\nLimit: Uses the file-backed preview cache and synchronous rendering; Edit Layers returns the authoring route.\nStatus: current",
+      "id": "aether.preview_layer_result",
+      "label": "Preview Layer Result",
+      "line": 209,
+      "options": [],
+      "properties": [],
+      "source": "aether/utils/layer_channels.py",
+      "status": "current"
+    },
+    {
+      "description": "Remove the active region from the scene list.\n\nContext: A scene with at least one region.\nStatus: experimental",
+      "id": "aether.remove_region",
+      "label": "Remove Region",
+      "line": 154,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/regions.py",
+      "status": "experimental"
+    },
+    {
+      "description": "Repeat the selected layer result at tile offsets after its existing modifiers.\n\nContext: Selected mesh or curve objects in Object Mode.\nLimit: Copies the evaluated seeded result; oversized features need a sufficient Repeat Radius.\nStatus: current",
+      "id": "aether.repeat_geometry",
+      "label": "Repeat Geometry for Tile",
+      "line": 128,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/tile_repeat.py",
+      "status": "current"
+    },
+    {
+      "description": "Restore the authoring camera view and frame the evaluated preview object.\n\nContext: An Aether scene with a window, authoring camera and .stx_preview object.\nEffects: Switches this window to the Aether workspace and changes its view framing.\nLimit: Does not isolate collections or enable live capture; local-view filtering remains unchanged.",
+      "id": "aether.restore_views",
+      "label": "Restore Aether Views",
+      "line": 235,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/scene_setup_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Create an editable seeded collection scatter and repeat its result across the tile.\n\nContext: An Aether authoring scene in Object Mode and a nonempty source collection.\nLimit: Direct children use reset transforms and local geometry; does not hide originals, convert materials or resolve collisions. Canvas is XY from zero; assets should use Aether materials.\nStatus: current",
+      "id": "aether.scatter_collection",
+      "label": "Scatter Collection as Tile Layer",
+      "line": 137,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "description": "Source collection name, or use the scene picker when empty",
+          "label": "Collection",
+          "line": 148,
+          "name": "collection_name",
+          "source": "aether/utils/collection_scatter.py",
+          "type": "StringProperty"
+        }
+      ],
+      "source": "aether/utils/collection_scatter.py",
+      "status": "current"
+    },
+    {
+      "description": "Add a Base Color entry and select it in the current scene map list.\n\nContext: A scene with Aether registered.\nLimit: Only changes the map list; no file is rendered.\nStatus: current",
+      "id": "exportmap.add_map",
+      "label": "Add Map",
+      "line": 19,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Route the full authoring material and select All Maps preview mode.\n\nContext: A scene with the Aether master material groups.\nLimit: Does not render or rebuild the cached 3D preview; the UI also labels this Edit Layers.\nStatus: current",
+      "id": "exportmap.apply_default_settings",
+      "label": "Show Full Material",
+      "line": 94,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Select a map, route its authoring output and configure its image settings.\n\nContext: An Aether scene and a valid zero-based index.\nLimit: Changes the shared output route and scene render settings; does not render. Derived outputs (packed, DirectX, inverted) show their first source capture; Height shows raw metres, so use Render Fast Preview for the normalized image.\nStatus: current",
+      "id": "exportmap.apply_map_settings",
+      "label": "Apply Settings for Selected Map",
+      "line": 55,
+      "options": [],
+      "properties": [
+        {
+          "description": "Zero-based entry in the scene output map list",
+          "label": "index",
+          "line": 64,
+          "name": "index",
+          "source": "aether/blender_ops/export_map_ops.py",
+          "type": "IntProperty"
+        }
+      ],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Create an Aether authoring scene with a UV canvas, preview object and orthographic camera.\n\nContext: Set scene.export_settings.source_object to a mesh with a UV map.\nLimit: Switches the window scene/workspace and creates datablocks. The selected source remains the live geometry input.\nStatus: current",
+      "id": "exportmap.create_bake_scene",
+      "label": "Create Bake Scene",
+      "line": 22,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/scene_setup_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Reserved single-map export action.\n\nContext: No supported use.\nLimit: Returns CANCELLED without writing a file; use Render All Maps.\nStatus: placeholder",
+      "id": "exportmap.export_single",
+      "label": "Export Single Map",
+      "line": 114,
+      "options": [
+        "INTERNAL"
+      ],
+      "properties": [
+        {
+          "description": "Zero-based entry in the scene output map list",
+          "label": "index",
+          "line": 125,
+          "name": "index",
+          "source": "aether/blender_ops/export_map_ops.py",
+          "type": "IntProperty"
+        }
+      ],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "placeholder"
+    },
+    {
+      "description": "Replace the scene map list with the chosen engine or workflow preset.\n\nContext: A scene with Aether registered.\nLimit: Replaces custom map entries; does not remove existing exported files. Packed and Height outputs are derived from separate captures at export, so they cost one render per distinct source map.\nStatus: current",
+      "id": "exportmap.load_preset",
+      "label": "Load Map Preset",
+      "line": 183,
+      "options": [],
+      "properties": [
+        {
+          "description": "Named output preset; replaces the current map list",
+          "items": {
+            "expression": "[(key, label, description) for (key, label, description, _) in PRESETS]"
+          },
+          "label": "Preset",
+          "line": 193,
+          "name": "preset",
+          "source": "aether/blender_ops/export_map_ops.py",
+          "type": "EnumProperty"
+        }
+      ],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Remove the current map-list entry and adjust the active index.\n\nContext: An active scene map list.\nLimit: Does not delete previously exported files.\nStatus: current",
+      "id": "exportmap.remove_map",
+      "label": "Remove Map",
+      "line": 37,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/export_map_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Refresh the cached 3D preview using the selected preview mode and resolution.\n\nContext: An Aether scene with a .stx_preview object and output maps.\nLimit: Active Map shows one output; All Maps renders the full stack. Uses file-backed cache images and can block the interface.\nStatus: current",
+      "id": "exportmap.render_active_map_preview",
+      "label": "Render Fast Preview",
+      "line": 396,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/render_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Render the complete output map list and assign the resulting PBR material to the preview.\n\nContext: An Aether authoring scene with a camera, output folder and supported material routes.\nLimit: Runs synchronously at full resolution, one EEVEE capture per direct map and per source of derived maps (Height, packed, DirectX, inverted). Writes <name>_maps.json with encodings and the height range in metres. File publication is not undone by Blender Undo. Restores scoped output and layer state on failure.\nStatus: current",
+      "id": "exportmap.render_all_maps",
+      "label": "Render All Maps",
+      "line": 347,
+      "options": [],
+      "properties": [],
+      "source": "aether/blender_ops/render_ops.py",
+      "status": "current"
+    },
+    {
+      "description": "Replace selected image samples with matching-coordinate triplanar groups.\n\nContext: Selected Image Texture nodes in a Shader Editor.\nLimit: Preserves color and alpha links. Tangent normal maps still require correct per-projection normal frames.\nStatus: current",
+      "id": "node.add_triplanar_from_template",
+      "label": "Use Triplanar Projection",
+      "line": 229,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/triplanarinput.py",
+      "status": "current"
+    },
+    {
+      "description": "Replace selected legacy triplanar groups with the current projection weights.\n\nContext: Selected triplanar groups in a Shader Editor.\nLimit: Retains supported image settings and links; does not establish tangent-normal reorientation.\nStatus: current",
+      "id": "node.aether_repair_triplanar",
+      "label": "Repair Selected Triplanar Groups",
+      "line": 203,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/triplanarinput.py",
+      "status": "current"
+    },
+    {
+      "description": "Add or refresh a baked source-map group in the current node tree.\n\nContext: A Shader or Geometry Nodes editor and a folder containing recognized source maps.\nLimit: Uses the completed-set manifest when present. Position reconstruction needs bounds metadata.\nStatus: current",
+      "id": "sourcemap.import_maps",
+      "label": "Add Source Maps",
+      "line": 284,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [
+        {
+          "description": "Source-map folder supplied by scripting or the importer button",
+          "label": "folder_path",
+          "line": 296,
+          "name": "folder_path",
+          "options": {
+            "expression": "{'PATH_SUPPORTS_BLEND_RELATIVE'} if bpy.app.version >= (5, 0, 0) else set()"
+          },
+          "source": "aether/utils/sourceimporter.py",
+          "subtype": "DIR_PATH",
+          "type": "StringProperty"
+        },
+        {
+          "description": "Folder chosen through Blender file selection when folder_path is empty",
+          "label": "directory",
+          "line": 297,
+          "name": "directory",
+          "options": {
+            "expression": "{'PATH_SUPPORTS_BLEND_RELATIVE'} if bpy.app.version >= (5, 0, 0) else set()"
+          },
+          "source": "aether/utils/sourceimporter.py",
+          "subtype": "DIR_PATH",
+          "type": "StringProperty"
+        }
+      ],
+      "source": "aether/utils/sourceimporter.py",
+      "status": "current"
+    },
+    {
+      "description": "Repair recognized data-image interpretation inside selected nodes and nested groups.\n\nContext: Selected nodes in a Shader or Geometry Nodes editor.\nLimit: Preserves shared color-image uses; missing files still require relinking.\nStatus: current",
+      "id": "sourcemap.repair_data_images",
+      "label": "Repair Selected Source Maps",
+      "line": 319,
+      "options": [
+        "REGISTER",
+        "UNDO"
+      ],
+      "properties": [],
+      "source": "aether/utils/sourceimporter.py",
+      "status": "current"
+    }
+  ],
+  "panels": [
+    {
+      "id": "AETHER_PT_bake_panel",
+      "label": "Source Map Baking",
+      "line": 1021,
+      "source": "aether/utils/aetherbake.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "SOURCEMAP_PT_importer",
+      "label": "Source Maps",
+      "line": 258,
+      "source": "aether/utils/sourceimporter.py",
+      "space": "NODE_EDITOR"
+    },
+    {
+      "id": "NODE_PT_triplanar_loader",
+      "label": "Triplanar Projection",
+      "line": 258,
+      "source": "aether/utils/triplanarinput.py",
+      "space": "NODE_EDITOR"
+    },
+    {
+      "id": "AETHER_PT_geometry_repeat",
+      "label": "Tile Geometry",
+      "line": 155,
+      "source": "aether/utils/tile_repeat.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "AETHER_PT_collection_scatter",
+      "label": "Collection Scatter",
+      "line": 173,
+      "source": "aether/utils/collection_scatter.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "AETHER_PT_feather",
+      "label": "Layer Feather",
+      "line": 332,
+      "source": "aether/utils/feather.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "AETHER_PT_layer_channels",
+      "label": "Layer Contributions",
+      "line": 177,
+      "source": "aether/utils/layer_channels.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "AETHER_PT_layer_height",
+      "label": "Layer Height",
+      "line": 241,
+      "source": "aether/utils/layer_height.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "AETHER_PT_converter",
+      "label": "Aether Material Tools",
+      "line": 124,
+      "source": "aether/utils/convert_principled.py",
+      "space": "NODE_EDITOR"
+    },
+    {
+      "id": "MYTEXTURE_PT_panel",
+      "label": "Texture Output",
+      "line": 9,
+      "source": "aether/ui_panels/texture_panel.py",
+      "space": "VIEW_3D"
+    },
+    {
+      "id": "EXPORTMAP_PT_export_panel",
+      "label": "Scene Setup",
+      "line": 8,
+      "source": "aether/ui_panels/export_panel.py",
+      "space": "VIEW_3D"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "registered operator classes and RNA settings; internal helper functions are not public API",
+  "settings": {
+    "AetherRegion": [
+      {
+        "default": "DECAL",
+        "description": "Trim strips repeat along U; decals are separate pieces",
+        "items": {
+          "expression": "KINDS"
+        },
+        "label": "Kind",
+        "line": 106,
+        "name": "kind",
+        "source": "aether/utils/regions.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "Region",
+        "description": "Name written to maps.json",
+        "label": "Name",
+        "line": 105,
+        "name": "name",
+        "source": "aether/utils/regions.py",
+        "type": "StringProperty"
+      },
+      {
+        "default": [
+          1.0,
+          1.0
+        ],
+        "description": "Upper-right corner in capture UV (origin bottom-left)",
+        "label": "Max",
+        "line": 110,
+        "max": 1.0,
+        "min": 0.0,
+        "name": "uv_max",
+        "size": 2,
+        "source": "aether/utils/regions.py",
+        "type": "FloatVectorProperty"
+      },
+      {
+        "default": [
+          0.0,
+          0.0
+        ],
+        "description": "Lower-left corner in capture UV (origin bottom-left)",
+        "label": "Min",
+        "line": 108,
+        "max": 1.0,
+        "min": 0.0,
+        "name": "uv_min",
+        "size": 2,
+        "source": "aether/utils/regions.py",
+        "type": "FloatVectorProperty"
+      }
+    ],
+    "FeatherSettings": [
+      {
+        "default": 0,
+        "description": "Simple subdivision before measuring boundary distance; dense meshes usually need zero",
+        "label": "Boundary Refinement",
+        "line": 237,
+        "max": 5,
+        "min": 0,
+        "name": "boundary_detail",
+        "source": "aether/utils/feather.py",
+        "type": "IntProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": [
+          0,
+          0,
+          0
+        ],
+        "description": "Center of the captured footprint in its selected coordinate frame",
+        "label": "Center",
+        "line": 241,
+        "name": "center",
+        "source": "aether/utils/feather.py",
+        "type": "FloatVectorProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": "BOUNDARY",
+        "description": "Coordinate source used to measure the feather footprint",
+        "items": [
+          [
+            "BOUNDARY",
+            "Mesh Boundary",
+            "Distance to open mesh edges; closed meshes use the footprint"
+          ],
+          [
+            "OBJECT",
+            "Geometry Bounds",
+            "Use captured local XY coordinates, including generated geometry"
+          ],
+          [
+            "UV",
+            "UV Patch",
+            "Use a patch UV attribute; copies keep the same feather"
+          ]
+        ],
+        "label": "Footprint",
+        "line": 235,
+        "name": "coordinates",
+        "source": "aether/utils/feather.py",
+        "type": "EnumProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 1,
+        "description": "Exponent shaping the coverage fade; larger values tighten the falloff",
+        "label": "Falloff",
+        "line": 239,
+        "max": 8,
+        "min": 0.1,
+        "name": "curve",
+        "source": "aether/utils/feather.py",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Apply the feather coverage to this layer material",
+        "label": "Enabled",
+        "line": 234,
+        "name": "enabled",
+        "source": "aether/utils/feather.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 0,
+        "description": "Optional view-dependent silhouette softening; zero disables it",
+        "label": "Grazing Angle Fade",
+        "line": 248,
+        "max": 1,
+        "min": 0,
+        "name": "facing_width",
+        "source": "aether/utils/feather.py",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": false,
+        "description": "Multiply coverage by a fade measured above the captured local base height",
+        "label": "Fade Near Base Height",
+        "line": 245,
+        "name": "height_fade",
+        "source": "aether/utils/feather.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 0.1,
+        "description": "Local Z distance over which height coverage reaches one",
+        "label": "Height Fade Range",
+        "line": 247,
+        "min": 1e-06,
+        "name": "height_range",
+        "source": "aether/utils/feather.py",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 0,
+        "description": "Local Z coordinate where height coverage begins",
+        "label": "Base Height",
+        "line": 246,
+        "name": "height_start",
+        "source": "aether/utils/feather.py",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "description": "Optional grayscale color or float attribute; multiplied with the feather",
+        "label": "Extra Mask Attribute",
+        "line": 249,
+        "name": "mask_attribute",
+        "source": "aether/utils/feather.py",
+        "type": "StringProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": "UVMap",
+        "description": "UV layer defining the tangent frame for the authored normal map",
+        "label": "Normal Map UV",
+        "line": 244,
+        "name": "normal_uv_map",
+        "source": "aether/utils/feather.py",
+        "type": "StringProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 1,
+        "description": "Maximum layer coverage; zero hides the layer and one permits full coverage",
+        "label": "Opacity",
+        "line": 240,
+        "max": 1,
+        "min": 0,
+        "name": "opacity",
+        "source": "aether/utils/feather.py",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": "BOX",
+        "description": "Rectangular or elliptical shape used by bounds and patch-UV feathering",
+        "items": [
+          [
+            "BOX",
+            "Rectangle",
+            "Fade inward from the four sides"
+          ],
+          [
+            "ELLIPSE",
+            "Ellipse",
+            "Radial fade inside an elliptical footprint"
+          ]
+        ],
+        "label": "Shape",
+        "line": 236,
+        "name": "shape",
+        "source": "aether/utils/feather.py",
+        "type": "EnumProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": false,
+        "description": "Show the additional layer-feather controls",
+        "label": "More Controls",
+        "line": 233,
+        "name": "show_advanced",
+        "source": "aether/utils/feather.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": [
+          1,
+          1,
+          1
+        ],
+        "description": "Dimensions of the captured footprint in its selected coordinate frame",
+        "label": "Size",
+        "line": 242,
+        "min": 1e-06,
+        "name": "size",
+        "source": "aether/utils/feather.py",
+        "type": "FloatVectorProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": "UVMap",
+        "description": "UV layer defining the patch feather footprint",
+        "label": "Patch UV Map",
+        "line": 243,
+        "name": "uv_map",
+        "source": "aether/utils/feather.py",
+        "type": "StringProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": 0.15,
+        "description": "Fraction of the footprint, fading inward from its edge",
+        "label": "Feather Width",
+        "line": 238,
+        "max": 0.5,
+        "min": 0,
+        "name": "width",
+        "source": "aether/utils/feather.py",
+        "subtype": "FACTOR",
+        "type": "FloatProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      }
+    ],
+    "LayerHeightSettings": [
+      {
+        "description": "Highest visible Z of this layer in the last Height capture",
+        "label": "Measured Max",
+        "line": 207,
+        "name": "measured_max",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "description": "Lowest visible Z of this layer in the last Height capture",
+        "label": "Measured Min",
+        "line": 205,
+        "name": "measured_min",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": false,
+        "description": "Write this layer's height by remapping its own Z range to a target range; its authored Z still decides what the camera sees, so it can float for AO spacing",
+        "label": "Remap Height",
+        "line": 189,
+        "name": "remap",
+        "source": "aether/utils/layer_height.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": "AUTO",
+        "description": "Z range of this layer that maps onto the target range",
+        "items": [
+          [
+            "AUTO",
+            "Measured",
+            "Lowest and highest visible Z of this layer in its own capture"
+          ],
+          [
+            "MANUAL",
+            "Manual",
+            "Use the From Min and From Max values"
+          ]
+        ],
+        "label": "From",
+        "line": 192,
+        "name": "source",
+        "source": "aether/utils/layer_height.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": 0.01,
+        "description": "Authored Z (metres along the camera up axis) written as To Max",
+        "label": "From Max",
+        "line": 199,
+        "name": "source_max",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": 0.0,
+        "description": "Authored Z (metres along the camera up axis) written as To Min",
+        "label": "From Min",
+        "line": 197,
+        "name": "source_min",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": 0.01,
+        "description": "Height written for the top of this layer, in metres; a larger span than the source exaggerates it",
+        "label": "To Max",
+        "line": 203,
+        "name": "target_max",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": 0.0,
+        "description": "Height written for the bottom of this layer, in metres",
+        "label": "To Min",
+        "line": 201,
+        "name": "target_min",
+        "source": "aether/utils/layer_height.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      }
+    ],
+    "LayerSettings": [
+      {
+        "default": true,
+        "description": "Show this surface in the AO map; independent of Cast AO",
+        "label": "AO",
+        "line": 140,
+        "name": "ao",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the base color output",
+        "label": "Base Color",
+        "line": 136,
+        "name": "base_color",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Allow this geometry to occlude other surfaces in the AO map",
+        "label": "Cast AO",
+        "line": 144,
+        "name": "cast_ao",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the custom output",
+        "label": "Custom",
+        "line": 143,
+        "name": "custom",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the emission output",
+        "label": "Emission",
+        "line": 142,
+        "name": "emission",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": false,
+        "description": "Apply this object map participation and AO casting controls",
+        "label": "Use Layer Controls",
+        "line": 135,
+        "name": "enabled",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the metallic output",
+        "label": "Metallic",
+        "line": 139,
+        "name": "metallic",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the normal output",
+        "label": "Normal",
+        "line": 137,
+        "name": "normal",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the opacity output",
+        "label": "Opacity",
+        "line": 141,
+        "name": "opacity",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      },
+      {
+        "default": true,
+        "description": "Include this geometry in the roughness output",
+        "label": "Roughness",
+        "line": 138,
+        "name": "roughness",
+        "source": "aether/utils/layer_channels.py",
+        "type": "BoolProperty",
+        "update": {
+          "expression": "update_settings"
+        }
+      }
+    ],
+    "MapExportItem": [
+      {
+        "default": 0.0,
+        "description": "Multiply this Base Color by the AO map (after AO Strength), in linear light: 0 leaves color unchanged, 1 applies full AO. For engines or looks that need occlusion in the albedo",
+        "label": "Bake AO",
+        "line": 81,
+        "max": 1.0,
+        "min": 0.0,
+        "name": "bake_ao",
+        "source": "aether/props/map_export_props.py",
+        "subtype": "FACTOR",
+        "type": "FloatProperty"
+      },
+      {
+        "default": "8",
+        "description": "Bit depth per channel",
+        "items": [
+          [
+            "8",
+            "8-bit",
+            ""
+          ],
+          [
+            "16",
+            "16-bit",
+            ""
+          ],
+          [
+            "32",
+            "32-bit (float)",
+            ""
+          ]
+        ],
+        "label": "Bit Depth",
+        "line": 122,
+        "name": "bit_depth",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "RGB",
+        "description": "Channels written to the image; single-channel EXR uses RGB storage for compatibility",
+        "items": [
+          [
+            "R",
+            "Grayscale (R)",
+            ""
+          ],
+          [
+            "RGB",
+            "RGB",
+            ""
+          ],
+          [
+            "RGBA",
+            "RGBA",
+            ""
+          ]
+        ],
+        "label": "Channel Format",
+        "line": 112,
+        "name": "channel_format",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "SRGB",
+        "description": "Interpretation of the exported map; data roles remain linear regardless of display appearance",
+        "items": [
+          [
+            "SRGB",
+            "sRGB",
+            ""
+          ],
+          [
+            "LINEAR",
+            "Linear",
+            ""
+          ]
+        ],
+        "label": "Color Space",
+        "line": 103,
+        "name": "color_space",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": false,
+        "description": "Write one minus the value, for example Roughness as Smoothness or Opacity as a cutout mask",
+        "label": "Invert",
+        "line": 75,
+        "name": "invert",
+        "source": "aether/props/map_export_props.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": "BaseColor",
+        "description": "Custom name for this output",
+        "label": "Map Output Name",
+        "line": 133,
+        "name": "map_name",
+        "source": "aether/props/map_export_props.py",
+        "type": "StringProperty"
+      },
+      {
+        "default": "BASECOLOR",
+        "description": "Type of map to export",
+        "items": [
+          [
+            "BASECOLOR",
+            "Base Color",
+            ""
+          ],
+          [
+            "NORMAL",
+            "Normal",
+            ""
+          ],
+          [
+            "ROUGHNESS",
+            "Roughness",
+            ""
+          ],
+          [
+            "METALLIC",
+            "Metallic",
+            ""
+          ],
+          [
+            "AO",
+            "Ambient Occlusion",
+            ""
+          ],
+          [
+            "OPACITY",
+            "Opacity",
+            ""
+          ],
+          [
+            "EMISSION",
+            "Emission",
+            ""
+          ],
+          [
+            "CUSTOM",
+            "Custom",
+            "Requires a matching output in aether_switcher"
+          ],
+          [
+            "HEIGHT",
+            "Height",
+            "Physical height of the construction measured along the capture camera's view axis, normalized to the scene height range (see the maps JSON for metres)"
+          ],
+          [
+            "PACKED",
+            "Packed",
+            "Several maps combined into the channels of one image (ORM, mask maps, color + alpha)"
+          ]
+        ],
+        "label": "Map Type",
+        "line": 49,
+        "name": "map_type",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "OPENGL",
+        "description": "Tangent-normal green channel: OpenGL is +Y up (Blender, glTF, Unity, Plush); DirectX flips green (Unreal, Substance DirectX)",
+        "items": [
+          [
+            "OPENGL",
+            "OpenGL (+Y)",
+            ""
+          ],
+          [
+            "DIRECTX",
+            "DirectX (-Y)",
+            ""
+          ]
+        ],
+        "label": "Normal Convention",
+        "line": 68,
+        "name": "normal_convention",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "NONE",
+        "description": "Scalar map written to alpha; None writes no alpha channel",
+        "items": {
+          "expression": "[('NONE', 'None', '')] + PACK_SOURCES"
+        },
+        "label": "A",
+        "line": 101,
+        "name": "pack_a",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "METALLIC",
+        "description": "Scalar map written to blue",
+        "items": {
+          "expression": "PACK_SOURCES"
+        },
+        "label": "B",
+        "line": 100,
+        "name": "pack_b",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "ROUGHNESS",
+        "description": "Scalar map written to green",
+        "items": {
+          "expression": "PACK_SOURCES"
+        },
+        "label": "G",
+        "line": 99,
+        "name": "pack_g",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "AO",
+        "description": "Scalar map written to red",
+        "items": {
+          "expression": "PACK_SOURCES"
+        },
+        "label": "R",
+        "line": 98,
+        "name": "pack_r",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": "CHANNELS",
+        "description": "What fills the red, green and blue channels of a packed map",
+        "items": [
+          [
+            "CHANNELS",
+            "Separate Channels",
+            "Choose a scalar map for each of R, G and B"
+          ],
+          [
+            "BASECOLOR",
+            "Base Color",
+            "Base Color RGB, for example with Opacity in alpha"
+          ],
+          [
+            "NORMAL",
+            "Normal",
+            "Encoded tangent normal RGB in this map's normal convention, for example with Height in alpha"
+          ]
+        ],
+        "label": "RGB",
+        "line": 87,
+        "name": "pack_rgb",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      }
+    ],
+    "MapExportSettings": [
+      {
+        "description": "Reserved authoring setting; source baking uses the separate High Res Source setting",
+        "label": "Highpoly Object",
+        "line": 15,
+        "name": "detail_object",
+        "poll": {
+          "expression": "lambda self, obj: obj.type == 'MESH'"
+        },
+        "source": "aether/props/map_export_props.py",
+        "target_type": {
+          "expression": "bpy.types.Object"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "Mesh whose evaluated geometry and selected UV map feed the authoring canvas",
+        "label": "Target Object",
+        "line": 9,
+        "name": "source_object",
+        "poll": {
+          "expression": "lambda self, obj: obj.type == 'MESH'"
+        },
+        "source": "aether/props/map_export_props.py",
+        "target_type": {
+          "expression": "bpy.types.Object"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "UV layer sampled by the authoring canvas; NONE means the target has no UV layers",
+        "items": {
+          "expression": "get_uv_map_items"
+        },
+        "label": "UV Map",
+        "line": 27,
+        "name": "uv_map",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      }
+    ],
+    "Object": [
+      {
+        "description": "Per-object coverage and footprint controls for authored layer materials",
+        "label": "aether_feather",
+        "line": 357,
+        "name": "aether_feather",
+        "source": "aether/utils/feather.py",
+        "target_type": {
+          "expression": "FeatherSettings"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "Per-layer Height remap: own Z range to target metres",
+        "label": "aether_height",
+        "line": 282,
+        "name": "aether_height",
+        "source": "aether/utils/layer_height.py",
+        "target_type": {
+          "expression": "LayerHeightSettings"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "Per-object output-map participation and dedicated AO casting controls",
+        "label": "aether_layer",
+        "line": 234,
+        "name": "aether_layer",
+        "source": "aether/utils/layer_channels.py",
+        "target_type": {
+          "expression": "LayerSettings"
+        },
+        "type": "PointerProperty"
+      }
+    ],
+    "Scene": [
+      {
+        "default": 1.0,
+        "description": "Exponent applied to the captured AO in every output that uses it (AO, ORM and mask maps, Bake AO): 1 is the capture, 2 squares it for deeper occlusion",
+        "label": "AO Strength",
+        "line": 171,
+        "min": 0.1,
+        "name": "aether_ao_strength",
+        "soft_max": 4.0,
+        "source": "aether/props/map_export_props.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": 0.75,
+        "description": "Seconds to wait after the last edit before launching auto preview. Longer delays reduce workspace hitching while editing.",
+        "label": "Auto Preview Delay",
+        "line": 224,
+        "max": 10.0,
+        "min": 0.05,
+        "name": "aether_auto_preview_delay",
+        "soft_max": 2.0,
+        "source": "aether/props/map_export_props.py",
+        "subtype": "TIME",
+        "type": "FloatProperty"
+      },
+      {
+        "default": false,
+        "description": "Automatically refresh fast preview after scene changes. Uses a guarded deferred update to avoid recursive refresh loops.",
+        "label": "Auto Preview",
+        "line": 216,
+        "name": "aether_auto_preview_enabled",
+        "source": "aether/props/map_export_props.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Ambient Occlusion",
+        "line": 1077,
+        "name": "aether_bake_ao",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": 0.0025,
+        "description": "Selected-to-active ray start offset as a fraction of the combined source/target bounds diagonal.",
+        "label": "Cage Extrusion Scale",
+        "line": 1113,
+        "max": 0.25,
+        "min": 0.0,
+        "name": "aether_bake_cage_extrusion_scale",
+        "soft_max": 0.02,
+        "source": "aether/utils/aetherbake.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Signed Curvature",
+        "line": 1077,
+        "name": "aether_bake_curvature",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": 16,
+        "description": "Padding in pixels around source-map UV islands; 16 by default",
+        "label": "Padding",
+        "line": 1073,
+        "max": 128,
+        "min": 0,
+        "name": "aether_bake_margin",
+        "source": "aether/utils/aetherbake.py",
+        "type": "IntProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Material ID",
+        "line": 1077,
+        "name": "aether_bake_material_id",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": 0.01,
+        "description": "Selected-to-active maximum ray distance as a fraction of the combined source/target bounds diagonal. Lower values reduce projection bleed into unrelated outer surfaces.",
+        "label": "Ray Distance Scale",
+        "line": 1122,
+        "max": 1.0,
+        "min": 0.0,
+        "name": "aether_bake_max_ray_distance_scale",
+        "soft_max": 0.05,
+        "source": "aether/utils/aetherbake.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Tangent Normal",
+        "line": 1077,
+        "name": "aether_bake_normal",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Object Normal",
+        "line": 1077,
+        "name": "aether_bake_normal_obj",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": true,
+        "description": "Include this map in the completed source-map bake set",
+        "label": "Position",
+        "line": 1077,
+        "name": "aether_bake_position",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": "2048",
+        "description": "Square source-map image dimension in pixels",
+        "items": {
+          "expression": "[(str(x), f'{x}x{x}', '') for x in [512, 1024, 2048, 4096]]"
+        },
+        "label": "Resolution",
+        "line": 1080,
+        "name": "aether_bake_resolution",
+        "source": "aether/utils/aetherbake.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": 64,
+        "description": "Cycles sample count per source-map bake; 64 by default",
+        "label": "Bake Samples",
+        "line": 1072,
+        "max": 4096,
+        "min": 1,
+        "name": "aether_bake_samples",
+        "source": "aether/utils/aetherbake.py",
+        "type": "IntProperty"
+      },
+      {
+        "description": "Target UV layer for source baking; blank uses the active UV layer",
+        "label": "UV Map",
+        "line": 1071,
+        "name": "aether_bake_uv_map",
+        "source": "aether/utils/aetherbake.py",
+        "type": "StringProperty"
+      },
+      {
+        "default": 32,
+        "description": "EEVEE samples for Base Color, Normal, Height, Roughness and the other maps (Per Map sampling). 32 differs from 128 only at anti-aliased edges",
+        "label": "Capture Samples",
+        "line": 184,
+        "max": 4096,
+        "min": 1,
+        "name": "aether_capture_samples",
+        "soft_max": 256,
+        "source": "aether/props/map_export_props.py",
+        "type": "IntProperty"
+      },
+      {
+        "default": 64,
+        "description": "EEVEE samples for the AO capture (Per Map sampling); AO keeps a little more grain than other maps at low counts",
+        "label": "AO Samples",
+        "line": 187,
+        "max": 4096,
+        "min": 1,
+        "name": "aether_capture_samples_ao",
+        "soft_max": 256,
+        "source": "aether/props/map_export_props.py",
+        "type": "IntProperty"
+      },
+      {
+        "default": "PER_MAP",
+        "description": "EEVEE samples for each capture",
+        "items": [
+          [
+            "PER_MAP",
+            "Per Map",
+            "Capture Samples for most maps, AO Samples for AO and 8 for Metallic and Opacity; previews use half"
+          ],
+          [
+            "SCENE",
+            "Scene",
+            "The scene's own EEVEE render samples for every capture (slower; the earlier behaviour)"
+          ]
+        ],
+        "label": "Capture Sampling",
+        "line": 178,
+        "name": "aether_capture_sampling",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": 2.0,
+        "description": "Signed-curvature contrast multiplier; 2 by default. Higher values emphasize convex and concave differences.",
+        "label": "Contrast",
+        "line": 1085,
+        "max": 8.0,
+        "min": 0.0,
+        "name": "aether_curvature_contrast",
+        "soft_max": 4.0,
+        "source": "aether/utils/aetherbake.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": 0.65,
+        "description": "Balance between sharp edge highlights and broad cavity shading. 1.0 = only sharp edges, 0.0 = only cavity.",
+        "label": "Edge / Cavity",
+        "line": 1094,
+        "max": 1.0,
+        "min": 0.0,
+        "name": "aether_curvature_hard_weight",
+        "source": "aether/utils/aetherbake.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": 4,
+        "description": "Mesh smoothing iterations for the broad curvature component. Larger = broader, smoother cavity shading. Set to 0 to disable the soft pass entirely.",
+        "label": "Cavity Smoothing",
+        "line": 1103,
+        "max": 64,
+        "min": 0,
+        "name": "aether_curvature_soft_radius",
+        "soft_max": 16,
+        "source": "aether/utils/aetherbake.py",
+        "type": "IntProperty"
+      },
+      {
+        "default": 1.0,
+        "description": "Weight of each material's shader relief in Height: Bump input x bump Distance x Bump Strength, in metres. 0 keeps Height geometry-only",
+        "label": "Shader Bump",
+        "line": 174,
+        "min": 0.0,
+        "name": "aether_height_bump",
+        "soft_max": 4.0,
+        "source": "aether/props/map_export_props.py",
+        "type": "FloatProperty"
+      },
+      {
+        "default": 0.05,
+        "description": "Height written as 1 in Fixed Range mode, in metres along the capture camera's up axis (world Z for a top-down camera)",
+        "label": "Height Max",
+        "line": 167,
+        "name": "aether_height_max",
+        "source": "aether/props/map_export_props.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": 0.0,
+        "description": "Height written as 0 in Fixed Range mode, in metres along the capture camera's up axis (world Z for a top-down camera)",
+        "label": "Height Min",
+        "line": 164,
+        "name": "aether_height_min",
+        "source": "aether/props/map_export_props.py",
+        "subtype": "DISTANCE",
+        "type": "FloatProperty",
+        "unit": "LENGTH"
+      },
+      {
+        "default": "AUTO",
+        "description": "How metres of physical height map to the 0-1 Height image",
+        "items": [
+          [
+            "AUTO",
+            "Fit to Capture",
+            "Normalize the set: the lowest visible point becomes 0 and the highest 1; maximum precision, scale differs per material. Use Layer Height remaps to place floated or exaggerated layers"
+          ],
+          [
+            "FIXED",
+            "Fixed Range",
+            "Use the same metre range for every material so heights can be compared and blended"
+          ]
+        ],
+        "label": "Height Range",
+        "line": 155,
+        "name": "aether_height_mode",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": 16,
+        "description": "Pixel distance for the compositor inpaint pass on the standard render path. Large values are much slower; 8-16 is usually enough.",
+        "label": "Inpaint Distance",
+        "line": 199,
+        "max": 256,
+        "min": 0,
+        "name": "aether_inpaint_distance",
+        "soft_max": 32,
+        "source": "aether/props/map_export_props.py",
+        "type": "IntProperty"
+      },
+      {
+        "description": "Most recently completed source-map set used by the node importer",
+        "label": "aether_last_source_map_directory",
+        "line": 1070,
+        "name": "aether_last_source_map_directory",
+        "options": {
+          "expression": "{'PATH_SUPPORTS_BLEND_RELATIVE'} if bpy.app.version >= (5, 0, 0) else set()"
+        },
+        "source": "aether/utils/aetherbake.py",
+        "subtype": "DIR_PATH",
+        "type": "StringProperty"
+      },
+      {
+        "default": 8,
+        "description": "Number of equal horizontal slabs between the lowest and highest construction point",
+        "label": "Slabs",
+        "line": 358,
+        "max": 32,
+        "min": 1,
+        "name": "aether_nearfield_slabs",
+        "source": "aether/utils/near_field.py",
+        "type": "IntProperty"
+      },
+      {
+        "default": "ACTIVE_MAP",
+        "description": "Whether preview renders the selected output map or the full map set into the receiver material",
+        "items": [
+          [
+            "ACTIVE_MAP",
+            "Active Map",
+            ""
+          ],
+          [
+            "ALL_MAPS",
+            "All Maps",
+            ""
+          ]
+        ],
+        "label": "Preview Mode",
+        "line": 207,
+        "name": "aether_preview_mode",
+        "source": "aether/props/map_export_props.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": 50,
+        "description": "Resolution percentage used by the fast EEVEE preview render. Lower values update faster.",
+        "label": "Preview Resolution",
+        "line": 190,
+        "max": 100,
+        "min": 10,
+        "name": "aether_preview_resolution_percentage",
+        "soft_max": 100,
+        "source": "aether/props/map_export_props.py",
+        "subtype": "PERCENTAGE",
+        "type": "IntProperty"
+      },
+      {
+        "default": -1,
+        "description": "Active entry in the region list",
+        "label": "aether_region_index",
+        "line": 200,
+        "name": "aether_region_index",
+        "source": "aether/utils/regions.py",
+        "type": "IntProperty"
+      },
+      {
+        "description": "Named trim strips and decal pieces written to maps.json",
+        "label": "aether_regions",
+        "line": 198,
+        "name": "aether_regions",
+        "source": "aether/utils/regions.py",
+        "target_type": {
+          "expression": "AetherRegion"
+        },
+        "type": "CollectionProperty"
+      },
+      {
+        "description": "Direct child objects to instance on the Aether tile",
+        "label": "Source Collection",
+        "line": 194,
+        "name": "aether_scatter_collection",
+        "source": "aether/utils/collection_scatter.py",
+        "target_type": {
+          "expression": "bpy.types.Collection"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "Source-map destination; blank uses the saved blend folder and target name",
+        "label": "Map Folder",
+        "line": 1069,
+        "name": "aether_source_map_directory",
+        "options": {
+          "expression": "{'PATH_SUPPORTS_BLEND_RELATIVE'} if bpy.app.version >= (5, 0, 0) else set()"
+        },
+        "source": "aether/utils/aetherbake.py",
+        "subtype": "DIR_PATH",
+        "type": "StringProperty"
+      },
+      {
+        "description": "Optional separate high-resolution mesh projected onto the source-bake target",
+        "label": "aether_source_obj",
+        "line": 1078,
+        "name": "aether_source_obj",
+        "source": "aether/utils/aetherbake.py",
+        "target_type": {
+          "expression": "bpy.types.Object"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "description": "UV-mapped mesh receiving the source-map bake",
+        "label": "aether_target_obj",
+        "line": 1068,
+        "name": "aether_target_obj",
+        "poll": {
+          "expression": "lambda self, obj: obj.type == 'MESH'"
+        },
+        "source": "aether/utils/aetherbake.py",
+        "target_type": {
+          "expression": "bpy.types.Object"
+        },
+        "type": "PointerProperty"
+      },
+      {
+        "default": "AUTO",
+        "description": "Source coordinate frame used by the triplanar conversion helper",
+        "items": [
+          [
+            "AUTO",
+            "Auto",
+            "Use a matching source-map group when available, otherwise object coordinates"
+          ],
+          [
+            "BAKED",
+            "Baked Source Maps",
+            "Reconstruct the original surface over a flattened UV layout"
+          ],
+          [
+            "OBJECT",
+            "Object",
+            "Use object-space position and normal on ordinary geometry"
+          ]
+        ],
+        "label": "Triplanar Coordinates",
+        "line": 279,
+        "name": "aether_triplanar_space",
+        "source": "aether/utils/triplanarinput.py",
+        "type": "EnumProperty"
+      },
+      {
+        "default": false,
+        "description": "Project the separate high-resolution source onto the UV-mapped receiver when enabled",
+        "label": "From High Res",
+        "line": 1079,
+        "name": "aether_use_highpoly",
+        "source": "aether/utils/aetherbake.py",
+        "type": "BoolProperty"
+      },
+      {
+        "default": "MyObject",
+        "description": "Prefix for output image names and generated material names",
+        "label": "Object Name",
+        "line": 147,
+        "name": "custom_object_name",
+        "source": "aether/props/map_export_props.py",
+        "type": "StringProperty"
+      },
+      {
+        "default": "_",
+        "description": "Text joining the object prefix and map name in exported filenames",
+        "label": "Delimiter",
+        "line": 148,
+        "name": "delimiter",
+        "source": "aether/props/map_export_props.py",
+        "type": "StringProperty"
+      },
+      {
+        "description": "Zero-based active map index; -1 means the list is empty",
+        "label": "export_map_index",
+        "line": 145,
+        "name": "export_map_index",
+        "source": "aether/props/map_export_props.py",
+        "type": "IntProperty"
+      },
+      {
+        "description": "Ordered output map definitions for the active authoring scene",
+        "label": "export_map_list",
+        "line": 144,
+        "name": "export_map_list",
+        "source": "aether/props/map_export_props.py",
+        "target_type": {
+          "expression": "MapExportItem"
+        },
+        "type": "CollectionProperty"
+      },
+      {
+        "default": "//exports/",
+        "description": "Destination for final PBR maps and the hidden preview cache; // is relative to the blend file",
+        "label": "Output Directory",
+        "line": 149,
+        "name": "export_output_directory",
+        "options": {
+          "expression": "{'PATH_SUPPORTS_BLEND_RELATIVE'} if bpy.app.version >= (5, 0, 0) else set()"
+        },
+        "source": "aether/props/map_export_props.py",
+        "subtype": "DIR_PATH",
+        "type": "StringProperty"
+      },
+      {
+        "description": "Source mesh and UV selection for authoring-scene creation",
+        "label": "export_settings",
+        "line": 146,
+        "name": "export_settings",
+        "source": "aether/props/map_export_props.py",
+        "target_type": {
+          "expression": "MapExportSettings"
+        },
+        "type": "PointerProperty"
+      }
+    ]
+  },
+  "source_files": {
+    "aether/blender_ops/export_map_ops.py": "2050e7d5629db24d59122580c3426534debc753e5dc4c3ddb185fb04c118d4f4",
+    "aether/blender_ops/object_add_ops.py": "754e56293721323f9ff2c293a9f766a9673c4c0681669567ab2342a02de2e9ef",
+    "aether/blender_ops/render_ops.py": "43365a8d7d22cb7ab244978a9ae886652c9afbb84d5ca101bb67f3618e7f5d83",
+    "aether/blender_ops/scene_setup_ops.py": "01f0d98d6cedf6ce5d77cb52b4e267ba23fa1a3d58452b3710593d53cd4b9716",
+    "aether/props/map_export_props.py": "11ca9d9efe34c5d128f9ddb9bd4a764ee5ccc65df5d88ec4953a56edb4a7910f",
+    "aether/ui_panels/export_panel.py": "da9cb9427f49b3287b8d99d946c063dca6c30815620475b5d00a48bb1e3b79b6",
+    "aether/ui_panels/texture_panel.py": "2a683aa9f740102e20b590cfadddbb027449730a2e0fcc11f881b50c1e8603d1",
+    "aether/utils/aetherbake.py": "8ae1f03a1ad66a0b3b2fb23fb85c4dc82003288330caf7f1eab5161b427a7de3",
+    "aether/utils/camera_preview.py": "ab3d28197f118d9a89c48a5d54fa6b9b5dac00667317f9fe3107d386ceaf2c0a",
+    "aether/utils/collection_scatter.py": "2faf8d414c9759ca9a0c2b18e7cdd2d626dd6eb76abc1edab65ce41b671b5f87",
+    "aether/utils/convert_principled.py": "ab7c3a6f003ff7bd1811613c99c1019f7d340340caf24a291651f43a9bc110cb",
+    "aether/utils/feather.py": "f1e4eb9e8b05a2a50d1329c17ad0d31ffb3a9257954454e550c7f6d95a3b419b",
+    "aether/utils/layer_channels.py": "c5cd4437584f84d4cbf8968eb5ac5238788cc44280508275d2ea724e317ed5e3",
+    "aether/utils/layer_height.py": "d78baa9426df8ff216132ab5262508fbb4ef273254b9750ca2c5d15c9ec41e67",
+    "aether/utils/live_surface.py": "b0a0e8613db3b6d4760bdfd878d1e0c7f5d6192f45c2879233479db5b6beee71",
+    "aether/utils/near_field.py": "6d0960376ec67a5af1435ac62b21350f7c01425429f93397114dbac867549eb3",
+    "aether/utils/node_layout.py": "7371ae4f99082ea8fdf6fba78861c498bee1b4ef861688fe0358f5a92b44ea06",
+    "aether/utils/normal_height.py": "b37ae874794649da46e8ef3b35f3401332807ff825d10431dfebfeb5831a2484",
+    "aether/utils/project_files.py": "1ead50004ebaef41da804e0c806db6d11a7f3c0d98a5846558d1169c88fa8cec",
+    "aether/utils/regions.py": "564b91a9969f4ab5047fcab80cbee0d665170a584e4d99f2e896d6a175b321ed",
+    "aether/utils/smart_groups.py": "9837edaf60782540b9ec975366c13eb6dae2a115013c262f3ebe5078466d8bd6",
+    "aether/utils/sourceimporter.py": "e4f4b24395dbe206a73cab95a62e263abd058366261bd37ef14889af4c34a5c8",
+    "aether/utils/tile_repeat.py": "d3a58ba032d2e2f6d2b48451660b66067d1d996bbfd6d33e9cd8a9f630665f94",
+    "aether/utils/triplanarinput.py": "f9070dacbdfd0ba6578044c4602112aca4f6ad6d870b61625fefee85d08faf21"
+  }
+}
