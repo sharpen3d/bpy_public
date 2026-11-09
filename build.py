@@ -72,7 +72,7 @@ def home_project_card(key):
     visual=link(url(p),f'<img src="{esc(image)}" alt="{esc(alt)}" width="960" height="540" loading="lazy">','project-card-visual')
     mark=''
     if key=='openvat':external=link('https://openvat.org/','OpenVAT.org ↗')
-    elif key=='aether':external=link(p['links'][0]['href'],'GitHub ↗')
+    elif key=='aether':external=link(p['links'][0]['href'],'Legacy Aether GitHub ↗')
     elif key=='attrio':external=link(url(p),'Blender Extensions ↗')
     else:external=link(url(p),'About the project →')
     evidence=''
@@ -96,7 +96,7 @@ def home_tool_card(key):
     }
     status,description,alt=summary[key]
     visual=link(url(p),f'<img src="{esc(p["image"])}" alt="{esc(alt)}" width="640" height="360" loading="lazy">','tool-card-preview')
-    if key=='aether': destinations=link(url(p),'About →')+link(p['links'][0]['href'],'GitHub ↗')
+    if key=='aether': destinations=link(url(p),'About →')+link(p['links'][0]['href'],'Legacy Aether GitHub ↗')
     elif key=='attrio': destinations=link(url(p),'Blender Extensions ↗')
     else: destinations=link(url(p),'About →')
     return f'''<article class="home-tool-card" aria-labelledby="tool-{key}-title">{visual}<div class="home-tool-card-body"><header><p class="project-card-category">{esc(status)}</p><h3 id="tool-{key}-title">{link(url(p),esc(p['title']))}</h3></header><p class="home-tool-card-description">{esc(description)}</p><nav class="home-tool-card-links" aria-label="{esc(p['title'])} links">{destinations}</nav></div></article>'''
