@@ -130,5 +130,19 @@
       "kind": "text",
       "value": "There's stuff in Plush that no company in their right mind would build into an engine, but that's the beauty of it to me. Built-in local git tracking save behavior and a vertical scrolling soundfont midi-based tracker DAW system for sound are a couple examples. "
     }
+  },
+  "devlog/boolean-method-for-mesh-islands.html": {
+    "19f8d5837bbd12fa-1": {
+      "kind": "rich",
+      "value": "Full geometry nodes reference and result"
+    },
+    "3e234c93649b2432-1": {
+      "kind": "rich",
+      "value": "The goal"
+    },
+    "c79cfa2a6c9ea40b-1": {
+      "kind": "rich",
+      "value": "Quick experiment, useful for reference. This method could be used as example of curve generation approaches over voxel-like exclusion approaches for creating isolation in mesh via nodes. This may be used in something like sprite-outline behavior or combined with 2D SDF to prove useful for cutout meshing behavior."
+    }
   }
 }

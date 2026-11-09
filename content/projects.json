@@ -562,7 +562,7 @@
   "openvat": {
     "title": "OpenVAT",
     "videoSrc": "videos/openvat.mp4",
-    "description": "OpenVAT is a Blender-native toolkit for baking Vertex Animation Textures (VATs).",
+    "description": "A Blender encoder and Unity playback system for bringing vertex animation into real-time projects.",
     "images": [
       {
         "src": "videos/openvat1.mp4",
@@ -1047,7 +1047,7 @@
   "aether": {
     "title": "Aether",
     "videoSrc": "videos/texlab.mp4",
-    "description": "My material creation and texture baking tools for Blender. Aether brings the earlier xBake and TextureLab work together.",
+    "description": "My geometry-first material authoring system for Blender: editable surface construction in, coherent texture sets and game-ready props out.",
     "images": [
       {
         "src": "images/xbake-cover.png",
@@ -1094,11 +1094,11 @@
       }
     ],
     "category": "tools",
-    "label": "Blender · In development",
+    "label": "Blender materials · Active development",
     "image": "images/xbake-cover.png",
     "page": "aether.html",
     "role": "Tool design, Python, material systems & baking",
-    "tools": "Blender · Python · Geometry Nodes · Cycles",
+    "tools": "Blender · Python · Geometry Nodes · EEVEE · MCP",
     "context": "Independent · In development",
     "mediaCaption": "Earlier TextureLab workflow. Aether now brings TextureLab and xBake together."
   },

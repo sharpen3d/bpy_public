@@ -1,5 +1,5 @@
 {
-  "intro": "Bake Blender animation into textures, then play it back in a game engine. Geometry Nodes, modifiers, rigs, and simulations can all be the starting point.",
+  "intro": "OpenVAT started as a way to bake Blender animation into textures. It’s also a Unity system for bringing those animations into a project and controlling them in gameplay.",
   "origamiTitle": "The animation is in the texture.",
   "origamiText": "OpenVAT records the evaluated mesh, frame by frame. A shader reads that motion back as vertex offsets, so the engine doesn’t need to reproduce the original rig, modifier stack, or simulation.",
   "origamiNote": "This folding example shows the same animation as texture data, vertex offsets, and the final mesh. It’s a useful way to see what the texture is actually doing.",
@@ -19,7 +19,7 @@
       "The texture holds the data; a shader decides how to use it. Timing, per-instance offsets, masks, and blending can make the same bake useful in different ways."
     ]
   ],
-  "work": "I made the Blender tool and the Unity and Unreal integrations. Geometry Nodes handles the baking; Python handles the interface and workflow. Working on both sides meant dealing with the practical bits too: vertex mapping, normals, precision, and engine import settings.",
-  "limit": "The mesh needs stable topology: the vertex count and order must stay consistent through the animation. VAT playback is baked motion, so any runtime interaction needs to be handled in the shader.",
+  "work": "I built both sides of the workflow: a Blender encoder driven by Geometry Nodes and Python, and a Unity receiver with import, shader, and playback tools. Building them together meant working through the practical details too: vertex mapping, normals, precision, and engine import settings.",
+  "limit": "The mesh needs stable topology: the vertex count and order must stay consistent through the animation. The motion itself is baked; playback and other runtime behavior depend on the engine integration and shader.",
   "mediaSource": "OpenVAT website: assets/frogdemo.mp4 and assets/frogdemo-poster.jpg"
 }

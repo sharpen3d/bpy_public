@@ -35,7 +35,14 @@ The PlushEngine `website` field currently points to `file:///Users/lukestilson/P
 
 Attrio preview: https://extensions.blender.org/add-ons/attrio-csv/ — author’s Full Demo thumbnail saved as `assets/attrio-preview.webp`.
 
-This refresh remains local. No commit, push, or deployment is part of this work.
+The portfolio is published through its Git repository.
+
+## Public Aether gallery
+
+`aether-gallery.html` is generated from the actual Plush render project at
+`GameProjects/_Labs/AetherGallery`. Re-render there, run its `Authoring/build_page.py`, then run
+`python3 build.py` here. The portfolio build copies newer public JPEGs and regenerates compact PBR map atlases from
+the authoritative Aether map folders. Public output contains no `file://` links or private workspace paths.
 
 ## Author credit
 
@@ -51,4 +58,4 @@ copy of the OpenVAT site’s folding example, with playback on demand.
 
 ## Aether page and API reference
 
-`aether_portfolio.py` generates the project page and searchable API site from `content/aether-api.json`. To update it, regenerate Aether’s `docs/api/api.json` with `tools/api_reference.py`, copy it to `content/aether-api.json`, then run `python3 build.py`. The API is a source-derived snapshot. The UI screenshots are verified captures of Aether 1.0.24 in Blender 5.2.3.
+`aether_portfolio.py` generates the project page and the searchable API site using `content/aether-api.json`. To update the reference, regenerate Aether’s `docs/api/api.json` with its `tools/api_reference.py`, copy that file to `content/aether-api.json`, then run `python3 build.py`. The reference is a source-derived snapshot, not a live service. The UI screenshots are the verified Aether documentation captures for Blender 5.2.3 and Aether 1.0.24.
