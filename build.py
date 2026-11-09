@@ -202,6 +202,8 @@ def case(p):
         return
     path=url(p); root='../' if '/' in path else ''
     actions=''.join(link(root+x['href'] if not x['href'].startswith(('https:','mailto:')) else x['href'],esc(x['label'])+' ↗','button') for x in p.get('links',[]))
+    if p['id'] == 'aether':
+        actions = link(root+'aether-gallery.html', 'View the Aether gallery →', 'button') + actions
     gallery=''
     for number,im in enumerate(p.get('images',[]),1):
         caption=im.get('caption') or f'{p["title"]} · Detail {number}'
