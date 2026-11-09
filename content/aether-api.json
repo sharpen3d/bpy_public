@@ -51,9 +51,18 @@
         {
           "default": "DECAL",
           "description": "Trim strips repeat along U; decals are separate pieces",
-          "items": {
-            "expression": "KINDS"
-          },
+          "items": [
+            [
+              "TRIM",
+              "Trim Strip",
+              "Full-width strip that repeats along U only"
+            ],
+            [
+              "DECAL",
+              "Decal",
+              "Separate piece read through Opacity; does not repeat"
+            ]
+          ],
           "label": "Kind",
           "line": 126,
           "name": "kind",
@@ -100,9 +109,93 @@
       "properties": [
         {
           "description": "Smart group to add",
-          "items": {
-            "expression": "[(k, k, f'Add {PREFIX}{k}') for k in BUILDERS]"
-          },
+          "items": [
+            [
+              "Surface",
+              "Surface",
+              ""
+            ],
+            [
+              "Seed Noise",
+              "Seed Noise",
+              ""
+            ],
+            [
+              "Object Noise",
+              "Object Noise",
+              ""
+            ],
+            [
+              "Distance Mask",
+              "Distance Mask",
+              ""
+            ],
+            [
+              "Edge Wear",
+              "Edge Wear",
+              ""
+            ],
+            [
+              "Scratches",
+              "Scratches",
+              ""
+            ],
+            [
+              "Dents",
+              "Dents",
+              ""
+            ],
+            [
+              "Grime",
+              "Grime",
+              ""
+            ],
+            [
+              "Painted Steel",
+              "Painted Steel",
+              ""
+            ],
+            [
+              "Zinc Plated",
+              "Zinc Plated",
+              ""
+            ],
+            [
+              "Rubber",
+              "Rubber",
+              ""
+            ],
+            [
+              "Brushed Metal",
+              "Brushed Metal",
+              ""
+            ],
+            [
+              "Molded Plastic",
+              "Molded Plastic",
+              ""
+            ],
+            [
+              "Cast Iron",
+              "Cast Iron",
+              ""
+            ],
+            [
+              "Cardboard",
+              "Cardboard",
+              ""
+            ],
+            [
+              "Packing Tape",
+              "Packing Tape",
+              ""
+            ],
+            [
+              "Slot Mix",
+              "Slot Mix",
+              ""
+            ]
+          ],
           "label": "Group",
           "line": 900,
           "name": "group",
@@ -191,7 +284,7 @@
       "status": "current"
     },
     {
-      "description": "Capture the construction in horizontal slabs for near-field relief in an engine.\n\nContext: A working project with an orthographic scene camera and an export folder.\nLimit: Writes <export folder>/nearfield/: per slab 16-bit PNGs (Base Color with coverage alpha, Normal, Roughness, Metallic, AO, Height over the slab's range) and <name>_nearfield.json. Each slab is a clip-range capture, so only geometry within it is seen; relief that exists only in the shader appears in normals and Height, never in coverage. AO lacks occlusion from geometry outside the slab. Experimental: no engine consumes it yet.\nStatus: experimental",
+      "description": "Capture the construction in horizontal slabs for near-field relief in an engine.\n\nContext: A working project with an orthographic scene camera and an export folder.\nLimit: Writes <export folder>/nearfield/: per slab 16-bit PNGs (Base Color with coverage alpha, Normal, Roughness, Metallic, AO, Height over the slab's range) and <name>_nearfield.json. Each slab is a clip-range capture, so only geometry within it is seen; relief that exists only in the shader appears in normals and Height, never in coverage. AO lacks occlusion from geometry outside the slab. Experimental: the generated relief pack is consumed by Plush\u2019s near-field relief path.\nStatus: experimental",
       "id": "aether.export_near_field",
       "label": "Export Near-Field Slabs",
       "line": 328,
@@ -495,9 +588,48 @@
       "properties": [
         {
           "description": "Named output preset; replaces the current map list",
-          "items": {
-            "expression": "[(key, label, description) for (key, label, description, _) in PRESETS]"
-          },
+          "items": [
+            [
+              "PBR_DEFAULT",
+              "PBR Metal/Rough (separate maps)",
+              "Substance-style separate maps: Base Color, Normal (OpenGL), Roughness, Metallic, AO, Opacity and Height"
+            ],
+            [
+              "BASECOLOR_ONLY",
+              "Unlit / Base Color Only",
+              "Base Color alone, for unlit or stylized use"
+            ],
+            [
+              "PLUSH",
+              "Plush",
+              "PBR Metal/Rough maps plus the three packed maps Plush's Aether surface shaders read: ColorAO (Base Color RGB, AO A), NormalRoughness (OpenGL Normal RGB, Roughness A) and MetalOpacity (Metallic R, Opacity G, Height B, A = 1)"
+            ],
+            [
+              "SURFACE_DATA",
+              "Surface Data (Normal, Height, AO)",
+              "Structure-only maps for detail layers, displacement and procedural work elsewhere"
+            ],
+            [
+              "GLTF",
+              "glTF 2.0",
+              "Base Color with Opacity in alpha, OpenGL Normal, and ORM (occlusion R, roughness G, metallic B)"
+            ],
+            [
+              "UNREAL",
+              "Unreal Engine",
+              "Base Color, DirectX Normal, ORM (AO R, Roughness G, Metallic B) and Height"
+            ],
+            [
+              "UNITY_LIT",
+              "Unity URP / Built-in Lit",
+              "Base Map with Opacity in alpha, OpenGL Normal, Metallic + Smoothness in alpha, Occlusion and Height"
+            ],
+            [
+              "UNITY_HDRP",
+              "Unity HDRP Lit",
+              "Base Map with Opacity in alpha, OpenGL Normal, Mask Map (Metallic R, AO G, detail mask B, Smoothness A) and Height"
+            ]
+          ],
           "label": "Preset",
           "line": 193,
           "name": "preset",
@@ -702,9 +834,18 @@
       {
         "default": "DECAL",
         "description": "Trim strips repeat along U; decals are separate pieces",
-        "items": {
-          "expression": "KINDS"
-        },
+        "items": [
+          [
+            "TRIM",
+            "Trim Strip",
+            "Full-width strip that repeats along U only"
+          ],
+          [
+            "DECAL",
+            "Decal",
+            "Separate piece read through Opacity; does not repeat"
+          ]
+        ],
         "label": "Kind",
         "line": 106,
         "name": "kind",
@@ -2097,7 +2238,7 @@
     "aether/utils/layer_channels.py": "c5cd4437584f84d4cbf8968eb5ac5238788cc44280508275d2ea724e317ed5e3",
     "aether/utils/layer_height.py": "d78baa9426df8ff216132ab5262508fbb4ef273254b9750ca2c5d15c9ec41e67",
     "aether/utils/live_surface.py": "b0a0e8613db3b6d4760bdfd878d1e0c7f5d6192f45c2879233479db5b6beee71",
-    "aether/utils/near_field.py": "6d0960376ec67a5af1435ac62b21350f7c01425429f93397114dbac867549eb3",
+    "aether/utils/near_field.py": "d4dcf619a769920e45eef6c034cb4e9410eaefe013eed7c1009b32050f0a13e3",
     "aether/utils/node_layout.py": "7371ae4f99082ea8fdf6fba78861c498bee1b4ef861688fe0358f5a92b44ea06",
     "aether/utils/normal_height.py": "b37ae874794649da46e8ef3b35f3401332807ff825d10431dfebfeb5831a2484",
     "aether/utils/project_files.py": "1ead50004ebaef41da804e0c806db6d11a7f3c0d98a5846558d1169c88fa8cec",

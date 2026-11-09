@@ -50,19 +50,65 @@ def build_api():
     home='''<h1>API reference</h1><p>Reference for Aether’s Blender operators and RNA settings, generated from the add-on’s operator docstrings and property declarations. The source parser produces Markdown and JSON without running Blender; the website presents a versioned snapshot of that data. The MCP lookup separately queries the current source.</p><p>Enable Aether before calling <code>bpy.ops</code>. Operators can require a particular scene, selection, mode or editor context; check each entry. File writes are outside Blender Undo. Internal Python helpers are not a supported public API.</p><div class="table"><table><thead><tr><th scope="col">Reference</th><th scope="col">Contents</th></tr></thead><tbody><tr><td>Operators</td><td>Identifiers, context, effects, limits and operator properties</td></tr><tr><td>Settings</td><td>RNA properties, descriptions, declared defaults and ranges</td></tr></tbody></table></div><p>Use the sidebar to browse or search. Experimental and placeholder entries are labeled; placeholders do not provide a working action.</p><p><a href="api.json">Download the machine-readable reference</a> · <a href="../aether.html">About Aether</a></p>'''
     (root/'index.html').write_text(layout('API reference','index.html',home)); (root/'api.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
     def properties(props):
-        if not props:return '<p>No operator properties documented.</p>'
+        if not props:return '<p>This operator declares no Aether-specific keyword properties. It may use scene, object, modifier, or editor settings instead; see its context and related settings below.</p>'
         rows=[]
         for p in props:
             detail=[]
             for k in ('default','min','max','subtype','unit','size'):
                 if k in p:detail.append(k+': '+str(p[k]))
+            if 'default' not in p: detail.append('default: Blender RNA default')
             if isinstance(p.get('items'), list):
                 detail.append('choices: '+', '.join(str(item[0]) for item in p['items'] if item))
+            elif isinstance(p.get('items'), dict):
+                detail.append('choices: source expression '+str(p['items'].get('expression', 'dynamic')))
+
             rows.append(f'<tr id="{slug(p["name"])}"><td><code>{E(p["name"])}</code></td><td>{E(p.get("type",""))}</td><td>{E(p.get("description", ""))}<br><small>{E(" · ".join(detail))}</small></td></tr>')
         return '<div class="table"><table><thead><tr><th scope="col">Property</th><th scope="col">Type</th><th scope="col">Description and declaration</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
+    # These are settings used by the implementation, not operator keyword arguments.
+    related={
+        'exportmap.create_bake_scene': [('MapExportSettings',['source_object','uv_map']),('Scene',['export_settings','custom_object_name','export_output_directory'])],
+        'aether.bake_source_maps': [('Scene',['aether_target_obj','aether_source_obj','aether_use_highpoly','aether_source_map_directory','aether_bake_uv_map','aether_bake_resolution','aether_bake_samples','aether_bake_margin','aether_bake_normal','aether_bake_normal_obj','aether_bake_ao','aether_bake_position','aether_bake_curvature','aether_bake_material_id','aether_bake_cage_extrusion_scale','aether_bake_max_ray_distance_scale'])],
+        'aether.open_export_dir': [('Scene',['aether_target_obj','aether_source_map_directory'])],
+        'aether.add_live_surface': [('Scene',['export_settings','aether_target_obj']),('MapExportSettings',['source_object','uv_map'])],
+        'aether.scatter_collection': [('Scene',['aether_scatter_collection'])],
+        'aether.export_near_field': [('Scene',['export_output_directory','aether_nearfield_slabs','aether_ao_strength','aether_height_bump','export_map_list'])],
+        'exportmap.render_all_maps': [('Scene',['export_map_list','export_output_directory','custom_object_name','delimiter','aether_capture_sampling','aether_capture_samples','aether_capture_samples_ao','aether_height_mode','aether_height_min','aether_height_max','aether_height_bump','aether_ao_strength']),('MapExportItem',['map_type','map_name','bit_depth','color_space','channel_format','normal_convention','bake_ao','pack_rgb','pack_r','pack_g','pack_b','pack_a'])],
+        'exportmap.render_active_map_preview': [('Scene',['aether_preview_mode','aether_preview_resolution_percentage','aether_inpaint_distance','export_map_list','export_map_index'])],
+        'aether.preview_layer_result': [('Scene',['aether_preview_mode','aether_preview_resolution_percentage','export_map_list']),('LayerSettings',['enabled','base_color','normal','roughness','metallic','ao','opacity','cast_ao'])],
+        'exportmap.add_map': [('Scene',['export_map_list','export_map_index']),('MapExportItem',['map_type','map_name'])],
+        'exportmap.remove_map': [('Scene',['export_map_list','export_map_index'])],
+        'exportmap.apply_map_settings': [('Scene',['export_map_list','export_map_index','aether_preview_mode'])],
+        'exportmap.load_preset': [('Scene',['export_map_list','export_map_index'])],
+        'aether.layer_preset': [('Object',['aether_layer']),('LayerSettings',['enabled','base_color','normal','roughness','metallic','ao','opacity','cast_ao'])],
+        'aether.feather_layer': [('Object',['aether_feather']),('FeatherSettings',['enabled','width','curve','opacity'])],
+        'aether.fit_feather': [('Object',['aether_feather']),('FeatherSettings',['center','size','coordinates'])],
+        'aether.height_use_measured': [('Object',['aether_height']),('LayerHeightSettings',['measured_min','measured_max','target_min','target_max'])],
+        'aether.add_region': [('Scene',['aether_regions','aether_region_index']),('AetherRegion',['kind','name','uv_min','uv_max'])],
+        'aether.remove_region': [('Scene',['aether_regions','aether_region_index'])],
+        'node.add_triplanar_from_template': [('Scene',['aether_triplanar_space'])],
+    }
+    modifier_controls={
+        'aether.repeat_geometry': [('Tile Width / Tile Height','1.0 each','Distance between copies in canvas units.'),('Repeat Radius','1','Radius 1 creates the center tile and its eight neighbors.'),('World XY','True','Align offsets with the top-down canvas even if the source is transformed.'),('Realize Copies','False','Turn instances into geometry when downstream operations require it.')],
+        'aether.scatter_collection': [('Source Collection','None','Direct child objects used as instances.'),('Density','40.0','Scatter points per square metre.'),('Seed','0','Stable point, choice and transform variation.'),('Tile Width / Tile Height','1.0 each','Center-tile dimensions in metres; match the repeat modifier.'),('Scale Min / Scale Max','0.8 / 1.2','Range for uniform source scale.'),('Axis Scale','(1, 1, 1)','Additional local XYZ scale.'),('Rotation Min / Rotation Max','0 / 2π radians','Range for rotation around Z.'),('Tilt','0.15 radians','Maximum absolute X/Y tilt.'),('Height Offset','0.0','Point height in canvas Z, in metres.'),('Realize Instances','False','Convert instances to geometry for mesh-only downstream operations.')],
+    }
+    def related_settings(operator):
+        groups_for_op=related.get(operator,[])
+        if not groups_for_op:return '<p>Other context, including selection and editor state, is described above. Browse the RNA settings in the sidebar for scene and object controls.</p>'
+        out='<p>These are configured on the scene or object; they are not passed to the operator as keyword arguments.</p>'
+        for owner,names in groups_for_op:
+            available={p['name']:p for p in groups[owner]}
+            assert all(name in available for name in names), (operator,owner,names)
+            out+=f'<h3>{E(owner)}</h3><ul>'+''.join(f'<li><a href="../settings/{slug(owner)}.html#{slug(name)}"><code>{E(name)}</code></a> — {E(available[name].get("description",""))}</li>' for name in names)+'</ul>'
+        return out
     for op in ops:
         path='operators/'+slug(op['id'])+'.html'; desc=op.get('description',''); paragraphs=''.join('<p>'+E(p).replace('\n','<br>')+'</p>' for p in desc.split('\n\n') if p.strip())
-        txt=f'<h1>{E(op["id"])}</h1><p class="meta">{E(op.get("label",""))} · {E(op.get("status","current"))}</p><div class="code" data-lang="Python"><pre><code>bpy.ops.{E(op["id"])}(**properties)</code></pre></div>{paragraphs}<h2>Properties</h2>{properties(op.get("properties",[]))}<h2>Source</h2><p><code>{E(op.get("source",""))}:{E(op.get("line",""))}</code></p>'
+        arguments=', '.join(p['name']+'=...' for p in op['properties'])
+        guidance='<p>Each <code>...</code> is a placeholder for a value; see the properties below.</p>' if arguments else ''
+        mod=''
+        if op['id'] in modifier_controls:
+            rows=''.join(f'<tr><td>{E(name)}</td><td><code>{E(default)}</code></td><td>{E(description)}</td></tr>' for name,default,description in modifier_controls[op['id']])
+            mod='<h2>Resulting Geometry Nodes modifier inputs</h2><p>These are editable inputs on the created modifier, not keyword arguments to the operator.</p><div class="table"><table><thead><tr><th>Input</th><th>Default</th><th>Meaning</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+        txt=f'<h1>{E(op["id"])}</h1><p class="meta">{E(op.get("label",""))} · {E(op.get("status","current"))}</p><div class="code" data-lang="Python"><pre><code>bpy.ops.{E(op["id"])}({E(arguments)})</code></pre></div>{guidance}{paragraphs}<h2>Operator properties</h2>{properties(op.get("properties",[]))}<h2>Related settings</h2>{related_settings(op["id"])}{mod}<h2>Source</h2><p><code>{E(op.get("source",""))}:{E(op.get("line",""))}</code></p>'
         (root/path).write_text(layout(op['id'],path,txt))
     for group,props in groups.items():
-        path='settings/'+slug(group)+'.html';txt=f'<h1>{E(group)}</h1><p>Declared Aether RNA properties for <code>{E(group)}</code>.</p>{properties(props)}';(root/path).write_text(layout(group,path,txt))
+        path='settings/'+slug(group)+'.html'; access={'Scene':'bpy.context.scene','Object':'bpy.context.object','MapExportSettings':'bpy.context.scene.export_settings','MapExportItem':'bpy.context.scene.export_map_list[index]','LayerSettings':'bpy.context.object.aether_layer','LayerHeightSettings':'bpy.context.object.aether_height','FeatherSettings':'bpy.context.object.aether_feather','AetherRegion':'bpy.context.scene.aether_regions[index]'}.get(group);txt=f'<h1>{E(group)}</h1><p>Declared Aether RNA properties for <code>{E(group)}</code>.</p>'+ (f'<p>Access through <code>{E(access)}</code>, when the required scene and object are available.</p>' if access else '')+properties(props);(root/path).write_text(layout(group,path,txt))
